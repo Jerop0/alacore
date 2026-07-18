@@ -6,6 +6,8 @@ const translations = {
     navWhy: "Why us",
     navProcess: "Process",
     navContact: "Contact",
+    navAbout: "About",
+    servicesMore: "Explore all services",
     navCta: "Start a project",
     heroEyebrow: "Your partner for growth & digital transformation",
     heroTitle1: "We build the",
@@ -76,6 +78,8 @@ const translations = {
     whyKicker: "Why ALA Core?",
     whyTitle: "One partner who sees the whole picture.",
     whyLead: "We do not deliver technology in isolation. We start with your business goals, design the right solution, then build, operate, and improve it with you.",
+    whatWeValueKicker: "What sets us apart",
+    whatWeValueTitle: "Built around your goals, not our templates.",
     value1Title: "Solutions tailored to your business",
     value1Desc: "No rigid templates—every decision connects to a goal and a measurable outcome.",
     value2Title: "End-to-end delivery",
@@ -140,6 +144,8 @@ const translations = {
     navWhy: "Neden biz",
     navProcess: "Süreç",
     navContact: "İletişim",
+    navAbout: "Hakkımızda",
+    servicesMore: "Tüm hizmetleri keşfedin",
     navCta: "Projeye başla",
     heroEyebrow: "Büyüme ve dijital dönüşüm ortağınız",
     heroTitle1: "Dijital işinizin",
@@ -210,6 +216,8 @@ const translations = {
     whyKicker: "Neden ALA Core?",
     whyTitle: "Resmin tamamını gören tek bir ortak.",
     whyLead: "Teknolojiyi gerçeklikten kopuk sunmayız. İş hedeflerinizle başlar, doğru çözümü tasarlar, ardından sizinle birlikte inşa eder, işletir ve geliştiririz.",
+    whatWeValueKicker: "Bizi farklı kılan",
+    whatWeValueTitle: "Şablonlarımıza göre değil, hedeflerinize göre kurgulanır.",
     value1Title: "İşinize özel tasarlanmış çözümler",
     value1Desc: "Katı şablonlar yok; her karar bir hedefe ve ölçülebilir bir sonuca bağlıdır.",
     value2Title: "Uçtan uca uygulama",
@@ -274,6 +282,8 @@ const translations = {
     navWhy: "Warum wir",
     navProcess: "Vorgehen",
     navContact: "Kontakt",
+    navAbout: "Über uns",
+    servicesMore: "Alle Leistungen entdecken",
     navCta: "Projekt starten",
     heroEyebrow: "Ihr Partner für Wachstum & digitale Transformation",
     heroTitle1: "Wir bauen den",
@@ -344,6 +354,8 @@ const translations = {
     whyKicker: "Warum ALA Core?",
     whyTitle: "Ein Partner, der das Gesamtbild sieht.",
     whyLead: "Wir liefern Technologie nicht losgelöst von der Realität. Wir starten mit Ihren Geschäftszielen, entwerfen die passende Lösung und bauen, betreiben und verbessern sie gemeinsam mit Ihnen.",
+    whatWeValueKicker: "Was uns auszeichnet",
+    whatWeValueTitle: "Auf Ihre Ziele ausgerichtet, nicht auf unsere Vorlagen.",
     value1Title: "Auf Ihr Unternehmen zugeschnittene Lösungen",
     value1Desc: "Keine starren Vorlagen – jede Entscheidung ist mit einem Ziel und einem messbaren Ergebnis verknüpft.",
     value2Title: "Umsetzung aus einer Hand",
@@ -853,7 +865,7 @@ function applyLanguage(language) {
   currentLanguage = language;
   html.lang = language;
   html.dir = "ltr";
-  document.title = PAGE_TITLES[language];
+  document.title = (window.ALA_PAGE_TITLES && window.ALA_PAGE_TITLES[language]) || PAGE_TITLES[language];
   langLabel.textContent = LANGUAGE_LABELS[language];
   langToggle.setAttribute("aria-label", `Switch to ${NEXT_LANGUAGE_LABEL[language]}`);
 
@@ -1100,11 +1112,19 @@ mobileMenu.querySelectorAll("a").forEach((link) => link.addEventListener("click"
 
 chatLauncher.addEventListener("click", toggleChat);
 chatClose.addEventListener("click", closeChat);
-document.getElementById("openChatHero").addEventListener("click", () => openChat());
-document.getElementById("openChatSolutions").addEventListener("click", () => {
-  openChat(OPEN_CHAT_SOLUTIONS_QUESTION[currentLanguage]);
-});
-document.getElementById("openChatFaq").addEventListener("click", () => openChat());
+
+const openChatHero = document.getElementById("openChatHero");
+if (openChatHero) openChatHero.addEventListener("click", () => openChat());
+
+const openChatSolutions = document.getElementById("openChatSolutions");
+if (openChatSolutions) {
+  openChatSolutions.addEventListener("click", () => {
+    openChat(OPEN_CHAT_SOLUTIONS_QUESTION[currentLanguage]);
+  });
+}
+
+const openChatFaq = document.getElementById("openChatFaq");
+if (openChatFaq) openChatFaq.addEventListener("click", () => openChat());
 
 document.querySelectorAll("[data-chat-question]").forEach((button) => {
   button.addEventListener("click", () => {
@@ -1120,16 +1140,18 @@ chatForm.addEventListener("submit", (event) => {
   handleUserMessage(chatInput.value);
 });
 
-contactForm.addEventListener("submit", (event) => {
-  event.preventDefault();
-  const data = new FormData(contactForm);
-  const template = WHATSAPP_MESSAGE_TEMPLATES[currentLanguage] || WHATSAPP_MESSAGE_TEMPLATES.en;
-  const message = template(data);
+if (contactForm) {
+  contactForm.addEventListener("submit", (event) => {
+    event.preventDefault();
+    const data = new FormData(contactForm);
+    const template = WHATSAPP_MESSAGE_TEMPLATES[currentLanguage] || WHATSAPP_MESSAGE_TEMPLATES.en;
+    const message = template(data);
 
-  const url = `https://wa.me/4917621812212?text=${encodeURIComponent(message)}`;
-  window.open(url, "_blank", "noopener,noreferrer");
-  showToast(WHATSAPP_SENT_TOAST[currentLanguage] || WHATSAPP_SENT_TOAST.en);
-});
+    const url = `https://wa.me/4917621812212?text=${encodeURIComponent(message)}`;
+    window.open(url, "_blank", "noopener,noreferrer");
+    showToast(WHATSAPP_SENT_TOAST[currentLanguage] || WHATSAPP_SENT_TOAST.en);
+  });
+}
 
 window.addEventListener("scroll", () => {
   siteHeader.classList.toggle("scrolled", window.scrollY > 30);
@@ -1171,5 +1193,6 @@ const navObserver = new IntersectionObserver(
 
 document.querySelectorAll("main section[id]").forEach((section) => navObserver.observe(section));
 
-document.getElementById("year").textContent = new Date().getFullYear();
+const yearEl = document.getElementById("year");
+if (yearEl) yearEl.textContent = new Date().getFullYear();
 applyLanguage(currentLanguage);

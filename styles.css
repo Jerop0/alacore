@@ -34,7 +34,7 @@
   --line: rgba(169, 202, 239, 0.13);
   --line-strong: rgba(86, 177, 255, 0.3);
   --text: #f6f9ff;
-  --muted: #91a1b8;
+  --muted: #aab8ce;
   --blue: #0679ff;
   --cyan: #00d9ff;
   --blue-soft: #4ea8ff;
@@ -739,8 +739,9 @@ html[dir="ltr"] .logo-card {
   gap: 9px;
   margin-bottom: 14px;
   color: var(--cyan);
-  font-size: 11px;
+  font-size: 12.5px;
   font-weight: 600;
+  letter-spacing: 0.3px;
 }
 
 .section-kicker::before {
@@ -870,9 +871,9 @@ html[lang="en"] .contact-copy h2 {
 
 .service-card > p {
   margin-bottom: 22px;
-  color: #8293aa;
-  font-size: 12px;
-  line-height: 1.85;
+  color: #b3c1d5;
+  font-size: 14.5px;
+  line-height: 1.8;
 }
 
 .service-tags {
@@ -883,14 +884,14 @@ html[lang="en"] .contact-copy h2 {
 }
 
 .service-tags span {
-  padding: 5px 9px;
+  padding: 6px 11px;
   direction: ltr;
-  color: #8ea1b9;
-  border: 1px solid rgba(151, 181, 214, 0.1);
-  background: rgba(255, 255, 255, 0.024);
+  color: #b1c2d8;
+  border: 1px solid rgba(151, 181, 214, 0.16);
+  background: rgba(255, 255, 255, 0.035);
   border-radius: 7px;
   font-family: var(--font-en);
-  font-size: 9px;
+  font-size: 12px;
   line-height: 1.5;
 }
 
@@ -902,11 +903,11 @@ html[lang="en"] .contact-copy h2 {
   margin-top: auto;
   padding: 0;
   cursor: pointer;
-  color: #65b8ff;
+  color: #7cc4ff;
   border: 0;
   background: transparent;
-  font-size: 11px;
-  font-weight: 500;
+  font-size: 13.5px;
+  font-weight: 600;
 }
 
 .service-link span:last-child {
@@ -1044,16 +1045,16 @@ html[dir="rtl"] .service-link:hover span:last-child {
 }
 
 .solution-number {
-  color: #526881;
+  color: #7189a3;
   font-family: var(--font-en);
-  font-size: 9px;
+  font-size: 11px;
   letter-spacing: 1.3px;
 }
 
 .solution-sector {
-  color: #53708e;
+  color: #7592b0;
   font-family: var(--font-en);
-  font-size: 7px;
+  font-size: 10px;
   font-weight: 650;
   letter-spacing: 1px;
 }
@@ -1083,9 +1084,9 @@ html[dir="rtl"] .service-link:hover span:last-child {
 .solution-summary {
   min-height: 59px;
   margin-bottom: 23px;
-  color: #8395ab;
-  font-size: 11px;
-  line-height: 1.85;
+  color: #c6d2e2;
+  font-size: 15px;
+  line-height: 1.75;
 }
 
 .solution-flow {
@@ -1096,8 +1097,8 @@ html[dir="rtl"] .service-link:hover span:last-child {
 
 .solution-flow > div {
   position: relative;
-  padding: 15px 0;
-  border-top: 1px solid rgba(151, 184, 219, 0.1);
+  padding: 17px 0;
+  border-top: 1px solid rgba(151, 184, 219, 0.12);
 }
 
 .solution-flow > div::before {
@@ -1114,23 +1115,25 @@ html[dir="rtl"] .service-link:hover span:last-child {
 
 .solution-flow small {
   display: block;
-  margin-bottom: 5px;
-  color: #4f83b0;
-  font-size: 8px;
-  font-weight: 600;
+  margin-bottom: 7px;
+  color: #8cc0ef;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.6px;
+  text-transform: uppercase;
 }
 
 .solution-flow p {
-  color: #8999ad;
-  font-size: 9px;
-  line-height: 1.8;
+  color: #c2cfe0;
+  font-size: 14px;
+  line-height: 1.7;
 }
 
 .solution-flow .expected-result {
   margin-top: auto;
-  padding: 14px;
-  border: 1px solid rgba(0, 151, 255, 0.12);
-  background: rgba(0, 118, 230, 0.045);
+  padding: 16px;
+  border: 1px solid rgba(0, 151, 255, 0.18);
+  background: rgba(0, 118, 230, 0.07);
   border-radius: 11px;
 }
 
@@ -1139,11 +1142,11 @@ html[dir="rtl"] .service-link:hover span:last-child {
 }
 
 .solution-flow .expected-result small {
-  color: var(--cyan);
+  color: #57c7ff;
 }
 
 .solution-flow .expected-result p {
-  color: #b1c0d1;
+  color: #dbe6f4;
 }
 
 .solutions-cta {
@@ -1163,20 +1166,21 @@ html[dir="rtl"] .service-link:hover span:last-child {
 .mini-label {
   display: block;
   margin-bottom: 6px;
-  color: #6485a7;
-  font-size: 8px;
+  color: #86a3c2;
+  font-size: 11px;
+  letter-spacing: 0.3px;
 }
 
 .solutions-cta h3 {
   color: #e6f1ff;
-  font-size: 17px;
+  font-size: 18.5px;
   font-weight: 550;
 }
 
 .solutions-cta .button {
   min-width: 205px;
   flex: 0 0 auto;
-  font-size: 11px;
+  font-size: 13px;
 }
 
 .why-section {
@@ -1380,13 +1384,14 @@ html[dir="rtl"] .service-link:hover span:last-child {
 .value-item h3 {
   margin-bottom: 6px;
   color: #eaf3ff;
-  font-size: 15px;
+  font-size: 16.5px;
   font-weight: 550;
 }
 
 .value-item p {
-  color: #7789a1;
-  font-size: 11px;
+  color: #aab8ce;
+  font-size: 13.5px;
+  line-height: 1.7;
 }
 
 .process-section {
@@ -1461,9 +1466,9 @@ html[dir="rtl"] .service-link:hover span:last-child {
 }
 
 .process-card p {
-  color: #7f91a9;
-  font-size: 11px;
-  line-height: 1.8;
+  color: #a7b5ca;
+  font-size: 13.5px;
+  line-height: 1.75;
 }
 
 .faq-section {
@@ -1500,13 +1505,13 @@ html[lang="en"] .faq-copy h2 {
 .faq-copy > p {
   margin-bottom: 27px;
   color: var(--muted);
-  font-size: 12px;
-  line-height: 1.95;
+  font-size: 14px;
+  line-height: 1.9;
 }
 
 .faq-copy .button {
   min-height: 48px;
-  font-size: 10px;
+  font-size: 13px;
 }
 
 .faq-list {
@@ -1524,10 +1529,10 @@ html[lang="en"] .faq-copy h2 {
   gap: 25px;
   padding: 24px 2px;
   cursor: pointer;
-  color: #dfeaf7;
+  color: #eaf3ff;
   list-style: none;
-  font-size: 14px;
-  font-weight: 500;
+  font-size: 15.5px;
+  font-weight: 600;
 }
 
 .faq-list summary::-webkit-details-marker {
@@ -1572,9 +1577,9 @@ html[lang="en"] .faq-copy h2 {
 .faq-list details > p {
   max-width: 700px;
   padding: 0 4px 24px;
-  color: #8294aa;
-  font-size: 11px;
-  line-height: 1.95;
+  color: #aebcd1;
+  font-size: 13.5px;
+  line-height: 1.85;
   animation: faqIn 0.25s ease;
 }
 
@@ -1622,9 +1627,9 @@ html[lang="en"] .faq-copy h2 {
 
 .contact-copy > p {
   margin-bottom: 30px;
-  color: #96a8c0;
-  font-size: 13px;
-  line-height: 1.95;
+  color: #aebcd1;
+  font-size: 15px;
+  line-height: 1.9;
 }
 
 .contact-links {
@@ -1668,18 +1673,19 @@ html[lang="en"] .faq-copy h2 {
 }
 
 .contact-links small {
-  color: #70839d;
+  color: #8496af;
   font-family: var(--font-en);
-  font-size: 8px;
+  font-size: 10.5px;
+  letter-spacing: 0.5px;
   text-transform: uppercase;
 }
 
 .contact-links strong {
   overflow-wrap: anywhere;
-  color: #dce9f9;
+  color: #e6f0fb;
   font-family: var(--font-en);
-  font-size: 11px;
-  font-weight: 500;
+  font-size: 14px;
+  font-weight: 600;
 }
 
 .contact-form {
@@ -1702,9 +1708,9 @@ html[lang="en"] .faq-copy h2 {
 .contact-form label {
   display: flex;
   flex-direction: column;
-  gap: 7px;
-  color: #aab8ca;
-  font-size: 10px;
+  gap: 8px;
+  color: #c3cfe0;
+  font-size: 13px;
   font-weight: 500;
 }
 
@@ -1717,14 +1723,14 @@ html[lang="en"] .faq-copy h2 {
   border: 1px solid rgba(151, 184, 219, 0.14);
   background: rgba(255, 255, 255, 0.035);
   border-radius: 10px;
-  font-size: 11px;
+  font-size: 14px;
   transition: 0.2s ease;
 }
 
 .contact-form input,
 .contact-form select {
-  height: 47px;
-  padding: 0 13px;
+  height: 50px;
+  padding: 0 14px;
 }
 
 .contact-form textarea {
@@ -1735,7 +1741,7 @@ html[lang="en"] .faq-copy h2 {
 
 .contact-form input::placeholder,
 .contact-form textarea::placeholder {
-  color: #53657c;
+  color: #6b7d94;
 }
 
 .contact-form input:focus,
@@ -1753,14 +1759,14 @@ html[lang="en"] .faq-copy h2 {
 
 .form-submit {
   width: 100%;
-  min-height: 49px;
+  min-height: 52px;
   margin-top: 2px;
-  font-size: 11px;
+  font-size: 13.5px;
 }
 
 .form-note {
-  color: #536780;
-  font-size: 8px;
+  color: #71839a;
+  font-size: 11.5px;
   text-align: center;
 }
 
@@ -1783,15 +1789,15 @@ html[lang="en"] .faq-copy h2 {
 }
 
 .footer-main > p {
-  color: #63758d;
-  font-size: 10px;
+  color: #8090a6;
+  font-size: 12px;
 }
 
 .footer-links {
   display: flex;
   gap: 25px;
-  color: #8595a9;
-  font-size: 10px;
+  color: #a3b2c6;
+  font-size: 12.5px;
 }
 
 .footer-links a:hover {
@@ -1800,10 +1806,10 @@ html[lang="en"] .faq-copy h2 {
 
 .footer-bottom {
   padding-top: 18px;
-  color: #485a72;
+  color: #6b7d95;
   border-top: 1px solid rgba(151, 184, 219, 0.08);
   font-family: var(--font-en);
-  font-size: 8px;
+  font-size: 11px;
 }
 
 .footer-status {
@@ -2740,5 +2746,116 @@ html[dir="ltr"] .chat-input-row button {
   .reveal {
     opacity: 1;
     transform: none;
+  }
+}
+
+/* ============================================================
+   Multi-page additions: teaser cards, page hero, CTA
+   ============================================================ */
+
+/* Home services teaser — compact cards that link to the full page */
+.teaser-grid {
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.service-teaser-card {
+  min-height: 0;
+  text-decoration: none;
+  color: inherit;
+}
+
+.service-teaser-card h3 {
+  margin-bottom: 10px;
+}
+
+.service-teaser-card > p {
+  margin-bottom: 0;
+}
+
+.service-teaser-card::after {
+  content: "↗";
+  position: absolute;
+  right: 24px;
+  bottom: 22px;
+  color: #4e6078;
+  font-size: 16px;
+  opacity: 0;
+  transform: translateY(6px);
+  transition: opacity 0.35s ease, transform 0.35s ease, color 0.35s ease;
+}
+
+.service-teaser-card:hover::after {
+  opacity: 1;
+  transform: translateY(0);
+  color: #a9dcff;
+}
+
+.services-more {
+  display: flex;
+  justify-content: center;
+  margin-top: 46px;
+}
+
+/* Sub-page hero / header band */
+.page-hero {
+  position: relative;
+  padding: 150px 0 40px;
+  overflow: hidden;
+}
+
+.page-hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(circle at 15% 0%, rgba(0, 141, 255, 0.12), transparent 45%),
+    radial-gradient(circle at 90% 10%, rgba(0, 90, 200, 0.08), transparent 40%);
+  pointer-events: none;
+}
+
+.page-hero .container {
+  position: relative;
+}
+
+.page-hero .section-kicker {
+  margin-bottom: 16px;
+}
+
+.page-hero h1 {
+  max-width: 760px;
+  margin-bottom: 18px;
+  font-size: clamp(32px, 5vw, 52px);
+  font-weight: 600;
+  line-height: 1.12;
+  color: #eef6ff;
+}
+
+.page-hero p {
+  max-width: 620px;
+  color: #8293aa;
+  font-size: 15px;
+  line-height: 1.9;
+}
+
+.page-hero-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
+  margin-top: 30px;
+}
+
+@media (max-width: 1020px) {
+  .teaser-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 720px) {
+  .teaser-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .page-hero {
+    padding: 120px 0 20px;
   }
 }
