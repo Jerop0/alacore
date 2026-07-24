@@ -1,0 +1,146 @@
+---
+import Card from '../ui/Card.astro';
+import Pill from '../ui/Pill.astro';
+
+interface Props {
+  entry: {
+    industry: string;
+    built: string;
+    outcome: string;
+    tags?: string[];
+    client?: string;
+    quote?: string;
+  };
+  labels: {
+    industry: string;
+    built: string;
+    outcome: string;
+    tags: string;
+  };
+}
+
+const { entry, labels } = Astro.props;
+---
+
+<Card class="work-card">
+  <div class="work-card__meta">
+    <span class="work-card__industry">{entry.industry}</span>
+  </div>
+  <h3 class="work-card__built">{entry.built}</h3>
+  {entry.client && <p class="work-card__client">{entry.client}</p>}
+  {entry.quote && <blockquote class="work-card__quote">"{entry.quote}"</blockquote>}
+  <dl class="work-card__details">
+    <div>
+      <dt>{labels.built}</dt>
+      <dd>{entry.built}</dd>
+    </div>
+    <div>
+      <dt>{labels.outcome}</dt>
+      <dd>{entry.outcome}</dd>
+    </div>
+  </dl>
+  {
+    entry.tags && entry.tags.length > 0 && (
+      <div class="work-card__tags">
+        <span class="work-card__tags-label">{labels.tags}</span>
+        <div class="work-card__tags-list">
+          {entry.tags.map((tag) => (
+            <Pill>{tag}</Pill>
+          ))}
+        </div>
+      </div>
+    )
+  }
+</Card>
+
+<style>
+  .work-card {
+    display: flex;
+    flex-direction: column;
+    gap: 0.875rem;
+  }
+
+  .work-card__meta {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+  }
+
+  .work-card__industry {
+    font-size: var(--text-sm);
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    color: var(--accent);
+  }
+
+  .work-card__built {
+    font-size: var(--text-xl);
+    font-weight: 700;
+    line-height: 1.2;
+    color: var(--text-primary);
+  }
+
+  .work-card__client {
+    font-size: var(--text-sm);
+    font-weight: 600;
+    color: var(--text-secondary);
+  }
+
+  .work-card__quote {
+    margin: 0;
+    padding: 1rem 1.25rem;
+    border-left: 3px solid var(--accent);
+    background-color: var(--surface);
+    border-radius: 0 var(--ala-radius-md) var(--ala-radius-md) 0;
+    font-size: var(--text-md);
+    font-style: italic;
+    line-height: 1.6;
+    color: var(--text-secondary);
+  }
+
+  .work-card__details {
+    display: grid;
+    gap: 1rem;
+    margin: 0;
+  }
+
+  .work-card__details dt {
+    font-size: var(--text-xs);
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    color: var(--text-tertiary);
+    margin-bottom: 0.25rem;
+  }
+
+  .work-card__details dd {
+    margin: 0;
+    font-size: var(--text-base);
+    line-height: 1.6;
+    color: var(--text-secondary);
+  }
+
+  .work-card__tags {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 0.5rem;
+    margin-top: auto;
+    padding-top: 0.5rem;
+  }
+
+  .work-card__tags-label {
+    font-size: var(--text-xs);
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    color: var(--text-tertiary);
+  }
+
+  .work-card__tags-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+  }
+</style>

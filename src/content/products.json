@@ -1,0 +1,215 @@
+{
+  "en": {
+    "meta": {
+      "title": "Products — ALA CORE",
+      "description": "Apps and products we build and run to help restaurants, clinics, schools, shops, offices, and factories work better."
+    },
+    "heading": "Products we build and run",
+    "support": "Tools we own, operate, and keep improving. Each one is built around a real business job.",
+    "status": {
+      "live": "Live",
+      "beta": "Beta",
+      "comingSoon": "Coming soon"
+    },
+    "cta": "Learn more",
+    "contact": "Talk to us",
+    "products": [
+      {
+        "name": "ALA Menu",
+        "tagline": "Digital menu and QR ordering for restaurants and cafés.",
+        "description": "Guests scan a QR code, see your menu, and place orders. You update prices and dishes anytime.",
+        "forWhom": "for restaurants and cafés",
+        "status": "live",
+        "icon": "QrCode",
+        "cta": "/solutions"
+      },
+      {
+        "name": "ALA Book",
+        "tagline": "Online appointments and reservations.",
+        "description": "Let customers book a table, slot, or visit from your website or WhatsApp. Reduce no-shows with reminders.",
+        "forWhom": "for clinics, salons, schools, and restaurants",
+        "status": "live",
+        "icon": "CalendarCheck",
+        "cta": "/solutions"
+      },
+      {
+        "name": "ALA Store",
+        "tagline": "Your own online store and ordering page.",
+        "description": "Sell products, take orders, and accept payments without relying on third-party marketplaces.",
+        "forWhom": "for retail, restaurants, and delivery",
+        "status": "beta",
+        "icon": "ShoppingBag",
+        "cta": "/solutions"
+      },
+      {
+        "name": "ALA Chat",
+        "tagline": "WhatsApp chatbot for common questions.",
+        "description": "Answer opening hours, bookings, and order questions automatically. Hand over to a human when needed.",
+        "forWhom": "for any customer-facing business",
+        "status": "live",
+        "icon": "MessageCircle",
+        "cta": "/solutions"
+      },
+      {
+        "name": "ALA Flow",
+        "tagline": "Automation for everyday tasks.",
+        "description": "Send reminders, update records, and move information between systems without manual copying.",
+        "forWhom": "for offices, warehouses, and clinics",
+        "status": "beta",
+        "icon": "Workflow",
+        "cta": "/solutions"
+      },
+      {
+        "name": "ALA Insight",
+        "tagline": "Simple dashboards and reports.",
+        "description": "See today's sales, stock, visits, or staff hours in one clear view. No spreadsheet wrangling.",
+        "forWhom": "for managers and owners",
+        "status": "live",
+        "icon": "BarChart3",
+        "cta": "/solutions"
+      }
+    ]
+  },
+  "de": {
+    "meta": {
+      "title": "Produkte — ALA CORE",
+      "description": "Apps und Produkte, die wir entwickeln und betreiben, damit Restaurants, Praxen, Schulen, Shops, Büros und Fabriken besser arbeiten."
+    },
+    "heading": "Produkte, die wir entwickeln und betreiben",
+    "support": "Tools, die wir besitzen, betreiben und kontinuierlich verbessern. Jedes ist auf eine echte Aufgabe im Geschäft ausgerichtet.",
+    "status": {
+      "live": "Live",
+      "beta": "Beta",
+      "comingSoon": "Demnächst"
+    },
+    "cta": "Mehr erfahren",
+    "contact": "Mit uns sprechen",
+    "products": [
+      {
+        "name": "ALA Menu",
+        "tagline": "Digitale Speisekarte und QR-Bestellung für Restaurants und Cafés.",
+        "description": "Gäste scannen einen QR-Code, sehen Ihre Speisekarte und bestellen. Sie aktualisieren Preise und Gerichte jederzeit.",
+        "forWhom": "für Restaurants und Cafés",
+        "status": "live",
+        "icon": "QrCode",
+        "cta": "/solutions"
+      },
+      {
+        "name": "ALA Book",
+        "tagline": "Online-Termine und Reservierungen.",
+        "description": "Lassen Sie Kunden über Ihre Website oder WhatsApp einen Tisch, Termin oder Besuch buchen. Reduzieren Sie Ausfälle mit Erinnerungen.",
+        "forWhom": "für Praxen, Salons, Schulen und Restaurants",
+        "status": "live",
+        "icon": "CalendarCheck",
+        "cta": "/solutions"
+      },
+      {
+        "name": "ALA Store",
+        "tagline": "Ihr eigener Online-Shop und Bestellseite.",
+        "description": "Verkaufen Sie Produkte, nehmen Sie Bestellungen entgegen und akzeptieren Sie Zahlungen ohne Abhängigkeit von Marktplätzen.",
+        "forWhom": "für Einzelhandel, Restaurants und Lieferdienste",
+        "status": "beta",
+        "icon": "ShoppingBag",
+        "cta": "/solutions"
+      },
+      {
+        "name": "ALA Chat",
+        "tagline": "WhatsApp-Chatbot für häufige Fragen.",
+        "description": "Beantworten Sie Öffnungszeiten, Buchungen und Bestellfragen automatisch. Übergeben Sie bei Bedarf an einen Menschen.",
+        "forWhom": "für jedes kundenorientierte Unternehmen",
+        "status": "live",
+        "icon": "MessageCircle",
+        "cta": "/solutions"
+      },
+      {
+        "name": "ALA Flow",
+        "tagline": "Automatisierung für alltägliche Aufgaben.",
+        "description": "Senden Sie Erinnerungen, aktualisieren Sie Datensätze und übertragen Sie Informationen zwischen Systemen ohne manuelles Kopieren.",
+        "forWhom": "für Büros, Lager und Praxen",
+        "status": "beta",
+        "icon": "Workflow",
+        "cta": "/solutions"
+      },
+      {
+        "name": "ALA Insight",
+        "tagline": "Einfache Dashboards und Berichte.",
+        "description": "Sehen Sie Umsatz, Bestand, Besuche oder Arbeitsstunden in einer klaren Übersicht. Keine Spreadsheet-Bastelei.",
+        "forWhom": "für Manager und Geschäftsführer",
+        "status": "live",
+        "icon": "BarChart3",
+        "cta": "/solutions"
+      }
+    ]
+  },
+  "tr": {
+    "meta": {
+      "title": "Ürünler — ALA CORE",
+      "description": "Restoran, klinik, okul, mağaza, ofis ve fabrikaların daha iyi çalışması için geliştirdiğimiz ve işlettiğimiz uygulamalar ve ürünler."
+    },
+    "heading": "Geliştirdiğimiz ve işlettiğimiz ürünler",
+    "support": "Sahip olduğumuz, işlettiğimiz ve sürekli geliştirdiğimiz araçlar. Her biri gerçek bir iş ihtiyacı etrafında şekillenir.",
+    "status": {
+      "live": "Yayında",
+      "beta": "Beta",
+      "comingSoon": "Yakında"
+    },
+    "cta": "Daha fazla bilgi",
+    "contact": "Bizimle konuşun",
+    "products": [
+      {
+        "name": "ALA Menu",
+        "tagline": "Restoranlar ve kafeler için dijital menü ve QR sipariş.",
+        "description": "Misafirler QR kodu tarar, menünüzü görür ve sipariş verir. Fiyatları ve yemekleri istediğiniz zaman güncellersiniz.",
+        "forWhom": "restoranlar ve kafeler için",
+        "status": "live",
+        "icon": "QrCode",
+        "cta": "/solutions"
+      },
+      {
+        "name": "ALA Book",
+        "tagline": "Online randevu ve rezervasyon.",
+        "description": "Müşterileriniz web sitenizden veya WhatsApp'tan masa, slot veya ziyaret rezervasyonu yapsın. Hatırlatmalarla iptalleri azaltın.",
+        "forWhom": "klinikler, güzellik salonları, okullar ve restoranlar için",
+        "status": "live",
+        "icon": "CalendarCheck",
+        "cta": "/solutions"
+      },
+      {
+        "name": "ALA Store",
+        "tagline": "Kendi online mağazanız ve sipariş sayfanız.",
+        "description": "Ürün satın, sipariş alın ve üçüncü taraf pazaryerlerine bağımlı kalmadan ödeme kabul edin.",
+        "forWhom": "perakende, restoranlar ve teslimat için",
+        "status": "beta",
+        "icon": "ShoppingBag",
+        "cta": "/solutions"
+      },
+      {
+        "name": "ALA Chat",
+        "tagline": "Sık sorulan sorular için WhatsApp chatbot'u.",
+        "description": "Çalışma saatleri, rezervasyon ve sipariş sorularını otomatik yanıtlayın. Gerekirinde bir insana yönlendirin.",
+        "forWhom": "müşteriye bakan her işletme için",
+        "status": "live",
+        "icon": "MessageCircle",
+        "cta": "/solutions"
+      },
+      {
+        "name": "ALA Flow",
+        "tagline": "Günlük görevler için otomasyon.",
+        "description": "Hatırlatmalar gönderin, kayıtları güncelleyin ve sistemler arasında bilgiyi manuel kopyalama olmadan aktarın.",
+        "forWhom": "ofisler, depolar ve klinikler için",
+        "status": "beta",
+        "icon": "Workflow",
+        "cta": "/solutions"
+      },
+      {
+        "name": "ALA Insight",
+        "tagline": "Basit panolar ve raporlar.",
+        "description": "Günün satışını, stokunu, ziyaretlerini veya personel saatlerini tek bir açık görünümde görün. Spreadsheet çilesi yok.",
+        "forWhom": "yöneticiler ve işletme sahipleri için",
+        "status": "live",
+        "icon": "BarChart3",
+        "cta": "/solutions"
+      }
+    ]
+  }
+}

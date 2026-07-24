@@ -1,0 +1,68 @@
+{
+  "en": {
+    "meta": {
+      "title": "Work — ALA CORE",
+      "description": "Real projects we have built for clients. Case studies are added only when we have permission to share them."
+    },
+    "heading": "Work we have done",
+    "support": "Real client projects, not illustrations. We add a case study only when the client has given permission.",
+    "distinction": "Example Solutions on our homepage are illustrative scenarios. The projects here are real.",
+    "empty": {
+      "title": "Case studies are on the way",
+      "body": "We are preparing our first permissioned case studies. In the meantime, tell us what you need and we will show you what is possible.",
+      "ctaPrimary": "Describe your need",
+      "ctaSecondary": "Talk on WhatsApp"
+    },
+    "labels": {
+      "industry": "Industry",
+      "built": "What we built",
+      "outcome": "Outcome",
+      "tags": "Tags"
+    },
+    "entries": []
+  },
+  "de": {
+    "meta": {
+      "title": "Projekte — ALA CORE",
+      "description": "Reale Projekte, die wir für Kunden umgesetzt haben. Fallstudien veröffentlichen wir nur mit Erlaubnis."
+    },
+    "heading": "Projekte, die wir umgesetzt haben",
+    "support": "Reale Kundenprojekte, keine Illustrationen. Eine Fallstudie fügen wir nur hinzu, wenn der Kunde seine Zustimmung gegeben hat.",
+    "distinction": "Beispiellösungen auf unserer Startseite sind illustrative Szenarien. Die Projekte hier sind real.",
+    "empty": {
+      "title": "Fallstudien folgen",
+      "body": "Wir bereiten unsere ersten genehmigten Fallstudien vor. Bis dahin erzählen Sie uns von Ihrem Vorhaben und wir zeigen Ihnen die Möglichkeiten.",
+      "ctaPrimary": "Bedarf beschreiben",
+      "ctaSecondary": "Auf WhatsApp schreiben"
+    },
+    "labels": {
+      "industry": "Branche",
+      "built": "Was wir gebaut haben",
+      "outcome": "Ergebnis",
+      "tags": "Stichworte"
+    },
+    "entries": []
+  },
+  "tr": {
+    "meta": {
+      "title": "Projeler — ALA CORE",
+      "description": "Müşterilerimiz için gerçekleştirdiğimiz gerçek projeler. Vaka çalışmalarını yalnızca izin aldığımızda paylaşıyoruz."
+    },
+    "heading": "Gerçekleştirdiğimiz projeler",
+    "support": "Gerçek müşteri projeleri, örnek değil. Bir vaka çalışmasını yalnızca müşteri izin verdiyse ekliyoruz.",
+    "distinction": "Ana sayfamızdaki Örnek Çözümler illustratif senaryolardır. Buradaki projeler gerçektir.",
+    "empty": {
+      "title": "Vaka çalışmaları yolda",
+      "body": "İlk izinli vaka çalışmalarımızı hazırlıyoruz. Bu arada bize ihtiyacınızı anlatın, olasılıkları gösterelim.",
+      "ctaPrimary": "İhtiyacınızı tanımlayın",
+      "ctaSecondary": "WhatsApp'tan yazın"
+    },
+    "labels": {
+      "industry": "Sektör",
+      "built": "Ne inşa ettik",
+      "outcome": "Sonuç",
+      "tags": "Etiketler"
+    },
+    "entries": []
+  }
+}

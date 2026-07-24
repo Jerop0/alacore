@@ -1,0 +1,51 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 500" role="img" aria-labelledby="title desc">
+  <title id="title">ALA CORE orbital hero visual</title>
+  <desc id="desc">Two A structures around a blue core with restrained orbital paths.</desc>
+  <defs>
+    <radialGradient id="coreGlow">
+      <stop offset="0" stop-color="#5B8CFF" stop-opacity=".8"/>
+      <stop offset=".35" stop-color="#155EEF" stop-opacity=".35"/>
+      <stop offset="1" stop-color="#155EEF" stop-opacity="0"/>
+    </radialGradient>
+    <filter id="glow" x="-100%" y="-100%" width="300%" height="300%">
+      <feGaussianBlur stdDeviation="8"/>
+    </filter>
+    <filter id="nodeGlow" x="-300%" y="-300%" width="700%" height="700%">
+      <feGaussianBlur stdDeviation="5" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+  <g fill="none" stroke="#155EEF">
+    <ellipse cx="450" cy="250" rx="455" ry="166" opacity=".2" stroke-width="1.1" transform="rotate(-4 450 250)"/>
+    <ellipse cx="450" cy="250" rx="430" ry="116" opacity=".42" stroke-width="1.4" transform="rotate(2 450 250)"/>
+    <ellipse cx="450" cy="250" rx="374" ry="94" opacity=".3" stroke-width="1.2" transform="rotate(-3 450 250)"/>
+    <ellipse cx="450" cy="250" rx="318" ry="136" opacity=".22" stroke-width="1.1" transform="rotate(5 450 250)"/>
+    <ellipse cx="450" cy="250" rx="266" ry="74" opacity=".24" stroke-width="1.05"/>
+    <ellipse cx="450" cy="250" rx="398" ry="151" opacity=".24" stroke-width="1.2" stroke-dasharray="2 6" transform="rotate(4 450 250)"/>
+  </g>
+  <g fill="#155EEF" filter="url(#nodeGlow)">
+    <circle cx="33" cy="187" r="5"/>
+    <circle cx="198" cy="376" r="5"/>
+    <circle cx="663" cy="98" r="6"/>
+    <circle cx="817" cy="192" r="6"/>
+    <circle cx="575" cy="398" r="4"/>
+    <circle cx="724" cy="309" r="3"/>
+  </g>
+  <g fill="none" stroke="#5B8CFF" opacity=".65">
+    <circle cx="33" cy="187" r="12"/>
+    <circle cx="663" cy="98" r="13"/>
+    <circle cx="817" cy="192" r="12"/>
+  </g>
+  <circle cx="450" cy="250" r="66" fill="url(#coreGlow)" filter="url(#glow)"/>
+  <g transform="translate(306 164)">
+    <g fill="none" stroke="#FFFFFF" stroke-width="18" stroke-linecap="butt" stroke-linejoin="bevel">
+      <path d="M9 107 63 9l26 44"/>
+      <path d="m198 108 22-40 55 91"/>
+    </g>
+    <circle cx="132.5" cy="88.5" r="31.5" fill="#155EEF"/>
+    <g fill="none" stroke="#FFFFFF" stroke-width="4" stroke-linecap="round">
+      <path d="M132 27c22-19 59-19 81-1"/>
+      <path d="M41 153c21 18 60 18 81 0"/>
+    </g>
+  </g>
+</svg>

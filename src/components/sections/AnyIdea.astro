@@ -1,0 +1,145 @@
+---
+import Button from '../ui/Button.astro';
+import Icon from '../ui/Icon.astro';
+import { localizePath, t } from '../../lib/i18n';
+import type { CopyNode } from '../../lib/i18n';
+import type { Locale } from '../../lib/config';
+
+interface Props {
+  locale: Locale;
+  copy: CopyNode;
+}
+
+const { locale, copy } = Astro.props;
+
+const points = [
+  { title: t(copy, 'sections.anyIdeaPoint1'), body: t(copy, 'sections.anyIdeaPoint1Support'), icon: 'sparkle' },
+  { title: t(copy, 'sections.anyIdeaPoint2'), body: t(copy, 'sections.anyIdeaPoint2Support'), icon: 'globe' },
+  { title: t(copy, 'sections.anyIdeaPoint3'), body: t(copy, 'sections.anyIdeaPoint3Support'), icon: 'settings' },
+];
+---
+
+<section class="section section--mist any-idea" aria-labelledby="any-idea-heading">
+  <div class="container any-idea__inner">
+    <div class="any-idea__copy">
+      <h2 id="any-idea-heading" class="any-idea__title">{t(copy, 'sections.anyIdea')}</h2>
+      <p class="any-idea__support">{t(copy, 'sections.anyIdeaSupport')}</p>
+
+      <div class="any-idea__points">
+        {
+          points.map((point) => (
+            <div class="any-idea__point">
+              <div class="any-idea__icon" aria-hidden="true">
+                <Icon name={point.icon} size={22} />
+              </div>
+              <div>
+                <h3>{point.title}</h3>
+                <p>{point.body}</p>
+              </div>
+            </div>
+          ))
+        }
+      </div>
+
+      <div class="any-idea__actions">
+        <Button id="any-idea-ask-ala">{t(copy, 'sections.anyIdeaCtaPrimary')}</Button>
+        <Button href={localizePath('/contact', locale, locale)} variant="secondary">{t(copy, 'sections.anyIdeaCtaSecondary')}</Button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<script>
+  (function () {
+    const btn = document.getElementById('any-idea-ask-ala');
+    if (!btn) return;
+    btn.addEventListener('click', (e) => {
+      e.preventDefault();
+      window.dispatchEvent(new CustomEvent('open-ask-ala'));
+    });
+  })();
+</script>
+
+<style>
+  .any-idea__inner {
+    display: grid;
+    gap: 2rem;
+  }
+
+  @media (min-width: 1024px) {
+    .any-idea__inner {
+      grid-template-columns: 1.25fr 1fr;
+      align-items: center;
+    }
+  }
+
+  .any-idea__title {
+    font-size: var(--heading-sm);
+    font-weight: 800;
+    line-height: 1.1;
+    letter-spacing: -0.02em;
+    color: var(--text-primary);
+  }
+
+  .any-idea__support {
+    max-width: 64ch;
+    margin-top: 1rem;
+    font-size: var(--text-lg);
+    line-height: 1.55;
+    color: var(--text-secondary);
+  }
+
+  .any-idea__points {
+    display: grid;
+    gap: 1rem;
+    margin-top: 2rem;
+  }
+
+  @media (min-width: 768px) {
+    .any-idea__points {
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1.25rem;
+    }
+  }
+
+  .any-idea__point {
+    display: flex;
+    gap: 0.875rem;
+    padding: 1.25rem;
+    border: 1px solid var(--line);
+    border-radius: var(--ala-radius-md);
+    background-color: var(--bg);
+    box-shadow: var(--shadow-card);
+  }
+
+  .any-idea__icon {
+    display: grid;
+    place-items: center;
+    flex-shrink: 0;
+    width: 40px;
+    height: 40px;
+    border-radius: var(--ala-radius-sm);
+    background-color: var(--accent);
+    color: var(--ala-pure-white);
+  }
+
+  .any-idea__point h3 {
+    font-size: var(--text-md);
+    font-weight: 700;
+    color: var(--text-primary);
+    margin-bottom: 0.25rem;
+  }
+
+  .any-idea__point p {
+    font-size: var(--text-sm);
+    line-height: 1.5;
+    color: var(--text-secondary);
+  }
+
+  .any-idea__actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+    margin-top: 2rem;
+  }
+</style>

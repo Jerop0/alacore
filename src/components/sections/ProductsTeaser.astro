@@ -1,0 +1,115 @@
+---
+import SectionHeading from '../ui/SectionHeading.astro';
+import Icon from '../ui/Icon.astro';
+import Button from '../ui/Button.astro';
+import { localizePath, t } from '../../lib/i18n';
+import type { CopyNode } from '../../lib/i18n';
+import type { Locale } from '../../lib/config';
+import productsData from '../../content/products.json';
+
+interface Props {
+  locale: Locale;
+  copy: CopyNode;
+}
+
+const { locale, copy } = Astro.props;
+const data = (productsData as Record<string, any>)[locale] ?? (productsData as Record<string, any>)['en'];
+const highlights = data.products.slice(0, 3);
+
+function toKebab(str: string) {
+  return str.replace(/([a-z])([A-Z])/g, '$1-$2').toLowerCase();
+}
+---
+
+<section class="section section--products-teaser" aria-labelledby="products-teaser-heading">
+  <div class="container">
+    <SectionHeading
+      id="products-teaser-heading"
+      title={t(copy, 'sections.products')}
+      supporting={t(copy, 'sections.productsSupport')}
+    />
+    <div class="products-teaser__list">
+      {
+        highlights.map((product: any) => (
+          <article class="products-teaser__item">
+            <div class="products-teaser__icon" aria-hidden="true">
+              <Icon name={toKebab(product.icon)} size={22} />
+            </div>
+            <div class="products-teaser__content">
+              <h3>{product.name}</h3>
+              <p>{product.tagline}</p>
+            </div>
+          </article>
+        ))
+      }
+    </div>
+    <div class="products-teaser__cta">
+      <Button href={localizePath('/products', locale, locale)} variant="primary" size="md">
+        {t(copy, 'sections.productsCta')}
+      </Button>
+    </div>
+  </div>
+</section>
+
+<style>
+  .products-teaser__list {
+    display: grid;
+    gap: 1rem;
+    margin-top: 2rem;
+  }
+
+  @media (min-width: 768px) {
+    .products-teaser__list {
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1.25rem;
+    }
+  }
+
+  .products-teaser__item {
+    display: flex;
+    align-items: flex-start;
+    gap: 1rem;
+    padding: 1.25rem;
+    border: 1px solid var(--line);
+    border-radius: var(--ala-radius-md);
+    background-color: var(--bg);
+    box-shadow: var(--shadow-card);
+  }
+
+  :global([data-theme='dark']) .products-teaser__item {
+    background-color: var(--surface);
+  }
+
+  .products-teaser__icon {
+    display: grid;
+    place-items: center;
+    flex-shrink: 0;
+    width: 40px;
+    height: 40px;
+    border-radius: var(--ala-radius-sm);
+    background-color: var(--accent);
+    color: var(--ala-pure-white);
+  }
+
+  :global([data-theme='dark']) .products-teaser__icon {
+    color: var(--ala-core-ink);
+  }
+
+  .products-teaser__content h3 {
+    font-size: var(--text-lg);
+    font-weight: 700;
+    color: var(--text-primary);
+    margin-bottom: 0.25rem;
+  }
+
+  .products-teaser__content p {
+    font-size: var(--text-sm);
+    line-height: 1.5;
+    color: var(--text-secondary);
+  }
+
+  .products-teaser__cta {
+    margin-top: 2rem;
+    text-align: center;
+  }
+</style>

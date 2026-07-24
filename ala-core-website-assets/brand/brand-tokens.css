@@ -1,0 +1,42 @@
+:root {
+  --ala-core-ink: #0b1220;
+  --ala-technology-blue: #155eef;
+  --ala-pure-white: #ffffff;
+  --ala-interface-mist: #f4f7fb;
+  --ala-text-dark: #111827;
+  --ala-text-muted: #667085;
+  --ala-border: #e4e7ec;
+  --ala-success: #12b76a;
+
+  --ala-font: "Manrope", "Inter", "Noto Sans", system-ui, sans-serif;
+  --ala-font-arabic: "Noto Sans Arabic", "Noto Sans", sans-serif;
+
+  --ala-radius-sm: 10px;
+  --ala-radius-md: 16px;
+  --ala-radius-lg: 24px;
+
+  --ala-shadow-card: 0 8px 28px rgb(16 24 40 / 8%);
+  --ala-content-width: 1200px;
+  --ala-section-space: clamp(72px, 8vw, 120px);
+}
+
+body {
+  color: var(--ala-text-dark);
+  background: var(--ala-pure-white);
+  font-family: var(--ala-font);
+}
+
+.ala-dark {
+  color: var(--ala-pure-white);
+  background: var(--ala-core-ink);
+}
+
+.ala-primary-button {
+  min-height: 48px;
+  padding: 0 24px;
+  border: 1px solid var(--ala-technology-blue);
+  border-radius: var(--ala-radius-sm);
+  color: var(--ala-pure-white);
+  background: var(--ala-technology-blue);
+  font-weight: 700;
+}

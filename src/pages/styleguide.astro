@@ -1,0 +1,180 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Button from '../components/ui/Button.astro';
+import Card from '../components/ui/Card.astro';
+import SectionHeading from '../components/ui/SectionHeading.astro';
+import Pill from '../components/ui/Pill.astro';
+import Icon from '../components/ui/Icon.astro';
+---
+
+<Layout title="Styleguide — ALA CORE" description="Internal design system reference" noIndex>
+  <div class="container section styleguide">
+    <h1 class="styleguide__title">Design system</h1>
+
+    <section class="styleguide__section">
+      <h2 class="styleguide__section-title">Colors</h2>
+      <div class="styleguide__swatches">
+        <div class="styleguide__swatch" style="background:#0B1220;color:#fff">Core Ink</div>
+        <div class="styleguide__swatch" style="background:#155EEF;color:#fff">Technology Blue</div>
+        <div class="styleguide__swatch" style="background:#F4F7FB;color:#111827">Interface Mist</div>
+        <div class="styleguide__swatch" style="background:#111827;color:#fff">Text Dark</div>
+        <div class="styleguide__swatch" style="background:#667085;color:#fff">Text Muted</div>
+        <div class="styleguide__swatch" style="background:#12B76A;color:#fff">Success</div>
+      </div>
+    </section>
+
+    <section class="styleguide__section">
+      <h2 class="styleguide__section-title">Typography</h2>
+      <p class="styleguide__sample styleguide__sample--hero">Hero heading — The quick brown fox</p>
+      <p class="styleguide__sample styleguide__sample--md">Section heading — The quick brown fox</p>
+      <p class="styleguide__sample styleguide__sample--sm">Subsection heading — The quick brown fox</p>
+      <p class="styleguide__sample styleguide__sample--body">Body — The quick brown fox jumps over the lazy dog. ALA CORE builds apps, websites, chatbots, automation, dashboards, and business systems that make companies easier to run.</p>
+      <p class="styleguide__sample styleguide__sample--muted">Muted — The quick brown fox jumps over the lazy dog.</p>
+    </section>
+
+    <section class="styleguide__section">
+      <h2 class="styleguide__section-title">Buttons</h2>
+      <div class="styleguide__row">
+        <Button>Primary</Button>
+        <Button variant="secondary">Secondary</Button>
+        <Button variant="ghost">Ghost</Button>
+      </div>
+      <div class="styleguide__row styleguide__row--dark">
+        <Button onDark>Primary dark</Button>
+        <Button variant="secondary" onDark>Secondary dark</Button>
+      </div>
+    </section>
+
+    <section class="styleguide__section">
+      <h2 class="styleguide__section-title">Cards</h2>
+      <div class="styleguide__grid">
+        <Card>
+          <h3>Card title</h3>
+          <p>Card body content with a sentence.</p>
+        </Card>
+        <Card>
+          <h3>Card title</h3>
+          <p>Card body content with a sentence.</p>
+        </Card>
+      </div>
+    </section>
+
+    <section class="styleguide__section">
+      <h2 class="styleguide__section-title">Section heading</h2>
+      <SectionHeading eyebrow="Eyebrow" title="Short section title" supporting="One supporting sentence that explains what this section is about." />
+    </section>
+
+    <section class="styleguide__section">
+      <h2 class="styleguide__section-title">Pills & Icons</h2>
+      <div class="styleguide__row">
+        <Pill>Business Apps</Pill>
+        <Pill>Websites</Pill>
+        <Pill>Automation</Pill>
+      </div>
+      <div class="styleguide__row">
+        <Icon name="briefcase" size={24} />
+        <Icon name="globe" size={24} />
+        <Icon name="messages-square" size={24} />
+        <Icon name="settings" size={24} />
+        <Icon name="chart-no-axes-column-increasing" size={24} />
+        <Icon name="database" size={24} />
+      </div>
+    </section>
+
+    <section class="styleguide__section">
+      <h2 class="styleguide__section-title">Theme</h2>
+      <p>Toggle the header theme switcher to verify dark tokens.</p>
+    </section>
+  </div>
+</Layout>
+
+<style>
+  .styleguide {
+    padding-top: 48px;
+    padding-bottom: 96px;
+  }
+
+  .styleguide__title {
+    font-size: var(--heading-md);
+    margin-bottom: 2.5rem;
+  }
+
+  .styleguide__section {
+    margin-bottom: 3rem;
+    padding-bottom: 3rem;
+    border-bottom: 1px solid var(--line);
+  }
+
+  .styleguide__section-title {
+    font-size: var(--heading-sm);
+    margin-bottom: 1.25rem;
+  }
+
+  .styleguide__swatches {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+    gap: 1rem;
+  }
+
+  .styleguide__swatch {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 80px;
+    border-radius: var(--ala-radius-md);
+    font-weight: 600;
+    font-size: var(--text-sm);
+  }
+
+  .styleguide__sample {
+    margin-bottom: 1rem;
+    max-width: 68ch;
+  }
+
+  .styleguide__sample--hero {
+    font-size: var(--heading-hero);
+    font-weight: 700;
+    text-transform: uppercase;
+    line-height: 1.02;
+  }
+
+  .styleguide__sample--md {
+    font-size: var(--heading-md);
+    font-weight: 700;
+  }
+
+  .styleguide__sample--sm {
+    font-size: var(--heading-sm);
+    font-weight: 700;
+  }
+
+  .styleguide__sample--body {
+    font-size: var(--text-md);
+    line-height: 1.65;
+  }
+
+  .styleguide__sample--muted {
+    font-size: var(--text-md);
+    color: var(--text-muted);
+  }
+
+  .styleguide__row {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 1rem;
+  }
+
+  .styleguide__row--dark {
+    padding: 1.5rem;
+    background-color: var(--ala-core-ink);
+    border-radius: var(--ala-radius-md);
+  }
+
+  .styleguide__grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.5rem;
+  }
+</style>

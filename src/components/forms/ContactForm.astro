@@ -1,0 +1,347 @@
+---
+import { EMAIL, WHATSAPP_NUMBER, DEFAULT_LOCALE, type Locale } from '../../lib/config';
+import type { CopyNode } from '../../lib/i18n';
+import { t, tArr } from '../../lib/i18n';
+
+interface Props {
+  locale: Locale;
+  copy: CopyNode;
+}
+
+const { locale, copy } = Astro.props;
+const form = (copy.form as CopyNode) ?? {};
+const industries = tArr(form, 'industries');
+const contactMethods = tArr(form, 'contactMethods');
+const errors = (form.errors as CopyNode) ?? {};
+---
+
+<form class="contact-form" id="contact-form" novalidate data-locale={locale} data-errors={JSON.stringify(errors)} data-number={WHATSAPP_NUMBER}>
+  <div class="contact-form__field">
+    <label for="contact-name" class="contact-form__label">{t(form, 'name')}</label>
+    <input type="text" id="contact-name" name="name" class="contact-form__input" placeholder={t(form, 'namePlaceholder')} required />
+    <span class="contact-form__error" id="contact-name-error"></span>
+  </div>
+
+  <div class="contact-form__field">
+    <label for="contact-business" class="contact-form__label">{t(form, 'business')}</label>
+    <input type="text" id="contact-business" name="business" class="contact-form__input" placeholder={t(form, 'businessPlaceholder')} required />
+    <span class="contact-form__error" id="contact-business-error"></span>
+  </div>
+
+  <div class="contact-form__field">
+    <label for="contact-contact" class="contact-form__label">{t(form, 'contact')}</label>
+    <input type="text" id="contact-contact" name="contact" class="contact-form__input" placeholder={t(form, 'contactPlaceholder')} required />
+    <span class="contact-form__error" id="contact-contact-error"></span>
+  </div>
+
+  <div class="contact-form__field">
+    <label for="contact-industry" class="contact-form__label">{t(form, 'industry')}</label>
+    <select id="contact-industry" name="industry" class="contact-form__input" required>
+      <option value="" disabled selected>{t(form, 'industryPlaceholder')}</option>
+      {industries.map((industry) => (
+        <option value={industry}>{industry}</option>
+      ))}
+    </select>
+    <span class="contact-form__error" id="contact-industry-error"></span>
+  </div>
+
+  <div class="contact-form__field">
+    <label for="contact-need" class="contact-form__label">{t(form, 'need')}</label>
+    <textarea id="contact-need" name="need" class="contact-form__input contact-form__textarea" rows="4" placeholder={t(form, 'needPlaceholder')} required></textarea>
+    <span class="contact-form__error" id="contact-need-error"></span>
+  </div>
+
+  <div class="contact-form__field">
+    <span class="contact-form__label">{t(form, 'contactMethod')}</span>
+    <div class="contact-form__radio-group">
+      {
+        contactMethods.map((method, index) => (
+          <label class="contact-form__radio">
+            <input type="radio" name="contactMethod" value={method} required checked={index === 0} />
+            <span>{method}</span>
+          </label>
+        ))
+      }
+    </div>
+    <span class="contact-form__error" id="contact-method-error"></span>
+  </div>
+
+  <div class="contact-form__field">
+    <label class="contact-form__checkbox">
+      <input type="checkbox" id="contact-consent" name="consent" required />
+      <span>{t(form, 'consent')}</span>
+    </label>
+    <span class="contact-form__error" id="contact-consent-error"></span>
+  </div>
+
+  <button type="submit" class="contact-form__submit" id="contact-submit">
+    <span class="contact-form__submit-text">{t(form, 'submit')}</span>
+    <span class="contact-form__submit-loading" aria-hidden="true">{t(form, 'sending')}</span>
+  </button>
+
+  <div class="contact-form__success" id="contact-success" role="status" aria-live="polite">
+    <p>{t(form, 'success')}</p>
+  </div>
+</form>
+
+<script>
+  (function () {
+    const form = document.getElementById('contact-form') as HTMLFormElement | null;
+    if (!form) return;
+
+    const locale = form.dataset.locale ?? 'en';
+    const rawErrors = form.dataset.errors;
+    const localizedErrors: Record<string, string> = rawErrors ? JSON.parse(rawErrors) : {};
+    const submitBtn = document.getElementById('contact-submit') as HTMLButtonElement | null;
+    const success = document.getElementById('contact-success') as HTMLDivElement | null;
+    const errorKeys: Record<string, string> = {
+      name: 'nameRequired',
+      business: 'businessRequired',
+      contact: 'contactRequired',
+      industry: 'industryRequired',
+      need: 'needRequired',
+      consent: 'consentRequired',
+    };
+
+    const getError = (key: string) => {
+      return localizedErrors[key] || 'Please check this field.';
+    };
+
+    const clearErrors = () => {
+      form.querySelectorAll('.contact-form__error').forEach((el) => {
+        el.textContent = '';
+        el.classList.remove('is-visible');
+      });
+      form.querySelectorAll('.contact-form__input').forEach((el) => {
+        el.classList.remove('has-error');
+      });
+    };
+
+    const showError = (name: string, message: string) => {
+      const input = form.querySelector<HTMLElement>(`[name="${name}"], #contact-${name}`);
+      input?.classList.add('has-error');
+      const error = document.getElementById(`contact-${name}-error`);
+      if (error) {
+        error.textContent = message;
+        error.classList.add('is-visible');
+      }
+    };
+
+    const validate = (): Record<string, string> | null => {
+      const data = new FormData(form);
+      const values: Record<string, string> = {};
+      const required = ['name', 'business', 'contact', 'industry', 'need'];
+      let hasError = false;
+      clearErrors();
+
+      required.forEach((key) => {
+        const value = (data.get(key) as string | null)?.trim() ?? '';
+        values[key] = value;
+        if (!value) {
+          showError(key, getError(errorKeys[key]));
+          hasError = true;
+        }
+      });
+
+      const consent = data.get('consent') === 'on';
+      if (!consent) {
+        showError('consent', getError(errorKeys.consent));
+        hasError = true;
+      }
+
+      const contactMethod = (data.get('contactMethod') as string | null) ?? '';
+      if (!contactMethod) {
+        showError('contactMethod', getError(errorKeys.contactMethod ?? 'contactRequired'));
+        hasError = true;
+      }
+
+      return hasError ? null : { ...values, contactMethod, consent: 'yes' };
+    };
+
+    const firstError = () => {
+      const err = form.querySelector('.has-error');
+      if (err) err.focus();
+    };
+
+    form.addEventListener('submit', (e) => {
+      e.preventDefault();
+      if (submitBtn) submitBtn.disabled = true;
+
+      const values = validate();
+      if (!values) {
+        if (submitBtn) submitBtn.disabled = false;
+        firstError();
+        return;
+      }
+
+      const lines = [
+        'Hello, I would like to discuss a project with ALA CORE.',
+        `Name: ${values.name}`,
+        `Business: ${values.business}`,
+        `Contact: ${values.contact}`,
+        `Industry: ${values.industry}`,
+        `What to improve: ${values.need}`,
+        `Preferred contact: ${values.contactMethod}`,
+      ];
+      const text = encodeURIComponent(lines.join('\n'));
+      const number = form.dataset.number ?? '4917621812212';
+      window.open(`https://wa.me/${number}?text=${text}`, '_blank', 'noopener,noreferrer');
+
+      if (success) success.classList.add('is-visible');
+      form.reset();
+      if (submitBtn) {
+        submitBtn.disabled = false;
+        submitBtn.classList.add('is-success');
+      }
+    });
+  })();
+</script>
+
+<style>
+  .contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+  }
+
+  .contact-form__field {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .contact-form__label {
+    font-size: var(--text-sm);
+    font-weight: 700;
+    color: var(--text);
+  }
+
+  .contact-form__input,
+  .contact-form__textarea {
+    width: 100%;
+    min-height: 48px;
+    padding: 0.75rem 1rem;
+    border: 1px solid var(--line);
+    border-radius: var(--ala-radius-sm);
+    background-color: var(--bg);
+    color: var(--text);
+    font-family: var(--ala-font);
+    font-size: var(--text-md);
+    transition: border-color 160ms var(--ease-out-expo);
+  }
+
+  .contact-form__input::placeholder,
+  .contact-form__textarea::placeholder {
+    color: var(--text-muted);
+  }
+
+  .contact-form__input:focus-visible,
+  .contact-form__textarea:focus-visible {
+    outline: 2px solid var(--accent);
+    outline-offset: 2px;
+  }
+
+  .contact-form__input.has-error {
+    border-color: #ef4444;
+  }
+
+  .contact-form__textarea {
+    min-height: 120px;
+    resize: vertical;
+  }
+
+  .contact-form__error {
+    display: none;
+    font-size: var(--text-sm);
+    color: #ef4444;
+  }
+
+  .contact-form__error.is-visible {
+    display: block;
+  }
+
+  .contact-form__radio-group {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+  }
+
+  .contact-form__radio {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: var(--text-md);
+    color: var(--text);
+    cursor: pointer;
+  }
+
+  .contact-form__checkbox {
+    display: inline-flex;
+    align-items: flex-start;
+    gap: 0.75rem;
+    font-size: var(--text-md);
+    color: var(--text);
+    cursor: pointer;
+  }
+
+  .contact-form__checkbox input {
+    width: 20px;
+    height: 20px;
+    margin-top: 2px;
+    accent-color: var(--accent);
+  }
+
+  .contact-form__submit {
+    position: relative;
+    min-height: 48px;
+    padding: 0 1.5rem;
+    border: 1px solid var(--accent);
+    border-radius: var(--ala-radius-sm);
+    background-color: var(--accent);
+    color: var(--ala-pure-white);
+    font-family: var(--ala-font);
+    font-size: var(--text-md);
+    font-weight: 700;
+    cursor: pointer;
+    transition: background-color 160ms var(--ease-out-expo);
+  }
+
+  .contact-form__submit:hover:not(:disabled) {
+    background-color: var(--accent-hover);
+  }
+
+  .contact-form__submit:disabled {
+    opacity: 0.7;
+    cursor: wait;
+  }
+
+  .contact-form__submit.is-success {
+    background-color: var(--ala-success);
+    border-color: var(--ala-success);
+  }
+
+  .contact-form__submit-loading {
+    display: none;
+  }
+
+  .contact-form__submit:disabled .contact-form__submit-text {
+    display: none;
+  }
+
+  .contact-form__submit:disabled .contact-form__submit-loading {
+    display: inline;
+  }
+
+  .contact-form__success {
+    display: none;
+    padding: 1rem 1.25rem;
+    border-radius: var(--ala-radius-sm);
+    background-color: rgba(18, 183, 106, 0.1);
+    color: var(--ala-success);
+    font-weight: 600;
+  }
+
+  .contact-form__success.is-visible {
+    display: block;
+  }
+</style>

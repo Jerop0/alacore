@@ -1,0 +1,137 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import SectionHeading from '../../components/ui/SectionHeading.astro';
+import Card from '../../components/ui/Card.astro';
+import Button from '../../components/ui/Button.astro';
+import ProcessSteps from '../../components/sections/ProcessSteps.astro';
+import FinalCta from '../../components/sections/FinalCta.astro';
+import { DEFAULT_LOCALE, type Locale } from '../../lib/config';
+import { getCopy, getSeo } from '../../lib/page';
+import { localizePath, t, tArr } from '../../lib/i18n';
+import type { CopyNode } from '../../lib/i18n';
+
+const currentLocale = (Astro.currentLocale as Locale) ?? DEFAULT_LOCALE;
+const copy = getCopy(currentLocale, 'about');
+const siteCopy = getCopy(currentLocale, 'site');
+const seo = getSeo(currentLocale, 'about');
+
+const positioning = tArr(copy, 'positioning');
+const principles = (t(copy, 'principles') as unknown as CopyNode) ?? {};
+const principleItems = tArr(principles, 'items');
+---
+
+<Layout title={seo.title} description={seo.description}>
+  <section class="section">
+    <div class="container">
+      <SectionHeading title={t(copy, 'title')} />
+      <p class="about-intro">{t(copy, 'intro')}</p>
+
+      <ul class="about-positioning">
+        {positioning.map((point) => (
+          <li>{point}</li>
+        ))}
+      </ul>
+    </div>
+  </section>
+
+  <section class="section section--mist">
+    <div class="container">
+      <SectionHeading title={t(principles, 'title')} />
+      <div class="about-principles">
+        {
+          principleItems.map((item) => {
+            const p = item as unknown as CopyNode;
+            return (
+              <Card>
+                <h3 class="about-principle__title">{t(p, 'title')}</h3>
+                <p class="about-principle__body">{t(p, 'body')}</p>
+              </Card>
+            );
+          })
+        }
+      </div>
+    </div>
+  </section>
+
+  <ProcessSteps copy={siteCopy} locale={currentLocale} />
+
+  <section class="section">
+    <div class="container about-cta">
+      <Button href={localizePath('/contact', currentLocale, currentLocale)}>
+        {t(copy, 'cta')}
+      </Button>
+      <Button href={localizePath('/how-we-work', currentLocale, currentLocale)} variant="secondary">
+        {t(siteCopy, 'sections.processCta')}
+      </Button>
+    </div>
+  </section>
+
+  <FinalCta locale={currentLocale} copy={siteCopy} />
+</Layout>
+
+<style>
+  .about-intro {
+    max-width: 72ch;
+    font-size: var(--text-xl);
+    line-height: 1.55;
+    color: var(--text-muted);
+  }
+
+  .about-positioning {
+    margin-top: 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+    list-style: none;
+  }
+
+  .about-positioning li {
+    position: relative;
+    padding-left: 1.5rem;
+    font-size: var(--text-lg);
+    line-height: 1.55;
+    color: var(--text);
+  }
+
+  .about-positioning li::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0.6em;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background-color: var(--accent);
+  }
+
+  .about-principles {
+    display: grid;
+    gap: 1.5rem;
+    grid-template-columns: 1fr;
+  }
+
+  @media (min-width: 768px) {
+    .about-principles {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+
+  .about-principle__title {
+    font-size: var(--text-xl);
+    font-weight: 700;
+    margin-bottom: 0.75rem;
+  }
+
+  .about-principle__body {
+    font-size: var(--text-md);
+    line-height: 1.6;
+    color: var(--text-muted);
+  }
+
+  .about-cta {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.75rem;
+  }
+</style>

@@ -1,0 +1,452 @@
+{
+  "en": {
+    "nav": {
+      "home": "Home",
+      "solutions": "Solutions",
+      "industries": "Industries",
+      "techTeams": "For Tech Teams",
+      "about": "About",
+      "contact": "Contact"
+    },
+    "hero": {
+      "title": "One Partner. Every Business Solution.",
+      "body": "We build apps, websites, chatbots, and systems that make your business easier to run.",
+      "primary": "Explore solutions",
+      "secondary": "Talk to an expert"
+    },
+    "sections": {
+      "build": "What We Build",
+      "buildSupport": "Six solution families. One partner to design, build, and support them.",
+      "industries": "Industries We Help",
+      "industriesSupport": "From cafés to factories, we build tools that fit the way your business works.",
+      "examples": "Example Solutions",
+      "examplesSupport": "Real situations. Plain-language outcomes. No architecture diagrams.",
+      "process": "How We Work",
+      "processSupport": "A clear path from understanding your business to supporting the solution after launch.",
+      "processCta": "See how we work",
+      "why": "Why ALA CORE",
+      "whySupport": "One accountable partner. Clear communication. Built around your workflow.",
+      "anyIdea": "Whatever you need, we build it.",
+      "anyIdeaSupport": "An app, a website, a system, an automation — on any platform, in any technology. You describe the outcome; we design and build it. And when a problem is complex or custom, that's exactly the kind of work we take on.",
+      "anyIdeaPoint1": "Any idea, made real",
+      "anyIdeaPoint1Support": "You describe the outcome, we turn it into software that works.",
+      "anyIdeaPoint2": "Any technology",
+      "anyIdeaPoint2Support": "Web, mobile, desktop, cloud, connected devices — we choose what fits.",
+      "anyIdeaPoint3": "We solve the hard problems",
+      "anyIdeaPoint3Support": "Complex, custom, one-of-a-kind builds are our specialty.",
+      "anyIdeaCtaPrimary": "Describe your need",
+      "anyIdeaCtaSecondary": "Talk to an expert",
+      "finalCta": "Ready to build the core of your business?"
+    },
+    "buildCards": {
+      "apps": ["Business Apps", "Run daily work from one simple app."],
+      "web": ["Websites & Portals", "Help customers find, book, buy, and connect."],
+      "chat": ["Chatbots & WhatsApp", "Answer customers and collect requests faster."],
+      "automation": ["Automation", "Reduce repetitive work and save staff time."],
+      "reports": ["Dashboards & Reports", "See what is happening across your business."],
+      "systems": ["Business Systems", "Organize customers, staff, stock, and operations."]
+    },
+    "process": ["Understand", "Design", "Build", "Support"],
+    "processBody": "We understand your business, design the right solution, build it, then support you after launch.",
+    "why": [
+      ["One partner for all digital needs", "No need to coordinate separate agencies. We design, build, and support the complete solution."],
+      ["Clear business communication", "We explain progress and trade-offs in plain language, not technical jargon."],
+      ["Built around your workflow", "Your processes come first. The technology is shaped to fit how you actually work."]
+    ],
+    "finalCta": "Build the core of your business.",
+    "finalCtaSecondary": "Describe your need",
+    "askAla": {
+      "title": "Ask ALA",
+      "panelTitle": "Ask ALA",
+      "close": "Close",
+      "question": "What would you like to improve in your business?",
+      "choices": ["Get more customers", "Save staff time", "Organize operations", "See better reports"],
+      "followUp": {
+        "customers": "Where do most of your customers find you today?",
+        "time": "What takes up most of your team's time?",
+        "operations": "Which area feels most chaotic?",
+        "reports": "What would you like to track clearly?"
+      },
+      "followUpChoices": {
+        "customers": ["Our website", "Social media", "WhatsApp", "Walk-ins"],
+        "time": ["Data entry", "Answering questions", "Scheduling", "Approvals"],
+        "operations": ["Stock", "Orders", "Staff shifts", "Projects"],
+        "reports": ["Sales", "Stock", "Staff hours", "Projects"]
+      },
+      "recommendation": "Based on what you shared, we would recommend looking at",
+      "recommendations": {
+        "customers": ["Websites & Portals", "Chatbots & WhatsApp"],
+        "time": ["Automation", "Chatbots & WhatsApp"],
+        "operations": ["Business Systems", "Business Apps"],
+        "reports": ["Dashboards & Reports", "Business Systems"]
+      },
+      "next": "What would you like to do next?",
+      "actions": ["Talk on WhatsApp", "Open contact form"]
+    },
+    "whatsapp": {
+      "buttonLabel": "Chat on WhatsApp",
+      "title": "Send your request on WhatsApp",
+      "step": "Step {n} of {total}",
+      "fields": {
+        "businessType": "What type of business do you run?",
+        "challenge": "What is your main challenge right now?",
+        "outcome": "What would you like to achieve?",
+        "name": "Your name",
+        "contactTime": "Best time to reach you"
+      },
+      "placeholders": {
+        "businessType": "e.g. Restaurant, clinic, warehouse",
+        "challenge": "e.g. We lose track of orders",
+        "outcome": "e.g. Faster customer service",
+        "name": "Your name",
+        "contactTime": "e.g. Weekday mornings"
+      },
+      "next": "Next",
+      "back": "Back",
+      "openWhatsApp": "Open WhatsApp",
+      "preface": "Hello, I would like to discuss a project with ALA CORE."
+    },
+    "examples": {
+      "restaurant": {
+        "title": "Restaurant",
+        "situation": "A busy café takes phone orders, manages bookings by hand, and loses track of regulars.",
+        "pills": ["Digital menu", "Online orders", "Reservations", "WhatsApp ordering"],
+        "outcome": "Fewer missed orders, faster service, and loyal customers who come back more often."
+      },
+      "hospital": {
+        "title": "Hospital",
+        "situation": "A clinic struggles with appointment gaps, reminders that never reach patients, and scattered records.",
+        "pills": ["Appointments", "Reminders", "Patient records", "Reports"],
+        "outcome": "Smoother patient flow, fewer no-shows, and staff who find information in seconds."
+      },
+      "school": {
+        "title": "School",
+        "situation": "A training center manages enrollments, payments, and attendance across spreadsheets and emails.",
+        "pills": ["Student portal", "Payments", "Attendance", "Parent communication"],
+        "outcome": "Clear records, on-time payments, and parents who feel informed."
+      },
+      "warehouse": {
+        "title": "Warehouse",
+        "situation": "A logistics business guesses stock levels, loses items, and delays shipments.",
+        "pills": ["Inventory", "Barcode tracking", "Deliveries", "Stock reports"],
+        "outcome": "Accurate stock, faster dispatch, and fewer customer complaints."
+      },
+      "company": {
+        "title": "Company",
+        "situation": "A growing office loses time on approvals, scattered customer data, and unclear team workloads.",
+        "pills": ["CRM", "HR", "Approvals", "Internal dashboards"],
+        "outcome": "Faster decisions, better customer follow-up, and a team that knows what to do next."
+      }
+    },
+    "footer": {
+      "tagline": "One partner for every business solution.",
+      "rights": "All rights reserved.",
+      "company": {
+        "title": "Company",
+        "products": "Products",
+        "work": "Work",
+        "howWeWork": "How we work"
+      }
+    }
+  },
+  "de": {
+    "nav": {
+      "home": "Start",
+      "solutions": "Lösungen",
+      "industries": "Branchen",
+      "techTeams": "Für Tech-Teams",
+      "about": "Über uns",
+      "contact": "Kontakt"
+    },
+    "hero": {
+      "title": "Ein Partner. Jede Lösung für Ihr Unternehmen.",
+      "body": "Wir entwickeln Apps, Websites, Chatbots und Systeme, die Ihren Geschäftsalltag erleichtern.",
+      "primary": "Lösungen ansehen",
+      "secondary": "Mit Experten sprechen"
+    },
+    "sections": {
+      "build": "Was wir entwickeln",
+      "buildSupport": "Sechs Lösungsfamilien. Ein Partner für Konzept, Entwicklung und Betreuung.",
+      "industries": "Branchen, die wir unterstützen",
+      "industriesSupport": "Vom Café bis zur Fabrik entwickeln wir Werkzeuge, die zu Ihrem Geschäft passen.",
+      "examples": "Beispiellösungen",
+      "examplesSupport": "Reale Situationen. Verständliche Ergebnisse. Keine Architekturdiagramme.",
+      "process": "So arbeiten wir",
+      "processSupport": "Vom Verstehen Ihres Unternehmens bis zur Betreuung nach dem Start.",
+      "processCta": "So arbeiten wir",
+      "why": "Warum ALA CORE",
+      "whySupport": "Ein verantwortlicher Partner. Klare Kommunikation. Auf Ihre Abläufe zugeschnitten.",
+      "anyIdea": "Was auch immer Sie brauchen, wir bauen es.",
+      "anyIdeaSupport": "Eine App, eine Website, ein System, eine Automatisierung — auf jeder Plattform, in jeder Technologie. Sie beschreiben das Ergebnis; wir planen und bauen es. Und wenn ein Problem komplex oder maßgeschneidert ist, ist das genau die Art von Arbeit, die wir übernehmen.",
+      "anyIdeaPoint1": "Jede Idee, umgesetzt",
+      "anyIdeaPoint1Support": "Sie beschreiben das Ergebnis, wir machen daraus funktionierende Software.",
+      "anyIdeaPoint2": "Jede Technologie",
+      "anyIdeaPoint2Support": "Web, Mobile, Desktop, Cloud, vernetzte Geräte — wir wählen, was passt.",
+      "anyIdeaPoint3": "Wir lösen die schwierigen Probleme",
+      "anyIdeaPoint3Support": "Komplexe, maßgeschneiderte, einzigartige Projekte sind unsere Spezialität.",
+      "anyIdeaCtaPrimary": "Bedarf beschreiben",
+      "anyIdeaCtaSecondary": "Mit Experten sprechen",
+      "finalCta": "Bereit, den Kern Ihres Unternehmens aufzubauen?"
+    },
+    "buildCards": {
+      "apps": ["Business-Apps", "Steuern Sie Ihre tägliche Arbeit mit einer einfachen App."],
+      "web": ["Websites & Portale", "Helfen Sie Kunden, zu finden, zu buchen, zu kaufen und Kontakt aufzunehmen."],
+      "chat": ["Chatbots & WhatsApp", "Beantworten Sie Fragen und erfassen Sie Anfragen schneller."],
+      "automation": ["Automatisierung", "Reduzieren Sie wiederkehrende Aufgaben und sparen Sie Zeit."],
+      "reports": ["Dashboards & Berichte", "Sehen Sie klar, was in Ihrem Unternehmen passiert."],
+      "systems": ["Geschäftssysteme", "Organisieren Sie Kunden, Mitarbeiter, Bestände und Abläufe."]
+    },
+    "process": ["Verstehen", "Planen", "Entwickeln", "Betreuen"],
+    "processBody": "Wir verstehen Ihr Unternehmen, planen die richtige Lösung, entwickeln sie und betreuen Sie nach dem Start.",
+    "why": [
+      ["Ein Partner für alle digitalen Bedürfnisse", "Keine Abstimmung zwischen mehreren Agenturen. Wir konzipieren, entwickeln und betreuen die komplette Lösung."],
+      ["Klare geschäftliche Kommunikation", "Wir erklären Fortschritt und Abwägungen in verständlicher Sprache, nicht im Technikjargon."],
+      ["Auf Ihre Abläufe zugeschnitten", "Ihre Prozesse stehen im Mittelpunkt. Die Technologie passt sich an, wie Sie tatsächlich arbeiten."]
+    ],
+    "finalCta": "Bauen Sie den Kern Ihres Unternehmens.",
+    "finalCtaSecondary": "Bedarf beschreiben",
+    "askAla": {
+      "title": "ALA fragen",
+      "panelTitle": "ALA fragen",
+      "close": "Schließen",
+      "question": "Was möchten Sie in Ihrem Unternehmen verbessern?",
+      "choices": ["Mehr Kunden gewinnen", "Arbeitszeit sparen", "Abläufe organisieren", "Bessere Berichte erhalten"],
+      "followUp": {
+        "customers": "Wo finden Ihre Kunden Sie heute am ehesten?",
+        "time": "Womit verbringt Ihr Team die meiste Zeit?",
+        "operations": "Welcher Bereich fühlt sich am chaotischsten an?",
+        "reports": "Was möchten Sie klar nachverfolgen?"
+      },
+      "followUpChoices": {
+        "customers": ["Unsere Website", "Social Media", "WhatsApp", "Laufkundschaft"],
+        "time": ["Datenerfassung", "Fragen beantworten", "Terminplanung", "Genehmigungen"],
+        "operations": ["Bestand", "Aufträge", "Schichten", "Projekte"],
+        "reports": ["Umsatz", "Bestand", "Arbeitsstunden", "Projekte"]
+      },
+      "recommendation": "Basierend auf Ihren Angaben empfehlen wir einen Blick auf",
+      "recommendations": {
+        "customers": ["Websites & Portale", "Chatbots & WhatsApp"],
+        "time": ["Automatisierung", "Chatbots & WhatsApp"],
+        "operations": ["Geschäftssysteme", "Business-Apps"],
+        "reports": ["Dashboards & Berichte", "Geschäftssysteme"]
+      },
+      "next": "Was möchten Sie als Nächstes tun?",
+      "actions": ["Per WhatsApp sprechen", "Kontaktformular öffnen"]
+    },
+    "whatsapp": {
+      "buttonLabel": "Auf WhatsApp chatten",
+      "title": "Anfrage per WhatsApp senden",
+      "step": "Schritt {n} von {total}",
+      "fields": {
+        "businessType": "Welche Art von Unternehmen führen Sie?",
+        "challenge": "Was ist Ihre größte Herausforderung gerade?",
+        "outcome": "Was möchten Sie erreichen?",
+        "name": "Ihr Name",
+        "contactTime": "Beste Erreichbarkeit"
+      },
+      "placeholders": {
+        "businessType": "z. B. Restaurant, Klinik, Lager",
+        "challenge": "z. B. Wir verlieren den Überblick über Aufträge",
+        "outcome": "z. B. Schnellerer Kundenservice",
+        "name": "Ihr Name",
+        "contactTime": "z. B. Wochentag vormittags"
+      },
+      "next": "Weiter",
+      "back": "Zurück",
+      "openWhatsApp": "WhatsApp öffnen",
+      "preface": "Hallo, ich möchte ein Projekt mit ALA CORE besprechen."
+    },
+    "examples": {
+      "restaurant": {
+        "title": "Restaurant",
+        "situation": "Ein belebtes Café nimmt telefonische Bestellungen entgegen, verwaltet Reservierungen per Hand und verliert Stammkunden aus den Augen.",
+        "pills": ["Digitale Speisekarte", "Online-Bestellungen", "Reservierungen", "WhatsApp-Bestellung"],
+        "outcome": "Weniger verpasste Bestellungen, schnellerer Service und Stammgäste, die öfter wiederkommen."
+      },
+      "hospital": {
+        "title": "Klinik",
+        "situation": "Eine Klinik kämpft mit freien Terminzeiten, Erinnerungen, die Patienten nicht erreichen, und verteilten Akten.",
+        "pills": ["Termine", "Erinnerungen", "Patientenakten", "Berichte"],
+        "outcome": "Flüssiger Patientenfluss, weniger Ausfälle und Mitarbeiter, die Informationen in Sekunden finden."
+      },
+      "school": {
+        "title": "Schule",
+        "situation": "Ein Bildungszentrum verwaltet Anmeldungen, Zahlungen und Anwesenheit über Tabellen und E-Mails.",
+        "pills": ["Schülerportal", "Zahlungen", "Anwesenheit", "Elternkommunikation"],
+        "outcome": "Klare Unterlagen, pünktliche Zahlungen und informierte Eltern."
+      },
+      "warehouse": {
+        "title": "Lager",
+        "situation": "Ein Logistikunternehmen schätzt Bestände, verliert Artikel und verzögert Sendungen.",
+        "pills": ["Bestand", "Barcode-Tracking", "Lieferungen", "Bestandsberichte"],
+        "outcome": "Genaue Bestände, schnellere Versendung und weniger Kundenbeschwerden."
+      },
+      "company": {
+        "title": "Unternehmen",
+        "situation": "Ein wachsendes Büro verliert Zeit bei Genehmigungen, verteilten Kundendaten und unklaren Team-Auslastungen.",
+        "pills": ["CRM", "HR", "Genehmigungen", "Interne Dashboards"],
+        "outcome": "Schnellere Entscheidungen, bessere Kunden-Nachverfolgung und ein Team, das weiß, was als Nächstes ansteht."
+      }
+    },
+    "footer": {
+      "tagline": "Ein Partner für jede Unternehmenslösung.",
+      "rights": "Alle Rechte vorbehalten.",
+      "company": {
+        "title": "Unternehmen",
+        "products": "Produkte",
+        "work": "Projekte",
+        "howWeWork": "So arbeiten wir"
+      }
+    }
+  },
+  "tr": {
+    "nav": {
+      "home": "Ana Sayfa",
+      "solutions": "Çözümler",
+      "industries": "Sektörler",
+      "techTeams": "Teknik Ekipler",
+      "about": "Hakkımızda",
+      "contact": "İletişim"
+    },
+    "hero": {
+      "title": "Tek İş Ortağı. Tüm İş Çözümleri.",
+      "body": "İşletmenizi yönetmeyi kolaylaştıran uygulamalar, web siteleri, chatbotlar ve sistemler geliştiriyoruz.",
+      "primary": "Çözümleri inceleyin",
+      "secondary": "Uzmanla görüşün"
+    },
+    "sections": {
+      "build": "Neler Geliştiriyoruz",
+      "buildSupport": "Altı çözüm ailesi. Tasarlayan, geliştiren ve destekleyen tek ortak.",
+      "industries": "Desteklediğimiz Sektörler",
+      "industriesSupport": "Kafeden fabrikaya, işletmenizin çalışma şekline uygun araçlar geliştiriyoruz.",
+      "examples": "Örnek Çözümler",
+      "examplesSupport": "Gerçek durumlar. Net sonuçlar. Mimari şemalar yok.",
+      "process": "Nasıl Çalışırız",
+      "processSupport": "İşletmenizi anlamaktan, çözümü başlattıktan sonra desteklemeye kadar açık bir yol.",
+      "processCta": "Nasıl çalışırız",
+      "why": "Neden ALA CORE",
+      "whySupport": "Tek sorumlu ortak. Net iletişim. İş akışınıza göre tasarlanmış.",
+      "anyIdea": "Ne ihtiyacınız varsa, biz onu inşa ederiz.",
+      "anyIdeaSupport": "Bir uygulama, bir web sitesi, bir sistem, bir otomasyon — her platformda, her teknolojide. Siz sonucu tarif edin; biz tasarlayıp inşa ederiz. Ve bir problem karmaşık veya özel olduğunda, tam olarak bu tür işler bizim uzmanlık alanımızdadır.",
+      "anyIdeaPoint1": "Her fikir gerçek olsun",
+      "anyIdeaPoint1Support": "Siz sonucu tarif edin, biz onu çalışan yazılıma dönüştürürüz.",
+      "anyIdeaPoint2": "Her teknoloji",
+      "anyIdeaPoint2Support": "Web, mobil, masaüstü, bulut, bağlı cihazlar — uygun olanı seçeriz.",
+      "anyIdeaPoint3": "Zor problemleri çözeriz",
+      "anyIdeaPoint3Support": "Karmaşık, özel, eşsiz projeler uzmanlık alanımızdadır.",
+      "anyIdeaCtaPrimary": "İhtiyacı anlat",
+      "anyIdeaCtaSecondary": "Uzmanla görüşün",
+      "finalCta": "İşletmenizin merkezini oluşturmaya hazır mısınız?"
+    },
+    "buildCards": {
+      "apps": ["İş Uygulamaları", "Günlük işlerinizi tek bir uygulamadan yönetin."],
+      "web": ["Web Siteleri & Portallar", "Müşterilerin bulmasını, rezervasyon yapmasını ve satın almasını kolaylaştırın."],
+      "chat": ["Chatbot & WhatsApp", "Soruları yanıtlayın ve talepleri daha hızlı toplayın."],
+      "automation": ["Otomasyon", "Tekrarlanan işleri azaltın ve çalışanların zamanını koruyun."],
+      "reports": ["Panolar & Raporlar", "İşletmenizde neler olduğunu net biçimde görün."],
+      "systems": ["İş Sistemleri", "Müşteri, personel, stok ve operasyonları düzenleyin."]
+    },
+    "process": ["Anla", "Tasarla", "Geliştir", "Destekle"],
+    "processBody": "İşletmenizi anlıyoruz, doğru çözümü tasarlıyoruz, geliştiriyoruz ve başlattıktan sonra destek veriyoruz.",
+    "why": [
+      ["Tüm dijital ihtiyaçlar için tek ortak", "Birden fazla ajansı koordine etmeye gerek yok. Komple çözümü tasarlıyor, geliştiriyor ve destekliyoruz."],
+      ["Net iş iletişimi", "İlerlemeyi ve değiş-tokuşları teknik jargon değil, anlaşılır dille açıklıyoruz."],
+      ["İş akışınıza göre tasarlanmış", "Önce sizin süreçleriniz gelir. Teknoloji, gerçekten çalıştığınız şekle göre şekillenir."]
+    ],
+    "finalCta": "İşletmenizin merkezini oluşturun.",
+    "finalCtaSecondary": "İhtiyacı anlat",
+    "askAla": {
+      "title": "ALA'ya Sor",
+      "panelTitle": "ALA'ya Sor",
+      "close": "Kapat",
+      "question": "İşletmenizde neyi geliştirmek istersiniz?",
+      "choices": ["Daha fazla müşteri", "Çalışan zamanından tasarruf", "Operasyonları düzenle", "Daha iyi raporlar"],
+      "followUp": {
+        "customers": "Müşterileriniz sizi bugün en çok nerede buluyor?",
+        "time": "Ekibinizin çoğu zamanı neye harcıyor?",
+        "operations": "Hangi alan en karmaşık hissettiriyor?",
+        "reports": "Neyi net şekilde takip etmek istersiniz?"
+      },
+      "followUpChoices": {
+        "customers": ["Web sitemiz", "Sosyal medya", "WhatsApp", "Yerleşik müşteri"],
+        "time": ["Veri girişi", "Soru yanıtlama", "Planlama", "Onaylar"],
+        "operations": ["Stok", "Siparişler", "Vardiyalar", "Projeler"],
+        "reports": ["Satış", "Stok", "Çalışma saatleri", "Projeler"]
+      },
+      "recommendation": "Paylaştıklarınıza göre şunlara bakmanızı öneririz",
+      "recommendations": {
+        "customers": ["Web Siteleri & Portallar", "Chatbot & WhatsApp"],
+        "time": ["Otomasyon", "Chatbot & WhatsApp"],
+        "operations": ["İş Sistemleri", "İş Uygulamaları"],
+        "reports": ["Panolar & Raporlar", "İş Sistemleri"]
+      },
+      "next": "Sıradaki adım ne olsun?",
+      "actions": ["WhatsApp'tan konuş", "İletişim formunu aç"]
+    },
+    "whatsapp": {
+      "buttonLabel": "WhatsApp'tan yaz",
+      "title": "WhatsApp üzerinden talep gönder",
+      "step": "Adım {n} / {total}",
+      "fields": {
+        "businessType": "Ne tür bir işletme işletiyorsunuz?",
+        "challenge": "Şu anki en büyük zorluğunuz nedir?",
+        "outcome": "Ne başarmak istiyorsunuz?",
+        "name": "Adınız",
+        "contactTime": "Size en uygun ulaşım zamanı"
+      },
+      "placeholders": {
+        "businessType": "örn. Restoran, klinik, depo",
+        "challenge": "örn. Siparişleri takip edemiyoruz",
+        "outcome": "örn. Daha hızlı müşteri hizmeti",
+        "name": "Adınız",
+        "contactTime": "örn. Hafta içi sabahları"
+      },
+      "next": "İleri",
+      "back": "Geri",
+      "openWhatsApp": "WhatsApp'ı aç",
+      "preface": "Merhaba, ALA CORE ile bir proje görüşmek istiyorum."
+    },
+    "examples": {
+      "restaurant": {
+        "title": "Restoran",
+        "situation": "Meşgul bir kafe telefonla sipariş alıyor, rezervasyonları elle yönetiyor ve sadık müşterileri gözden kaçırıyor.",
+        "pills": ["Dijital menü", "Online sipariş", "Rezervasyon", "WhatsApp sipariş"],
+        "outcome": "Daha az kaçırılan sipariş, daha hızlı hizmet ve daha sık geri dönen sadık müşteriler."
+      },
+      "hospital": {
+        "title": "Hastane",
+        "situation": "Bir klinik boş randevu aralıkları, hastalara ulaşmayan hatırlatmalar ve dağınık kayıtlarla mücadele ediyor.",
+        "pills": ["Randevular", "Hatırlatmalar", "Hasta kayıtları", "Raporlar"],
+        "outcome": "Daha akıcı hasta akışı, daha az iptal ve bilgiyi saniyeler içinde bulan personel."
+      },
+      "school": {
+        "title": "Okul",
+        "situation": "Bir eğitim merkezi kayıtları, ödemeleri ve devam durumunu tablolar ve e-postalar arasında yönetiyor.",
+        "pills": ["Öğrenci portalı", "Ödemeler", "Devam takibi", "Veli iletişimi"],
+        "outcome": "Net kayıtlar, zamanında ödemeler ve bilgili hisseden veliler."
+      },
+      "warehouse": {
+        "title": "Depo",
+        "situation": "Bir lojistik firması stok seviyelerini tahmin ediyor, ürünleri kaybediyor ve gönderileri geciktiriyor.",
+        "pills": ["Stok", "Barkod takibi", "Teslimatlar", "Stok raporları"],
+        "outcome": "Doğru stok, daha hızlı sevkiyat ve daha az müşteri şikayeti."
+      },
+      "company": {
+        "title": "Şirket",
+        "situation": "Büyüyen bir ofis onaylarda, dağınık müşteri verilerinde ve belirsiz ekip iş yüklerinde zaman kaybediyor.",
+        "pills": ["CRM", "İK", "Onaylar", "İç panolar"],
+        "outcome": "Daha hızlı kararlar, daha iyi müşteri takibi ve sıradaki adımı bilen bir ekip."
+      }
+    },
+    "footer": {
+      "tagline": "Her iş çözümü için tek ortak.",
+      "rights": "Tüm hakları saklıdır.",
+      "company": {
+        "title": "Şirket",
+        "products": "Ürünler",
+        "work": "Projeler",
+        "howWeWork": "Nasıl çalışırız"
+      }
+    }
+  }
+}

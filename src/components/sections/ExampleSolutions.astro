@@ -1,0 +1,117 @@
+---
+import SectionHeading from '../ui/SectionHeading.astro';
+import Pill from '../ui/Pill.astro';
+import type { CopyNode } from '../../lib/i18n';
+import { t, tArr, tObj } from '../../lib/i18n';
+
+interface Props {
+  copy: CopyNode;
+}
+
+const { copy } = Astro.props;
+
+const examples = ['restaurant', 'hospital', 'school', 'warehouse', 'company'] as const;
+---
+
+<section class="section">
+  <div class="container">
+    <SectionHeading
+      title={t(copy, 'sections.examples')}
+      supporting={t(copy, 'sections.examplesSupport')}
+    />
+
+    <div class="examples-grid">
+      {
+        examples.map((key) => {
+          const item = tObj<CopyNode>(copy, `examples.${key}`);
+          if (!item) return null;
+          const title = t(item, 'title');
+          const situation = t(item, 'situation');
+          const pills = tArr(item, 'pills');
+          const outcome = t(item, 'outcome');
+          return (
+            <article class="example-card">
+              <h3 class="example-card__title">{title}</h3>
+              <p class="example-card__situation">{situation}</p>
+              <div class="example-card__pills">
+                {pills.map((pill) => (
+                  <Pill>{pill}</Pill>
+                ))}
+              </div>
+              <p class="example-card__outcome">{outcome}</p>
+            </article>
+          );
+        })
+      }
+    </div>
+  </div>
+</section>
+
+<style>
+  .examples-grid {
+    display: grid;
+    gap: 1.5rem;
+    grid-template-columns: 1fr;
+  }
+
+  @media (min-width: 768px) {
+    .examples-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+
+  @media (min-width: 1024px) {
+    .examples-grid {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+
+  .example-card {
+    padding: 1.5rem;
+    border-radius: var(--ala-radius-md);
+    background-color: var(--surface);
+  }
+
+  @media (min-width: 1024px) {
+    .example-card {
+      padding: 2rem;
+    }
+  }
+
+  .example-card:first-child {
+    grid-column: 1 / -1;
+  }
+
+  @media (min-width: 768px) {
+    .example-card:first-child {
+      grid-column: 1 / 2;
+    }
+  }
+
+  .example-card__title {
+    font-size: var(--text-xl);
+    font-weight: 700;
+    margin-bottom: 0.75rem;
+  }
+
+  .example-card__situation {
+    font-size: var(--text-md);
+    line-height: 1.55;
+    color: var(--text-muted);
+    margin-bottom: 1rem;
+  }
+
+  .example-card__pills {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-bottom: 1rem;
+  }
+
+  .example-card__outcome {
+    font-size: var(--text-md);
+    font-weight: 500;
+    line-height: 1.5;
+    color: var(--text);
+  }
+</style>

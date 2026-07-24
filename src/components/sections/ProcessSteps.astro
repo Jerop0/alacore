@@ -1,0 +1,114 @@
+---
+import SectionHeading from '../ui/SectionHeading.astro';
+import Button from '../ui/Button.astro';
+import type { CopyNode } from '../../lib/i18n';
+import type { Locale } from '../../lib/config';
+import { localizePath, t, tArr } from '../../lib/i18n';
+
+interface Props {
+  copy: CopyNode;
+  locale: Locale;
+}
+
+const { copy, locale } = Astro.props;
+const steps = tArr(copy, 'process');
+---
+
+<section class="section section--mist">
+  <div class="container">
+    <SectionHeading
+      title={t(copy, 'sections.process')}
+      supporting={t(copy, 'sections.processSupport')}
+    />
+
+    <ol class="process-steps">
+      {
+        steps.map((step, index) => (
+          <li class="process-step">
+            <span class="process-step__number">0{index + 1}</span>
+            <h3 class="process-step__title">{step}</h3>
+          </li>
+        ))
+      }
+    </ol>
+
+    <p class="process-body">{t(copy, 'processBody')}</p>
+
+    <div class="process-cta">
+      <Button href={localizePath('/how-we-work', locale, locale)} variant="secondary">
+        {t(copy, 'sections.processCta')}
+      </Button>
+    </div>
+  </div>
+</section>
+
+<style>
+  .process-steps {
+    display: grid;
+    gap: 1rem;
+    list-style: none;
+  }
+
+  @media (min-width: 768px) {
+    .process-steps {
+      grid-template-columns: repeat(4, 1fr);
+    }
+  }
+
+  .process-step {
+    position: relative;
+    padding: 1.5rem;
+    border-radius: var(--ala-radius-md);
+    background-color: var(--bg);
+  }
+
+  @media (min-width: 768px) and (max-width: 1023px) {
+    .process-step:not(:last-child)::after {
+      content: '';
+      position: absolute;
+      top: 50%;
+      right: -0.75rem;
+      width: 1.5rem;
+      height: 1px;
+      background-color: var(--line);
+    }
+  }
+
+  @media (min-width: 1024px) {
+    .process-step:not(:last-child)::after {
+      content: '';
+      position: absolute;
+      top: 50%;
+      right: -1rem;
+      width: 2rem;
+      height: 1px;
+      background-color: var(--line);
+    }
+  }
+
+  .process-step__number {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-size: var(--text-sm);
+    font-weight: 700;
+    color: var(--accent);
+  }
+
+  .process-step__title {
+    font-size: var(--text-xl);
+    font-weight: 700;
+    color: var(--text);
+  }
+
+  .process-body {
+    max-width: 680px;
+    margin-top: 2rem;
+    font-size: var(--text-xl);
+    line-height: 1.55;
+    color: var(--text-muted);
+  }
+
+  .process-cta {
+    margin-top: 2rem;
+  }
+</style>

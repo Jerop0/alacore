@@ -1,0 +1,39 @@
+---
+import WhatsAppButton from '../chat/WhatsAppButton.astro';
+import AskAlaButton from '../chat/AskAlaButton.astro';
+import WhatsAppNeedsForm from '../chat/WhatsAppNeedsForm.astro';
+import AskAlaPanel from '../chat/AskAlaPanel.astro';
+---
+
+<div class="floating-actions">
+  <WhatsAppButton />
+  <AskAlaButton />
+</div>
+<WhatsAppNeedsForm />
+<AskAlaPanel />
+
+<style>
+  .floating-actions {
+    position: fixed;
+    right: max(1rem, env(safe-area-inset-right));
+    bottom: max(1rem, env(safe-area-inset-bottom));
+    z-index: var(--z-float);
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+    align-items: flex-end;
+    pointer-events: none;
+  }
+
+  .floating-actions > :global(*) {
+    pointer-events: auto;
+  }
+
+  @media (min-width: 768px) {
+    .floating-actions {
+      right: max(1.5rem, env(safe-area-inset-right));
+      bottom: max(1.5rem, env(safe-area-inset-bottom));
+      gap: 0.875rem;
+    }
+  }
+</style>

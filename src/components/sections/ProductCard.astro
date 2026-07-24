@@ -1,0 +1,142 @@
+---
+import Card from '../ui/Card.astro';
+import Icon from '../ui/Icon.astro';
+import Button from '../ui/Button.astro';
+import { localizePath } from '../../lib/i18n';
+import type { Locale } from '../../lib/config';
+
+interface Props {
+  product: {
+    name: string;
+    tagline: string;
+    description: string;
+    forWhom: string;
+    status: 'live' | 'beta' | 'coming-soon';
+    icon: string;
+    cta: string;
+  };
+  statusLabel: string;
+  ctaLabel: string;
+  locale: Locale;
+}
+
+const { product, statusLabel, ctaLabel, locale } = Astro.props;
+
+function toKebab(str: string) {
+  return str.replace(/([a-z])([A-Z])/g, '$1-$2').toLowerCase();
+}
+
+const iconName = toKebab(product.icon);
+const statusClass = `product-card__status product-card__status--${product.status}`;
+const ctaHref = product.cta.startsWith('/') ? localizePath(product.cta, locale, locale) : product.cta;
+---
+
+<Card class="product-card">
+  <div class="product-card__header">
+    <div class="product-card__icon" aria-hidden="true">
+      <Icon name={iconName} size={28} />
+    </div>
+    <span class={statusClass}>{statusLabel}</span>
+  </div>
+  <h3 class="product-card__name">{product.name}</h3>
+  <p class="product-card__tagline">{product.tagline}</p>
+  <p class="product-card__description">{product.description}</p>
+  <p class="product-card__for-whom">{product.forWhom}</p>
+  <div class="product-card__cta">
+    <Button href={ctaHref} variant="primary" size="sm">{ctaLabel}</Button>
+  </div>
+</Card>
+
+<style>
+  .product-card {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+  }
+
+  .product-card__header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+  }
+
+  .product-card__icon {
+    display: grid;
+    place-items: center;
+    width: 48px;
+    height: 48px;
+    border-radius: var(--ala-radius-md);
+    background-color: var(--accent);
+    color: var(--ala-pure-white);
+  }
+
+  :global([data-theme='dark']) .product-card__icon {
+    background-color: var(--accent);
+    color: var(--ala-core-ink);
+  }
+
+  .product-card__status {
+    font-size: var(--text-xs);
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    padding: 0.25rem 0.5rem;
+    border-radius: var(--ala-radius-sm);
+  }
+
+  .product-card__status--live {
+    background-color: rgba(16, 185, 129, 0.12);
+    color: var(--ala-success);
+  }
+
+  .product-card__status--beta {
+    background-color: rgba(59, 130, 246, 0.12);
+    color: var(--accent);
+  }
+
+  .product-card__status--coming-soon {
+    background-color: rgba(107, 114, 128, 0.12);
+    color: var(--text-tertiary);
+  }
+
+  :global([data-theme='dark']) .product-card__status--live {
+    background-color: rgba(16, 185, 129, 0.18);
+    color: #34d399;
+  }
+
+  :global([data-theme='dark']) .product-card__status--beta {
+    background-color: rgba(59, 130, 246, 0.18);
+    color: #60a5fa;
+  }
+
+  .product-card__name {
+    font-size: var(--text-xl);
+    font-weight: 700;
+    line-height: 1.2;
+    color: var(--text-primary);
+  }
+
+  .product-card__tagline {
+    font-size: var(--text-md);
+    font-weight: 600;
+    color: var(--text-secondary);
+    line-height: 1.4;
+  }
+
+  .product-card__description {
+    font-size: var(--text-base);
+    line-height: 1.6;
+    color: var(--text-secondary);
+  }
+
+  .product-card__for-whom {
+    font-size: var(--text-sm);
+    color: var(--text-tertiary);
+  }
+
+  .product-card__cta {
+    margin-top: auto;
+    padding-top: 0.5rem;
+  }
+</style>

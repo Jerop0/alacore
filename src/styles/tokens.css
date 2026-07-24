@@ -1,0 +1,139 @@
+/* Brand constants — do not change values */
+:root {
+  --ala-core-ink: #0b1220;
+  --ala-technology-blue: #155eef;
+  --ala-pure-white: #ffffff;
+  --ala-interface-mist: #f4f7fb;
+  --ala-text-dark: #111827;
+  --ala-text-muted: #667085;
+  --ala-border: #e4e7ec;
+  --ala-success: #12b76a;
+
+  --ala-font: "Manrope", "Inter", "Noto Sans", system-ui, sans-serif;
+  --ala-font-arabic: "Noto Sans Arabic", "Noto Sans", sans-serif;
+
+  --ala-radius-sm: 10px;
+  --ala-radius-md: 16px;
+  --ala-radius-lg: 24px;
+
+  --ala-shadow-card: 0 8px 28px rgb(16 24 40 / 8%);
+  --ala-content-width: 1200px;
+  --ala-section-space: clamp(72px, 8vw, 120px);
+}
+
+/* Semantic light theme */
+:root {
+  --bg: var(--ala-pure-white);
+  --surface: var(--ala-interface-mist);
+  --surface-2: #eaf1ff;
+  --line: var(--ala-border);
+  --text: var(--ala-text-dark);
+  --text-primary: var(--ala-text-dark);
+  --text-secondary: var(--ala-text-muted);
+  --text-tertiary: var(--text-subtle);
+  --text-muted: var(--ala-text-muted);
+  --text-subtle: #4b5563;
+  --accent: var(--ala-technology-blue);
+  --accent-hover: #1149c7;
+  --accent-tint: var(--surface-2);
+  --shadow-card: var(--ala-shadow-card);
+}
+
+/* Semantic dark theme */
+[data-theme="dark"] {
+  --bg: var(--ala-core-ink);
+  --surface: #111a2e;
+  --surface-2: #16223b;
+  --line: rgba(148, 163, 184, 0.14);
+  --text: var(--ala-interface-mist);
+  --text-primary: var(--ala-interface-mist);
+  --text-secondary: #94a3b8;
+  --text-tertiary: #b4c0d3;
+  --text-muted: #94a3b8;
+  --text-subtle: #b4c0d3;
+  --accent: #4c86ff;
+  --accent-hover: #6b9bff;
+  --accent-tint: rgba(76, 134, 255, 0.12);
+  --shadow-card: 0 24px 60px rgba(0, 0, 0, 0.5);
+}
+
+/* Type scale */
+:root {
+  --text-xs: 0.75rem;
+  --text-sm: 0.875rem;
+  --text-md: 1rem;
+  --text-lg: 1.125rem;
+  --text-xl: 1.25rem;
+
+  --heading-sm: clamp(1.75rem, 3vw, 2.5rem);
+  --heading-md: clamp(2.25rem, 5vw, 4rem);
+  --heading-hero: clamp(2.75rem, 6vw, 5.25rem);
+
+  --ease-out-expo: cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+/* Z-index scale */
+:root {
+  --z-header: 100;
+  --z-float: 200;
+  --z-backdrop: 300;
+  --z-panel: 400;
+  --z-toast: 500;
+  --z-tooltip: 600;
+}
+
+/* Font faces */
+@font-face {
+  font-family: "Manrope";
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+  src:
+    url("/fonts/manrope-latin-ext-400-normal.woff2") format("woff2"),
+    url("/fonts/manrope-latin-400-normal.woff2") format("woff2");
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+
+@font-face {
+  font-family: "Manrope";
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+  src:
+    url("/fonts/manrope-latin-ext-500-normal.woff2") format("woff2"),
+    url("/fonts/manrope-latin-500-normal.woff2") format("woff2");
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+
+@font-face {
+  font-family: "Manrope";
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+  src:
+    url("/fonts/manrope-latin-ext-600-normal.woff2") format("woff2"),
+    url("/fonts/manrope-latin-600-normal.woff2") format("woff2");
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+
+@font-face {
+  font-family: "Manrope";
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+  src:
+    url("/fonts/manrope-latin-ext-700-normal.woff2") format("woff2"),
+    url("/fonts/manrope-latin-700-normal.woff2") format("woff2");
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+
+@font-face {
+  font-family: "Manrope";
+  font-weight: 800;
+  font-style: normal;
+  font-display: swap;
+  src:
+    url("/fonts/manrope-latin-ext-800-normal.woff2") format("woff2"),
+    url("/fonts/manrope-latin-800-normal.woff2") format("woff2");
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}

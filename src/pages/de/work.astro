@@ -1,0 +1,138 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import SectionHeading from '../../components/ui/SectionHeading.astro';
+import WorkCard from '../../components/sections/WorkCard.astro';
+import FinalCta from '../../components/sections/FinalCta.astro';
+import Button from '../../components/ui/Button.astro';
+import { DEFAULT_LOCALE, WHATSAPP_NUMBER, type Locale } from '../../lib/config';
+import type { CopyNode } from '../../lib/i18n';
+import copy from '../../content/site-copy.json';
+import workData from '../../content/work.json';
+
+const currentLocale = (Astro.currentLocale as Locale) ?? DEFAULT_LOCALE;
+const localeCopy = (copy as Record<string, CopyNode>)[currentLocale] ?? copy[DEFAULT_LOCALE];
+const data = (workData as Record<string, any>)[currentLocale] ?? (workData as Record<string, any>)[DEFAULT_LOCALE];
+
+const title = data.meta.title;
+const description = data.meta.description;
+const hasEntries = data.entries && data.entries.length > 0;
+---
+
+<Layout title={title} description={description}>
+  <main class="page page--work">
+    <section class="section" aria-labelledby="work-heading">
+      <div class="container">
+        <SectionHeading
+          id="work-heading"
+          title={data.heading}
+          supporting={data.support}
+        />
+        <p class="work-distinction">{data.distinction}</p>
+
+        {
+          hasEntries ? (
+            <div class="work-grid">
+              {data.entries.map((entry: any) => (
+                <WorkCard entry={entry} labels={data.labels} />
+              ))}
+            </div>
+          ) : (
+            <div class="work-empty">
+              <h2>{data.empty.title}</h2>
+              <p>{data.empty.body}</p>
+              <div class="work-empty__actions">
+                <Button
+                  href="#ask-ala"
+                  variant="primary"
+                  data-ask-ala
+                  size="md"
+                >
+                  {data.empty.ctaPrimary}
+                </Button>
+                <Button
+                  href={`https://wa.me/${WHATSAPP_NUMBER}`}
+                  variant="secondary"
+                  size="md"
+                >
+                  {data.empty.ctaSecondary}
+                </Button>
+              </div>
+            </div>
+          )
+        }
+      </div>
+    </section>
+
+    <FinalCta locale={currentLocale} copy={localeCopy} />
+  </main>
+</Layout>
+
+<script>
+  document.addEventListener('click', (e) => {
+    const target = e.target as HTMLElement;
+    const btn = target.closest('[data-ask-ala]');
+    if (btn) {
+      e.preventDefault();
+      window.dispatchEvent(new CustomEvent('askala:open'));
+    }
+  });
+</script>
+
+<style>
+  .page--work {
+    padding-top: 120px;
+  }
+
+  .work-distinction {
+    max-width: 70ch;
+    margin-top: 1.25rem;
+    font-size: var(--text-base);
+    color: var(--text-tertiary);
+    line-height: 1.6;
+  }
+
+  .work-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1.5rem;
+    margin-top: 2.5rem;
+  }
+
+  @media (min-width: 1024px) {
+    .work-grid {
+      gap: 2rem;
+      margin-top: 3rem;
+    }
+  }
+
+  .work-empty {
+    margin-top: 2.5rem;
+    padding: 2.5rem 2rem;
+    border: 1px dashed var(--line);
+    border-radius: var(--ala-radius-md);
+    background-color: var(--surface);
+    text-align: center;
+  }
+
+  .work-empty h2 {
+    font-size: var(--text-2xl);
+    font-weight: 700;
+    color: var(--text-primary);
+    margin-bottom: 0.75rem;
+  }
+
+  .work-empty p {
+    max-width: 54ch;
+    margin: 0 auto 1.5rem;
+    font-size: var(--text-lg);
+    line-height: 1.6;
+    color: var(--text-secondary);
+  }
+
+  .work-empty__actions {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+  }
+</style>

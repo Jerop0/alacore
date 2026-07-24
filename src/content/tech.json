@@ -1,0 +1,146 @@
+{
+  "en": {
+    "title": "For Tech Teams",
+    "intro": "If you are a CTO, IT manager, or developer evaluating ALA CORE, here is the technical depth behind the simple language. We build serious systems, end to end.",
+    "delivery": "How we deliver: discovery, design, build, and long-term support. Agile cycles, transparent progress, and production-ready engineering.",
+    "groups": [
+      {
+        "title": "AI & Intelligent Assistants",
+        "items": ["AI agents", "Generative AI", "RAG", "Chatbots", "Voice AI", "Computer vision", "OCR / document AI", "Predictive models", "Recommendations", "AI consulting"]
+      },
+      {
+        "title": "Software & Applications",
+        "items": ["Web applications", "Mobile applications", "Desktop applications", "SaaS products", "Custom enterprise apps"]
+      },
+      {
+        "title": "Web & E-commerce",
+        "items": ["Corporate websites", "Customer portals", "CMS solutions", "Online stores", "Marketplaces", "Order management"]
+      },
+      {
+        "title": "Enterprise Systems",
+        "items": ["ERP / CRM / HRM / POS", "Inventory & accounting", "SAP, Odoo, Dynamics", "Oracle, ERPNext, Zoho"]
+      },
+      {
+        "title": "Automation & Integrations",
+        "items": ["Workflow automation", "n8n / Make / Zapier", "API development", "API integrations", "WhatsApp / email automation"]
+      },
+      {
+        "title": "Data & Analytics",
+        "items": ["Business intelligence", "Dashboards", "Reporting", "Data engineering", "Data warehousing", "Forecasting", "KPIs"]
+      },
+      {
+        "title": "Cloud & DevOps",
+        "items": ["AWS / Azure / GCP", "Docker & Kubernetes", "CI/CD", "Hosting", "Cloud migration", "Server management"]
+      },
+      {
+        "title": "Cybersecurity",
+        "items": ["Penetration testing", "Vulnerability assessment", "SOC", "Network & endpoint security", "Compliance", "Backup & disaster recovery"]
+      },
+      {
+        "title": "IoT & Smart Systems",
+        "items": ["Industrial automation", "MES", "Predictive maintenance", "Smart buildings", "Sensors & firmware", "Edge computing"]
+      },
+      {
+        "title": "Supporting Capabilities",
+        "items": ["UI/UX design", "Digital marketing", "IT infrastructure", "Managed services", "Payments", "VoIP / IVR", "Media production", "Corporate training", "QA & testing", "Localization", "Loyalty", "Legal / compliance tech", "No-code / low-code", "Accessibility"]
+      }
+    ],
+    "cta": "Talk to an expert"
+  },
+  "de": {
+    "title": "Für Tech-Teams",
+    "intro": "Wenn Sie CTO, IT-Manager oder Entwickler sind und ALA CORE bewerten, finden Sie hier die technische Tiefe hinter der einfachen Sprache. Wir bauen ernsthafte Systeme, von Anfang bis Ende.",
+    "delivery": "So liefern wir: Discovery, Design, Entwicklung und langfristige Betreuung. Agile Zyklen, transparenter Fortschritt und produktionsreife Engineering.",
+    "groups": [
+      {
+        "title": "KI & intelligente Assistenten",
+        "items": ["KI-Agenten", "Generative KI", "RAG", "Chatbots", "Sprach-KI", "Computer Vision", "OCR / Dokumenten-KI", "Prädiktive Modelle", "Empfehlungen", "KI-Beratung"]
+      },
+      {
+        "title": "Software & Anwendungen",
+        "items": ["Webanwendungen", "Mobile Anwendungen", "Desktop-Anwendungen", "SaaS-Produkte", "Custom Enterprise Apps"]
+      },
+      {
+        "title": "Web & E-Commerce",
+        "items": ["Unternehmenswebsites", "Kundenportale", "CMS-Lösungen", "Onlineshops", "Marktplätze", "Auftragsmanagement"]
+      },
+      {
+        "title": "Enterprise-Systeme",
+        "items": ["ERP / CRM / HRM / POS", "Bestand & Buchhaltung", "SAP, Odoo, Dynamics", "Oracle, ERPNext, Zoho"]
+      },
+      {
+        "title": "Automatisierung & Integrationen",
+        "items": ["Workflow-Automatisierung", "n8n / Make / Zapier", "API-Entwicklung", "API-Integrationen", "WhatsApp / E-Mail-Automatisierung"]
+      },
+      {
+        "title": "Daten & Analysen",
+        "items": ["Business Intelligence", "Dashboards", "Berichte", "Data Engineering", "Data Warehousing", "Forecasting", "KPIs"]
+      },
+      {
+        "title": "Cloud & DevOps",
+        "items": ["AWS / Azure / GCP", "Docker & Kubernetes", "CI/CD", "Hosting", "Cloud-Migration", "Server-Management"]
+      },
+      {
+        "title": "Cybersicherheit",
+        "items": ["Penetration Testing", "Schwachstellenanalyse", "SOC", "Netzwerk- & Endpunktsicherheit", "Compliance", "Backup & Disaster Recovery"]
+      },
+      {
+        "title": "IoT & intelligente Systeme",
+        "items": ["Industrielle Automatisierung", "MES", "Predictive Maintenance", "Smart Buildings", "Sensoren & Firmware", "Edge Computing"]
+      },
+      {
+        "title": "Unterstützende Fähigkeiten",
+        "items": ["UI/UX-Design", "Digitales Marketing", "IT-Infrastruktur", "Managed Services", "Zahlungen", "VoIP / IVR", "Medienproduktion", "Unternehmensschulungen", "QA & Testing", "Lokalisierung", "Loyalty", "Recht / Compliance Tech", "No-Code / Low-Code", "Barrierefreiheit"]
+      }
+    ],
+    "cta": "Mit Experten sprechen"
+  },
+  "tr": {
+    "title": "Teknik Ekipler İçin",
+    "intro": "CTO, IT yöneticisi veya ALA CORE'u değerlendiren bir geliştiriciyseniz, basit dilin arkasındaki teknik derinliği burada bulabilirsiniz. Uçtan uca ciddi sistemler inşa ediyoruz.",
+    "delivery": "Nasıl teslim ediyoruz: keşif, tasarım, geliştirme ve uzun vadeli destek. Çevik döngüler, şeffaf ilerleme ve üretime hazır mühendislik.",
+    "groups": [
+      {
+        "title": "Yapay Zeka & Akıllı Asistanlar",
+        "items": ["Yapay zeka ajanları", "Üretken yapay zeka", "RAG", "Chatbotlar", "Sesli yapay zeka", "Bilgisayarlı görü", "OCR / doküman yapay zekası", "Öngörücü modeller", "Öneriler", "Yapay zeka danışmanlığı"]
+      },
+      {
+        "title": "Yazılım & Uygulamalar",
+        "items": ["Web uygulamaları", "Mobil uygulamalar", "Masaüstü uygulamaları", "SaaS ürünleri", "Özel kurumsal uygulamalar"]
+      },
+      {
+        "title": "Web & E-Ticaret",
+        "items": ["Kurumsal web siteleri", "Müşteri portalları", "CMS çözümleri", "Online mağazalar", "Pazar yerleri", "Sipariş yönetimi"]
+      },
+      {
+        "title": "Kurumsal Sistemler",
+        "items": ["ERP / CRM / HRM / POS", "Stok & muhasebe", "SAP, Odoo, Dynamics", "Oracle, ERPNext, Zoho"]
+      },
+      {
+        "title": "Otomasyon & Entegrasyonlar",
+        "items": ["İş akışı otomasyonu", "n8n / Make / Zapier", "API geliştirme", "API entegrasyonları", "WhatsApp / e-posta otomasyonu"]
+      },
+      {
+        "title": "Veri & Analiz",
+        "items": ["İş zekası", "Panolar", "Raporlar", "Veri mühendisliği", "Veri ambarı", "Tahminleme", "KPI'ler"]
+      },
+      {
+        "title": "Bulut & DevOps",
+        "items": ["AWS / Azure / GCP", "Docker & Kubernetes", "CI/CD", "Hosting", "Bulut geçişi", "Sunucu yönetimi"]
+      },
+      {
+        "title": "Siber Güvenlik",
+        "items": ["Sızma testi", "Güvenlik açığı değerlendirmesi", "SOC", "Ağ & uç nokta güvenliği", "Uyumluluk", "Yedekleme & felaket kurtarma"]
+      },
+      {
+        "title": "IoT & Akıllı Sistemler",
+        "items": ["Endüstriyel otomasyon", "MES", "Öngörücü bakım", "Akıllı binalar", "Sensörler & firmware", "Edge computing"]
+      },
+      {
+        "title": "Destekleyici Yetkinlikler",
+        "items": ["UI/UX tasarım", "Dijital pazarlama", "IT altyapısı", "Yönetilen hizmetler", "Ödemeler", "VoIP / IVR", "Medya üretimi", "Kurumsal eğitim", "QA & test", "Lokalizasyon", "Sadakat", "Yasal / uyumluluk teknolojisi", "No-code / low-code", "Erişilebilirlik"]
+      }
+    ],
+    "cta": "Uzmanla görüşün"
+  }
+}

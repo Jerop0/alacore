@@ -1,0 +1,112 @@
+---
+import SectionHeading from '../ui/SectionHeading.astro';
+import Card from '../ui/Card.astro';
+import Icon from '../ui/Icon.astro';
+import type { CopyNode } from '../../lib/i18n';
+import { t, tArr } from '../../lib/i18n';
+
+interface Props {
+  copy: CopyNode;
+}
+
+const { copy } = Astro.props;
+
+const cards = [
+  { key: 'apps', icon: 'briefcase' },
+  { key: 'web', icon: 'globe' },
+  { key: 'chat', icon: 'messages-square' },
+  { key: 'automation', icon: 'settings' },
+  { key: 'reports', icon: 'chart-no-axes-column-increasing' },
+  { key: 'systems', icon: 'database' },
+] as const;
+---
+
+<section class="section">
+  <div class="container">
+    <SectionHeading
+      title={t(copy, 'sections.build')}
+      supporting={t(copy, 'sections.buildSupport')}
+    />
+    <div class="build-grid">
+      {
+        cards.map((card, index) => {
+          const item = tArr(copy, `buildCards.${card.key}`);
+          const title = item[0] ?? '';
+          const body = item[1] ?? '';
+          const isWide = index === 0;
+          return (
+            <Card class={isWide ? 'build-card build-card--wide' : 'build-card'}>
+              <div class="build-card__icon">
+                <Icon name={card.icon} size={24} />
+              </div>
+              <h3 class="build-card__title">{title}</h3>
+              <p class="build-card__body">{body}</p>
+            </Card>
+          );
+        })
+      }
+    </div>
+  </div>
+</section>
+
+<style>
+  .build-grid {
+    display: grid;
+    gap: 1.25rem;
+    grid-template-columns: 1fr;
+  }
+
+  @media (min-width: 640px) {
+    .build-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+
+  @media (min-width: 1024px) {
+    .build-grid {
+      grid-template-columns: repeat(3, 1fr);
+    }
+
+    .build-card--wide {
+      grid-column: span 2;
+    }
+  }
+
+  .build-card {
+    display: flex;
+    flex-direction: column;
+    gap: 0.875rem;
+  }
+
+  .build-card__icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 44px;
+    height: 44px;
+    border-radius: var(--ala-radius-sm);
+    background-color: var(--accent-tint);
+    color: var(--accent);
+  }
+
+  .build-card__title {
+    font-size: var(--text-lg);
+    font-weight: 700;
+    color: var(--text);
+  }
+
+  .build-card__body {
+    font-size: var(--text-md);
+    line-height: 1.55;
+    color: var(--text-muted);
+  }
+
+  .build-card:hover .build-card__icon {
+    background-color: var(--accent);
+    color: var(--ala-pure-white);
+  }
+
+  .build-card:hover .build-card__title {
+    color: var(--accent);
+  }
+</style>

@@ -1,0 +1,76 @@
+<button
+  type="button"
+  class="theme-toggle"
+  aria-label="Toggle dark mode"
+  id="theme-toggle"
+>
+  <span class="theme-toggle__icon theme-toggle__icon--sun" aria-hidden="true">
+    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"/><path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/></svg>
+  </span>
+  <span class="theme-toggle__icon theme-toggle__icon--moon" aria-hidden="true">
+    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"/></svg>
+  </span>
+</button>
+
+<script>
+  (function () {
+    const toggle = document.getElementById('theme-toggle');
+    if (!toggle) return;
+
+    const updateLabel = () => {
+      const isDark = document.documentElement.getAttribute('data-theme') === 'dark';
+      toggle.setAttribute('aria-label', isDark ? 'Switch to light mode' : 'Switch to dark mode');
+    };
+
+    updateLabel();
+
+    toggle.addEventListener('click', () => {
+      const current = document.documentElement.getAttribute('data-theme');
+      const next = current === 'dark' ? 'light' : 'dark';
+      document.documentElement.setAttribute('data-theme', next);
+      localStorage.setItem('ala-theme', next);
+      updateLabel();
+    });
+  })();
+</script>
+
+<style>
+  .theme-toggle {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 44px;
+    height: 44px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: var(--ala-radius-sm);
+    background: transparent;
+    color: var(--ala-pure-white);
+    cursor: pointer;
+    transition: background-color 160ms var(--ease-out-expo);
+  }
+
+  .theme-toggle:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+  }
+
+  .theme-toggle__icon {
+    position: absolute;
+    transition: opacity 160ms var(--ease-out-expo), transform 160ms var(--ease-out-expo);
+  }
+
+  html[data-theme='dark'] .theme-toggle__icon--sun {
+    opacity: 0;
+    transform: rotate(-90deg);
+  }
+
+  html:not([data-theme='dark']) .theme-toggle__icon--moon {
+    opacity: 0;
+    transform: rotate(90deg);
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .theme-toggle__icon {
+      transition: none;
+    }
+  }
+</style>

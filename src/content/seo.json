@@ -1,0 +1,80 @@
+{
+  "en": {
+    "home": {
+      "title": "ALA CORE — One Partner for Every Business Solution",
+      "description": "ALA CORE builds apps, websites, chatbots, automation, dashboards, and business systems that make companies easier to run."
+    },
+    "solutions": {
+      "title": "Solutions — ALA CORE",
+      "description": "Explore what ALA CORE builds: business apps, websites, chatbots, automation, dashboards, and systems for companies of every size."
+    },
+    "industries": {
+      "title": "Industries — ALA CORE",
+      "description": "ALA CORE builds tailored technology for restaurants, clinics, schools, offices, warehouses, retail, and manufacturing."
+    },
+    "forTechTeams": {
+      "title": "For Tech Teams — ALA CORE",
+      "description": "Technical depth behind ALA CORE: AI, software, ERP, automation, cloud, cybersecurity, data, and IoT capabilities."
+    },
+    "about": {
+      "title": "About — ALA CORE",
+      "description": "ALA CORE is a B2B technology partner that designs, builds, and supports custom business systems."
+    },
+    "contact": {
+      "title": "Contact — ALA CORE",
+      "description": "Talk to an ALA CORE expert. Tell us what you would like to improve and we will suggest the right starting point."
+    }
+  },
+  "de": {
+    "home": {
+      "title": "ALA CORE — Ein Partner für jede Unternehmenslösung",
+      "description": "ALA CORE entwickelt Apps, Websites, Chatbots, Automation, Dashboards und Geschäftssysteme, die Unternehmen einfacher machen."
+    },
+    "solutions": {
+      "title": "Lösungen — ALA CORE",
+      "description": "Entdecken Sie, was ALA CORE entwickelt: Business-Apps, Websites, Chatbots, Automatisierung, Dashboards und Systeme für Unternehmen jeder Größe."
+    },
+    "industries": {
+      "title": "Branchen — ALA CORE",
+      "description": "ALA CORE entwickelt maßgeschneiderte Technologie für Restaurants, Kliniken, Schulen, Büros, Lager, Einzelhandel und Fertigung."
+    },
+    "forTechTeams": {
+      "title": "Für Tech-Teams — ALA CORE",
+      "description": "Technische Tiefe hinter ALA CORE: KI, Software, ERP, Automatisierung, Cloud, Cybersicherheit, Daten und IoT."
+    },
+    "about": {
+      "title": "Über uns — ALA CORE",
+      "description": "ALA CORE ist ein B2B-Technologiepartner, der maßgeschneiderte Geschäftssysteme konzipiert, entwickelt und betreut."
+    },
+    "contact": {
+      "title": "Kontakt — ALA CORE",
+      "description": "Sprechen Sie mit einem ALA CORE-Experten. Sagen Sie uns, was Sie verbessern möchten, und wir schlagen den richtigen Einstieg vor."
+    }
+  },
+  "tr": {
+    "home": {
+      "title": "ALA CORE — Her İş Çözümü İçin Tek İş Ortağı",
+      "description": "ALA CORE, şirketleri daha kolay yönetilebilir kılan uygulamalar, web siteleri, chatbotlar, otomasyon, panolar ve iş sistemleri geliştirir."
+    },
+    "solutions": {
+      "title": "Çözümler — ALA CORE",
+      "description": "ALA CORE'un geliştirdiklerini keşfedin: iş uygulamaları, web siteleri, chatbotlar, otomasyon, panolar ve her büyüklükteki şirketler için sistemler."
+    },
+    "industries": {
+      "title": "Sektörler — ALA CORE",
+      "description": "ALA CORE, restoranlar, klinikler, okullar, ofisler, depolar, perakende ve üretim için özel teknoloji geliştirir."
+    },
+    "forTechTeams": {
+      "title": "Teknik Ekipler İçin — ALA CORE",
+      "description": "ALA CORE'un teknik derinliği: yapay zeka, yazılım, ERP, otomasyon, bulut, siber güvenlik, veri ve IoT yetkinlikleri."
+    },
+    "about": {
+      "title": "Hakkımızda — ALA CORE",
+      "description": "ALA CORE, özel iş sistemlerini tasarlayan, geliştiren ve destekleyen bir B2B teknoloji ortağıdır."
+    },
+    "contact": {
+      "title": "İletişim — ALA CORE",
+      "description": "Bir ALA CORE uzmanıyla görüşün. Neyi geliştirmek istediğinizi anlatın, doğru başlangıç noktasını önerelim."
+    }
+  }
+}

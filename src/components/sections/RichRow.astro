@@ -1,0 +1,389 @@
+---
+import Pill from '../ui/Pill.astro';
+
+interface Props {
+  title: string;
+  summary: string;
+  pills?: string[];
+  expand?: {
+    summaryLabel: string;
+    content: string;
+  };
+  dialog?: {
+    triggerLabel: string;
+    title: string;
+    body: string;
+  };
+}
+
+const { title, summary, pills = [], expand, dialog } = Astro.props;
+const hasDialog = Boolean(dialog);
+const dialogId = hasDialog ? `dialog-${Math.random().toString(36).slice(2, 9)}` : undefined;
+---
+
+<article class="rich-row" data-has-expand={expand ? 'true' : undefined} data-has-dialog={hasDialog ? 'true' : undefined}>
+  <div class="rich-row__main">
+    <div class="rich-row__content">
+      <h3 class="rich-row__title">{title}</h3>
+      <p class="rich-row__summary">{summary}</p>
+      {
+        pills.length > 0 && (
+          <div class="rich-row__pills">
+            {pills.map((pill) => (
+              <Pill>{pill}</Pill>
+            ))}
+          </div>
+        )
+      }
+    </div>
+    <div class="rich-row__actions">
+      {
+        expand && (
+          <details class="rich-row__expand">
+            <summary class="rich-row__summary-btn" aria-label={expand.summaryLabel}>
+              <svg class="rich-row__chevron" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="m6 9 6 6 6-6" />
+              </svg>
+            </summary>
+            <div class="rich-row__expand-body">
+              <slot name="expand">
+                <p>{expand.content}</p>
+              </slot>
+            </div>
+          </details>
+        )
+      }
+      {
+        dialog && dialogId && (
+          <button type="button" class="rich-row__dialog-btn" data-open-dialog={dialogId} aria-haspopup="dialog">
+            {dialog.triggerLabel}
+          </button>
+        )
+      }
+    </div>
+  </div>
+  {
+    dialog && dialogId && (
+      <dialog class="rich-row__dialog" id={dialogId} aria-labelledby={`${dialogId}-title`}>
+        <div class="rich-row__dialog-backdrop" data-close-dialog></div>
+        <div class="rich-row__dialog-sheet">
+          <div class="rich-row__dialog-handle" aria-hidden="true"></div>
+          <div class="rich-row__dialog-header">
+            <h2 id={`${dialogId}-title`} class="rich-row__dialog-title">{dialog.title}</h2>
+            <button type="button" class="rich-row__dialog-close" data-close-dialog aria-label="Close">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M18 6 6 18M6 6l12 12"/></svg>
+            </button>
+          </div>
+          <div class="rich-row__dialog-body">
+            <slot name="dialog">
+              <p>{dialog.body}</p>
+            </slot>
+          </div>
+        </div>
+      </dialog>
+    )
+  }
+</article>
+
+<script>
+  (function () {
+    const rows = document.querySelectorAll('.rich-row[data-has-dialog="true"]');
+    rows.forEach((row) => {
+      const openBtn = row.querySelector<HTMLButtonElement>('[data-open-dialog]');
+      const dialog = row.querySelector<HTMLDialogElement>('.rich-row__dialog');
+      if (!openBtn || !dialog) return;
+
+      const closeBtns = dialog.querySelectorAll<HTMLButtonElement>('[data-close-dialog]');
+
+      const trapFocus = (e: KeyboardEvent) => {
+        if (e.key !== 'Tab') return;
+        const focusables = dialog.querySelectorAll<HTMLElement>('button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])');
+        if (focusables.length === 0) return;
+        const first = focusables[0];
+        const last = focusables[focusables.length - 1];
+        if (e.shiftKey && document.activeElement === first) {
+          e.preventDefault();
+          last.focus();
+        } else if (!e.shiftKey && document.activeElement === last) {
+          e.preventDefault();
+          first.focus();
+        }
+      };
+
+      const onKeyDown = (e: KeyboardEvent) => {
+        if (e.key === 'Escape') {
+          dialog.close();
+        } else {
+          trapFocus(e);
+        }
+      };
+
+      openBtn.addEventListener('click', () => {
+        dialog.showModal();
+        const firstFocusable = dialog.querySelector<HTMLElement>('button, [href], input, select, textarea');
+        firstFocusable?.focus();
+        dialog.addEventListener('keydown', onKeyDown);
+      });
+
+      const close = () => {
+        dialog.close();
+        dialog.removeEventListener('keydown', onKeyDown);
+        openBtn.focus();
+      };
+
+      closeBtns.forEach((btn) => {
+        btn.addEventListener('click', (e) => {
+          if (e.target === btn) close();
+        });
+      });
+
+      dialog.addEventListener('click', (e) => {
+        const rect = dialog.getBoundingClientRect();
+        if (
+          e.clientX < rect.left ||
+          e.clientX > rect.right ||
+          e.clientY < rect.top ||
+          e.clientY > rect.bottom
+        ) {
+          close();
+        }
+      });
+
+      dialog.addEventListener('close', () => {
+        dialog.removeEventListener('keydown', onKeyDown);
+        openBtn.focus();
+      });
+    });
+  })();
+</script>
+
+<style>
+  .rich-row {
+    border: 1px solid var(--line);
+    border-radius: var(--ala-radius-md);
+    background-color: var(--bg);
+    box-shadow: var(--shadow-card);
+    transition: border-color 180ms var(--ease-out-expo), transform 180ms var(--ease-out-expo);
+  }
+
+  .rich-row:hover,
+  .rich-row:focus-within {
+    border-color: var(--accent);
+  }
+
+  @media (prefers-reduced-motion: no-preference) {
+    .rich-row:hover {
+      transform: translateY(-2px);
+    }
+  }
+
+  .rich-row__main {
+    display: grid;
+    gap: 1rem;
+    padding: 1.5rem;
+  }
+
+  @media (min-width: 768px) {
+    .rich-row__main {
+      grid-template-columns: 1fr auto;
+      align-items: start;
+    }
+  }
+
+  .rich-row__title {
+    font-size: var(--text-xl);
+    font-weight: 700;
+    color: var(--text-primary);
+    margin-bottom: 0.5rem;
+  }
+
+  .rich-row__summary {
+    font-size: var(--text-base);
+    line-height: 1.6;
+    color: var(--text-secondary);
+    max-width: 72ch;
+  }
+
+  .rich-row__pills {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-top: 1rem;
+  }
+
+  .rich-row__actions {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+  }
+
+  .rich-row__summary-btn {
+    display: grid;
+    place-items: center;
+    width: 44px;
+    height: 44px;
+    border: 1px solid var(--line);
+    border-radius: var(--ala-radius-sm);
+    background-color: transparent;
+    color: var(--text-secondary);
+    cursor: pointer;
+  }
+
+  .rich-row__summary-btn:hover {
+    border-color: var(--accent);
+    color: var(--accent);
+  }
+
+  .rich-row__summary-btn::-webkit-details-marker {
+    display: none;
+  }
+
+  .rich-row__chevron {
+    transition: transform 160ms var(--ease-out-expo);
+  }
+
+  .rich-row__expand[open] .rich-row__chevron {
+    transform: rotate(180deg);
+  }
+
+  .rich-row__expand-body {
+    grid-column: 1 / -1;
+    padding: 1rem 0 0;
+    color: var(--text-secondary);
+    line-height: 1.6;
+  }
+
+  .rich-row__expand-body p {
+    max-width: 72ch;
+  }
+
+  .rich-row__dialog-btn {
+    min-height: 44px;
+    padding: 0 1rem;
+    border: 1px solid var(--accent);
+    border-radius: var(--ala-radius-sm);
+    background-color: transparent;
+    color: var(--accent);
+    font-family: var(--ala-font);
+    font-size: var(--text-sm);
+    font-weight: 700;
+    cursor: pointer;
+  }
+
+  .rich-row__dialog-btn:hover {
+    background-color: var(--accent-tint);
+  }
+
+  .rich-row__dialog {
+    position: fixed;
+    inset: 0;
+    z-index: var(--z-panel);
+    max-width: 100%;
+    max-height: 100%;
+    width: 100%;
+    height: 100%;
+    padding: 0;
+    border: none;
+    background: transparent;
+  }
+
+  .rich-row__dialog::backdrop {
+    background-color: rgba(11, 18, 32, 0.5);
+    opacity: 0;
+    transition: opacity 220ms var(--ease-out-expo);
+  }
+
+  .rich-row__dialog[open]::backdrop {
+    opacity: 1;
+  }
+
+  .rich-row__dialog-backdrop {
+    position: absolute;
+    inset: 0;
+  }
+
+  .rich-row__dialog-sheet {
+    position: absolute;
+    right: 1rem;
+    bottom: 1rem;
+    width: min(calc(100% - 2rem), 560px);
+    max-height: calc(100vh - 2rem);
+    display: flex;
+    flex-direction: column;
+    border: 1px solid var(--line);
+    border-radius: var(--ala-radius-lg);
+    background-color: var(--bg);
+    box-shadow: var(--shadow-card);
+  }
+
+  .rich-row__dialog-handle {
+    display: none;
+    width: 40px;
+    height: 4px;
+    margin: 0.75rem auto 0;
+    border-radius: 999px;
+    background-color: var(--line);
+  }
+
+  @media (max-width: 640px) {
+    .rich-row__dialog-sheet {
+      right: 0;
+      bottom: 0;
+      width: 100%;
+      max-height: 85vh;
+      padding-bottom: env(safe-area-inset-bottom);
+      border-radius: var(--ala-radius-lg) var(--ala-radius-lg) 0 0;
+    }
+
+    .rich-row__dialog-handle {
+      display: block;
+    }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .rich-row__dialog::backdrop {
+      transition: none;
+    }
+  }
+
+  .rich-row__dialog-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    padding: 1rem 1.25rem;
+    border-bottom: 1px solid var(--line);
+  }
+
+  .rich-row__dialog-title {
+    font-size: var(--text-lg);
+    font-weight: 700;
+    color: var(--text-primary);
+  }
+
+  .rich-row__dialog-close {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 44px;
+    height: 44px;
+    border: none;
+    border-radius: var(--ala-radius-sm);
+    background-color: transparent;
+    color: var(--text-secondary);
+    cursor: pointer;
+  }
+
+  .rich-row__dialog-close:hover {
+    background-color: var(--surface);
+    color: var(--text-primary);
+  }
+
+  .rich-row__dialog-body {
+    flex: 1;
+    overflow-y: auto;
+    padding: 1.25rem;
+    color: var(--text-secondary);
+    line-height: 1.6;
+  }
+</style>

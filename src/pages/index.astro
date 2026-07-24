@@ -1,0 +1,46 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Hero from '../components/sections/Hero.astro';
+import WhatWeBuild from '../components/sections/WhatWeBuild.astro';
+import IndustriesTeaser from '../components/sections/IndustriesTeaser.astro';
+import ExampleSolutions from '../components/sections/ExampleSolutions.astro';
+import AnyIdea from '../components/sections/AnyIdea.astro';
+import ProcessSteps from '../components/sections/ProcessSteps.astro';
+import WhyAlaCore from '../components/sections/WhyAlaCore.astro';
+import FinalCta from '../components/sections/FinalCta.astro';
+import { DEFAULT_LOCALE, type Locale } from '../lib/config';
+import type { CopyNode } from '../lib/i18n';
+import copy from '../content/site-copy.json';
+
+const currentLocale = (Astro.currentLocale as Locale) ?? DEFAULT_LOCALE;
+const localeCopy = (copy as Record<string, CopyNode>)[currentLocale] ?? copy[DEFAULT_LOCALE];
+
+const title = 'ALA CORE — One Partner for Every Business Solution';
+const description = 'ALA CORE builds apps, websites, chatbots, automation, dashboards, and business systems that make companies easier to run.';
+
+const structuredData = {
+  '@context': 'https://schema.org',
+  '@type': 'Organization',
+  name: 'ALA CORE',
+  url: 'https://alacore.net',
+  logo: 'https://alacore.net/brand/ala-core-horizontal-dark.svg',
+  contactPoint: {
+    '@type': 'ContactPoint',
+    email: 'support@alacore.net',
+    contactType: 'customer support',
+    availableLanguage: ['English', 'German', 'Turkish'],
+  },
+  sameAs: [],
+};
+---
+
+<Layout title={title} description={description} structuredData={structuredData}>
+  <Hero locale={currentLocale} copy={localeCopy} />
+  <WhatWeBuild copy={localeCopy} />
+  <AnyIdea locale={currentLocale} copy={localeCopy} />
+  <IndustriesTeaser locale={currentLocale} copy={localeCopy} />
+  <ExampleSolutions copy={localeCopy} />
+  <ProcessSteps copy={localeCopy} locale={currentLocale} />
+  <WhyAlaCore copy={localeCopy} />
+  <FinalCta locale={currentLocale} copy={localeCopy} />
+</Layout>

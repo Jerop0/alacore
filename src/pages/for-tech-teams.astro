@@ -1,0 +1,104 @@
+---
+import Layout from '../layouts/Layout.astro';
+import SectionHeading from '../components/ui/SectionHeading.astro';
+import Card from '../components/ui/Card.astro';
+import Pill from '../components/ui/Pill.astro';
+import Button from '../components/ui/Button.astro';
+import FinalCta from '../components/sections/FinalCta.astro';
+import { DEFAULT_LOCALE, type Locale } from '../lib/config';
+import { getCopy, getSeo } from '../lib/page';
+import { localizePath, t, tArr } from '../lib/i18n';
+import type { CopyNode } from '../lib/i18n';
+
+const currentLocale = (Astro.currentLocale as Locale) ?? DEFAULT_LOCALE;
+const copy = getCopy(currentLocale, 'tech');
+const siteCopy = getCopy(currentLocale, 'site');
+const seo = getSeo(currentLocale, 'forTechTeams');
+
+const groups = tArr(copy, 'groups');
+---
+
+<Layout title={seo.title} description={seo.description}>
+  <section class="section">
+    <div class="container">
+      <SectionHeading title={t(copy, 'title')} supporting={t(copy, 'intro')} />
+
+      <div class="tech-grid">
+        {
+          groups.map((group) => {
+            const item = group as unknown as CopyNode;
+            return (
+              <Card>
+                <h3 class="tech-card__title">{t(item, 'title')}</h3>
+                <div class="tech-card__items">
+                  {tArr(item, 'items').map((cap) => (
+                    <Pill>{cap}</Pill>
+                  ))}
+                </div>
+              </Card>
+            );
+          })
+        }
+      </div>
+
+      <div class="tech-delivery">
+        <p class="tech-delivery__text">{t(copy, 'delivery')}</p>
+        <Button href={localizePath('/contact', currentLocale, currentLocale)}>
+          {t(copy, 'cta')}
+        </Button>
+      </div>
+    </div>
+  </section>
+
+  <FinalCta locale={currentLocale} copy={siteCopy} />
+</Layout>
+
+<style>
+  .tech-grid {
+    display: grid;
+    gap: 1.5rem;
+    grid-template-columns: 1fr;
+  }
+
+  @media (min-width: 768px) {
+    .tech-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+
+  @media (min-width: 1024px) {
+    .tech-grid {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+
+  .tech-card__title {
+    font-size: var(--text-xl);
+    font-weight: 700;
+    margin-bottom: 1rem;
+    color: var(--text);
+  }
+
+  .tech-card__items {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+  }
+
+  .tech-delivery {
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+    margin-top: 3rem;
+    padding: 2rem;
+    border-radius: var(--ala-radius-lg);
+    background-color: var(--surface);
+    text-align: center;
+  }
+
+  .tech-delivery__text {
+    font-size: var(--text-xl);
+    line-height: 1.55;
+    color: var(--text-muted);
+  }
+</style>

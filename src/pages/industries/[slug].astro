@@ -1,0 +1,28 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import IndustryPanel from '../../components/sections/IndustryPanel.astro';
+import { INDUSTRIES, DEFAULT_LOCALE, type Locale } from '../../lib/config';
+import { getCopy, getSeo } from '../../lib/page';
+import type { GetStaticPaths } from 'astro';
+
+export const getStaticPaths = (() => {
+  return INDUSTRIES.map((industry) => ({
+    params: { slug: industry.slug },
+    props: { locale: DEFAULT_LOCALE },
+  }));
+}) satisfies GetStaticPaths;
+
+const { slug } = Astro.params;
+const { locale } = Astro.props;
+const currentLocale = locale ?? (Astro.currentLocale as Locale) ?? DEFAULT_LOCALE;
+const copy = getCopy(currentLocale, 'industries');
+const siteCopy = getCopy(currentLocale, 'site');
+const item = (copy.list as Record<string, { name?: string; oneLiner?: string }> | undefined)?.[slug] ?? {};
+const seo = getSeo(currentLocale, 'industries');
+const title = `${item.name ?? ''} — ALA CORE`;
+const description = item.oneLiner ?? seo.description;
+---
+
+<Layout title={title} description={description}>
+  <IndustryPanel locale={currentLocale} copy={copy} siteCopy={siteCopy} slug={slug} />
+</Layout>

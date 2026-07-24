@@ -1,0 +1,86 @@
+---
+import SectionHeading from '../ui/SectionHeading.astro';
+import IndustryCatalog from '../sections/IndustryCatalog.astro';
+import Button from '../ui/Button.astro';
+import { type Locale } from '../../lib/config';
+import { localizePath, t, tObj } from '../../lib/i18n';
+import type { CopyNode } from '../../lib/i18n';
+import catalogData from '../../content/industries-catalog.json';
+
+interface Props {
+  locale: Locale;
+  copy: CopyNode;
+  siteCopy: CopyNode;
+  slug: string;
+}
+
+const { locale, copy, siteCopy, slug } = Astro.props;
+const list = tObj<Record<string, CopyNode>>(copy, 'list') ?? {};
+const item = list[slug] ?? {};
+const catalogLocale = (catalogData as Record<string, any>)[locale] ?? (catalogData as Record<string, any>)['en'];
+const catalog = catalogLocale.catalog?.[slug];
+const themeTitles = catalogLocale.themeTitles ?? {};
+---
+
+<section class="section industry-panel">
+  <div class="container">
+    <SectionHeading title={t(item, 'name')} supporting={t(item, 'oneLiner')} />
+
+    {
+      catalog ? (
+        <IndustryCatalog
+          intro={catalog.intro}
+          themeTitles={themeTitles}
+          themes={catalog.themes}
+          bundle={catalog.bundle}
+          cta={catalog.cta}
+          locale={locale}
+        />
+      ) : (
+        <div class="industry-panel__fallback">
+          <p>{t(item, 'businessType')}</p>
+          <div class="industry-panel__actions">
+            <Button href={localizePath('/contact', locale, locale)}>{t(copy, 'cta')}</Button>
+            <Button variant="ghost" id="industry-ask-ala">{t(siteCopy, 'finalCtaSecondary')}</Button>
+          </div>
+        </div>
+      )
+    }
+  </div>
+</section>
+
+<script>
+  (function () {
+    const btn = document.getElementById('industry-ask-ala');
+    if (!btn) return;
+    btn.addEventListener('click', (e) => {
+      e.preventDefault();
+      window.dispatchEvent(new CustomEvent('open-ask-ala'));
+    });
+  })();
+</script>
+
+<style>
+  .industry-panel {
+    padding-top: 120px;
+  }
+
+  .industry-panel__fallback {
+    max-width: 800px;
+    margin-inline: auto;
+    padding: 2rem;
+    border: 1px solid var(--line);
+    border-radius: var(--ala-radius-md);
+    background-color: var(--bg);
+    box-shadow: var(--shadow-card);
+  }
+
+  .industry-panel__actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+    margin-top: 1.5rem;
+    padding-top: 1rem;
+    border-top: 1px solid var(--line);
+  }
+</style>

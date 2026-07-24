@@ -1,0 +1,113 @@
+{
+  "en": {
+    "nav": {
+      "home": "Home",
+      "solutions": "Solutions",
+      "industries": "Industries",
+      "techTeams": "For Tech Teams",
+      "about": "About",
+      "contact": "Contact"
+    },
+    "hero": {
+      "title": "One Partner. Every Business Solution.",
+      "body": "We build apps, websites, chatbots, and systems that make your business easier to run.",
+      "primary": "Explore solutions",
+      "secondary": "Talk to an expert"
+    },
+    "sections": {
+      "build": "What We Build",
+      "industries": "Industries We Help",
+      "examples": "Example Solutions",
+      "why": "Why ALA CORE"
+    },
+    "buildCards": {
+      "apps": ["Business Apps", "Run daily work from one simple app."],
+      "web": ["Websites & Portals", "Help customers find, book, buy, and connect."],
+      "chat": ["Chatbots & WhatsApp", "Answer customers and collect requests faster."],
+      "automation": ["Automation", "Reduce repetitive work and save staff time."],
+      "reports": ["Dashboards & Reports", "See what is happening across your business."],
+      "systems": ["Business Systems", "Organize customers, staff, stock, and operations."]
+    },
+    "process": ["Understand", "Design", "Build", "Support"],
+    "finalCta": "Build the core of your business.",
+    "askAla": {
+      "title": "Ask ALA",
+      "question": "What would you like to improve in your business?",
+      "choices": ["Get more customers", "Save staff time", "Organize operations", "See better reports"]
+    }
+  },
+  "de": {
+    "nav": {
+      "home": "Start",
+      "solutions": "Lösungen",
+      "industries": "Branchen",
+      "techTeams": "Für Tech-Teams",
+      "about": "Über uns",
+      "contact": "Kontakt"
+    },
+    "hero": {
+      "title": "Ein Partner. Jede Lösung für Ihr Unternehmen.",
+      "body": "Wir entwickeln Apps, Websites, Chatbots und Systeme, die Ihren Geschäftsalltag erleichtern.",
+      "primary": "Lösungen ansehen",
+      "secondary": "Mit Experten sprechen"
+    },
+    "sections": {
+      "build": "Was wir entwickeln",
+      "industries": "Branchen, die wir unterstützen",
+      "examples": "Beispiellösungen",
+      "why": "Warum ALA CORE"
+    },
+    "buildCards": {
+      "apps": ["Business-Apps", "Steuern Sie Ihre tägliche Arbeit mit einer einfachen App."],
+      "web": ["Websites & Portale", "Helfen Sie Kunden, zu finden, zu buchen, zu kaufen und Kontakt aufzunehmen."],
+      "chat": ["Chatbots & WhatsApp", "Beantworten Sie Fragen und erfassen Sie Anfragen schneller."],
+      "automation": ["Automatisierung", "Reduzieren Sie wiederkehrende Aufgaben und sparen Sie Zeit."],
+      "reports": ["Dashboards & Berichte", "Sehen Sie klar, was in Ihrem Unternehmen passiert."],
+      "systems": ["Geschäftssysteme", "Organisieren Sie Kunden, Mitarbeiter, Bestände und Abläufe."]
+    },
+    "process": ["Verstehen", "Planen", "Entwickeln", "Betreuen"],
+    "finalCta": "Bauen Sie den Kern Ihres Unternehmens.",
+    "askAla": {
+      "title": "ALA fragen",
+      "question": "Was möchten Sie in Ihrem Unternehmen verbessern?",
+      "choices": ["Mehr Kunden gewinnen", "Arbeitszeit sparen", "Abläufe organisieren", "Bessere Berichte erhalten"]
+    }
+  },
+  "tr": {
+    "nav": {
+      "home": "Ana Sayfa",
+      "solutions": "Çözümler",
+      "industries": "Sektörler",
+      "techTeams": "Teknik Ekipler",
+      "about": "Hakkımızda",
+      "contact": "İletişim"
+    },
+    "hero": {
+      "title": "Tek İş Ortağı. Tüm İş Çözümleri.",
+      "body": "İşletmenizi yönetmeyi kolaylaştıran uygulamalar, web siteleri, chatbotlar ve sistemler geliştiriyoruz.",
+      "primary": "Çözümleri inceleyin",
+      "secondary": "Uzmanla görüşün"
+    },
+    "sections": {
+      "build": "Neler Geliştiriyoruz",
+      "industries": "Desteklediğimiz Sektörler",
+      "examples": "Örnek Çözümler",
+      "why": "Neden ALA CORE"
+    },
+    "buildCards": {
+      "apps": ["İş Uygulamaları", "Günlük işlerinizi tek bir uygulamadan yönetin."],
+      "web": ["Web Siteleri & Portallar", "Müşterilerin bulmasını, rezervasyon yapmasını ve satın almasını kolaylaştırın."],
+      "chat": ["Chatbot & WhatsApp", "Soruları yanıtlayın ve talepleri daha hızlı toplayın."],
+      "automation": ["Otomasyon", "Tekrarlanan işleri azaltın ve çalışanların zamanını koruyun."],
+      "reports": ["Panolar & Raporlar", "İşletmenizde neler olduğunu net biçimde görün."],
+      "systems": ["İş Sistemleri", "Müşteri, personel, stok ve operasyonları düzenleyin."]
+    },
+    "process": ["Anla", "Tasarla", "Geliştir", "Destekle"],
+    "finalCta": "İşletmenizin merkezini oluşturun.",
+    "askAla": {
+      "title": "ALA'ya Sor",
+      "question": "İşletmenizde neyi geliştirmek istersiniz?",
+      "choices": ["Daha fazla müşteri", "Çalışan zamanından tasarruf", "Operasyonları düzenle", "Daha iyi raporlar"]
+    }
+  }
+}

@@ -1,0 +1,230 @@
+---
+import Button from '../ui/Button.astro';
+import { localizePath } from '../../lib/i18n';
+import type { Locale } from '../../lib/config';
+
+interface Props {
+  intro: string;
+  themeTitles: Record<string, string>;
+  themes: { key: string; items: { name: string; short: string; detail: string; link?: string }[] }[];
+  bundle?: { title: string; description: string };
+  cta?: string;
+  learnMore?: string;
+  locale: Locale;
+}
+
+const { intro, themeTitles, themes, bundle, cta, learnMore = 'Learn more', locale } = Astro.props;
+---
+
+<div class="capability-catalog">
+  <p class="capability-catalog__intro">{intro}</p>
+
+  <div class="capability-catalog__themes">
+    {
+      themes.map((theme) => (
+        <section class="capability-theme" aria-labelledby={`theme-${theme.key}`}>
+          <h2 id={`theme-${theme.key}`} class="capability-theme__title">
+            {themeTitles[theme.key] ?? theme.key}
+          </h2>
+          <div class="capability-theme__items">
+            {theme.items.map((item, index) => (
+              <details class="capability-item" name={`theme-${theme.key}`}>
+                <summary class="capability-item__summary">
+                  <span class="capability-item__name">{item.name}</span>
+                  <span class="capability-item__short">{item.short}</span>
+                  <span class="capability-item__chevron" aria-hidden="true">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                      <path d="m6 9 6 6 6-6" />
+                    </svg>
+                  </span>
+                </summary>
+                <div class="capability-item__detail">
+                  <p>{item.detail}</p>
+                  {item.link && (
+                    <a href={localizePath(item.link, locale, locale)} class="capability-item__link">
+                      {learnMore}
+                    </a>
+                  )}
+                </div>
+              </details>
+            ))}
+          </div>
+        </section>
+      ))
+    }
+  </div>
+
+  {
+    bundle && (
+      <div class="capability-bundle">
+        <h2>{bundle.title}</h2>
+        <p>{bundle.description}</p>
+      </div>
+    )
+  }
+
+  {
+    cta && (
+      <div class="capability-catalog__cta">
+        <Button href={localizePath('/contact', locale, locale)}>{cta}</Button>
+      </div>
+    )
+  }
+</div>
+
+<style>
+  .capability-catalog {
+    display: flex;
+    flex-direction: column;
+    gap: 2.5rem;
+  }
+
+  .capability-catalog__intro {
+    font-size: var(--text-xl);
+    line-height: 1.5;
+    color: var(--text-secondary);
+    max-width: 64ch;
+  }
+
+  .capability-catalog__themes {
+    display: grid;
+    gap: 2rem;
+  }
+
+  .capability-theme {
+    border: 1px solid var(--line);
+    border-radius: var(--ala-radius-md);
+    background-color: var(--bg);
+    box-shadow: var(--shadow-card);
+    overflow: hidden;
+  }
+
+  :global([data-theme='dark']) .capability-theme {
+    background-color: var(--surface);
+  }
+
+  .capability-theme__title {
+    padding: 1.25rem 1.5rem;
+    font-size: var(--text-lg);
+    font-weight: 700;
+    color: var(--text-primary);
+    background-color: var(--surface);
+    border-bottom: 1px solid var(--line);
+  }
+
+  :global([data-theme='dark']) .capability-theme__title {
+    background-color: rgba(255, 255, 255, 0.03);
+  }
+
+  .capability-theme__items {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .capability-item {
+    border-bottom: 1px solid var(--line);
+  }
+
+  .capability-item:last-child {
+    border-bottom: none;
+  }
+
+  .capability-item__summary {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    gap: 0.25rem 0.75rem;
+    align-items: center;
+    padding: 1rem 1.5rem;
+    cursor: pointer;
+    list-style: none;
+    transition: background-color 160ms var(--ease-out-expo);
+  }
+
+  .capability-item__summary::-webkit-details-marker {
+    display: none;
+  }
+
+  .capability-item__summary:hover,
+  .capability-item__summary:focus-visible {
+    background-color: var(--surface);
+  }
+
+  .capability-item__name {
+    grid-column: 1;
+    font-weight: 700;
+    color: var(--text-primary);
+  }
+
+  .capability-item__short {
+    grid-column: 1;
+    font-size: var(--text-sm);
+    color: var(--text-secondary);
+    line-height: 1.5;
+  }
+
+  .capability-item__chevron {
+    grid-column: 2;
+    grid-row: 1 / 3;
+    display: grid;
+    place-items: center;
+    width: 28px;
+    height: 28px;
+    color: var(--text-tertiary);
+    transition: transform 160ms var(--ease-out-expo);
+  }
+
+  .capability-item[open] .capability-item__chevron {
+    transform: rotate(180deg);
+  }
+
+  .capability-item__detail {
+    padding: 0 1.5rem 1.25rem;
+    color: var(--text-secondary);
+    line-height: 1.6;
+  }
+
+  .capability-item__detail p {
+    margin-bottom: 0.75rem;
+  }
+
+  .capability-item__link {
+    font-weight: 600;
+    color: var(--accent);
+    text-decoration: underline;
+    text-underline-offset: 3px;
+  }
+
+  .capability-item__link:hover {
+    color: var(--text-primary);
+  }
+
+  .capability-bundle {
+    padding: 1.5rem;
+    border: 1px dashed var(--line);
+    border-radius: var(--ala-radius-md);
+    background-color: var(--surface);
+  }
+
+  .capability-bundle h2 {
+    font-size: var(--text-lg);
+    font-weight: 700;
+    color: var(--text-primary);
+    margin-bottom: 0.5rem;
+  }
+
+  .capability-bundle p {
+    color: var(--text-secondary);
+    line-height: 1.6;
+  }
+
+  .capability-catalog__cta {
+    display: flex;
+    justify-content: center;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .capability-item__chevron {
+      transition: none;
+    }
+  }
+</style>

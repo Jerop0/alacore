@@ -1,0 +1,173 @@
+{
+  "en": {
+    "meta": {
+      "title": "How We Work — ALA CORE",
+      "description": "Our clear process from understanding your business to launching and supporting your solution."
+    },
+    "heading": "How We Work",
+    "intro": "One clear process, from idea to launch and beyond.",
+    "labels": {
+      "youGet": "You get",
+      "yourPart": "Your part"
+    },
+    "steps": [
+      {
+        "number": "01",
+        "title": "Understand",
+        "what": "We learn your business, goals, and the real problem, and agree what success looks like.",
+        "youGet": "A clear plan and scope.",
+        "yourPart": "Share how you work today."
+      },
+      {
+        "number": "02",
+        "title": "Design",
+        "what": "We design how the solution looks and works; you review it before anything is built.",
+        "youGet": "A preview you can approve.",
+        "yourPart": "Tell us what fits your customers and staff."
+      },
+      {
+        "number": "03",
+        "title": "Build",
+        "what": "We build in stages, show progress, and test everything so it works, is secure, and is fast.",
+        "youGet": "Working software, checked before launch.",
+        "yourPart": "Try it and give feedback."
+      },
+      {
+        "number": "04",
+        "title": "Support",
+        "what": "We launch, train your team, and stay with you afterwards with updates and fixes.",
+        "youGet": "A partner who stays.",
+        "yourPart": "Tell us what to improve next."
+      }
+    ],
+    "expect": {
+      "title": "What to expect",
+      "points": [
+        "One point of contact throughout the project.",
+        "Clear communication in plain language, not technical jargon.",
+        "Work in stages you approve before we continue.",
+        "Start small, then grow: a first version, then add more."
+      ]
+    },
+    "afterLaunch": {
+      "title": "After launch",
+      "body": "We keep your solution running and improving. Updates, fixes, and new features as your business grows."
+    },
+    "ctaPrimary": "Talk to an expert",
+    "ctaSecondary": "Describe your need"
+  },
+  "de": {
+    "meta": {
+      "title": "So arbeiten wir — ALA CORE",
+      "description": "Unser klarer Prozess vom Verstehen Ihres Unternehmens bis zur Einführung und Betreuung Ihrer Lösung."
+    },
+    "heading": "So arbeiten wir",
+    "intro": "Ein klarer Prozess, von der Idee bis zum Start und darüber hinaus.",
+    "labels": {
+      "youGet": "Sie erhalten",
+      "yourPart": "Ihr Beitrag"
+    },
+    "steps": [
+      {
+        "number": "01",
+        "title": "Verstehen",
+        "what": "Wir lernen Ihr Unternehmen, Ihre Ziele und das echte Problem kennen und einigen uns, was Erfolg bedeutet.",
+        "youGet": "Ein klarer Plan und Umfang.",
+        "yourPart": "Teilen Sie mit, wie Sie heute arbeiten."
+      },
+      {
+        "number": "02",
+        "title": "Planen",
+        "what": "Wir planen, wie die Lösung aussieht und funktioniert; Sie prüfen sie, bevor etwas gebaut wird.",
+        "youGet": "Eine Vorschau, die Sie freigeben können.",
+        "yourPart": "Sagen Sie uns, was zu Ihren Kunden und Mitarbeitern passt."
+      },
+      {
+        "number": "03",
+        "title": "Entwickeln",
+        "what": "Wir entwickeln in Stufen, zeigen Fortschritte und testen alles, damit es funktioniert, sicher und schnell ist.",
+        "youGet": "Funktionierende Software, vor dem Start geprüft.",
+        "yourPart": "Probieren Sie aus und geben Sie Feedback."
+      },
+      {
+        "number": "04",
+        "title": "Betreuen",
+        "what": "Wir starten, schulen Ihr Team und begleiten Sie danach mit Updates und Korrekturen.",
+        "youGet": "Ein Partner, der bleibt.",
+        "yourPart": "Sagen Sie uns, was wir als Nächstes verbessern."
+      }
+    ],
+    "expect": {
+      "title": "Was Sie erwarten können",
+      "points": [
+        "Ein Ansprechpartner während des gesamten Projekts.",
+        "Klare Kommunikation in verständlicher Sprache, nicht im Technikjargon.",
+        "Arbeit in Phasen, die Sie freigeben, bevor wir weitermachen.",
+        "Klein anfangen, dann wachsen: eine erste Version, dann mehr."
+      ]
+    },
+    "afterLaunch": {
+      "title": "Nach dem Start",
+      "body": "Wir halten Ihre Lösung am Laufen und verbessern sie weiter. Updates, Korrekturen und neue Funktionen, wenn Ihr Unternehmen wächst."
+    },
+    "ctaPrimary": "Mit Experten sprechen",
+    "ctaSecondary": "Bedarf beschreiben"
+  },
+  "tr": {
+    "meta": {
+      "title": "Nasıl Çalışırız — ALA CORE",
+      "description": "İşletmenizi anlamaktan çözümü başlatmaya ve desteklemeye kadar açık sürecimiz."
+    },
+    "heading": "Nasıl Çalışırız",
+    "intro": "Fikirden başlatmaya ve ötesine kadar açık bir süreç.",
+    "labels": {
+      "youGet": "Siz alırsınız",
+      "yourPart": "Sizin rolünüz"
+    },
+    "steps": [
+      {
+        "number": "01",
+        "title": "Anla",
+        "what": "İşletmenizi, hedeflerinizi ve gerçek sorunu öğreniriz; başarının neye benzeyeceğini anlaşırız.",
+        "youGet": "Net bir plan ve kapsam.",
+        "yourPart": "Bugün nasıl çalıştığınızı paylaşın."
+      },
+      {
+        "number": "02",
+        "title": "Tasarla",
+        "what": "Çözümün nasıl görüneceğini ve çalışacağını tasarlarız; herhangi bir şey inşa edilmeden önce siz incelersiniz.",
+        "youGet": "Onaylayabileceğiniz bir önizleme.",
+        "yourPart": "Müşterilerinize ve ekibinize neyin uyduğunu söyleyin."
+      },
+      {
+        "number": "03",
+        "title": "Geliştir",
+        "what": "Aşama aşama geliştiririz, ilerlemeyi gösteririz ve çalışması, güvenli ve hızlı olması için her şeyi test ederiz.",
+        "youGet": "Başlatmadan önce kontrol edilmiş çalışan yazılım.",
+        "yourPart": "Deneyin ve geri bildirim verin."
+      },
+      {
+        "number": "04",
+        "title": "Destekle",
+        "what": "Başlatırız, ekibinizi eğitiriz ve sonrasında güncellemeler ve düzeltmelerle yanınızda kalırız.",
+        "youGet": "Kalacak bir ortak.",
+        "yourPart": "Sıradaki iyileştirmeyi bize söyleyin."
+      }
+    ],
+    "expect": {
+      "title": "Ne bekleyebilirsiniz",
+      "points": [
+        "Proje boyunca tek bir iletişim kişisi.",
+        "Teknik jargon değil, anlaşılır dille net iletişim.",
+        "Devam etmeden önce onayladığınız aşamalarda çalışma.",
+        "Küçük başlayıp büyümek: ilk bir sürüm, sonra daha fazlası."
+      ]
+    },
+    "afterLaunch": {
+      "title": "Başlattıktan sonra",
+      "body": "Çözümünüzü çalışır ve gelişmiş tutarız. İşletmeniz büyüdükçe güncellemeler, düzeltmeler ve yeni özellikler."
+    },
+    "ctaPrimary": "Uzmanla görüşün",
+    "ctaSecondary": "İhtiyacı anlat"
+  }
+}

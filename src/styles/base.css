@@ -1,0 +1,154 @@
+@import "./tokens.css";
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  color-scheme: light dark;
+  scroll-behavior: smooth;
+  -webkit-text-size-adjust: 100%;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+body {
+  min-height: 100vh;
+  font-family: var(--ala-font);
+  font-size: var(--text-md);
+  font-weight: 400;
+  line-height: 1.65;
+  color: var(--text);
+  background-color: var(--bg);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+img,
+picture,
+svg {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button {
+  font: inherit;
+  cursor: pointer;
+}
+
+ul,
+ol {
+  list-style: none;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  text-wrap: balance;
+}
+
+p,
+li {
+  text-wrap: pretty;
+}
+
+:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+}
+
+::selection {
+  color: var(--ala-pure-white);
+  background-color: var(--accent);
+}
+
+.container {
+  width: min(100% - 2rem, var(--ala-content-width));
+  margin-inline: auto;
+}
+
+.section {
+  padding-block: var(--ala-section-space);
+}
+
+.section--mist {
+  background-color: var(--surface);
+}
+
+.section--ink {
+  color: var(--ala-pure-white);
+  background-color: var(--ala-core-ink);
+}
+
+.skip-link {
+  position: absolute;
+  top: -100%;
+  left: 1rem;
+  z-index: calc(var(--z-header) + 1);
+  padding: 0.75rem 1rem;
+  border-radius: var(--ala-radius-sm);
+  background-color: var(--accent);
+  color: var(--ala-pure-white);
+  font-weight: 700;
+  transition: top 160ms var(--ease-out-expo);
+}
+
+.skip-link:focus {
+  top: 1rem;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+.no-scroll {
+  overflow: hidden;
+}
+
+/* Reduced motion block */
+@media (prefers-reduced-motion: reduce) {
+  .motion-safe {
+    display: none !important;
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .motion-reduce {
+    display: none !important;
+  }
+}

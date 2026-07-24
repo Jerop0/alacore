@@ -1,0 +1,170 @@
+{
+  "en": {
+    "title": "Industries",
+    "intro": "We have built tools for restaurants, clinics, schools, warehouses, offices, retailers, and factories. Each solution is shaped around the real workflow of that business.",
+    "cta": "Talk to an expert",
+    "list": {
+      "restaurants-cafes": {
+        "name": "Restaurants & Cafes",
+        "oneLiner": "Digital menus, online orders, reservations, and loyalty.",
+        "businessType": "Restaurants, cafés, bakeries, and food-service businesses",
+        "needs": ["Take orders without losing them", "Manage reservations and table turnover", "Build repeat customers with loyalty", "Answer questions and take orders on WhatsApp"],
+        "examples": ["Digital menu + QR ordering", "WhatsApp order assistant", "Reservation system", "Loyalty program"]
+      },
+      "hospitals-clinics": {
+        "name": "Hospitals & Clinics",
+        "oneLiner": "Appointments, patient records, reminders, and reports.",
+        "businessType": "Clinics, hospitals, medical practices, and health services",
+        "needs": ["Reduce no-shows with reminders", "Keep patient records in one place", "Schedule appointments efficiently", "Track performance and reports"],
+        "examples": ["Online appointment booking", "Patient record system", "Automated reminders", "Doctor and service reports"]
+      },
+      "schools-training": {
+        "name": "Schools & Training",
+        "oneLiner": "Student portals, payments, attendance, and parent communication.",
+        "businessType": "Schools, training centers, and educational institutions",
+        "needs": ["Manage enrollments and payments", "Track attendance and progress", "Keep parents informed", "Reduce administrative work"],
+        "examples": ["Student portal", "Payment tracking", "Attendance system", "Parent messaging"]
+      },
+      "companies-offices": {
+        "name": "Companies & Offices",
+        "oneLiner": "CRM, HR, approvals, and internal dashboards.",
+        "businessType": "Companies, offices, and corporate teams",
+        "needs": ["Track customer relationships", "Manage staff and approvals", "See team workload", "Make decisions faster"],
+        "examples": ["CRM", "HR dashboard", "Approval workflows", "Internal reports"]
+      },
+      "warehouses-logistics": {
+        "name": "Warehouses & Logistics",
+        "oneLiner": "Inventory, barcode tracking, deliveries, and stock reports.",
+        "businessType": "Warehouses, logistics companies, and distribution centers",
+        "needs": ["Know real stock levels", "Track items with barcodes", "Plan deliveries efficiently", "Avoid stockouts and overstocks"],
+        "examples": ["Barcode scanning system", "Inventory dashboard", "Delivery tracking", "Stock alerts"]
+      },
+      "retail-ecommerce": {
+        "name": "Retail & E-commerce",
+        "oneLiner": "Catalogs, orders, stock, payments, and customer support.",
+        "businessType": "Retail stores, online shops, and marketplaces",
+        "needs": ["Sell online and in-store", "Sync stock across channels", "Support customers faster", "Handle payments and refunds"],
+        "examples": ["Online store", "POS integration", "Stock sync", "Customer support chat"]
+      },
+      "factories-manufacturing": {
+        "name": "Factories & Manufacturing",
+        "oneLiner": "Production workflows, inventory, maintenance, and reporting.",
+        "businessType": "Factories, manufacturers, and production facilities",
+        "needs": ["Track production stages", "Plan maintenance before breakdowns", "Manage raw materials and stock", "See performance by line or shift"],
+        "examples": ["Production dashboard", "Maintenance scheduler", "Material tracking", "Shift reports"]
+      }
+    }
+  },
+  "de": {
+    "title": "Branchen",
+    "intro": "Wir haben Werkzeuge für Restaurants, Kliniken, Schulen, Lager, Büros, Einzelhändler und Fabriken entwickelt. Jede Lösung ist auf den echten Arbeitsablauf dieser Branche zugeschnitten.",
+    "cta": "Mit Experten sprechen",
+    "list": {
+      "restaurants-cafes": {
+        "name": "Restaurants & Cafés",
+        "oneLiner": "Digitale Speisekarten, Online-Bestellungen, Reservierungen und Loyalty.",
+        "businessType": "Restaurants, Cafés, Bäckereien und Gastronomiebetriebe",
+        "needs": ["Bestellungen ohne Verlust entgegennehmen", "Reservierungen und Tischwechsel managen", "Stammkunden mit Loyalty binden", "Fragen auf WhatsApp beantworten und Bestellungen entgegennehmen"],
+        "examples": ["Digitale Speisekarte + QR-Bestellung", "WhatsApp-Bestellassistent", "Reservierungssystem", "Loyalty-Programm"]
+      },
+      "hospitals-clinics": {
+        "name": "Krankenhäuser & Kliniken",
+        "oneLiner": "Termine, Patientenakten, Erinnerungen und Berichte.",
+        "businessType": "Kliniken, Krankenhäuser, Arztpraxen und Gesundheitsdienstleister",
+        "needs": ["Ausfälle durch Erinnerungen reduzieren", "Patientenakten an einem Ort halten", "Termine effizient planen", "Leistung und Berichte nachverfolgen"],
+        "examples": ["Online-Terminbuchung", "Patientenakten-System", "Automatisierte Erinnerungen", "Arzt- und Serviceberichte"]
+      },
+      "schools-training": {
+        "name": "Schulen & Weiterbildung",
+        "oneLiner": "Schülerportale, Zahlungen, Anwesenheit und Elternkommunikation.",
+        "businessType": "Schulen, Weiterbildungszentren und Bildungseinrichtungen",
+        "needs": ["Anmeldungen und Zahlungen verwalten", "Anwesenheit und Fortschritt verfolgen", "Eltern informieren", "Verwaltungsaufwand reduzieren"],
+        "examples": ["Schülerportal", "Zahlungsverfolgung", "Anwesenheitssystem", "Eltern-Nachrichten"]
+      },
+      "companies-offices": {
+        "name": "Unternehmen & Büros",
+        "oneLiner": "CRM, HR, Genehmigungen und interne Dashboards.",
+        "businessType": "Unternehmen, Büros und Unternehmensteams",
+        "needs": ["Kundenbeziehungen verfolgen", "Personal und Genehmigungen verwalten", "Team-Auslastung sehen", "Schneller entscheiden"],
+        "examples": ["CRM", "HR-Dashboard", "Genehmigungs-Workflows", "Interne Berichte"]
+      },
+      "warehouses-logistics": {
+        "name": "Lager & Logistik",
+        "oneLiner": "Bestand, Barcode-Tracking, Lieferungen und Bestandsberichte.",
+        "businessType": "Lager, Logistikunternehmen und Verteilzentren",
+        "needs": ["Echte Bestände kennen", "Artikel mit Barcodes verfolgen", "Lieferungen effizient planen", "Fehl- und Überbestände vermeiden"],
+        "examples": ["Barcode-Scanning-System", "Bestands-Dashboard", "Lieferverfolgung", "Bestandswarnungen"]
+      },
+      "retail-ecommerce": {
+        "name": "Einzelhandel & E-Commerce",
+        "oneLiner": "Kataloge, Aufträge, Bestand, Zahlungen und Kundenservice.",
+        "businessType": "Einzelhandel, Onlineshops und Marktplätze",
+        "needs": ["Online und im Geschäft verkaufen", "Bestand über Kanäle hinweg synchronisieren", "Kunden schneller unterstützen", "Zahlungen und Rückbuchungen abwickeln"],
+        "examples": ["Onlineshop", "Kassen-Integration", "Bestandsabgleich", "Kundenservice-Chat"]
+      },
+      "factories-manufacturing": {
+        "name": "Fabriken & Fertigung",
+        "oneLiner": "Produktionsabläufe, Bestand, Wartung und Berichterstattung.",
+        "businessType": "Fabriken, Hersteller und Produktionsstätten",
+        "needs": ["Produktionsstufen verfolgen", "Wartung vor dem Ausfall planen", "Rohmaterialien und Bestand verwalten", "Leistung nach Linie oder Schicht sehen"],
+        "examples": ["Produktions-Dashboard", "Wartungsplaner", "Material-Tracking", "Schichtberichte"]
+      }
+    }
+  },
+  "tr": {
+    "title": "Sektörler",
+    "intro": "Restoranlar, klinikler, okullar, depolar, ofisler, perakende satışlar ve fabrikalar için araçlar geliştirdik. Her çözüm, o işletmenin gerçek iş akışına göre şekillenir.",
+    "cta": "Uzmanla görüşün",
+    "list": {
+      "restaurants-cafes": {
+        "name": "Restoranlar & Kafeler",
+        "oneLiner": "Dijital menü, online sipariş, rezervasyon ve sadakat.",
+        "businessType": "Restoranlar, kafeler, fırınlar ve yiyecek hizmeti işletmeleri",
+        "needs": ["Siparişleri kaybetmeden almak", "Rezervasyon ve masa değişimini yönetmek", "Sadakat programıyla müşterileri geri getirmek", "WhatsApp'tan soru yanıtlamak ve sipariş almak"],
+        "examples": ["Dijital menü + QR sipariş", "WhatsApp sipariş asistanı", "Rezervasyon sistemi", "Sadakat programı"]
+      },
+      "hospitals-clinics": {
+        "name": "Hastaneler & Klinikler",
+        "oneLiner": "Randevular, hasta kayıtları, hatırlatmalar ve raporlar.",
+        "businessType": "Klinikler, hastaneler, tıbbi pratikler ve sağlık hizmetleri",
+        "needs": ["Hatırlatmalarla iptalleri azaltmak", "Hasta kayıtlarını tek yerde tutmak", "Randevuları verimli planlamak", "Performans ve raporları takip etmek"],
+        "examples": ["Online randevu alma", "Hasta kayıt sistemi", "Otomatik hatırlatmalar", "Doktor ve hizmet raporları"]
+      },
+      "schools-training": {
+        "name": "Okullar & Eğitim",
+        "oneLiner": "Öğrenci portalları, ödemeler, devam takibi ve veli iletişimi.",
+        "businessType": "Okullar, eğitim merkezleri ve eğitim kurumları",
+        "needs": ["Kayıtları ve ödemeleri yönetmek", "Devam durumunu ve ilerlemeyi takip etmek", "Velileri bilgilendirmek", "İdari iş yükünü azaltmak"],
+        "examples": ["Öğrenci portalı", "Ödeme takibi", "Devam takip sistemi", "Veli mesajlaşması"]
+      },
+      "companies-offices": {
+        "name": "Şirketler & Ofisler",
+        "oneLiner": "CRM, İK, onaylar ve iç panolar.",
+        "businessType": "Şirketler, ofisler ve kurumsal ekipler",
+        "needs": ["Müşteri ilişkilerini takip etmek", "Personel ve onayları yönetmek", "Ekip iş yükünü görmek", "Daha hızlı karar vermek"],
+        "examples": ["CRM", "İK panosu", "Onay akışları", "İç raporlar"]
+      },
+      "warehouses-logistics": {
+        "name": "Depolar & Lojistik",
+        "oneLiner": "Stok, barkod takibi, teslimatlar ve stok raporları.",
+        "businessType": "Depolar, lojistik firmaları ve dağıtım merkezleri",
+        "needs": ["Gerçek stok seviyelerini bilmek", "Barkodlarla ürünleri takip etmek", "Teslimatları verimli planlamak", "Stok açığı ve fazlasından kaçınmak"],
+        "examples": ["Barkod tarama sistemi", "Stok panosu", "Teslimat takibi", "Stok uyarıları"]
+      },
+      "retail-ecommerce": {
+        "name": "Perakende & E-Ticaret",
+        "oneLiner": "Kataloglar, siparişler, stok, ödemeler ve müşteri desteği.",
+        "businessType": "Perakende mağazalar, online mağazalar ve pazar yerleri",
+        "needs": ["Online ve mağazada satmak", "Stoğu kanallar arasında senkronize etmek", "Müşterilere daha hızlı destek vermek", "Ödemeler ve iadeleri yönetmek"],
+        "examples": ["Online mağaza", "POS entegrasyonu", "Stok senkronizasyonu", "Müşteri destek sohbeti"]
+      },
+      "factories-manufacturing": {
+        "name": "Fabrikalar & Üretim",
+        "oneLiner": "Üretim akışları, stok, bakım ve raporlama.",
+        "businessType": "Fabrikalar, üreticiler ve üretim tesisleri",
+        "needs": ["Üretim aşamalarını takip etmek", "Arızadan önce bakım planlamak", "Hammadde ve stok yönetmek", "Hat veya vardiya bazında performans görmek"],
+        "examples": ["Üretim panosu", "Bakım planlayıcı", "Malzeme takibi", "Vardiya raporları"]
+      }
+    }
+  }
+}

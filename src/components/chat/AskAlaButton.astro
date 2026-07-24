@@ -1,0 +1,119 @@
+---
+import { DEFAULT_LOCALE, type Locale } from '../../lib/config';
+import type { CopyNode } from '../../lib/i18n';
+import copy from '../../content/site-copy.json';
+
+const currentLocale = Astro.currentLocale as Locale ?? DEFAULT_LOCALE;
+const localeCopy = (copy as Record<string, CopyNode>)[currentLocale] ?? copy[DEFAULT_LOCALE];
+const label = String((localeCopy.askAla as CopyNode)?.title ?? 'Ask ALA');
+---
+
+<button type="button" class="ask-ala-button" id="ask-ala-button" aria-label={label}>
+  <span class="ask-ala-button__icon" aria-hidden="true">
+    <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/><path d="M9 10h.01M13 14h.01"/></svg>
+  </span>
+  <span class="ask-ala-button__label">{label}</span>
+</button>
+
+<script>
+  (function () {
+    const btn = document.getElementById('ask-ala-button');
+    if (!btn) return;
+    btn.addEventListener('click', () => {
+      window.dispatchEvent(new CustomEvent('open-ask-ala'));
+    });
+  })();
+</script>
+
+<style>
+  .ask-ala-button {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.625rem;
+    width: 56px;
+    height: 56px;
+    padding: 0;
+    border: none;
+    border-radius: 9999px;
+    background-color: var(--accent);
+    color: var(--ala-pure-white);
+    font-family: var(--ala-font);
+    font-size: var(--text-sm);
+    font-weight: 700;
+    cursor: pointer;
+    box-shadow:
+      0 4px 12px rgba(21, 94, 239, 0.25),
+      0 1px 3px rgba(0, 0, 0, 0.08);
+    transition:
+      transform 180ms var(--ease-out-expo),
+      box-shadow 180ms var(--ease-out-expo),
+      background-color 180ms var(--ease-out-expo);
+    -webkit-tap-highlight-color: transparent;
+  }
+
+  .ask-ala-button:hover {
+    background-color: var(--accent-hover);
+    transform: translateY(-2px) scale(1.04);
+    box-shadow:
+      0 8px 24px rgba(21, 94, 239, 0.32),
+      0 2px 6px rgba(0, 0, 0, 0.1);
+  }
+
+  .ask-ala-button:active {
+    transform: translateY(0) scale(0.97);
+    box-shadow:
+      0 2px 8px rgba(21, 94, 239, 0.2),
+      0 1px 2px rgba(0, 0, 0, 0.06);
+  }
+
+  .ask-ala-button:focus-visible {
+    outline: 3px solid var(--accent);
+    outline-offset: 3px;
+  }
+
+  .ask-ala-button__icon {
+    display: grid;
+    place-items: center;
+    flex-shrink: 0;
+    width: 22px;
+    height: 22px;
+  }
+
+  .ask-ala-button__label {
+    display: none;
+  }
+
+  @media (min-width: 768px) {
+    .ask-ala-button {
+      width: auto;
+      min-width: 56px;
+      min-height: 56px;
+      padding: 0 1.25rem 0 1rem;
+      border-radius: 9999px;
+    }
+
+    .ask-ala-button__label {
+      display: inline;
+      white-space: nowrap;
+    }
+  }
+
+  @media (prefers-reduced-motion: no-preference) {
+    .ask-ala-button {
+      animation: ala-pulse 2.8s cubic-bezier(0.4, 0, 0.6, 1) 3;
+    }
+  }
+
+  @keyframes ala-pulse {
+    0%, 100% { box-shadow: 0 4px 12px rgba(21, 94, 239, 0.25), 0 0 0 0 rgba(21, 94, 239, 0.3); }
+    50% { box-shadow: 0 4px 12px rgba(21, 94, 239, 0.25), 0 0 0 10px rgba(21, 94, 239, 0); }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .ask-ala-button {
+      animation: none;
+    }
+  }
+</style>

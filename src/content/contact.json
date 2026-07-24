@@ -1,0 +1,101 @@
+{
+  "en": {
+    "title": "Contact",
+    "intro": "Tell us what you would like to improve. We will suggest the right starting point and next steps.",
+    "emailIntro": "Prefer email? Reach us at",
+    "askAla": "Not sure what to ask? Try Ask ALA.",
+    "form": {
+      "name": "Your name",
+      "namePlaceholder": "John Doe",
+      "business": "Business name",
+      "businessPlaceholder": "Your company",
+      "contact": "Email or phone",
+      "contactPlaceholder": "you@company.com",
+      "industry": "Industry",
+      "industryPlaceholder": "Select your industry",
+      "industries": ["Restaurant / Cafe", "Hospital / Clinic", "School / Training", "Company / Office", "Warehouse / Logistics", "Retail / E-commerce", "Factory / Manufacturing", "Other"],
+      "need": "What would you like to improve?",
+      "needPlaceholder": "Describe your challenge and the outcome you want",
+      "contactMethod": "Preferred contact method",
+      "contactMethods": ["WhatsApp", "Email", "Phone"],
+      "consent": "I agree to be contacted about my request.",
+      "submit": "Send via WhatsApp",
+      "sending": "Opening WhatsApp...",
+      "success": "WhatsApp is opening with your message. We will reply as soon as possible.",
+      "errors": {
+        "nameRequired": "Please enter your name.",
+        "businessRequired": "Please enter your business name.",
+        "contactRequired": "Please enter an email or phone number.",
+        "industryRequired": "Please select an industry.",
+        "needRequired": "Please describe what you would like to improve.",
+        "consentRequired": "Please agree to be contacted."
+      }
+    }
+  },
+  "de": {
+    "title": "Kontakt",
+    "intro": "Sagen Sie uns, was Sie verbessern möchten. Wir schlagen den richtigen Einstieg und die nächsten Schritte vor.",
+    "emailIntro": "Lieber per E-Mail? Erreichen Sie uns unter",
+    "askAla": "Unsicher, was Sie fragen sollen? Probieren Sie ALA fragen.",
+    "form": {
+      "name": "Ihr Name",
+      "namePlaceholder": "Max Mustermann",
+      "business": "Unternehmensname",
+      "businessPlaceholder": "Ihr Unternehmen",
+      "contact": "E-Mail oder Telefon",
+      "contactPlaceholder": "sie@unternehmen.de",
+      "industry": "Branche",
+      "industryPlaceholder": "Branche auswählen",
+      "industries": ["Restaurant / Café", "Krankenhaus / Klinik", "Schule / Weiterbildung", "Unternehmen / Büro", "Lager / Logistik", "Einzelhandel / E-Commerce", "Fabrik / Fertigung", "Sonstiges"],
+      "need": "Was möchten Sie verbessern?",
+      "needPlaceholder": "Beschreiben Sie Ihre Herausforderung und das gewünschte Ergebnis",
+      "contactMethod": "Bevorzugte Kontaktart",
+      "contactMethods": ["WhatsApp", "E-Mail", "Telefon"],
+      "consent": "Ich stimme zu, bezüglich meiner Anfrage kontaktiert zu werden.",
+      "submit": "Per WhatsApp senden",
+      "sending": "WhatsApp wird geöffnet...",
+      "success": "WhatsApp öffnet sich mit Ihrer Nachricht. Wir antworten so schnell wie möglich.",
+      "errors": {
+        "nameRequired": "Bitte geben Sie Ihren Namen ein.",
+        "businessRequired": "Bitte geben Sie Ihren Unternehmensnamen ein.",
+        "contactRequired": "Bitte geben Sie eine E-Mail-Adresse oder Telefonnummer ein.",
+        "industryRequired": "Bitte wählen Sie eine Branche.",
+        "needRequired": "Bitte beschreiben Sie, was Sie verbessern möchten.",
+        "consentRequired": "Bitte stimmen Sie der Kontaktaufnahme zu."
+      }
+    }
+  },
+  "tr": {
+    "title": "İletişim",
+    "intro": "Neyi geliştirmek istediğinizi bize anlatın. Doğru başlangıç noktasını ve sonraki adımları önereceğiz.",
+    "emailIntro": "E-posta tercih ediyorsanız bize şu adresten ulaşabilirsiniz",
+    "askAla": "Ne soracağınızdan emin değil misiniz? ALA'ya Sor'u deneyin.",
+    "form": {
+      "name": "Adınız",
+      "namePlaceholder": "Ahmet Yılmaz",
+      "business": "İşletme adı",
+      "businessPlaceholder": "Şirketiniz",
+      "contact": "E-posta veya telefon",
+      "contactPlaceholder": "siz@sirketiniz.com",
+      "industry": "Sektör",
+      "industryPlaceholder": "Sektör seçin",
+      "industries": ["Restoran / Kafe", "Hastane / Klinik", "Okul / Eğitim", "Şirket / Ofis", "Depo / Lojistik", "Perakende / E-Ticaret", "Fabrika / Üretim", "Diğer"],
+      "need": "Neyi geliştirmek istersiniz?",
+      "needPlaceholder": "Zorluğunuzu ve istediğiniz sonucu açıklayın",
+      "contactMethod": "Tercih edilen iletişim yöntemi",
+      "contactMethods": ["WhatsApp", "E-posta", "Telefon"],
+      "consent": "Talebim hakkında benimle iletişime geçilmesini kabul ediyorum.",
+      "submit": "WhatsApp üzerinden gönder",
+      "sending": "WhatsApp açılıyor...",
+      "success": "WhatsApp, mesajınızla birlikte açılıyor. En kısa sürede yanıt vereceğiz.",
+      "errors": {
+        "nameRequired": "Lütfen adınızı girin.",
+        "businessRequired": "Lütfen işletme adını girin.",
+        "contactRequired": "Lütfen bir e-posta adresi veya telefon numarası girin.",
+        "industryRequired": "Lütfen bir sektör seçin.",
+        "needRequired": "Lütfen neyi geliştirmek istediğinizi açıklayın.",
+        "consentRequired": "Lütfen iletişime geçilmesini kabul edin."
+      }
+    }
+  }
+}

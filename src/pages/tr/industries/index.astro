@@ -1,0 +1,15 @@
+---
+import Layout from '../../../layouts/Layout.astro';
+import IndustryIndex from '../../../components/sections/IndustryIndex.astro';
+import { DEFAULT_LOCALE, type Locale } from '../../../lib/config';
+import { getCopy, getSeo } from '../../../lib/page';
+
+const currentLocale = (Astro.currentLocale as Locale) ?? DEFAULT_LOCALE;
+const copy = getCopy(currentLocale, 'industries');
+const siteCopy = getCopy(currentLocale, 'site');
+const seo = getSeo(currentLocale, 'industries');
+---
+
+<Layout title={seo.title} description={seo.description}>
+  <IndustryIndex locale={currentLocale} copy={copy} siteCopy={siteCopy} />
+</Layout>

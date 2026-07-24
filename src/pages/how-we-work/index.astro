@@ -1,0 +1,207 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import SectionHeading from '../../components/ui/SectionHeading.astro';
+import Button from '../../components/ui/Button.astro';
+import Card from '../../components/ui/Card.astro';
+import FinalCta from '../../components/sections/FinalCta.astro';
+import { DEFAULT_LOCALE, type Locale } from '../../lib/config';
+import { localizePath } from '../../lib/i18n';
+import type { CopyNode } from '../../lib/i18n';
+import copy from '../../content/site-copy.json';
+import pageData from '../../content/how-we-work.json';
+
+const currentLocale = (Astro.currentLocale as Locale) ?? DEFAULT_LOCALE;
+const localeCopy = (copy as Record<string, CopyNode>)[currentLocale] ?? copy[DEFAULT_LOCALE];
+const data = (pageData as Record<string, any>)[currentLocale] ?? (pageData as Record<string, any>)[DEFAULT_LOCALE];
+---
+
+<Layout title={data.meta.title} description={data.meta.description}>
+  <main class="page page--how-we-work">
+    <section class="section" aria-labelledby="how-heading">
+      <div class="container">
+        <SectionHeading id="how-heading" title={data.heading} supporting={data.intro} />
+
+        <div class="process-steps">
+          {
+            data.steps.map((step: any, index: number) => (
+              <Card class="process-step" hover={false}>
+                <div class="process-step__meta">
+                  <span class="process-step__number">{step.number}</span>
+                  <h2 class="process-step__title">{step.title}</h2>
+                </div>
+                <p class="process-step__what">{step.what}</p>
+                <dl class="process-step__details">
+                  <div>
+                    <dt>{data.labels.youGet}</dt>
+                    <dd>{step.youGet}</dd>
+                  </div>
+                  <div>
+                    <dt>{data.labels.yourPart}</dt>
+                    <dd>{step.yourPart}</dd>
+                  </div>
+                </dl>
+              </Card>
+            ))
+          }
+        </div>
+
+        <div class="how-expect">
+          <Card hover={false} class="how-expect__card">
+            <h2>{data.expect.title}</h2>
+            <ul>
+              {data.expect.points.map((point: string) => (
+                <li>{point}</li>
+              ))}
+            </ul>
+          </Card>
+          <Card hover={false} class="how-after__card">
+            <h2>{data.afterLaunch.title}</h2>
+            <p>{data.afterLaunch.body}</p>
+          </Card>
+        </div>
+
+        <div class="how-actions">
+          <Button href={localizePath('/contact', currentLocale, currentLocale)}>{data.ctaPrimary}</Button>
+          <Button variant="ghost" id="how-ask-ala">{data.ctaSecondary}</Button>
+        </div>
+      </div>
+    </section>
+
+    <FinalCta locale={currentLocale} copy={localeCopy} />
+  </main>
+</Layout>
+
+<script>
+  (function () {
+    const btn = document.getElementById('how-ask-ala');
+    if (!btn) return;
+    btn.addEventListener('click', (e) => {
+      e.preventDefault();
+      window.dispatchEvent(new CustomEvent('open-ask-ala'));
+    });
+  })();
+</script>
+
+<style>
+  .page--how-we-work {
+    padding-top: 120px;
+  }
+
+  .process-steps {
+    display: grid;
+    gap: 1.25rem;
+    margin-top: 2.5rem;
+  }
+
+  @media (min-width: 768px) {
+    .process-steps {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+
+  @media (min-width: 1024px) {
+    .process-steps {
+      grid-template-columns: repeat(4, 1fr);
+      gap: 1rem;
+    }
+  }
+
+  .process-step {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+  }
+
+  .process-step__meta {
+    display: flex;
+    align-items: baseline;
+    gap: 0.75rem;
+  }
+
+  .process-step__number {
+    font-size: var(--text-sm);
+    font-weight: 800;
+    color: var(--accent);
+  }
+
+  .process-step__title {
+    font-size: var(--text-xl);
+    font-weight: 700;
+    color: var(--text-primary);
+  }
+
+  .process-step__what {
+    font-size: var(--text-base);
+    line-height: 1.6;
+    color: var(--text-secondary);
+  }
+
+  .process-step__details {
+    display: grid;
+    gap: 0.5rem;
+    margin-top: auto;
+    padding-top: 0.75rem;
+    border-top: 1px solid var(--line);
+  }
+
+  .process-step__details dt {
+    font-size: var(--text-xs);
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    color: var(--text-tertiary);
+  }
+
+  .process-step__details dd {
+    margin: 0;
+    font-size: var(--text-sm);
+    color: var(--text-secondary);
+  }
+
+  .how-expect {
+    display: grid;
+    gap: 1.25rem;
+    margin-top: 2.5rem;
+  }
+
+  @media (min-width: 768px) {
+    .how-expect {
+      grid-template-columns: 1.5fr 1fr;
+    }
+  }
+
+  .how-expect h2,
+  .how-after__card h2 {
+    font-size: var(--text-xl);
+    font-weight: 700;
+    color: var(--text-primary);
+    margin-bottom: 0.75rem;
+  }
+
+  .how-expect ul {
+    display: grid;
+    gap: 0.5rem;
+    list-style: disc;
+    padding-left: 1.25rem;
+  }
+
+  .how-expect li {
+    font-size: var(--text-base);
+    line-height: 1.6;
+    color: var(--text-secondary);
+  }
+
+  .how-after__card p {
+    font-size: var(--text-base);
+    line-height: 1.6;
+    color: var(--text-secondary);
+  }
+
+  .how-actions {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.75rem;
+    margin-top: 2.5rem;
+  }
+</style>

@@ -1,0 +1,182 @@
+{
+  "en": {
+    "title": "Solutions",
+    "intro": "We build the tools that make daily business easier — from the app your staff uses to the dashboard you check each morning.",
+    "labels": {
+      "included": "What's included",
+      "whoFor": "Who it's for",
+      "example": "Example"
+    },
+    "families": [
+      {
+        "title": "Business Apps",
+        "description": "One place for the work your team does every day. Orders, bookings, schedules, tasks, and customer requests in a single app that fits your workflow.",
+        "tools": ["Orders", "Bookings", "Staff scheduling", "Tasks", "Customer requests"],
+        "included": ["Custom mobile and web apps", "Role-based access for staff", "Forms and workflows that match your process", "Notifications and reminders"],
+        "whoFor": "Restaurants, clinics, schools, warehouses, and offices that want one simple app for daily work.",
+        "example": "A restaurant uses one app to take orders, send them to the kitchen, and track table status."
+      },
+      {
+        "title": "Websites & Portals",
+        "description": "A fast, clear website or customer portal that helps people find you, book services, buy products, and get in touch without confusion.",
+        "tools": ["Corporate sites", "Booking portals", "Online stores", "Customer logins", "Landing pages"],
+        "included": ["Responsive design", "Booking and contact forms", "Secure customer login area", "SEO-ready structure"],
+        "whoFor": "Businesses that need to be found online and let customers self-serve.",
+        "example": "A clinic lets patients book appointments, see services, and access forms on a fast mobile site."
+      },
+      {
+        "title": "Chatbots & WhatsApp",
+        "description": "Automated conversations that answer common questions, collect requests, and hand off to your team when a human is needed.",
+        "tools": ["WhatsApp assistants", "Website chatbots", "FAQ automation", "Lead capture", "Appointment booking"],
+        "included": ["WhatsApp Business integration", "Website chat widget", "Natural-language FAQs", "Handoff to human agents"],
+        "whoFor": "Customer-facing businesses that get the same questions again and again.",
+        "example": "A retail shop answers order-status and product questions on WhatsApp 24/7."
+      },
+      {
+        "title": "Automation",
+        "description": "Connect the steps that currently happen by hand. Reduce errors, speed up repetitive work, and free your team for higher-value tasks.",
+        "tools": ["Workflow automation", "Notifications", "Data sync", "Approval flows", "Reminders"],
+        "included": ["Trigger-based workflows", "Email, WhatsApp, and Slack notifications", "Data sync between tools", "Approval and reminder sequences"],
+        "whoFor": "Teams that copy data, chase approvals, or send reminders manually.",
+        "example": "An office routes leave requests to managers and updates HR records automatically."
+      },
+      {
+        "title": "Dashboards & Reports",
+        "description": "See the numbers that matter in one place. Sales, stock, staff hours, and any other metric you need to run the business with confidence.",
+        "tools": ["KPI dashboards", "Sales reports", "Stock reports", "Staff reports", "Custom analytics"],
+        "included": ["Real-time charts", "Scheduled reports", "Filters by location, date, or role", "Export to PDF or spreadsheet"],
+        "whoFor": "Owners and managers who want clear numbers without spreadsheet wrangling.",
+        "example": "A warehouse manager sees daily stock-in, stock-out, and delayed shipments on one screen."
+      },
+      {
+        "title": "Business Systems",
+        "description": "The core systems that keep a business organized: customers, staff, stock, operations, and the connections between them.",
+        "tools": ["CRM", "ERP", "Inventory", "HR", "Operations"],
+        "included": ["Customer and supplier records", "Stock and order management", "Staff and role management", "Integrations with accounting and shipping"],
+        "whoFor": "Growing businesses that have outgrown spreadsheets and need one connected system.",
+        "example": "A manufacturer tracks materials, production orders, and shipments in one system."
+      }
+    ],
+    "cta": "Talk to an expert"
+  },
+  "de": {
+    "title": "Lösungen",
+    "intro": "Wir entwickeln die Werkzeuge, die den Geschäftsalltag erleichtern — von der App, die Ihr Team nutzt, bis zum Dashboard, das Sie jeden Morgen prüfen.",
+    "labels": {
+      "included": "Was enthalten ist",
+      "whoFor": "Für wen",
+      "example": "Beispiel"
+    },
+    "families": [
+      {
+        "title": "Business-Apps",
+        "description": "Ein Ort für die tägliche Arbeit Ihres Teams. Aufträge, Buchungen, Dienstpläne, Aufgaben und Kundenanfragen in einer App, die zu Ihren Abläufen passt.",
+        "tools": ["Aufträge", "Buchungen", "Dienstplanung", "Aufgaben", "Kundenanfragen"],
+        "included": ["Individuelle Mobile- und Web-Apps", "Rollenbasierte Zugriffe", "Formulare und Workflows nach Ihrem Prozess", "Benachrichtigungen und Erinnerungen"],
+        "whoFor": "Restaurants, Kliniken, Schulen, Lager und Büros, die eine einfache App für den Tagesablauf wünschen.",
+        "example": "Ein Restaurant nutzt eine App für Bestellungen, Küchenübergabe und Tischstatus."
+      },
+      {
+        "title": "Websites & Portale",
+        "description": "Eine schnelle, übersichtliche Website oder ein Kundenportal, über das Menschen Sie finden, Dienste buchen, Produkte kaufen und unkompliziert Kontakt aufnehmen.",
+        "tools": ["Unternehmenswebsites", "Buchungsportale", "Onlineshops", "Kunden-Logins", "Landingpages"],
+        "included": ["Responsive Design", "Buchungs- und Kontaktformulare", "Sicherer Kundenbereich", "SEO-freundliche Struktur"],
+        "whoFor": "Unternehmen, die online gefunden werden und Kunden Self-Service ermöglichen wollen.",
+        "example": "Eine Klinik lässt Patienten Termine buchen, Leistungen sehen und Formulare auf einer schnellen mobilen Seite ausfüllen."
+      },
+      {
+        "title": "Chatbots & WhatsApp",
+        "description": "Automatisierte Gespräche, die häufige Fragen beantworten, Anfragen erfassen und bei Bedarf an Ihr Team übergeben.",
+        "tools": ["WhatsApp-Assistenten", "Website-Chatbots", "FAQ-Automatisierung", "Lead-Generierung", "Terminbuchung"],
+        "included": ["WhatsApp Business Integration", "Website-Chat-Widget", "Natürlich-sprachliche FAQs", "Übergabe an menschliche Agenten"],
+        "whoFor": "Kundenorientierte Unternehmen, die dieselben Fragen immer wieder hören.",
+        "example": "Ein Einzelhändler beantwortet Bestellstatus- und Produktfragen 24/7 per WhatsApp."
+      },
+      {
+        "title": "Automatisierung",
+        "description": "Verbinden Sie die Schritte, die bisher manuell passieren. Reduzieren Sie Fehler, beschleunigen Sie wiederkehrende Aufgaben und entlasten Sie Ihr Team.",
+        "tools": ["Workflow-Automatisierung", "Benachrichtigungen", "Datenabgleich", "Genehmigungsabläufe", "Erinnerungen"],
+        "included": ["Trigger-basierte Workflows", "E-Mail, WhatsApp und Slack Benachrichtigungen", "Datenabgleich zwischen Tools", "Genehmigungs- und Erinnerungsabläufe"],
+        "whoFor": "Teams, die Daten kopieren, Genehmigungen hinterherlaufen oder Erinnerungen manuell verschicken.",
+        "example": "Ein Büro leitet Urlaubsanträge an Vorgesetzte weiter und aktualisiert HR-Daten automatisch."
+      },
+      {
+        "title": "Dashboards & Berichte",
+        "description": "Sehen Sie die relevanten Zahlen an einem Ort. Umsatz, Bestand, Arbeitsstunden und jede andere Kennzahl, die Sie brauchen, um das Unternehmen sicher zu führen.",
+        "tools": ["KPI-Dashboards", "Umsatzberichte", "Bestandsberichte", "Personalberichte", "Individuelle Analysen"],
+        "included": ["Echtzeit-Charts", "Geplante Berichte", "Filter nach Standort, Datum oder Rolle", "Export als PDF oder Tabelle"],
+        "whoFor": "Inhaber und Manager, die klare Zahlen ohne Tabellen-Bastelei wollen.",
+        "example": "Ein Lagermanager sieht täglichen Zugang, Abgang und verspätete Sendungen auf einem Bildschirm."
+      },
+      {
+        "title": "Geschäftssysteme",
+        "description": "Die Kernelemente, die ein Unternehmen organisiert halten: Kunden, Mitarbeiter, Bestand, Abläufe und deren Verbindung.",
+        "tools": ["CRM", "ERP", "Bestand", "HR", "Betrieb"],
+        "included": ["Kunden- und Lieferantenstammdaten", "Bestands- und Auftragsmanagement", "Mitarbeiter- und Rollenverwaltung", "Integrationen mit Buchhaltung und Versand"],
+        "whoFor": "Wachsende Unternehmen, die Tabellen überwachsen und ein vernetztes System brauchen.",
+        "example": "Ein Hersteller verfolgt Materialien, Produktionsaufträge und Sendungen in einem System."
+      }
+    ],
+    "cta": "Mit Experten sprechen"
+  },
+  "tr": {
+    "title": "Çözümler",
+    "intro": "İş gününü kolaylaştıran araçları geliştiriyoruz — ekibinizin kullandığı uygulamadan her sabah kontrol ettiğiniz panele kadar.",
+    "labels": {
+      "included": "Neler dahil",
+      "whoFor": "Kimler için",
+      "example": "Örnek"
+    },
+    "families": [
+      {
+        "title": "İş Uygulamaları",
+        "description": "Ekibinizin günlük işleri için tek bir yer. Siparişler, rezervasyonlar, vardiyalar, görevler ve müşteri talepleri, iş akışınıza uyan bir uygulamada.",
+        "tools": ["Siparişler", "Rezervasyonlar", "Vardiya planlama", "Görevler", "Müşteri talepleri"],
+        "included": ["Özel mobil ve web uygulamaları", "Personel için rol tabanlı erişim", "Sürecinize uygun formlar ve akışlar", "Bildirimler ve hatırlatmalar"],
+        "whoFor": "Günlük işleri için basit bir uygulama isteyen restoranlar, klinikler, okullar, depolar ve ofisler.",
+        "example": "Bir restoran sipariş almak, mutfağa iletmek ve masa durumunu takip etmek için tek uygulama kullanır."
+      },
+      {
+        "title": "Web Siteleri & Portallar",
+        "description": "İnsanların sizi bulmasını, hizmet rezervasyonu yapmasını, ürün satın almasını ve karışıklık yaşamadan iletişime geçmesini sağlayan hızlı, net bir web sitesi veya müşteri portalı.",
+        "tools": ["Kurumsal siteler", "Rezervasyon portalları", "Online mağazalar", "Müşteri girişleri", "Açılış sayfaları"],
+        "included": ["Mobil uyumlu tasarım", "Rezervasyon ve iletişim formları", "Güvenli müşteri giriş alanı", "SEO uyumlu yapı"],
+        "whoFor": "Online bulunmak ve müşterilere self-service sunmak isteyen işletmeler.",
+        "example": "Bir klinik, hastaların hızlı mobil sitede randevu almasına, hizmetleri görmesine ve formlara ulaşmasına izin verir."
+      },
+      {
+        "title": "Chatbot & WhatsApp",
+        "description": "Sık sorulan soruları yanıtlayan, talepleri toplayan ve gerektiğinde ekibinize devreden otomatik konuşmalar.",
+        "tools": ["WhatsApp asistanları", "Web sitesi chatbotları", "SSS otomasyonu", "Potansiyel müşteri toplama", "Randevu alma"],
+        "included": ["WhatsApp Business entegrasyonu", "Web sitesi sohbet widget'ı", "Doğal dil SSS", "İnsan temsilciye aktarma"],
+        "whoFor": "Aynı soruları tekrar tekrar alan müşteriye bakan işletmeler.",
+        "example": "Bir perakende mağazası, WhatsApp'tan 7/24 sipariş durumu ve ürün sorularını yanıtlar."
+      },
+      {
+        "title": "Otomasyon",
+        "description": "Şu ana kadar elle yapılan adımları birbirine bağlayın. Hataları azaltın, tekrarlanan işleri hızlandırın ve ekibinizi daha değerli işlere ayırın.",
+        "tools": ["İş akışı otomasyonu", "Bildirimler", "Veri senkronizasyonu", "Onay akışları", "Hatırlatmalar"],
+        "included": ["Tetikleyici tabanlı iş akışları", "E-posta, WhatsApp ve Slack bildirimleri", "Araçlar arası veri senkronizasyonu", "Onay ve hatırlatma dizileri"],
+        "whoFor": "Veri kopyalayan, onay takip eden veya hatırlatma gönderen ekipler.",
+        "example": "Bir ofis, izin taleplerini yöneticilere yönlendirir ve İK kayıtlarını otomatik günceller."
+      },
+      {
+        "title": "Panolar & Raporlar",
+        "description": "Önemli sayıları tek yerde görün. Satış, stok, personel saatleri ve işletmeyi güvenle yönetmek için ihtiyaç duyduğunuz diğer tüm ölçümler.",
+        "tools": ["KPI panoları", "Satış raporları", "Stok raporları", "Personel raporları", "Özel analizler"],
+        "included": ["Gerçek zamanlı grafikler", "Planlanmış raporlar", "Konum, tarih veya role göre filtreler", "PDF veya tabloya aktarma"],
+        "whoFor": "Elektronik tablo çilesi olmadan net rakamlar isteyen işletme sahipleri ve yöneticiler.",
+        "example": "Bir depo yöneticisi günlük giriş, çıkış ve gecikmeli sevkiyatları tek ekranda görür."
+      },
+      {
+        "title": "İş Sistemleri",
+        "description": "Bir işletmeyi düzenli tutan temel sistemler: müşteriler, personel, stok, operasyonlar ve bunların arasındaki bağlantılar.",
+        "tools": ["CRM", "ERP", "Stok", "İK", "Operasyon"],
+        "included": ["Müşteri ve tedarikçi kayıtları", "Stok ve sipariş yönetimi", "Personel ve rol yönetimi", "Muhasebe ve kargo entegrasyonları"],
+        "whoFor": "Tabloları aşmış ve bağlı bir sisteme ihtiyaç duyan büyüyen işletmeler.",
+        "example": "Bir üretici, malzemeleri, üretim emirlerini ve sevkiyatları tek sistemde takip eder."
+      }
+    ],
+    "cta": "Uzmanla görüşün"
+  }
+}

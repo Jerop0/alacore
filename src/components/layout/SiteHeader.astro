@@ -1,0 +1,217 @@
+---
+import { NAV_ROUTES, DEFAULT_LOCALE, type Locale } from '../../lib/config';
+import { localizePath, t } from '../../lib/i18n';
+import LanguageSwitcher from './LanguageSwitcher.astro';
+import ThemeToggle from '../ui/ThemeToggle.astro';
+import Button from '../ui/Button.astro';
+import MobileMenu from './MobileMenu.astro';
+import type { CopyNode } from '../../lib/i18n';
+import copy from '../../content/site-copy.json';
+
+interface Props {
+  currentLocale?: Locale;
+  path?: string;
+}
+
+const currentLocale = Astro.currentLocale as Locale ?? DEFAULT_LOCALE;
+const path = Astro.url.pathname;
+const localeCopy = (copy as Record<string, CopyNode>)[currentLocale] ?? copy[DEFAULT_LOCALE];
+
+const lightLogo = '/brand/ala-core-horizontal-light.svg';
+const markLogo = '/brand/ala-core-mark-light.svg';
+---
+
+<header class="site-header" id="site-header">
+  <div class="container site-header__inner">
+    <a href={localizePath('/', currentLocale, currentLocale)} class="site-header__logo" aria-label="ALA CORE Home">
+      <img src={lightLogo} alt="ALA CORE" class="site-header__logo-wide" width="180" height="36" />
+      <img src={markLogo} alt="ALA CORE" class="site-header__logo-mark" width="40" height="40" />
+    </a>
+
+    <nav class="site-header__nav" aria-label="Main navigation">
+      <ul class="site-header__nav-list">
+        {
+          NAV_ROUTES.map((route) => {
+            const href = localizePath(route.path, currentLocale, currentLocale);
+            const normalizedPath = path.replace(/\/$/, '') || '/';
+            const normalizedHref = href.replace(/\/$/, '') || '/';
+            const isActive = normalizedPath === normalizedHref;
+            return (
+              <li>
+                <a
+                  href={href}
+                  class={`site-header__nav-link ${isActive ? 'site-header__nav-link--active' : ''}`}
+                  aria-current={isActive ? 'page' : undefined}
+                >
+                  {t(localeCopy, route.labelKey)}
+                </a>
+              </li>
+            );
+          })
+        }
+      </ul>
+    </nav>
+
+    <div class="site-header__actions">
+      <LanguageSwitcher currentLocale={currentLocale} path={path} />
+      <ThemeToggle />
+      <Button
+        href={localizePath('/contact', currentLocale, currentLocale)}
+        class="site-header__cta"
+      >
+        {t(localeCopy, 'hero.secondary')}
+      </Button>
+      <button
+        type="button"
+        class="site-header__menu-toggle"
+        id="mobile-menu-open"
+        aria-label="Open menu"
+        aria-expanded="false"
+        aria-controls="mobile-menu"
+      >
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M4 5h16M4 12h16M4 19h16"/></svg>
+      </button>
+    </div>
+  </div>
+</header>
+
+<MobileMenu currentLocale={currentLocale} path={path} />
+
+<script>
+  (function () {
+    const header = document.getElementById('site-header');
+    if (!header) return;
+    const onScroll = () => {
+      header.classList.toggle('is-scrolled', window.scrollY > 10);
+    };
+    window.addEventListener('scroll', onScroll, { passive: true });
+    onScroll();
+  })();
+</script>
+
+<style>
+  .site-header {
+    position: sticky;
+    top: 0;
+    z-index: var(--z-header);
+    height: 64px;
+    background-color: var(--ala-core-ink);
+    border-bottom: 1px solid transparent;
+    transition:
+      background-color 160ms var(--ease-out-expo),
+      border-color 160ms var(--ease-out-expo),
+      box-shadow 160ms var(--ease-out-expo);
+  }
+
+  .site-header.is-scrolled {
+    background-color: rgba(11, 18, 32, 0.98);
+    border-bottom-color: rgba(255, 255, 255, 0.08);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+  }
+
+  @media (min-width: 1024px) {
+    .site-header {
+      height: 76px;
+    }
+  }
+
+  .site-header__inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 100%;
+  }
+
+  .site-header__logo {
+    display: flex;
+    align-items: center;
+    flex-shrink: 0;
+  }
+
+  .site-header__logo-wide {
+    display: none;
+  }
+
+  .site-header__logo-mark {
+    display: block;
+  }
+
+  @media (min-width: 768px) {
+    .site-header__logo-wide {
+      display: block;
+    }
+
+    .site-header__logo-mark {
+      display: none;
+    }
+  }
+
+  .site-header__nav {
+    display: none;
+  }
+
+  @media (min-width: 1024px) {
+    .site-header__nav {
+      display: block;
+    }
+  }
+
+  .site-header__nav-list {
+    display: flex;
+    align-items: center;
+    gap: 0.25rem;
+    list-style: none;
+  }
+
+  .site-header__nav-link {
+    display: inline-flex;
+    align-items: center;
+    height: 36px;
+    padding: 0 0.75rem;
+    border-radius: 6px;
+    font-size: var(--text-sm);
+    font-weight: 600;
+    color: rgba(255, 255, 255, 0.75);
+    transition: background-color 160ms var(--ease-out-expo), color 160ms var(--ease-out-expo);
+  }
+
+  .site-header__nav-link:hover,
+  .site-header__nav-link--active {
+    color: var(--ala-pure-white);
+    background-color: rgba(255, 255, 255, 0.1);
+  }
+
+  .site-header__actions {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+  }
+
+  .site-header__cta {
+    display: none;
+  }
+
+  @media (min-width: 768px) {
+    .site-header__cta {
+      display: inline-flex;
+    }
+  }
+
+  .site-header__menu-toggle {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 44px;
+    height: 44px;
+    border: none;
+    background: transparent;
+    color: var(--ala-pure-white);
+    cursor: pointer;
+  }
+
+  @media (min-width: 1024px) {
+    .site-header__menu-toggle {
+      display: none;
+    }
+  }
+</style>

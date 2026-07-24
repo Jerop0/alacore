@@ -1,0 +1,209 @@
+---
+import { EMAIL, DEFAULT_LOCALE, LOCALES, LOCALES_WITH_LABELS, type Locale } from '../../lib/config';
+import { localizePath, t } from '../../lib/i18n';
+import type { CopyNode } from '../../lib/i18n';
+import copy from '../../content/site-copy.json';
+
+interface Props {
+  currentLocale?: Locale;
+  path?: string;
+}
+
+const currentLocale = Astro.currentLocale as Locale ?? DEFAULT_LOCALE;
+const path = Astro.url.pathname;
+const localeCopy = (copy as Record<string, CopyNode>)[currentLocale] ?? copy[DEFAULT_LOCALE];
+const year = new Date().getFullYear();
+---
+
+<footer class="site-footer">
+  <div class="container site-footer__inner">
+    <div class="site-footer__brand">
+      <a href={localizePath('/', currentLocale, currentLocale)} aria-label="ALA CORE Home">
+        <img src="/brand/ala-core-horizontal-light.svg" alt="ALA CORE" width="180" height="36" loading="lazy" />
+      </a>
+      <p class="site-footer__tagline">{t(localeCopy, 'footer.tagline')}</p>
+      <a href={`mailto:${EMAIL}`} class="site-footer__email">{EMAIL}</a>
+    </div>
+
+    <nav class="site-footer__nav" aria-label="Footer pages">
+      <ul class="site-footer__nav-list">
+        <li>
+          <a href={localizePath('/', currentLocale, currentLocale)}>{t(localeCopy, 'nav.home')}</a>
+        </li>
+        <li>
+          <a href={localizePath('/solutions', currentLocale, currentLocale)}>{t(localeCopy, 'nav.solutions')}</a>
+        </li>
+        <li>
+          <a href={localizePath('/industries', currentLocale, currentLocale)}>{t(localeCopy, 'nav.industries')}</a>
+        </li>
+        <li>
+          <a href={localizePath('/about', currentLocale, currentLocale)}>{t(localeCopy, 'nav.about')}</a>
+        </li>
+        <li>
+          <a href={localizePath('/contact', currentLocale, currentLocale)}>{t(localeCopy, 'nav.contact')}</a>
+        </li>
+      </ul>
+    </nav>
+
+    <nav class="site-footer__company" aria-label="Footer company">
+      <h3 class="site-footer__column-title">{t(localeCopy, 'footer.company.title')}</h3>
+        <ul class="site-footer__nav-list">
+        <li>
+          <a href={localizePath('/how-we-work', currentLocale, currentLocale)}>{t(localeCopy, 'footer.company.howWeWork')}</a>
+        </li>
+        <li>
+          <a href={localizePath('/products', currentLocale, currentLocale)}>{t(localeCopy, 'footer.company.products')}</a>
+        </li>
+        <li>
+          <a href={localizePath('/work', currentLocale, currentLocale)}>{t(localeCopy, 'footer.company.work')}</a>
+        </li>
+      </ul>
+    </nav>
+
+    <div class="site-footer__meta">
+      <nav class="site-footer__languages" aria-label="Footer languages">
+        <ul class="site-footer__language-list">
+          {
+            LOCALES.map((locale) => {
+              const href = localizePath(path, locale, currentLocale);
+              return (
+                <li>
+                  <a href={href} hreflang={locale} aria-current={locale === currentLocale ? 'true' : undefined}>
+                    {LOCALES_WITH_LABELS[locale]}
+                  </a>
+                </li>
+              );
+            })
+          }
+        </ul>
+      </nav>
+      <p class="site-footer__copyright">
+        © {year} ALA CORE. {t(localeCopy, 'footer.rights')}
+      </p>
+    </div>
+  </div>
+</footer>
+
+<style>
+  .site-footer {
+    padding: 64px 0 32px;
+    background-color: var(--ala-core-ink);
+    color: var(--ala-pure-white);
+  }
+
+  @media (min-width: 1024px) {
+    .site-footer {
+      padding: 80px 0 40px;
+    }
+  }
+
+  .site-footer__inner {
+    display: grid;
+    gap: 2.5rem;
+  }
+
+  @media (min-width: 768px) {
+    .site-footer__inner {
+      grid-template-columns: 1.5fr 1fr;
+      gap: 3rem;
+    }
+  }
+
+  @media (min-width: 1024px) {
+    .site-footer__inner {
+      grid-template-columns: 1.5fr 1fr 1fr 1fr;
+    }
+  }
+
+  .site-footer__brand {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .site-footer__tagline {
+    max-width: 28ch;
+    font-size: var(--text-lg);
+    line-height: 1.5;
+    color: rgba(255, 255, 255, 0.75);
+  }
+
+  .site-footer__email {
+    font-size: var(--text-md);
+    font-weight: 600;
+    color: var(--accent);
+    transition: color 160ms var(--ease-out-expo);
+  }
+
+  .site-footer__email:hover {
+    color: #6b9bff;
+  }
+
+  .site-footer__nav-list {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+    list-style: none;
+  }
+
+  .site-footer__nav-list a {
+    font-size: var(--text-md);
+    color: rgba(255, 255, 255, 0.7);
+    transition: color 160ms var(--ease-out-expo);
+  }
+
+  .site-footer__nav-list a:hover {
+    color: var(--ala-pure-white);
+  }
+
+  .site-footer__column-title {
+    font-size: var(--text-sm);
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    color: var(--ala-pure-white);
+    margin-bottom: 1rem;
+  }
+
+  .site-footer__meta {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+
+  @media (min-width: 768px) {
+    .site-footer__meta {
+      grid-column: 1 / -1;
+      flex-direction: row;
+      align-items: center;
+      justify-content: space-between;
+      padding-top: 2rem;
+      border-top: 1px solid rgba(255, 255, 255, 0.08);
+    }
+  }
+
+  .site-footer__language-list {
+    display: flex;
+    gap: 1rem;
+    list-style: none;
+  }
+
+  .site-footer__language-list a {
+    font-size: var(--text-sm);
+    font-weight: 600;
+    color: rgba(255, 255, 255, 0.7);
+  }
+
+  .site-footer__language-list a[aria-current='true'] {
+    color: var(--ala-pure-white);
+  }
+
+  .site-footer__language-list a:hover {
+    color: var(--ala-pure-white);
+  }
+
+  .site-footer__copyright {
+    font-size: var(--text-sm);
+    color: rgba(255, 255, 255, 0.5);
+  }
+</style>

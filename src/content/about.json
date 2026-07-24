@@ -1,0 +1,83 @@
+{
+  "en": {
+    "title": "About",
+    "intro": "ALA CORE is a B2B technology partner. We design, build, and support the custom apps, websites, chatbots, automation, dashboards, and business systems that help companies run smarter.",
+    "positioning": [
+      "We understand your business first, then propose technology.",
+      "We are one accountable partner for every digital need.",
+      "We stay with you after launch: support, improve, and scale."
+    ],
+    "principles": {
+      "title": "How we work",
+      "items": [
+        {
+          "title": "Capable",
+          "body": "We have built systems across industries and technologies. If it can be done, we can design and deliver it."
+        },
+        {
+          "title": "Clear",
+          "body": "We speak in business outcomes, not jargon. Every decision is explained in language you can act on."
+        },
+        {
+          "title": "Calm",
+          "body": "We plan before we build, test before we launch, and support after delivery. No panic, no noise."
+        }
+      ]
+    },
+    "cta": "Talk to an expert"
+  },
+  "de": {
+    "title": "Über uns",
+    "intro": "ALA CORE ist ein B2B-Technologiepartner. Wir konzipieren, entwickeln und betreuen die maßgeschneiderten Apps, Websites, Chatbots, Automatisierungen, Dashboards und Geschäftssysteme, die Unternehmen effizienter machen.",
+    "positioning": [
+      "Wir verstehen zuerst Ihr Unternehmen, dann schlagen wir Technologie vor.",
+      "Wir sind ein verantwortlicher Partner für jeden digitalen Bedarf.",
+      "Wir bleiben nach dem Start: Betreuung, Verbesserung und Skalierung."
+    ],
+    "principles": {
+      "title": "So arbeiten wir",
+      "items": [
+        {
+          "title": "Kompetent",
+          "body": "Wir haben Systeme über Branchen und Technologien hinweg gebaut. Wenn es umsetzbar ist, können wir es konzipieren und liefern."
+        },
+        {
+          "title": "Klar",
+          "body": "Wir sprechen in geschäftlichen Ergebnissen, nicht im Fachjargon. Jede Entscheidung wird in einer Sprache erklärt, auf die Sie handeln können."
+        },
+        {
+          "title": "Ruhig",
+          "body": "Wir planen vor dem Bauen, testen vor dem Start und betreuen nach der Lieferung. Keine Panik, kein Lärm."
+        }
+      ]
+    },
+    "cta": "Mit Experten sprechen"
+  },
+  "tr": {
+    "title": "Hakkımızda",
+    "intro": "ALA CORE, bir B2B teknoloji ortağıdır. Şirketlerin daha akıllı çalışmasını sağlayan özel uygulamaları, web sitelerini, chatbotları, otomasyonu, panoları ve iş sistemlerini tasarlar, geliştirir ve destekleriz.",
+    "positioning": [
+      "Önce işletmenizi anlarız, sonra teknoloji öneririz.",
+      "Her dijital ihtiyaç için tek sorumlu ortağız.",
+      "Başlattıktan sonra kalırız: destek, iyileştirme ve ölçeklendirme."
+    ],
+    "principles": {
+      "title": "Nasıl çalışırız",
+      "items": [
+        {
+          "title": "Yetkin",
+          "body": "Sektörler ve teknolojiler arasında sistemler inşa ettik. Yapılabilirse, tasarlayıp teslim edebiliriz."
+        },
+        {
+          "title": "Net",
+          "body": "Teknik jargon değil, iş sonuçlarında konuşuruz. Her karar, üzerinde hareket edebileceğiniz bir dille açıklanır."
+        },
+        {
+          "title": "Sakin",
+          "body": "İnşaat öncesi planlarız, başlama öncesi test ederiz, teslimattan sonra destek veririz. Panik yok, gürültü yok."
+        }
+      ]
+    },
+    "cta": "Uzmanla görüşün"
+  }
+}

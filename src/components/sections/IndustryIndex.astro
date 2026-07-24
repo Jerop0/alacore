@@ -1,0 +1,122 @@
+---
+import SectionHeading from '../ui/SectionHeading.astro';
+import Card from '../ui/Card.astro';
+import Button from '../ui/Button.astro';
+import Icon from '../ui/Icon.astro';
+import { INDUSTRIES, type Locale } from '../../lib/config';
+import { localizePath, t, tObj } from '../../lib/i18n';
+import type { CopyNode } from '../../lib/i18n';
+
+interface Props {
+  locale: Locale;
+  copy: CopyNode;
+  siteCopy: CopyNode;
+}
+
+const { locale, copy, siteCopy } = Astro.props;
+const industryList = tObj<Record<string, CopyNode>>(copy, 'list') ?? {};
+---
+
+<section class="section">
+  <div class="container">
+    <SectionHeading title={t(copy, 'title')} supporting={t(copy, 'intro')} />
+
+    <div class="industries-grid">
+      {
+        INDUSTRIES.map((industry) => {
+          const item = industryList[industry.slug] ?? {};
+          return (
+            <a href={localizePath(`/industries/${industry.slug}`, locale, locale)} class="industry-card-link">
+              <Card>
+                <div class="industry-card__icon">
+                  <Icon name={industry.iconKey.toLowerCase()} size={24} />
+                </div>
+                <h3 class="industry-card__title">{t(item, 'name')}</h3>
+                <p class="industry-card__body">{t(item, 'oneLiner')}</p>
+                <span class="industry-card__cta">{t(copy, 'cta')}</span>
+              </Card>
+            </a>
+          );
+        })
+      }
+    </div>
+  </div>
+</section>
+
+<section class="section section--mist">
+  <div class="container industries-all">
+    <SectionHeading title={t(siteCopy, 'sections.examples')} supporting={t(siteCopy, 'sections.examplesSupport')} />
+    <div class="industries-all__cta">
+      <Button href={localizePath('/solutions', locale, locale)}>
+        {t(siteCopy, 'hero.primary')}
+      </Button>
+    </div>
+  </div>
+</section>
+
+<style>
+  .industries-grid {
+    display: grid;
+    gap: 1.5rem;
+    grid-template-columns: 1fr;
+  }
+
+  @media (min-width: 640px) {
+    .industries-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+
+  @media (min-width: 1024px) {
+    .industries-grid {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+
+  .industry-card-link {
+    display: block;
+    text-decoration: none;
+  }
+
+  .industry-card__icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 44px;
+    height: 44px;
+    border-radius: var(--ala-radius-sm);
+    background-color: var(--accent-tint);
+    color: var(--accent);
+    margin-bottom: 1rem;
+  }
+
+  .industry-card-link:hover .industry-card__icon {
+    background-color: var(--accent);
+    color: var(--ala-pure-white);
+  }
+
+  .industry-card__title {
+    font-size: var(--text-xl);
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+    color: var(--text);
+  }
+
+  .industry-card__body {
+    font-size: var(--text-md);
+    line-height: 1.55;
+    color: var(--text-muted);
+    margin-bottom: 1rem;
+  }
+
+  .industry-card__cta {
+    font-size: var(--text-sm);
+    font-weight: 700;
+    color: var(--accent);
+  }
+
+  .industries-all__cta {
+    margin-top: 2rem;
+    text-align: center;
+  }
+</style>

@@ -1,0 +1,66 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import SectionHeading from '../../components/ui/SectionHeading.astro';
+import ProductCard from '../../components/sections/ProductCard.astro';
+import FinalCta from '../../components/sections/FinalCta.astro';
+import { DEFAULT_LOCALE, type Locale } from '../../lib/config';
+import type { CopyNode } from '../../lib/i18n';
+import copy from '../../content/site-copy.json';
+import productsData from '../../content/products.json';
+
+const currentLocale = (Astro.currentLocale as Locale) ?? DEFAULT_LOCALE;
+const localeCopy = (copy as Record<string, CopyNode>)[currentLocale] ?? copy[DEFAULT_LOCALE];
+const data = (productsData as Record<string, any>)[currentLocale] ?? (productsData as Record<string, any>)[DEFAULT_LOCALE];
+
+const title = data.meta.title;
+const description = data.meta.description;
+const statusLabels = data.status;
+---
+
+<Layout title={title} description={description}>
+  <main class="page page--products">
+    <section class="section" aria-labelledby="products-heading">
+      <div class="container">
+        <SectionHeading
+          id="products-heading"
+          title={data.heading}
+          supporting={data.support}
+        />
+        <div class="products-grid">
+          {
+            data.products.map((product: any) => (
+              <ProductCard
+                product={product}
+                statusLabel={statusLabels[product.status]}
+                ctaLabel={data.cta}
+                locale={currentLocale}
+              />
+            ))
+          }
+        </div>
+      </div>
+    </section>
+
+    <FinalCta locale={currentLocale} copy={localeCopy} />
+  </main>
+</Layout>
+
+<style>
+  .page--products {
+    padding-top: 120px;
+  }
+
+  .products-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.5rem;
+    margin-top: 2.5rem;
+  }
+
+  @media (min-width: 1024px) {
+    .products-grid {
+      gap: 2rem;
+      margin-top: 3rem;
+    }
+  }
+</style>

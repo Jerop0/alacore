@@ -1,0 +1,142 @@
+---
+import Icon from './Icon.astro';
+
+interface Props {
+  variant?: 'primary' | 'secondary' | 'ghost';
+  href?: string;
+  type?: 'button' | 'submit';
+  class?: string;
+  onDark?: boolean;
+  ariaLabel?: string;
+  id?: string;
+  disabled?: boolean;
+  isExternal?: boolean;
+}
+
+const {
+  variant = 'primary',
+  href,
+  type = 'button',
+  class: className = '',
+  onDark = false,
+  ariaLabel,
+  id,
+  disabled = false,
+  isExternal = false,
+} = Astro.props;
+
+const base = 'button';
+const classes = `${base} ${base}--${variant} ${onDark ? `${base}--on-dark` : ''} ${className}`;
+const rel = isExternal ? 'noopener noreferrer' : undefined;
+const target = isExternal ? '_blank' : undefined;
+---
+
+{
+  href ? (
+    <a href={href} class={classes} aria-label={ariaLabel} id={id} rel={rel} target={target}>
+      <span class="button__text">
+        <slot />
+      </span>
+      {variant === 'ghost' && <Icon name="arrow-right" size={16} class="button__arrow" />}
+    </a>
+  ) : (
+    <button type={type} class={classes} aria-label={ariaLabel} id={id} disabled={disabled}>
+      <span class="button__text">
+        <slot />
+      </span>
+      {variant === 'ghost' && <Icon name="arrow-right" size={16} class="button__arrow" />}
+    </button>
+  )
+}
+
+<style>
+  .button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    min-height: 48px;
+    padding: 0 24px;
+    border: 1px solid transparent;
+    border-radius: var(--ala-radius-sm);
+    font-family: var(--ala-font);
+    font-size: var(--text-md);
+    font-weight: 700;
+    line-height: 1.2;
+    text-decoration: none;
+    transition:
+      background-color 160ms var(--ease-out-expo),
+      border-color 160ms var(--ease-out-expo),
+      color 160ms var(--ease-out-expo),
+      transform 160ms var(--ease-out-expo),
+      box-shadow 160ms var(--ease-out-expo);
+  }
+
+  .button--primary {
+    background-color: var(--accent);
+    color: var(--ala-pure-white);
+    border-color: var(--accent);
+  }
+
+  .button--primary:hover {
+    background-color: var(--accent-hover);
+    border-color: var(--accent-hover);
+    box-shadow: var(--shadow-card);
+  }
+
+  .button--primary:active {
+    transform: scale(0.98);
+  }
+
+  .button--secondary {
+    background-color: transparent;
+    color: var(--text);
+    border-color: var(--line);
+  }
+
+  .button--secondary:hover {
+    border-color: var(--accent);
+    color: var(--accent);
+  }
+
+  .button--on-dark.button--secondary {
+    color: var(--ala-pure-white);
+    border-color: rgba(255, 255, 255, 0.2);
+  }
+
+  .button--on-dark.button--secondary:hover {
+    border-color: var(--ala-pure-white);
+    color: var(--ala-pure-white);
+  }
+
+  .button--ghost {
+    background-color: transparent;
+    color: var(--accent);
+    border-color: transparent;
+    padding-inline: 0;
+    min-height: 44px;
+  }
+
+  .button--ghost:hover {
+    color: var(--accent-hover);
+  }
+
+  .button__arrow {
+    transition: transform 160ms var(--ease-out-expo);
+  }
+
+  .button--ghost:hover .button__arrow {
+    transform: translateX(4px);
+  }
+
+  .button__text {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+  }
+
+  .button:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+  }
+</style>

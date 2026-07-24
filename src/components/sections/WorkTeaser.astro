@@ -1,0 +1,130 @@
+---
+import SectionHeading from '../ui/SectionHeading.astro';
+import Button from '../ui/Button.astro';
+import { localizePath, t } from '../../lib/i18n';
+import type { CopyNode } from '../../lib/i18n';
+import type { Locale } from '../../lib/config';
+import workData from '../../content/work.json';
+
+interface Props {
+  locale: Locale;
+  copy: CopyNode;
+}
+
+const { locale, copy } = Astro.props;
+const data = (workData as Record<string, any>)[locale] ?? (workData as Record<string, any>)['en'];
+const hasEntries = data.entries && data.entries.length > 0;
+const previews = hasEntries ? data.entries.slice(0, 3) : [];
+---
+
+<section class="section section--work-teaser" aria-labelledby="work-teaser-heading">
+  <div class="container">
+    <SectionHeading
+      id="work-teaser-heading"
+      title={t(copy, 'sections.work')}
+      supporting={t(copy, 'sections.workSupport')}
+    />
+
+    {
+      hasEntries ? (
+        <>
+          <ul class="work-teaser__list">
+            {previews.map((entry: any) => (
+              <li class="work-teaser__item">
+                <span class="work-teaser__industry">{entry.industry}</span>
+                <h3>{entry.built}</h3>
+                <p>{entry.outcome}</p>
+              </li>
+            ))}
+          </ul>
+          <div class="work-teaser__cta">
+            <Button href={localizePath('/work', locale, locale)} variant="primary" size="md">
+              {t(copy, 'sections.workCta')}
+            </Button>
+          </div>
+        </>
+      ) : (
+        <div class="work-teaser__empty">
+          <p>{t(copy, 'sections.workSupport')}</p>
+          <Button href={localizePath('/work', locale, locale)} variant="primary" size="md">
+            {t(copy, 'sections.workEmptyCta')}
+          </Button>
+        </div>
+      )
+    }
+  </div>
+</section>
+
+<style>
+  .work-teaser__list {
+    display: grid;
+    gap: 1rem;
+    margin-top: 2rem;
+  }
+
+  @media (min-width: 768px) {
+    .work-teaser__list {
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1.25rem;
+    }
+  }
+
+  .work-teaser__item {
+    padding: 1.25rem;
+    border: 1px solid var(--line);
+    border-radius: var(--ala-radius-md);
+    background-color: var(--bg);
+    box-shadow: var(--shadow-card);
+  }
+
+  :global([data-theme='dark']) .work-teaser__item {
+    background-color: var(--surface);
+  }
+
+  .work-teaser__industry {
+    display: inline-block;
+    font-size: var(--text-xs);
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    color: var(--accent);
+    margin-bottom: 0.5rem;
+  }
+
+  .work-teaser__item h3 {
+    font-size: var(--text-lg);
+    font-weight: 700;
+    color: var(--text-primary);
+    margin-bottom: 0.5rem;
+  }
+
+  .work-teaser__item p {
+    font-size: var(--text-sm);
+    line-height: 1.5;
+    color: var(--text-secondary);
+  }
+
+  .work-teaser__cta,
+  .work-teaser__empty {
+    margin-top: 2rem;
+    text-align: center;
+  }
+
+  .work-teaser__empty {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    padding: 2rem;
+    border: 1px dashed var(--line);
+    border-radius: var(--ala-radius-md);
+    background-color: var(--surface);
+  }
+
+  .work-teaser__empty p {
+    max-width: 52ch;
+    font-size: var(--text-base);
+    color: var(--text-secondary);
+    line-height: 1.6;
+  }
+</style>

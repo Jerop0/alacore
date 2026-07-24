@@ -1,0 +1,95 @@
+---
+import { SITE, DEFAULT_LOCALE, LOCALES, type Locale } from '../lib/config';
+import { localizePath } from '../lib/i18n';
+import SiteHeader from '../components/layout/SiteHeader.astro';
+import SiteFooter from '../components/layout/SiteFooter.astro';
+import FloatingActions from '../components/layout/FloatingActions.astro';
+import '../styles/base.css';
+
+interface Props {
+  title: string;
+  description: string;
+  ogTitle?: string;
+  ogDescription?: string;
+  noIndex?: boolean;
+  canonical?: string;
+  structuredData?: object;
+}
+
+const currentLocale = (Astro.currentLocale as Locale) ?? DEFAULT_LOCALE;
+const path = Astro.url.pathname;
+
+const {
+  title,
+  description,
+  ogTitle = title,
+  ogDescription = description,
+  noIndex = false,
+  canonical = Astro.url.pathname,
+  structuredData,
+} = Astro.props;
+
+const canonicalUrl = `${SITE}${canonical}`;
+const alternates = LOCALES.map((loc) => ({
+  locale: loc,
+  url: `${SITE}${localizePath(path, loc, currentLocale)}`,
+}));
+---
+
+<!doctype html>
+<html lang={currentLocale} dir="ltr" data-theme="light">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="generator" content={Astro.generator} />
+    <title>{title}</title>
+    <meta name="description" content={description} />
+    {noIndex && <meta name="robots" content="noindex, nofollow" />}
+    <meta name="theme-color" content="#0B1220" />
+    <link rel="canonical" href={canonicalUrl} />
+    <link rel="icon" type="image/svg+xml" href="/brand/ala-core-favicon.svg" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png" />
+    <link rel="apple-touch-icon" sizes="192x192" href="/favicon-192.png" />
+    <link rel="manifest" href="/site.webmanifest" />
+
+    <link rel="preload" href="/fonts/manrope-latin-700-normal.woff2" as="font" type="font/woff2" crossorigin />
+    <link rel="preload" href="/fonts/manrope-latin-ext-700-normal.woff2" as="font" type="font/woff2" crossorigin />
+
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="ALA CORE" />
+    <meta property="og:title" content={ogTitle} />
+    <meta property="og:description" content={ogDescription} />
+    <meta property="og:url" content={canonicalUrl} />
+    <meta property="og:locale" content={currentLocale} />
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:title" content={ogTitle} />
+    <meta name="twitter:description" content={ogDescription} />
+
+    {alternates.map((alt) => (
+      <link rel="alternate" hreflang={alt.locale} href={alt.url} />
+    ))}
+    <link rel="alternate" hreflang="x-default" href={alternates.find((a) => a.locale === DEFAULT_LOCALE)?.url} />
+
+    {structuredData && (
+      <script type="application/ld+json" set:html={JSON.stringify(structuredData)} />
+    )}
+
+    <script is:inline>
+      (function () {
+        const stored = localStorage.getItem('ala-theme');
+        const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+        const theme = stored === 'dark' || (stored === null && prefersDark) ? 'dark' : 'light';
+        document.documentElement.setAttribute('data-theme', theme);
+      })();
+    </script>
+  </head>
+  <body>
+    <a href="#main" class="skip-link">Skip to content</a>
+    <SiteHeader />
+    <main id="main">
+      <slot />
+    </main>
+    <SiteFooter />
+    <FloatingActions />
+  </body>
+</html>

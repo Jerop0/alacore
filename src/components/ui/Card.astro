@@ -1,0 +1,44 @@
+---
+interface Props {
+  class?: string;
+  hover?: boolean;
+}
+
+const { class: className = '', hover = true } = Astro.props;
+const classes = `card ${hover ? 'card--hover' : ''} ${className}`;
+---
+
+<article class={classes}>
+  <slot />
+</article>
+
+<style>
+  .card {
+    padding: 28px;
+    border: 1px solid var(--line);
+    border-radius: var(--ala-radius-md);
+    background-color: var(--bg);
+    box-shadow: var(--shadow-card);
+    transition:
+      border-color 180ms var(--ease-out-expo),
+      transform 180ms var(--ease-out-expo),
+      box-shadow 180ms var(--ease-out-expo);
+  }
+
+  @media (min-width: 1024px) {
+    .card {
+      padding: 32px;
+    }
+  }
+
+  .card--hover:hover,
+  .card--hover:focus-within {
+    border-color: var(--accent);
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-card);
+  }
+
+  :global([data-theme='dark']) .card {
+    background-color: var(--surface);
+  }
+</style>
