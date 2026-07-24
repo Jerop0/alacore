@@ -2,8 +2,19 @@ import { defineConfig, type HtmlTagDescriptor, type Plugin } from 'vite'
 import react from '@vitejs/plugin-react'
 import tailwindcss from '@tailwindcss/vite'
 import path from 'node:path'
+import fs from 'node:fs'
 
-import siteConfiguration from './.figma/make/site.json'
+// `.figma/make/site.json` is provided by the Figma Make runtime and is not
+// committed to the repo, so it's absent in CI/hosting builds (e.g. Vercel).
+// Load it optionally and fall back to defaults when it's missing.
+function loadSiteConfiguration(): FigmaSiteConfiguration {
+  try {
+    return JSON.parse(fs.readFileSync(path.resolve(__dirname, './.figma/make/site.json'), 'utf-8'))
+  } catch {
+    return {}
+  }
+}
+const siteConfiguration = loadSiteConfiguration()
 
 // Vite config — https://vitejs.dev/config/
 export default defineConfig(({ mode }) => {
