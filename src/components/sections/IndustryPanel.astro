@@ -19,10 +19,35 @@ const list = tObj<Record<string, CopyNode>>(copy, 'list') ?? {};
 const item = list[slug] ?? {};
 const catalogLocale = (catalogData as Record<string, any>)[locale] ?? (catalogData as Record<string, any>)['en'];
 const catalog = catalogLocale.catalog?.[slug];
+
+const industryImages: Record<string, string> = {
+  'factories-manufacturing': '/images/industries/factories-manufacturing-germany.png',
+  'retail-ecommerce': '/images/industries/retail-ecommerce-germany.png',
+  'warehouses-logistics': '/images/industries/warehouses-logistics-germany.png',
+  'companies-offices': '/images/industries/companies-offices-germany.png',
+  'schools-training': '/images/industries/schools-training-germany.png',
+  'hospitals-clinics': '/images/industries/hospitals-clinics-germany.png',
+  'restaurants-cafes': '/images/industries/restaurants-cafes-germany.png',
+};
+
+const heroImage = industryImages[slug];
 ---
 
 <section class="section industry-panel">
   <div class="container">
+    {heroImage && (
+      <div class="industry-panel__hero">
+        <img
+          src={heroImage}
+          alt={t(item, 'name')}
+          class="industry-panel__hero-image"
+          width="1200"
+          height="675"
+          loading="lazy"
+          decoding="async"
+        />
+      </div>
+    )}
     <SectionHeading title={t(item, 'name')} supporting={t(item, 'oneLiner')} />
 
     {
@@ -61,6 +86,36 @@ const catalog = catalogLocale.catalog?.[slug];
 <style>
   .industry-panel {
     padding-top: 120px;
+  }
+
+  .industry-panel__hero {
+    margin-bottom: 3rem;
+    border-radius: var(--ala-radius-md);
+    overflow: hidden;
+    box-shadow: var(--shadow-card);
+  }
+
+  .industry-panel__hero-image {
+    display: block;
+    width: 100%;
+    height: auto;
+    aspect-ratio: 16 / 9;
+    object-fit: cover;
+    transition: transform 400ms var(--ease-out-expo);
+  }
+
+  .industry-panel__hero:hover .industry-panel__hero-image {
+    transform: scale(1.02);
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .industry-panel__hero-image {
+      transition: none;
+    }
+
+    .industry-panel__hero:hover .industry-panel__hero-image {
+      transform: none;
+    }
   }
 
   .industry-panel__fallback {

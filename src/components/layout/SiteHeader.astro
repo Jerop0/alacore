@@ -99,18 +99,10 @@ const markLogo = '/brand/ala-core-mark-light.svg';
     top: 0;
     z-index: var(--z-header);
     height: 64px;
-    background-color: transparent;
-    border-bottom: 1px solid transparent;
-    transition:
-      background-color 160ms var(--ease-out-expo),
-      border-color 160ms var(--ease-out-expo),
-      box-shadow 160ms var(--ease-out-expo);
-  }
-
-  .site-header.is-scrolled {
-    background-color: rgba(11, 18, 32, 0.98);
-    border-bottom-color: rgba(255, 255, 255, 0.08);
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+    background-color: rgba(5, 11, 22, 0.92);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
   }
 
   @media (min-width: 1024px) {
