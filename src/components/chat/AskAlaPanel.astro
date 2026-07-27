@@ -256,21 +256,24 @@ const askAla = localeCopy.askAla as CopyNode;
     position: absolute;
     right: 1.5rem;
     bottom: 1.5rem;
-    width: min(calc(100% - 3rem), 440px);
-    max-height: calc(100vh - 3rem);
+    width: min(560px, calc(100vw - 32px));
+    max-height: min(720px, calc(100vh - 32px));
     display: flex;
     flex-direction: column;
-    border: 1px solid var(--line);
-    border-radius: 20px;
-    background-color: var(--bg);
-    box-shadow:
-      0 24px 64px rgba(11, 18, 32, 0.14),
-      0 8px 20px rgba(11, 18, 32, 0.06);
+    border-radius: 22px;
+    background: #fff;
+    box-shadow: 0 24px 80px rgba(15, 23, 42, 0.28);
     transform: translateY(16px) scale(0.97);
     opacity: 0;
     transition:
       transform 280ms var(--ease-out-expo),
       opacity 280ms var(--ease-out-expo);
+    overflow: hidden;
+  }
+
+  [data-theme='dark'] .ask-ala-panel__sheet {
+    background: #0f172a;
+    box-shadow: 0 24px 80px rgba(0, 0, 0, 0.5);
   }
 
   .ask-ala-panel.is-open .ask-ala-panel__sheet {
@@ -294,7 +297,7 @@ const askAla = localeCopy.askAla as CopyNode;
       width: 100%;
       max-height: 92vh;
       padding-bottom: env(safe-area-inset-bottom);
-      border-radius: 20px 20px 0 0;
+      border-radius: 22px 22px 0 0;
       transform: translateY(100%);
     }
 
@@ -317,30 +320,38 @@ const askAla = localeCopy.askAla as CopyNode;
   .ask-ala-panel__header {
     display: flex;
     align-items: center;
-    justify-content: space-between;
-    gap: 0.75rem;
-    padding: 1.25rem 1.25rem 1rem;
-    border-bottom: 1px solid var(--line);
+    gap: 16px;
+    padding: 24px 26px 20px;
+    border-bottom: 1px solid rgba(15, 23, 42, 0.1);
+  }
+
+  [data-theme='dark'] .ask-ala-panel__header {
+    border-bottom-color: rgba(255, 255, 255, 0.1);
   }
 
   .ask-ala-panel__title-wrap {
     display: flex;
     align-items: center;
-    gap: 0.75rem;
+    gap: 16px;
     min-width: 0;
+    flex: 1;
   }
 
   .ask-ala-panel__avatar {
     display: grid;
     place-items: center;
     flex-shrink: 0;
-    width: 40px;
-    height: 40px;
+    width: 44px;
+    height: 44px;
     border-radius: 12px;
-    background-color: var(--accent);
-    color: var(--ala-pure-white);
+    background-color: #1768ff;
+    color: #fff;
     font-weight: 800;
-    font-size: var(--text-sm);
+    font-size: 16px;
+  }
+
+  [data-theme='dark'] .ask-ala-panel__avatar {
+    background-color: #3b82f6;
   }
 
   .ask-ala-panel__title-group {
@@ -348,32 +359,41 @@ const askAla = localeCopy.askAla as CopyNode;
   }
 
   .ask-ala-panel__title {
-    font-size: 1.0625rem;
-    font-weight: 700;
-    color: var(--text);
-    line-height: 1.3;
+    font-size: 22px;
+    line-height: 1.25;
+    font-weight: 800;
+    color: #07111f;
     margin: 0;
   }
 
+  [data-theme='dark'] .ask-ala-panel__title {
+    color: #f1f5f9;
+  }
+
   .ask-ala-panel__close {
+    margin-inline-start: auto;
+    width: 40px;
+    height: 40px;
+    border: 0;
+    border-radius: 999px;
+    background: transparent;
+    color: #64748b;
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    flex-shrink: 0;
-    width: 40px;
-    height: 40px;
-    padding: 0;
-    border: none;
-    border-radius: 10px;
-    background-color: transparent;
-    color: var(--text-muted);
     cursor: pointer;
+    flex-shrink: 0;
     transition: background-color 160ms var(--ease-out-expo), color 160ms var(--ease-out-expo);
   }
 
   .ask-ala-panel__close:hover {
-    background-color: var(--surface);
-    color: var(--text);
+    background-color: rgba(15, 23, 42, 0.05);
+    color: #07111f;
+  }
+
+  [data-theme='dark'] .ask-ala-panel__close:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+    color: #f1f5f9;
   }
 
   .ask-ala-panel__close:focus-visible {
@@ -384,7 +404,7 @@ const askAla = localeCopy.askAla as CopyNode;
   .ask-ala-panel__body {
     flex: 1;
     overflow-y: auto;
-    padding: 1.5rem 1.25rem 1.25rem;
+    padding: 28px 26px 26px;
     display: flex;
     flex-direction: column;
     gap: 1rem;
@@ -401,22 +421,31 @@ const askAla = localeCopy.askAla as CopyNode;
     max-width: 88%;
     padding: 0.875rem 1rem;
     border-radius: 16px;
-    font-size: var(--text-md);
+    font-size: 16px;
     line-height: 1.55;
   }
 
   .ask-ala-panel__message--assistant {
     align-self: flex-start;
-    background-color: var(--surface);
-    color: var(--text);
+    background-color: #f8fafc;
+    color: #07111f;
     border-bottom-left-radius: 6px;
+  }
+
+  [data-theme='dark'] .ask-ala-panel__message--assistant {
+    background-color: #1e293b;
+    color: #f1f5f9;
   }
 
   .ask-ala-panel__message--user {
     align-self: flex-end;
-    background-color: var(--accent);
-    color: var(--ala-pure-white);
+    background-color: #1768ff;
+    color: #fff;
     border-bottom-right-radius: 6px;
+  }
+
+  [data-theme='dark'] .ask-ala-panel__message--user {
+    background-color: #3b82f6;
   }
 
   .ask-ala-panel__message p {
@@ -440,11 +469,15 @@ const askAla = localeCopy.askAla as CopyNode;
   .ask-ala-panel__recs li {
     padding: 0.75rem 1rem;
     border-radius: 12px;
-    background-color: var(--accent);
-    color: var(--ala-pure-white);
+    background-color: #1768ff;
+    color: #fff;
     font-weight: 600;
-    font-size: var(--text-sm);
+    font-size: 15px;
     line-height: 1.5;
+  }
+
+  [data-theme='dark'] .ask-ala-panel__recs li {
+    background-color: #3b82f6;
   }
 
   .ask-ala-panel__choices {
@@ -456,14 +489,14 @@ const askAla = localeCopy.askAla as CopyNode;
   .ask-ala-panel__choice {
     display: inline-flex;
     align-items: center;
-    min-height: 44px;
+    min-height: 48px;
     padding: 0.625rem 1.125rem;
-    border: 1.5px solid var(--line);
+    border: 1.5px solid rgba(15, 23, 42, 0.18);
     border-radius: 9999px;
-    background-color: var(--bg);
-    color: var(--text);
+    background-color: #fff;
+    color: #07111f;
     font-family: var(--ala-font);
-    font-size: var(--text-sm);
+    font-size: 15px;
     font-weight: 600;
     cursor: pointer;
     transition:
@@ -474,10 +507,21 @@ const askAla = localeCopy.askAla as CopyNode;
     -webkit-tap-highlight-color: transparent;
   }
 
+  [data-theme='dark'] .ask-ala-panel__choice {
+    background-color: #1e293b;
+    border-color: rgba(255, 255, 255, 0.18);
+    color: #f1f5f9;
+  }
+
   .ask-ala-panel__choice:hover {
-    border-color: var(--accent);
-    background-color: var(--accent);
-    color: var(--ala-pure-white);
+    border-color: #1768ff;
+    background-color: #1768ff;
+    color: #fff;
+  }
+
+  [data-theme='dark'] .ask-ala-panel__choice:hover {
+    border-color: #3b82f6;
+    background-color: #3b82f6;
   }
 
   .ask-ala-panel__choice:active {
@@ -492,13 +536,23 @@ const askAla = localeCopy.askAla as CopyNode;
   .ask-ala-panel__choice--secondary {
     border-color: transparent;
     background-color: transparent;
-    color: var(--text-muted);
+    color: #64748b;
+  }
+
+  [data-theme='dark'] .ask-ala-panel__choice--secondary {
+    color: #94a3b8;
   }
 
   .ask-ala-panel__choice--secondary:hover {
-    border-color: var(--line);
-    background-color: var(--surface);
-    color: var(--text);
+    border-color: rgba(15, 23, 42, 0.18);
+    background-color: rgba(15, 23, 42, 0.05);
+    color: #07111f;
+  }
+
+  [data-theme='dark'] .ask-ala-panel__choice--secondary:hover {
+    border-color: rgba(255, 255, 255, 0.18);
+    background-color: rgba(255, 255, 255, 0.1);
+    color: #f1f5f9;
   }
 
   .ask-ala-panel__typing {
@@ -508,16 +562,24 @@ const askAla = localeCopy.askAla as CopyNode;
     padding: 1rem 1.25rem;
     border-radius: 16px;
     border-bottom-left-radius: 6px;
-    background-color: var(--surface);
+    background-color: #f8fafc;
     align-self: flex-start;
+  }
+
+  [data-theme='dark'] .ask-ala-panel__typing {
+    background-color: #1e293b;
   }
 
   .ask-ala-panel__typing span {
     width: 7px;
     height: 7px;
     border-radius: 9999px;
-    background-color: var(--text-muted);
+    background-color: #64748b;
     animation: typing-dot 1.4s ease-in-out infinite;
+  }
+
+  [data-theme='dark'] .ask-ala-panel__typing span {
+    background-color: #94a3b8;
   }
 
   .ask-ala-panel__typing span:nth-child(2) {
@@ -533,9 +595,27 @@ const askAla = localeCopy.askAla as CopyNode;
     50% { opacity: 1; transform: scale(1); }
   }
 
+  @media (max-width: 640px) {
+    .ask-ala-panel__header {
+      padding: 20px 18px 16px;
+    }
+
+    .ask-ala-panel__title {
+      font-size: 18px;
+    }
+
+    .ask-ala-panel__body {
+      padding: 22px 18px 20px;
+    }
+  }
+
   @media (prefers-reduced-motion: reduce) {
     .ask-ala-panel__typing span {
       animation: none;
+    }
+
+    .ask-ala-panel__choice {
+      transition: none;
     }
   }
 </style>
