@@ -2,8 +2,9 @@
 import SectionHeading from '../ui/SectionHeading.astro';
 import Icon from '../ui/Icon.astro';
 import { INDUSTRIES, DEFAULT_LOCALE, type Locale } from '../../lib/config';
-import { localizePath, t } from '../../lib/i18n';
+import { localizePath, t, tObj } from '../../lib/i18n';
 import type { CopyNode } from '../../lib/i18n';
+import industriesData from '../../content/industries.json';
 
 interface Props {
   locale: Locale;
@@ -12,15 +13,8 @@ interface Props {
 
 const { locale, copy } = Astro.props;
 
-const industryLabels: Record<string, string> = {
-  'restaurants-cafes': 'Restaurants & Cafes',
-  'hospitals-clinics': 'Hospitals & Clinics',
-  'schools-training': 'Schools & Training',
-  'companies-offices': 'Companies & Offices',
-  'warehouses-logistics': 'Warehouses & Logistics',
-  'retail-ecommerce': 'Retail & E-commerce',
-  'factories-manufacturing': 'Factories & Manufacturing',
-};
+const industriesCopy = (industriesData as Record<string, CopyNode>)[locale] ?? (industriesData as Record<string, CopyNode>)[DEFAULT_LOCALE];
+const industriesList = tObj<Record<string, CopyNode>>(industriesCopy, 'list') ?? {};
 
 const industryImages: Record<string, string> = {
   'factories-manufacturing': '/images/industries/factories-manufacturing-germany.png',
@@ -47,6 +41,8 @@ const industryImages: Record<string, string> = {
         {
           INDUSTRIES.map((industry, index) => {
             const animation = index % 2 === 0 ? 'fade-up' : 'fade-down';
+            const industryCopy = industriesList[industry.slug];
+            const industryName = t(industryCopy, 'name');
             return (
               <li class="industries-teaser__item" data-animate={animation} style={`--delay: ${index * 80}ms`}>
                 <a
@@ -56,7 +52,7 @@ const industryImages: Record<string, string> = {
                   <div class="industries-teaser__image-wrapper">
                     <img
                       src={industryImages[industry.slug]}
-                      alt={industryLabels[industry.slug]}
+                      alt={industryName}
                       class="industries-teaser__image"
                       width="400"
                       height="300"
@@ -64,7 +60,7 @@ const industryImages: Record<string, string> = {
                       decoding="async"
                     />
                   </div>
-                  <span class="industries-teaser__label">{industryLabels[industry.slug]}</span>
+                  <span class="industries-teaser__label">{industryName}</span>
                 </a>
               </li>
             );
