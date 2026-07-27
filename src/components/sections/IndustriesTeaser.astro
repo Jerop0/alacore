@@ -35,40 +35,45 @@ const industryImages: Record<string, string> = {
 
 <section class="section section--mist">
   <div class="container">
-    <SectionHeading
-      title={t(copy, 'sections.industries')}
-      supporting={t(copy, 'sections.industriesSupport')}
-    />
+    <div data-animate="fade-up">
+      <SectionHeading
+        title={t(copy, 'sections.industries')}
+        supporting={t(copy, 'sections.industriesSupport')}
+      />
+    </div>
 
     <div class="industries-teaser">
       <ul class="industries-teaser__list" role="tablist" aria-label="Industries">
         {
-          INDUSTRIES.map((industry) => (
-            <li class="industries-teaser__item">
-              <a
-                href={localizePath(`/industries/${industry.slug}`, locale, locale)}
-                class="industries-teaser__card"
-              >
-                <div class="industries-teaser__image-wrapper">
-                  <img
-                    src={industryImages[industry.slug]}
-                    alt={industryLabels[industry.slug]}
-                    class="industries-teaser__image"
-                    width="400"
-                    height="300"
-                    loading="lazy"
-                    decoding="async"
-                  />
-                </div>
-                <span class="industries-teaser__label">{industryLabels[industry.slug]}</span>
-              </a>
-            </li>
-          ))
+          INDUSTRIES.map((industry, index) => {
+            const animation = index % 2 === 0 ? 'fade-up' : 'fade-down';
+            return (
+              <li class="industries-teaser__item" data-animate={animation} style={`--delay: ${index * 80}ms`}>
+                <a
+                  href={localizePath(`/industries/${industry.slug}`, locale, locale)}
+                  class="industries-teaser__card"
+                >
+                  <div class="industries-teaser__image-wrapper">
+                    <img
+                      src={industryImages[industry.slug]}
+                      alt={industryLabels[industry.slug]}
+                      class="industries-teaser__image"
+                      width="400"
+                      height="300"
+                      loading="lazy"
+                      decoding="async"
+                    />
+                  </div>
+                  <span class="industries-teaser__label">{industryLabels[industry.slug]}</span>
+                </a>
+              </li>
+            );
+          })
         }
       </ul>
     </div>
 
-    <div class="industries-teaser__footer">
+    <div class="industries-teaser__footer" data-animate="fade-up" style="--delay: 560ms">
       <a href={localizePath('/industries', locale, locale)} class="industries-teaser__all">
         {t(copy, 'sections.industries')}
         <Icon name="arrow-right" size={16} />

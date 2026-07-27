@@ -35,15 +35,15 @@ const points = [
 
 <section class="section section--mist any-idea" aria-labelledby="any-idea-heading">
   <div class="container any-idea__inner">
-    <div class="any-idea__copy">
+    <div class="any-idea__copy" data-animate="fade-left">
       <h2 id="any-idea-heading" class="any-idea__title">{t(copy, 'sections.anyIdea')}</h2>
       <p class="any-idea__support">{t(copy, 'sections.anyIdeaSupport')}</p>
     </div>
 
     <ul class="any-idea__points" role="list">
       {
-        points.map((point) => (
-          <li class="any-idea__card" style={`--card-accent: ${point.accent};`}>
+        points.map((point, index) => (
+          <li class="any-idea__card" style={`--card-accent: ${point.accent};`} data-animate="fade-right" data-delay={index * 100}>
             <div class="any-idea__media">
               <img
                 src={point.image}
@@ -63,7 +63,7 @@ const points = [
       }
     </ul>
 
-    <div class="any-idea__actions">
+    <div class="any-idea__actions" data-animate="fade-up" data-delay={points.length * 100}>
       <Button id="any-idea-ask-ala">{t(copy, 'sections.anyIdeaCtaPrimary')}</Button>
       <Button href={localizePath('/contact', locale, locale)} variant="secondary">
         {t(copy, 'sections.anyIdeaCtaSecondary')}

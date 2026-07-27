@@ -26,19 +26,21 @@ const solutionsHref = localizePath('/solutions', locale, locale);
 
 <section class="section what-we-build" aria-labelledby="what-we-build-title">
   <div class="container">
-    <SectionHeading
-      id="what-we-build-title"
-      title={t(copy, 'sections.build')}
-      supporting={t(copy, 'sections.buildSupport')}
-    />
+    <div data-animate="fade-up">
+      <SectionHeading
+        id="what-we-build-title"
+        title={t(copy, 'sections.build')}
+        supporting={t(copy, 'sections.buildSupport')}
+      />
+    </div>
     <ul class="build-grid" role="list">
       {
-        cards.map((card) => {
+        cards.map((card, index) => {
           const item = tArr(copy, `buildCards.${card.key}`);
           const title = item[0] ?? '';
           const body = item[1] ?? '';
           return (
-            <li class="build-item">
+            <li class="build-item" data-animate="fade-up" style={`--delay: ${index * 80}ms`}>
               <a class="build-card" href={solutionsHref} style={`--card-accent: ${card.accent};`}>
                 <div class="build-card__media">
                   <img

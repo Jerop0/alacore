@@ -11,27 +11,49 @@ interface Props {
 const { copy } = Astro.props;
 const whyItems = tArr(copy, 'why');
 const icons = ['users', 'message-square-text', 'workflow'] as const;
+
+const whyImages = [
+  '/why-ala-core/one-partner.png',
+  '/why-ala-core/clear-communication.png',
+  '/why-ala-core/workflow.png',
+];
 ---
 
 <section class="section">
   <div class="container">
-    <SectionHeading
-      title={t(copy, 'sections.why')}
-      supporting={t(copy, 'sections.whySupport')}
-    />
+    <div data-animate="fade-up">
+      <SectionHeading
+        title={t(copy, 'sections.why')}
+        supporting={t(copy, 'sections.whySupport')}
+      />
+    </div>
 
     <div class="why-grid">
       {
         whyItems.map((item, index) => {
           if (!Array.isArray(item) || item.length < 2) return null;
           const [title, body] = item;
+          const animations = ['fade-left', 'fade-up', 'fade-right'];
+          const animation = animations[index % animations.length];
           return (
-            <article class="why-item">
-              <span class="why-item__icon">
-                <Icon name={icons[index]} size={24} />
-              </span>
-              <h3 class="why-item__title">{title}</h3>
-              <p class="why-item__body">{body}</p>
+            <article class="why-item" data-animate={animation} style={`--delay: ${index * 100}ms`}>
+              <div class="why-item__media">
+                <img
+                  src={whyImages[index]}
+                  alt={title}
+                  width="400"
+                  height="210"
+                  loading="lazy"
+                  decoding="async"
+                />
+              </div>
+              <div class="why-item__content">
+                <span class="why-item__icon">
+                  <Icon name={icons[index]} size={24} />
+                </span>
+                <h3 class="why-item__title">{title}</h3>
+                <p class="why-item__body">{body}</p>
+              </div>
             </article>
           );
         })
@@ -56,7 +78,31 @@ const icons = ['users', 'message-square-text', 'workflow'] as const;
   .why-item {
     display: flex;
     flex-direction: column;
+    overflow: hidden;
+    border-radius: 18px;
+    background-color: var(--bg);
+    border: 1px solid rgba(15, 23, 42, 0.1);
+    box-shadow: 0 12px 34px rgba(15, 23, 42, 0.06);
+  }
+
+  .why-item__media {
+    width: 100%;
+    height: 210px;
+    overflow: hidden;
+  }
+
+  .why-item__media img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+  }
+
+  .why-item__content {
+    display: flex;
+    flex-direction: column;
     gap: 0.875rem;
+    padding: 26px 28px 30px;
   }
 
   .why-item__icon {

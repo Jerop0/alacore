@@ -15,9 +15,9 @@ const { locale, copy } = Astro.props;
 
 <section class="final-cta">
   <div class="container final-cta__inner">
-    <div class="final-cta__content">
+    <div class="final-cta__content" data-animate="scale-up">
       <h2 class="final-cta__title">{t(copy, 'finalCta')}</h2>
-      <div class="final-cta__actions">
+      <div class="final-cta__actions" data-animate="fade-up" style="--delay: 200ms">
         <Button href={localizePath('/contact', locale, locale)}>
           {t(copy, 'hero.secondary')}
         </Button>
@@ -30,7 +30,7 @@ const { locale, copy } = Astro.props;
         </Button>
       </div>
     </div>
-    <div class="final-cta__visual" aria-hidden="true">
+    <div class="final-cta__visual" aria-hidden="true" data-animate="fade-up" style="--delay: 300ms">
       <CoreOrbit compact />
     </div>
   </div>
