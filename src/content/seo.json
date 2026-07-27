@@ -76,5 +76,31 @@
       "title": "İletişim — ALA CORE",
       "description": "Bir ALA CORE uzmanıyla görüşün. Neyi geliştirmek istediğinizi anlatın, doğru başlangıç noktasını önerelim."
     }
+  },
+  "ar": {
+    "home": {
+      "title": "ALA CORE — شريك واحد لكل حلول أعمالك",
+      "description": "تبني ALA CORE التطبيقات والمواقع والشات بوت والأتمتة واللوحات وأنظمة الأعمال التي تجعل إدارة الشركات أسهل."
+    },
+    "solutions": {
+      "title": "الحلول — ALA CORE",
+      "description": "اكتشف ما تبنيه ALA CORE: تطبيقات الأعمال والمواقع والشات بوت والأتمتة واللوحات والأنظمة لشركات من كل حجم."
+    },
+    "industries": {
+      "title": "القطاعات — ALA CORE",
+      "description": "تبني ALA CORE تقنية مخصّصة للمطاعم والعيادات والمدارس والمكاتب والمستودعات والتجزئة والتصنيع."
+    },
+    "forTechTeams": {
+      "title": "للفرق التقنية — ALA CORE",
+      "description": "العمق التقني خلف ALA CORE: الذكاء الاصطناعي والبرمجيات وأنظمة تخطيط الموارد والأتمتة والسحابة والأمن السيبراني والبيانات وإنترنت الأشياء."
+    },
+    "about": {
+      "title": "من نحن — ALA CORE",
+      "description": "ALA CORE شريك تقني للأعمال يصمّم أنظمة الأعمال المخصّصة ويبنيها ويدعمها."
+    },
+    "contact": {
+      "title": "تواصل معنا — ALA CORE",
+      "description": "تحدّث إلى خبير من ALA CORE. أخبرنا بما تودّ تحسينه وسنقترح نقطة البداية المناسبة."
+    }
   }
 }

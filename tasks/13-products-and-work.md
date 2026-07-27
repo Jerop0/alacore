@@ -59,5 +59,5 @@ are scenarios); `../DECISIONS.md`; `../PRODUCT.md` (voice).
 - Data-driven: adding a real product or case = adding a JSON entry, no layout change.
 
 ## Done-when
-Both pages + teasers + footer links complete and localized, with the no-fake guardrail respected;
-committed.
+Both pages + footer links complete and localized (no homepage teasers), with the no-fake guardrail
+respected; committed.

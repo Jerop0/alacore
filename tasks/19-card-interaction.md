@@ -48,11 +48,16 @@ dismissed/blur).
   `aria-haspopup="dialog"` correct; visible focus ring.
 - **Theme + tokens:** all colors/radii/shadows from tokens, light + dark.
 
+## Card unit
+On Industries/Solutions the card unit is a **theme/family group** (one rich card per theme), which holds
+several items each with a "how it works" — see [`21-theme-cards-how-it-works.md`](21-theme-cards-how-it-works.md).
+Not one card per item.
+
 ## Apply to
-- **Industries** (`tasks/06` + `14`): each capability theme's items become rich rows; heavy items open a
-  pop-up.
-- **Solutions** (`tasks/05` + `20`): each solution family is a full-width row (business summary visible);
-  the **tech layer** opens in a **pop-up dialog** ("How we build it").
+- **Industries** (`tasks/06` + `14` + `21`): one card per theme; each item's "how it works" reveals
+  (hover/focus/tap), heavy themes open a pop-up.
+- **Solutions** (`tasks/05` + `20` + `21`): each solution family is a full-width row (business summary
+  visible); the **tech layer** opens in a **pop-up dialog** ("How we build it").
 
 ## Acceptance
 - Cards are full-width rows with always-visible business summaries (never one-word); no "Learn more"

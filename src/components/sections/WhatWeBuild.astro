@@ -1,51 +1,81 @@
 ---
 import SectionHeading from '../ui/SectionHeading.astro';
-import Card from '../ui/Card.astro';
-import Icon from '../ui/Icon.astro';
+import { Image } from 'astro:assets';
 import type { CopyNode } from '../../lib/i18n';
-import { t, tArr } from '../../lib/i18n';
+import { t, tArr, localizePath } from '../../lib/i18n';
+import type { Locale } from '../../lib/config';
+
+import businessApps from '../../assets/build/business-apps.png';
+import websitesPortals from '../../assets/build/websites-portals.png';
+import chatbotsWhatsapp from '../../assets/build/chatbots-whatsapp.png';
+import automation from '../../assets/build/automation.png';
+import dashboardsReports from '../../assets/build/dashboards-reports.png';
+import businessSystems from '../../assets/build/business-systems.png';
 
 interface Props {
   copy: CopyNode;
+  locale: Locale;
 }
 
-const { copy } = Astro.props;
+const { copy, locale } = Astro.props;
 
 const cards = [
-  { key: 'apps', icon: 'briefcase' },
-  { key: 'web', icon: 'globe' },
-  { key: 'chat', icon: 'messages-square' },
-  { key: 'automation', icon: 'settings' },
-  { key: 'reports', icon: 'chart-no-axes-column-increasing' },
-  { key: 'systems', icon: 'database' },
+  { key: 'apps', image: businessApps, accent: '#1E56A0' },
+  { key: 'web', image: websitesPortals, accent: '#2D6A4F' },
+  { key: 'chat', image: chatbotsWhatsapp, accent: '#D97706' },
+  { key: 'automation', image: automation, accent: '#7C3AED' },
+  { key: 'reports', image: dashboardsReports, accent: '#DC2626' },
+  { key: 'systems', image: businessSystems, accent: '#4B5563' },
 ] as const;
+
+const learnMore = t(copy, 'sections.buildLearnMore');
+const solutionsHref = localizePath('/solutions', locale, locale);
 ---
 
-<section class="section">
+<section class="section" aria-labelledby="what-we-build-title">
   <div class="container">
     <SectionHeading
+      id="what-we-build-title"
       title={t(copy, 'sections.build')}
       supporting={t(copy, 'sections.buildSupport')}
     />
-    <div class="build-grid">
+    <ul class="build-grid" role="list">
       {
-        cards.map((card, index) => {
+        cards.map((card) => {
           const item = tArr(copy, `buildCards.${card.key}`);
           const title = item[0] ?? '';
           const body = item[1] ?? '';
-          const isWide = index === 0;
           return (
-            <Card class={isWide ? 'build-card build-card--wide' : 'build-card'}>
-              <div class="build-card__icon">
-                <Icon name={card.icon} size={24} />
-              </div>
-              <h3 class="build-card__title">{title}</h3>
-              <p class="build-card__body">{body}</p>
-            </Card>
+            <li class="build-item">
+              <a class="build-card" href={solutionsHref} style={`--card-accent: ${card.accent};`}>
+                <div class="build-card__media">
+                  <Image
+                    src={card.image}
+                    alt={`${title} illustration`}
+                    widths={[360, 540, 720]}
+                    sizes="(min-width: 1024px) 30vw, (min-width: 640px) 45vw, 90vw"
+                    format="webp"
+                    quality={70}
+                    loading="lazy"
+                    decoding="async"
+                  />
+                </div>
+                <div class="build-card__content">
+                  <h3 class="build-card__title">{title}</h3>
+                  <p class="build-card__body">{body}</p>
+                  <span class="build-card__cta" aria-hidden="true">
+                    {learnMore}
+                    <svg width="14" height="14" viewBox="0 0 16 16" fill="none" aria-hidden="true">
+                      <path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" />
+                    </svg>
+                  </span>
+                </div>
+              </a>
+            </li>
           );
         })
       }
-    </div>
+    </ul>
   </div>
 </section>
 
@@ -54,6 +84,9 @@ const cards = [
     display: grid;
     gap: 1.25rem;
     grid-template-columns: 1fr;
+    list-style: none;
+    margin: 0;
+    padding: 0;
   }
 
   @media (min-width: 640px) {
@@ -66,33 +99,74 @@ const cards = [
     .build-grid {
       grid-template-columns: repeat(3, 1fr);
     }
+  }
 
-    .build-card--wide {
-      grid-column: span 2;
-    }
+  .build-item {
+    display: flex;
   }
 
   .build-card {
+    position: relative;
     display: flex;
     flex-direction: column;
-    gap: 0.875rem;
+    width: 100%;
+    overflow: hidden;
+    border: 1px solid var(--line);
+    border-radius: var(--ala-radius-md);
+    background-color: var(--bg);
+    box-shadow: var(--shadow-card);
+    text-decoration: none;
+    transition:
+      border-color 200ms var(--ease-out-expo),
+      transform 200ms var(--ease-out-expo),
+      box-shadow 200ms var(--ease-out-expo);
   }
 
-  .build-card__icon {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    width: 44px;
-    height: 44px;
-    border-radius: var(--ala-radius-sm);
-    background-color: var(--accent-tint);
-    color: var(--accent);
+  :global([data-theme='dark']) .build-card {
+    background-color: var(--surface);
+  }
+
+  /* Accent rail that reveals on hover/focus */
+  .build-card::before {
+    content: '';
+    position: absolute;
+    inset: 0 0 auto 0;
+    height: 3px;
+    background-color: var(--card-accent);
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 220ms var(--ease-out-expo);
+    z-index: 1;
+  }
+
+  .build-card__media {
+    aspect-ratio: 11 / 6;
+    background-color: #f4f7fb;
+    border-bottom: 1px solid var(--line);
+    overflow: hidden;
+  }
+
+  .build-card__media :global(img) {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 320ms var(--ease-out-expo);
+  }
+
+  .build-card__content {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    gap: 0.5rem;
+    padding: 1.25rem 1.375rem 1.375rem;
   }
 
   .build-card__title {
     font-size: var(--text-lg);
     font-weight: 700;
     color: var(--text);
+    transition: color 180ms var(--ease-out-expo);
   }
 
   .build-card__body {
@@ -101,12 +175,70 @@ const cards = [
     color: var(--text-muted);
   }
 
-  .build-card:hover .build-card__icon {
-    background-color: var(--accent);
-    color: var(--ala-pure-white);
+  .build-card__cta {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.375rem;
+    margin-top: auto;
+    padding-top: 0.5rem;
+    font-size: var(--text-sm);
+    font-weight: 600;
+    color: var(--card-accent);
   }
 
-  .build-card:hover .build-card__title {
-    color: var(--accent);
+  .build-card__cta svg {
+    transition: transform 200ms var(--ease-out-expo);
+  }
+
+  /* Hover / keyboard-focus states */
+  .build-card:hover,
+  .build-card:focus-visible {
+    transform: translateY(-4px);
+    border-color: var(--card-accent);
+    box-shadow:
+      0 18px 40px -18px color-mix(in srgb, var(--card-accent) 55%, transparent),
+      var(--shadow-card);
+  }
+
+  .build-card:focus-visible {
+    outline: 2px solid var(--card-accent);
+    outline-offset: 2px;
+  }
+
+  .build-card:hover::before,
+  .build-card:focus-visible::before {
+    transform: scaleX(1);
+  }
+
+  .build-card:hover .build-card__title,
+  .build-card:focus-visible .build-card__title {
+    color: var(--card-accent);
+  }
+
+  .build-card:hover .build-card__media :global(img) {
+    transform: scale(1.04);
+  }
+
+  .build-card:hover .build-card__cta svg,
+  .build-card:focus-visible .build-card__cta svg {
+    transform: translateX(3px);
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .build-card,
+    .build-card::before,
+    .build-card__media :global(img),
+    .build-card__cta svg {
+      transition: none;
+    }
+
+    .build-card:hover,
+    .build-card:focus-visible {
+      transform: none;
+    }
+
+    .build-card:hover .build-card__media :global(img) {
+      transform: none;
+    }
   }
 </style>

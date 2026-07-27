@@ -1,5 +1,5 @@
 ---
-import { LOCALES, LOCALES_WITH_LABELS, DEFAULT_LOCALE, type Locale } from '../../lib/config';
+import { VISIBLE_LOCALES, LOCALES_WITH_LABELS, type Locale } from '../../lib/config';
 import { localizePath } from '../../lib/i18n';
 
 interface Props {
@@ -15,7 +15,7 @@ const baseClass = `language-switcher ${inDrawer ? 'language-switcher--drawer' : 
 <nav class={baseClass} aria-label="Language switcher">
   <ul class="language-switcher__list">
     {
-      LOCALES.map((locale) => {
+      VISIBLE_LOCALES.map((locale) => {
         const href = localizePath(path, locale, currentLocale);
         const isActive = locale === currentLocale;
         return (

@@ -84,6 +84,10 @@ One commit per task: `feat(site): <task-nn> <short summary>`. Keep commits scope
 | 18 | `18-home-positioning.md` | Remove Products/Work teasers from home; add "any idea → reality" band |
 | 19 | `19-card-interaction.md` | Rich-row cards: hover/focus/tap reveal + pop-up dialog (no "Learn more") |
 | 20 | `20-merge-solutions-tech.md` | Merge For Tech Teams into Solutions (business-first, then tech) |
+| 21 | `21-theme-cards-how-it-works.md` | Card = a theme (not per item); each item gets a plain "how it works" |
+| 22 | `22-fix-cards-and-orbit.md` | **FIX**: reveal-card layout bug (full-width body) + `--text-base` + clipped hero orbit |
+| 23 | `23-fix-anyidea-width.md` | **FIX**: home "Whatever you need, we build it." band too narrow (empty 2nd column) |
+| 24 | `24-about-page.md` | Full About page ("engineering company": mission/vision/values/principles/process/global/stats) |
 
 > **Note on 07:** `/for-tech-teams` is **merged into Solutions** (task 20) — no standalone page; it
 > 301-redirects to `/solutions`. Primary nav is **5 items** (Home · Solutions · Industries · About ·

@@ -10,7 +10,6 @@ import { t } from '../lib/i18n';
 
 const currentLocale = (Astro.currentLocale as Locale) ?? DEFAULT_LOCALE;
 const copy = getCopy(currentLocale, 'solutions');
-const techCopy = getCopy(currentLocale, 'tech');
 const siteCopy = getCopy(currentLocale, 'site');
 const seo = getSeo(currentLocale, 'solutions');
 ---
@@ -19,7 +18,7 @@ const seo = getSeo(currentLocale, 'solutions');
   <section class="section">
     <div class="container">
       <SectionHeading title={t(copy, 'title')} supporting={t(copy, 'intro')} />
-      <SolutionsCatalog copy={copy} techCopy={techCopy} locale={currentLocale} />
+      <SolutionsCatalog copy={copy} locale={currentLocale} />
     </div>
   </section>
 

@@ -74,6 +74,21 @@
       "source": "/tr/for-tech-teams",
       "destination": "/tr/solutions",
       "permanent": true
+    },
+    {
+      "source": "/how-we-work",
+      "destination": "/about",
+      "permanent": true
+    },
+    {
+      "source": "/de/how-we-work",
+      "destination": "/de/about",
+      "permanent": true
+    },
+    {
+      "source": "/tr/how-we-work",
+      "destination": "/tr/about",
+      "permanent": true
     }
   ]
 }

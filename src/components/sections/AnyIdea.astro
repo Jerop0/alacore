@@ -1,9 +1,13 @@
 ---
 import Button from '../ui/Button.astro';
-import Icon from '../ui/Icon.astro';
+import { Image } from 'astro:assets';
 import { localizePath, t } from '../../lib/i18n';
 import type { CopyNode } from '../../lib/i18n';
 import type { Locale } from '../../lib/config';
+
+import ideaMadeReal from '../../assets/build/idea-made-real.png';
+import anyTechnology from '../../assets/build/any-technology.png';
+import hardProblems from '../../assets/build/hard-problems.png';
 
 interface Props {
   locale: Locale;
@@ -13,9 +17,24 @@ interface Props {
 const { locale, copy } = Astro.props;
 
 const points = [
-  { title: t(copy, 'sections.anyIdeaPoint1'), body: t(copy, 'sections.anyIdeaPoint1Support'), icon: 'sparkle' },
-  { title: t(copy, 'sections.anyIdeaPoint2'), body: t(copy, 'sections.anyIdeaPoint2Support'), icon: 'globe' },
-  { title: t(copy, 'sections.anyIdeaPoint3'), body: t(copy, 'sections.anyIdeaPoint3Support'), icon: 'settings' },
+  {
+    title: t(copy, 'sections.anyIdeaPoint1'),
+    body: t(copy, 'sections.anyIdeaPoint1Support'),
+    image: ideaMadeReal,
+    accent: '#1D61E7',
+  },
+  {
+    title: t(copy, 'sections.anyIdeaPoint2'),
+    body: t(copy, 'sections.anyIdeaPoint2Support'),
+    image: anyTechnology,
+    accent: '#2563EB',
+  },
+  {
+    title: t(copy, 'sections.anyIdeaPoint3'),
+    body: t(copy, 'sections.anyIdeaPoint3Support'),
+    image: hardProblems,
+    accent: '#1E3A8A',
+  },
 ];
 ---
 
@@ -24,27 +43,38 @@ const points = [
     <div class="any-idea__copy">
       <h2 id="any-idea-heading" class="any-idea__title">{t(copy, 'sections.anyIdea')}</h2>
       <p class="any-idea__support">{t(copy, 'sections.anyIdeaSupport')}</p>
+    </div>
 
-      <div class="any-idea__points">
-        {
-          points.map((point) => (
-            <div class="any-idea__point">
-              <div class="any-idea__icon" aria-hidden="true">
-                <Icon name={point.icon} size={22} />
-              </div>
-              <div>
-                <h3>{point.title}</h3>
-                <p>{point.body}</p>
-              </div>
+    <ul class="any-idea__points" role="list">
+      {
+        points.map((point) => (
+          <li class="any-idea__card" style={`--card-accent: ${point.accent};`}>
+            <div class="any-idea__media">
+              <Image
+                src={point.image}
+                alt={`${point.title} illustration`}
+                widths={[400, 560, 720]}
+                sizes="(min-width: 768px) 32vw, 90vw"
+                format="webp"
+                quality={72}
+                loading="lazy"
+                decoding="async"
+              />
             </div>
-          ))
-        }
-      </div>
+            <div class="any-idea__card-body">
+              <h3>{point.title}</h3>
+              <p>{point.body}</p>
+            </div>
+          </li>
+        ))
+      }
+    </ul>
 
-      <div class="any-idea__actions">
-        <Button id="any-idea-ask-ala">{t(copy, 'sections.anyIdeaCtaPrimary')}</Button>
-        <Button href={localizePath('/contact', locale, locale)} variant="secondary">{t(copy, 'sections.anyIdeaCtaSecondary')}</Button>
-      </div>
+    <div class="any-idea__actions">
+      <Button id="any-idea-ask-ala">{t(copy, 'sections.anyIdeaCtaPrimary')}</Button>
+      <Button href={localizePath('/contact', locale, locale)} variant="secondary">
+        {t(copy, 'sections.anyIdeaCtaSecondary')}
+      </Button>
     </div>
   </div>
 </section>
@@ -62,15 +92,7 @@ const points = [
 
 <style>
   .any-idea__inner {
-    display: grid;
-    gap: 2rem;
-  }
-
-  @media (min-width: 1024px) {
-    .any-idea__inner {
-      grid-template-columns: 1.25fr 1fr;
-      align-items: center;
-    }
+    display: block;
   }
 
   .any-idea__title {
@@ -93,6 +115,8 @@ const points = [
     display: grid;
     gap: 1rem;
     margin-top: 2rem;
+    list-style: none;
+    padding: 0;
   }
 
   @media (min-width: 768px) {
@@ -102,38 +126,85 @@ const points = [
     }
   }
 
-  .any-idea__point {
+  .any-idea__card {
+    position: relative;
     display: flex;
-    gap: 0.875rem;
-    padding: 1.25rem;
+    flex-direction: column;
+    overflow: hidden;
     border: 1px solid var(--line);
     border-radius: var(--ala-radius-md);
     background-color: var(--bg);
     box-shadow: var(--shadow-card);
+    transition:
+      border-color 200ms var(--ease-out-expo),
+      transform 200ms var(--ease-out-expo),
+      box-shadow 200ms var(--ease-out-expo);
   }
 
-  .any-idea__icon {
+  .any-idea__card::before {
+    content: '';
+    position: absolute;
+    inset: 0 0 auto 0;
+    height: 3px;
+    background-color: var(--card-accent);
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 220ms var(--ease-out-expo);
+    z-index: 1;
+  }
+
+  .any-idea__media {
+    aspect-ratio: 16 / 9;
     display: grid;
     place-items: center;
-    flex-shrink: 0;
-    width: 40px;
-    height: 40px;
-    border-radius: var(--ala-radius-sm);
-    background-color: var(--accent);
-    color: var(--ala-pure-white);
+    padding: 0.75rem;
+    background-color: #f1f5fb;
+    border-bottom: 1px solid var(--line);
   }
 
-  .any-idea__point h3 {
+  .any-idea__media :global(img) {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+  }
+
+  .any-idea__card-body {
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+    padding: 1.375rem 1.5rem 1.5rem;
+  }
+
+  .any-idea__card-body h3 {
     font-size: var(--text-md);
     font-weight: 700;
     color: var(--text-primary);
-    margin-bottom: 0.25rem;
+    transition: color 180ms var(--ease-out-expo);
   }
 
-  .any-idea__point p {
+  .any-idea__card-body p {
     font-size: var(--text-sm);
-    line-height: 1.5;
+    line-height: 1.55;
     color: var(--text-secondary);
+  }
+
+  .any-idea__card:hover,
+  .any-idea__card:focus-within {
+    transform: translateY(-4px);
+    border-color: var(--card-accent);
+    box-shadow:
+      0 18px 40px -18px color-mix(in srgb, var(--card-accent) 50%, transparent),
+      var(--shadow-card);
+  }
+
+  .any-idea__card:hover::before,
+  .any-idea__card:focus-within::before {
+    transform: scaleX(1);
+  }
+
+  .any-idea__card:hover .any-idea__card-body h3 {
+    color: var(--card-accent);
   }
 
   .any-idea__actions {
@@ -141,5 +212,17 @@ const points = [
     flex-wrap: wrap;
     gap: 0.75rem;
     margin-top: 2rem;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .any-idea__card,
+    .any-idea__card::before {
+      transition: none;
+    }
+
+    .any-idea__card:hover,
+    .any-idea__card:focus-within {
+      transform: none;
+    }
   }
 </style>

@@ -1,5 +1,5 @@
 ---
-import { SITE, DEFAULT_LOCALE, LOCALES, type Locale } from '../lib/config';
+import { SITE, DEFAULT_LOCALE, LOCALES, dirForLocale, type Locale } from '../lib/config';
 import { localizePath } from '../lib/i18n';
 import SiteHeader from '../components/layout/SiteHeader.astro';
 import SiteFooter from '../components/layout/SiteFooter.astro';
@@ -37,7 +37,7 @@ const alternates = LOCALES.map((loc) => ({
 ---
 
 <!doctype html>
-<html lang={currentLocale} dir="ltr" data-theme="light">
+<html lang={currentLocale} dir={dirForLocale(currentLocale)} data-theme="light">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />

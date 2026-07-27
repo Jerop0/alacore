@@ -2,59 +2,504 @@
   "en": {
     "title": "Solutions",
     "intro": "We build the tools that make daily business easier — from the app your staff uses to the dashboard you check each morning.",
-    "labels": {
-      "included": "What's included",
-      "whoFor": "Who it's for",
-      "example": "Example"
-    },
     "families": [
       {
         "title": "Business Apps",
-        "description": "One place for the work your team does every day. Orders, bookings, schedules, tasks, and customer requests in a single app that fits your workflow.",
-        "tools": ["Orders", "Bookings", "Staff scheduling", "Tasks", "Customer requests"],
-        "included": ["Custom mobile and web apps", "Role-based access for staff", "Forms and workflows that match your process", "Notifications and reminders"],
-        "whoFor": "Restaurants, clinics, schools, warehouses, and offices that want one simple app for daily work.",
-        "example": "A restaurant uses one app to take orders, send them to the kitchen, and track table status."
+        "summary": "One place for the work your team does every day. We create custom mobile and web applications for orders, bookings, schedules, tasks, approvals, customer requests, and other daily operations. The app follows the way your business already works instead of forcing your team into a generic process.",
+        "items": [
+          {
+            "name": "Custom mobile and web apps",
+            "benefit": "Built for your exact process instead of forcing your team into generic software.",
+            "howItWorks": [
+              "We map how your team actually works.",
+              "We design the app around your workflow, forms, and roles.",
+              "Your staff use one tool on web or mobile."
+            ]
+          },
+          {
+            "name": "Role-based access for staff",
+            "benefit": "Every employee sees only what they need.",
+            "howItWorks": [
+              "You define roles and permissions.",
+              "Staff log in and see their dashboard.",
+              "Managers get full access; others see only their tasks."
+            ]
+          },
+          {
+            "name": "Forms and workflows that match your process",
+            "benefit": "No more paper or spreadsheets.",
+            "howItWorks": [
+              "We build digital forms for your specific needs.",
+              "Workflows route tasks to the right people automatically.",
+              "Approvals and updates happen in real time."
+            ]
+          },
+          {
+            "name": "Notifications and reminders",
+            "benefit": "Nothing falls through the cracks.",
+            "howItWorks": [
+              "The app sends alerts for new tasks or deadlines.",
+              "Staff get reminders on their phone or email.",
+              "Managers see what's overdue."
+            ]
+          },
+          {
+            "name": "Approval flows",
+            "benefit": "Requests move faster without emails.",
+            "howItWorks": [
+              "Staff submit requests in the app.",
+              "Requests route to the right approver automatically.",
+              "Approvers review and approve with one click."
+            ]
+          },
+          {
+            "name": "Customer and employee portals",
+            "benefit": "Self-service for customers and staff.",
+            "howItWorks": [
+              "Customers log in to see their orders or status.",
+              "Employees access their records and requests.",
+              "Everything updates in real time."
+            ]
+          },
+          {
+            "name": "File and document management",
+            "benefit": "All documents in one place.",
+            "howItWorks": [
+              "Upload and organize documents by project or customer.",
+              "Search finds files instantly.",
+              "Version control tracks changes."
+            ]
+          },
+          {
+            "name": "Connections to your existing business tools",
+            "benefit": "Your app works with what you already use.",
+            "howItWorks": [
+              "We connect to your accounting, CRM, or ERP.",
+              "Data syncs automatically between systems.",
+              "No duplicate entry."
+            ]
+          }
+        ],
+        "dialog": {
+          "triggerLabel": "How we build it",
+          "title": "How we build Business Apps",
+          "body": "We use modern frameworks like React, Next.js, and React Native for web and mobile. Secure databases (PostgreSQL, MongoDB) store your data. Authentication uses industry standards (OAuth, JWT). We deploy on cloud platforms (AWS, Vercel) with CI/CD pipelines for reliable updates."
+        }
       },
       {
         "title": "Websites & Portals",
-        "description": "A fast, clear website or customer portal that helps people find you, book services, buy products, and get in touch without confusion.",
-        "tools": ["Corporate sites", "Booking portals", "Online stores", "Customer logins", "Landing pages"],
-        "included": ["Responsive design", "Booking and contact forms", "Secure customer login area", "SEO-ready structure"],
-        "whoFor": "Businesses that need to be found online and let customers self-serve.",
-        "example": "A clinic lets patients book appointments, see services, and access forms on a fast mobile site."
+        "summary": "A fast, clear website or customer portal that helps people find you, book services, buy products, and get in touch without confusion. Every site is designed for speed, clarity, and conversion — so visitors become customers.",
+        "items": [
+          {
+            "name": "Corporate websites",
+            "benefit": "A professional online presence that builds trust.",
+            "howItWorks": [
+              "We design pages that reflect your brand and message.",
+              "Content is structured for clarity and fast loading.",
+              "Your team can update text and images without a developer."
+            ]
+          },
+          {
+            "name": "Booking portals",
+            "benefit": "Customers book on their own, 24/7.",
+            "howItWorks": [
+              "We set up availability calendars and booking forms.",
+              "Customers choose a time and confirm online.",
+              "Your team gets notified automatically."
+            ]
+          },
+          {
+            "name": "E-commerce stores",
+            "benefit": "Sell products online with secure payments.",
+            "howItWorks": [
+              "We build a product catalog with search and filters.",
+              "Customers add items to cart and pay securely.",
+              "Orders flow to your fulfillment process."
+            ]
+          },
+          {
+            "name": "Customer accounts",
+            "benefit": "Customers manage their own information.",
+            "howItWorks": [
+              "Customers create accounts and log in.",
+              "They view order history, invoices, and status.",
+              "Updates happen in real time."
+            ]
+          },
+          {
+            "name": "Content management",
+            "benefit": "Your team publishes without waiting for a developer.",
+            "howItWorks": [
+              "We set up an admin panel for your content.",
+              "Editors add pages, blog posts, or product listings.",
+              "Changes go live instantly."
+            ]
+          },
+          {
+            "name": "SEO setup",
+            "benefit": "Get found by more customers in search.",
+            "howItWorks": [
+              "We optimize page structure, meta tags, and speed.",
+              "Content is organized for search engines.",
+              "We track rankings and traffic over time."
+            ]
+          },
+          {
+            "name": "Accessibility",
+            "benefit": "Everyone can use your site, including people with disabilities.",
+            "howItWorks": [
+              "We follow WCAG guidelines for screen readers and keyboard navigation.",
+              "Color contrast and font sizes meet standards.",
+              "We test with assistive tools before launch."
+            ]
+          },
+          {
+            "name": "Performance optimization",
+            "benefit": "Pages load fast on any device or connection.",
+            "howItWorks": [
+              "We compress images and minimize code.",
+              "Content is delivered from edge servers worldwide.",
+              "We monitor speed and fix bottlenecks."
+            ]
+          }
+        ],
+        "dialog": {
+          "triggerLabel": "How we build it",
+          "title": "How we build Websites & Portals",
+          "body": "We build with Astro, Next.js, and headless CMS platforms (Strapi, Sanity) for fast, maintainable sites. E-commerce runs on Shopify or custom stacks with Stripe payments. Hosting on Vercel, Cloudflare, or AWS ensures global speed. All sites are responsive, accessible, and SEO-ready from day one."
+        }
       },
       {
         "title": "Chatbots & WhatsApp",
-        "description": "Automated conversations that answer common questions, collect requests, and hand off to your team when a human is needed.",
-        "tools": ["WhatsApp assistants", "Website chatbots", "FAQ automation", "Lead capture", "Appointment booking"],
-        "included": ["WhatsApp Business integration", "Website chat widget", "Natural-language FAQs", "Handoff to human agents"],
-        "whoFor": "Customer-facing businesses that get the same questions again and again.",
-        "example": "A retail shop answers order-status and product questions on WhatsApp 24/7."
+        "summary": "Automated conversations that answer common questions, collect requests, and hand off to your team when a human is needed. Available on WhatsApp, your website, or any channel your customers use.",
+        "items": [
+          {
+            "name": "WhatsApp assistants",
+            "benefit": "Answer customers on the app they already use.",
+            "howItWorks": [
+              "Customers message your WhatsApp number.",
+              "The bot answers common questions automatically.",
+              "Complex requests go to a team member."
+            ]
+          },
+          {
+            "name": "Website chatbots",
+            "benefit": "Engage visitors before they leave your site.",
+            "howItWorks": [
+              "A chat widget appears on your website.",
+              "The bot guides visitors to the right page or answers questions.",
+              "Live chat takes over when needed."
+            ]
+          },
+          {
+            "name": "FAQ automation",
+            "benefit": "The same questions get answered without staff.",
+            "howItWorks": [
+              "We load your FAQ into the bot's knowledge base.",
+              "Customers ask in natural language.",
+              "The bot matches and responds instantly."
+            ]
+          },
+          {
+            "name": "Lead capture",
+            "benefit": "Collect contact details from every conversation.",
+            "howItWorks": [
+              "The bot asks for name, email, or phone.",
+              "Details are saved to your CRM or spreadsheet.",
+              "Your sales team follows up."
+            ]
+          },
+          {
+            "name": "Appointment booking",
+            "benefit": "Customers book without calling.",
+            "howItWorks": [
+              "The bot shows available time slots.",
+              "Customers pick a time and confirm.",
+              "Both sides get a confirmation message."
+            ]
+          },
+          {
+            "name": "Multilingual support",
+            "benefit": "Serve customers in their own language.",
+            "howItWorks": [
+              "The bot detects the customer's language.",
+              "Responses are delivered in that language.",
+              "You can support dozens of languages automatically."
+            ]
+          },
+          {
+            "name": "Human handoff",
+            "benefit": "Complex issues reach a real person fast.",
+            "howItWorks": [
+              "The bot detects when it can't help.",
+              "The conversation transfers to a team member.",
+              "The agent sees the full chat history."
+            ]
+          },
+          {
+            "name": "CRM connections",
+            "benefit": "Every conversation updates your customer records.",
+            "howItWorks": [
+              "Chat data syncs to your CRM automatically.",
+              "Customer profiles get new notes and tags.",
+              "Your team sees the full context."
+            ]
+          }
+        ],
+        "dialog": {
+          "triggerLabel": "How we build it",
+          "title": "How we build Chatbots & WhatsApp",
+          "body": "We use the WhatsApp Business API with platforms like Twilio or 360dialog. Chatbots are built with Botpress, Voiceflow, or custom Node.js logic. AI models (OpenAI, local LLMs) handle natural language understanding. All conversations are logged and can sync to your CRM via webhooks."
+        }
       },
       {
         "title": "Automation",
-        "description": "Connect the steps that currently happen by hand. Reduce errors, speed up repetitive work, and free your team for higher-value tasks.",
-        "tools": ["Workflow automation", "Notifications", "Data sync", "Approval flows", "Reminders"],
-        "included": ["Trigger-based workflows", "Email, WhatsApp, and Slack notifications", "Data sync between tools", "Approval and reminder sequences"],
-        "whoFor": "Teams that copy data, chase approvals, or send reminders manually.",
-        "example": "An office routes leave requests to managers and updates HR records automatically."
+        "summary": "Connect the steps that currently happen by hand. We design workflows that reduce errors, speed up repetitive work, and free your team for higher-value tasks — from approvals and follow-ups to data sync and scheduling.",
+        "items": [
+          {
+            "name": "Approval workflows",
+            "benefit": "Requests get approved without email chains.",
+            "howItWorks": [
+              "A team member submits a request.",
+              "It routes to the right approver automatically.",
+              "The requester gets notified once approved."
+            ]
+          },
+          {
+            "name": "Document processing",
+            "benefit": "Data from documents enters your system automatically.",
+            "howItWorks": [
+              "Documents are uploaded or received by email.",
+              "AI extracts key fields (names, dates, amounts).",
+              "Data is saved to your database or spreadsheet."
+            ]
+          },
+          {
+            "name": "Scheduled reports",
+            "benefit": "Reports arrive on time, every time.",
+            "howItWorks": [
+              "You define the report format and schedule.",
+              "The system gathers data automatically.",
+              "Reports are sent by email or saved to a folder."
+            ]
+          },
+          {
+            "name": "Data sync",
+            "benefit": "Your tools always show the same information.",
+            "howItWorks": [
+              "We connect your systems via APIs.",
+              "Data flows between them in real time or on schedule.",
+              "No more manual copying between tools."
+            ]
+          },
+          {
+            "name": "Customer follow-ups",
+            "benefit": "Every customer gets a timely response.",
+            "howItWorks": [
+              "A trigger starts the follow-up (new lead, completed order).",
+              "An email or message is sent automatically.",
+              "If no reply, a reminder goes out later."
+            ]
+          },
+          {
+            "name": "Reminders",
+            "benefit": "Deadlines and tasks don't get forgotten.",
+            "howItWorks": [
+              "You set the reminder rules.",
+              "The system sends notifications at the right time.",
+              "Overdue items are flagged for managers."
+            ]
+          },
+          {
+            "name": "Form automation",
+            "benefit": "Form submissions trigger actions automatically.",
+            "howItWorks": [
+              "A customer or staff member fills out a form.",
+              "The submission creates a task, record, or notification.",
+              "The right person is informed instantly."
+            ]
+          },
+          {
+            "name": "Tool integrations",
+            "benefit": "Your existing tools work together seamlessly.",
+            "howItWorks": [
+              "We connect your apps via APIs or webhooks.",
+              "Events in one tool trigger actions in another.",
+              "Everything stays in sync without manual work."
+            ]
+          }
+        ],
+        "dialog": {
+          "triggerLabel": "How we build it",
+          "title": "How we build Automation",
+          "body": "We use n8n, Make (Integromat), or custom Node.js/Python scripts for workflow automation. Document processing uses OCR and AI extraction (Tesseract, AWS Textract). APIs and webhooks connect your tools. All automations run on reliable cloud infrastructure with logging and error handling."
+        }
       },
       {
         "title": "Dashboards & Reports",
-        "description": "See the numbers that matter in one place. Sales, stock, staff hours, and any other metric you need to run the business with confidence.",
-        "tools": ["KPI dashboards", "Sales reports", "Stock reports", "Staff reports", "Custom analytics"],
-        "included": ["Real-time charts", "Scheduled reports", "Filters by location, date, or role", "Export to PDF or spreadsheet"],
-        "whoFor": "Owners and managers who want clear numbers without spreadsheet wrangling.",
-        "example": "A warehouse manager sees daily stock-in, stock-out, and delayed shipments on one screen."
+        "summary": "See the numbers that matter in one place. We build live dashboards and automated reports for sales, stock, staff performance, and any other metric you need to run the business with confidence.",
+        "items": [
+          {
+            "name": "KPI dashboards",
+            "benefit": "See your most important numbers at a glance.",
+            "howItWorks": [
+              "We identify the KPIs that matter to your business.",
+              "Data is pulled from your systems in real time.",
+              "A visual dashboard shows current performance."
+            ]
+          },
+          {
+            "name": "Sales reports",
+            "benefit": "Track revenue, deals, and trends clearly.",
+            "howItWorks": [
+              "Sales data flows from your CRM or POS.",
+              "Reports show daily, weekly, and monthly trends.",
+              "You can filter by product, region, or salesperson."
+            ]
+          },
+          {
+            "name": "Stock reports",
+            "benefit": "Know what's in stock, what's low, and what's moving.",
+            "howItWorks": [
+              "Inventory data syncs from your warehouse system.",
+              "Reports show stock levels, turnover, and reorder points.",
+              "Alerts flag items running low."
+            ]
+          },
+          {
+            "name": "Staff performance",
+            "benefit": "See who's delivering and who needs support.",
+            "howItWorks": [
+              "Performance data is collected from your systems.",
+              "Dashboards show individual and team metrics.",
+              "Managers can drill down into details."
+            ]
+          },
+          {
+            "name": "Custom analytics",
+            "benefit": "Measure exactly what matters to your business.",
+            "howItWorks": [
+              "We define the metrics with you.",
+              "Data is gathered from multiple sources.",
+              "Visualizations are built for your specific needs."
+            ]
+          },
+          {
+            "name": "Scheduled delivery",
+            "benefit": "Reports arrive in your inbox on schedule.",
+            "howItWorks": [
+              "You choose the frequency (daily, weekly, monthly).",
+              "The system generates the report automatically.",
+              "It's sent to your email or saved to a shared folder."
+            ]
+          },
+          {
+            "name": "Filters",
+            "benefit": "Zoom into the data that matters right now.",
+            "howItWorks": [
+              "Dashboards include filters for date, location, role, etc.",
+              "Click a filter to update all charts instantly.",
+              "Save your favorite views for quick access."
+            ]
+          },
+          {
+            "name": "Export tools",
+            "benefit": "Take your data anywhere.",
+            "howItWorks": [
+              "Export dashboards and reports as PDF or Excel.",
+              "Schedule exports to run automatically.",
+              "Share with stakeholders who need the data."
+            ]
+          }
+        ],
+        "dialog": {
+          "triggerLabel": "How we build it",
+          "title": "How we build Dashboards & Reports",
+          "body": "We build dashboards with React, Next.js, and charting libraries (Recharts, Chart.js, D3.js) or use platforms like Metabase and Grafana. Data is pulled from your databases via APIs or direct connections. Reports are generated with PDF libraries and scheduled with cron jobs or cloud functions."
+        }
       },
       {
         "title": "Business Systems",
-        "description": "The core systems that keep a business organized: customers, staff, stock, operations, and the connections between them.",
-        "tools": ["CRM", "ERP", "Inventory", "HR", "Operations"],
-        "included": ["Customer and supplier records", "Stock and order management", "Staff and role management", "Integrations with accounting and shipping"],
-        "whoFor": "Growing businesses that have outgrown spreadsheets and need one connected system.",
-        "example": "A manufacturer tracks materials, production orders, and shipments in one system."
+        "summary": "The core systems that keep a business organized: customers, staff, stock, operations, and the connections between them. We build or integrate CRM, ERP, inventory, HR, and accounting systems that work as one.",
+        "items": [
+          {
+            "name": "CRM",
+            "benefit": "Every customer interaction in one place.",
+            "howItWorks": [
+              "Customer contacts, deals, and notes are stored centrally.",
+              "Your team sees the full history with each customer.",
+              "Follow-ups and tasks are tracked automatically."
+            ]
+          },
+          {
+            "name": "ERP",
+            "benefit": "Run your entire operation from one system.",
+            "howItWorks": [
+              "Sales, purchasing, inventory, and finance are connected.",
+              "Data flows between departments without manual entry.",
+              "Managers see the full picture in real time."
+            ]
+          },
+          {
+            "name": "Inventory",
+            "benefit": "Know exactly what you have and where.",
+            "howItWorks": [
+              "Stock levels are tracked across locations.",
+              "Movements (in, out, transfer) are recorded instantly.",
+              "Reorder alerts prevent stockouts."
+            ]
+          },
+          {
+            "name": "HR",
+            "benefit": "Manage your team without spreadsheets.",
+            "howItWorks": [
+              "Employee records, contracts, and documents are centralized.",
+              "Leave requests and approvals happen in the system.",
+              "Payroll data flows to your accounting tool."
+            ]
+          },
+          {
+            "name": "Order management",
+            "benefit": "Track every order from placement to delivery.",
+            "howItWorks": [
+              "Orders are captured from all channels.",
+              "Status updates flow to customers automatically.",
+              "Fulfillment teams see what needs attention."
+            ]
+          },
+          {
+            "name": "Accounting connections",
+            "benefit": "Your books stay up to date automatically.",
+            "howItWorks": [
+              "Sales, purchases, and payments sync to your accounting tool.",
+              "Invoices are generated and sent automatically.",
+              "Financial reports reflect real-time data."
+            ]
+          },
+          {
+            "name": "Supplier management",
+            "benefit": "Keep suppliers organized and deliveries on track.",
+            "howItWorks": [
+              "Supplier contacts, contracts, and performance are tracked.",
+              "Purchase orders are sent and monitored.",
+              "Delivery status is visible in real time."
+            ]
+          },
+          {
+            "name": "Multi-location support",
+            "benefit": "Manage all your locations from one system.",
+            "howItWorks": [
+              "Each location has its own data and permissions.",
+              "Head office sees consolidated reports.",
+              "Transfers between locations are tracked."
+            ]
+          }
+        ],
+        "dialog": {
+          "triggerLabel": "How we build it",
+          "title": "How we build Business Systems",
+          "body": "We build custom systems with Node.js, Python, and PostgreSQL, or integrate existing platforms (Salesforce, HubSpot, Odoo, SAP). APIs connect all modules. Multi-tenant architecture supports multiple locations. Data is secured with encryption, backups, and role-based access control."
+        }
       }
     ],
     "cta": "Talk to an expert"
@@ -62,59 +507,504 @@
   "de": {
     "title": "Lösungen",
     "intro": "Wir entwickeln die Werkzeuge, die den Geschäftsalltag erleichtern — von der App, die Ihr Team nutzt, bis zum Dashboard, das Sie jeden Morgen prüfen.",
-    "labels": {
-      "included": "Was enthalten ist",
-      "whoFor": "Für wen",
-      "example": "Beispiel"
-    },
     "families": [
       {
         "title": "Business-Apps",
-        "description": "Ein Ort für die tägliche Arbeit Ihres Teams. Aufträge, Buchungen, Dienstpläne, Aufgaben und Kundenanfragen in einer App, die zu Ihren Abläufen passt.",
-        "tools": ["Aufträge", "Buchungen", "Dienstplanung", "Aufgaben", "Kundenanfragen"],
-        "included": ["Individuelle Mobile- und Web-Apps", "Rollenbasierte Zugriffe", "Formulare und Workflows nach Ihrem Prozess", "Benachrichtigungen und Erinnerungen"],
-        "whoFor": "Restaurants, Kliniken, Schulen, Lager und Büros, die eine einfache App für den Tagesablauf wünschen.",
-        "example": "Ein Restaurant nutzt eine App für Bestellungen, Küchenübergabe und Tischstatus."
+        "summary": "Ein Ort für die tägliche Arbeit Ihres Teams. Wir entwickeln individuelle Mobile- und Web-Anwendungen für Bestellungen, Buchungen, Dienstpläne, Aufgaben, Genehmigungen, Kundenanfragen und andere Tagesabläufe. Die App richtet sich nach der Art, wie Ihr Unternehmen bereits arbeitet, statt Ihr Team in einen generischen Prozess zu zwingen.",
+        "items": [
+          {
+            "name": "Individuelle Mobile- und Web-Apps",
+            "benefit": "Gebaut für Ihren genauen Prozess, statt Ihr Team in Standardsoftware zu zwingen.",
+            "howItWorks": [
+              "Wir erfassen, wie Ihr Team tatsächlich arbeitet.",
+              "Wir gestalten die App um Ihren Workflow, Formulare und Rollen.",
+              "Ihre Mitarbeiter nutzen ein Tool im Web oder mobil."
+            ]
+          },
+          {
+            "name": "Rollenbasierte Zugriffe für Mitarbeiter",
+            "benefit": "Jeder Mitarbeiter sieht nur, was er braucht.",
+            "howItWorks": [
+              "Sie definieren Rollen und Berechtigungen.",
+              "Mitarbeiter melden sich an und sehen ihr Dashboard.",
+              "Manager haben vollen Zugriff; andere sehen nur ihre Aufgaben."
+            ]
+          },
+          {
+            "name": "Formulare und Workflows nach Ihrem Prozess",
+            "benefit": "Schluss mit Papier und Tabellen.",
+            "howItWorks": [
+              "Wir bauen digitale Formulare für Ihre spezifischen Bedürfnisse.",
+              "Workflows leiten Aufgaben automatisch an die richtigen Personen weiter.",
+              "Genehmigungen und Updates erfolgen in Echtzeit."
+            ]
+          },
+          {
+            "name": "Benachrichtigungen und Erinnerungen",
+            "benefit": "Nichts fällt durch die Lappen.",
+            "howItWorks": [
+              "Die App sendet Benachrichtigungen für neue Aufgaben oder Fristen.",
+              "Mitarbeiter erhalten Erinnerungen auf dem Handy oder per E-Mail.",
+              "Manager sehen, was überfällig ist."
+            ]
+          },
+          {
+            "name": "Genehmigungsabläufe",
+            "benefit": "Anfragen bewegen sich schneller ohne E-Mails.",
+            "howItWorks": [
+              "Mitarbeiter stellen Anfragen in der App.",
+              "Anfragen werden automatisch an den richtigen Genehmiger geleitet.",
+              "Genehmiger prüfen und genehmigen mit einem Klick."
+            ]
+          },
+          {
+            "name": "Kunden- und Mitarbeiterportale",
+            "benefit": "Self-Service für Kunden und Mitarbeiter.",
+            "howItWorks": [
+              "Kunden melden sich an, um ihre Bestellungen oder den Status zu sehen.",
+              "Mitarbeiter greifen auf ihre Unterlagen und Anfragen zu.",
+              "Alles aktualisiert sich in Echtzeit."
+            ]
+          },
+          {
+            "name": "Dokumenten- und Dateiverwaltung",
+            "benefit": "Alle Dokumente an einem Ort.",
+            "howItWorks": [
+              "Dokumente nach Projekt oder Kunde hochladen und organisieren.",
+              "Die Suche findet Dateien sofort.",
+              "Versionskontrolle verfolgt Änderungen."
+            ]
+          },
+          {
+            "name": "Anbindung an bestehende Geschäftstools",
+            "benefit": "Ihre App arbeitet mit dem, was Sie bereits nutzen.",
+            "howItWorks": [
+              "Wir verbinden Ihre Buchhaltung, CRM oder ERP.",
+              "Daten synchronisieren automatisch zwischen Systemen.",
+              "Keine doppelte Eingabe."
+            ]
+          }
+        ],
+        "dialog": {
+          "triggerLabel": "Wie wir es bauen",
+          "title": "Wie wir Business-Apps entwickeln",
+          "body": "Wir nutzen moderne Frameworks wie React, Next.js und React Native für Web und Mobile. Sichere Datenbanken (PostgreSQL, MongoDB) speichern Ihre Daten. Die Authentifizierung verwendet Industriestandards (OAuth, JWT). Wir deployen auf Cloud-Plattformen (AWS, Vercel) mit CI/CD-Pipelines für zuverlässige Updates."
+        }
       },
       {
         "title": "Websites & Portale",
-        "description": "Eine schnelle, übersichtliche Website oder ein Kundenportal, über das Menschen Sie finden, Dienste buchen, Produkte kaufen und unkompliziert Kontakt aufnehmen.",
-        "tools": ["Unternehmenswebsites", "Buchungsportale", "Onlineshops", "Kunden-Logins", "Landingpages"],
-        "included": ["Responsive Design", "Buchungs- und Kontaktformulare", "Sicherer Kundenbereich", "SEO-freundliche Struktur"],
-        "whoFor": "Unternehmen, die online gefunden werden und Kunden Self-Service ermöglichen wollen.",
-        "example": "Eine Klinik lässt Patienten Termine buchen, Leistungen sehen und Formulare auf einer schnellen mobilen Seite ausfüllen."
+        "summary": "Eine schnelle, übersichtliche Website oder ein Kundenportal, über das Menschen Sie finden, Dienste buchen, Produkte kaufen und unkompliziert Kontakt aufnehmen. Jede Seite ist auf Geschwindigkeit, Klarheit und Conversion ausgelegt — damit Besucher zu Kunden werden.",
+        "items": [
+          {
+            "name": "Unternehmenswebsites",
+            "benefit": "Eine professionelle Online-Präsenz, die Vertrauen aufbaut.",
+            "howItWorks": [
+              "Wir gestalten Seiten, die Ihre Marke und Botschaft widerspiegeln.",
+              "Inhalte sind für Klarheit und schnelles Laden strukturiert.",
+              "Ihr Team kann Texte und Bilder ohne Entwickler aktualisieren."
+            ]
+          },
+          {
+            "name": "Buchungsportale",
+            "benefit": "Kunden buchen selbstständig, 24/7.",
+            "howItWorks": [
+              "Wir richten Verfügbarkeitskalender und Buchungsformulare ein.",
+              "Kunden wählen einen Termin und bestätigen online.",
+              "Ihr Team wird automatisch benachrichtigt."
+            ]
+          },
+          {
+            "name": "Onlineshops",
+            "benefit": "Produkte online mit sicheren Zahlungen verkaufen.",
+            "howItWorks": [
+              "Wir bauen einen Produktkatalog mit Suche und Filtern.",
+              "Kunden legen Artikel in den Warenkorb und zahlen sicher.",
+              "Bestellungen fließen in Ihren Fulfillment-Prozess."
+            ]
+          },
+          {
+            "name": "Kundenkonten",
+            "benefit": "Kunden verwalten ihre eigenen Informationen.",
+            "howItWorks": [
+              "Kunden erstellen Konten und melden sich an.",
+              "Sie sehen Bestellhistorie, Rechnungen und Status.",
+              "Updates erfolgen in Echtzeit."
+            ]
+          },
+          {
+            "name": "Content-Management",
+            "benefit": "Ihr Team publiziert ohne auf einen Entwickler zu warten.",
+            "howItWorks": [
+              "Wir richten ein Admin-Panel für Ihre Inhalte ein.",
+              "Redakteure fügen Seiten, Blogbeiträge oder Produktlisten hinzu.",
+              "Änderungen sind sofort live."
+            ]
+          },
+          {
+            "name": "SEO-Einrichtung",
+            "benefit": "Von mehr Kunden in der Suche gefunden werden.",
+            "howItWorks": [
+              "Wir optimieren Seitenstruktur, Meta-Tags und Geschwindigkeit.",
+              "Inhalte sind für Suchmaschinen organisiert.",
+              "Wir verfolgen Rankings und Traffic über die Zeit."
+            ]
+          },
+          {
+            "name": "Barrierefreiheit",
+            "benefit": "Jeder kann Ihre Seite nutzen, auch Menschen mit Behinderungen.",
+            "howItWorks": [
+              "Wir folgen WCAG-Richtlinien für Screenreader und Tastaturnavigation.",
+              "Farbkontrast und Schriftgrößen erfüllen Standards.",
+              "Wir testen mit Hilfsmitteln vor dem Launch."
+            ]
+          },
+          {
+            "name": "Performance-Optimierung",
+            "benefit": "Seiten laden schnell auf jedem Gerät oder jeder Verbindung.",
+            "howItWorks": [
+              "Wir komprimieren Bilder und minimieren Code.",
+              "Inhalte werden von Edge-Servern weltweit ausgeliefert.",
+              "Wir überwachen die Geschwindigkeit und beheben Engpässe."
+            ]
+          }
+        ],
+        "dialog": {
+          "triggerLabel": "Wie wir es bauen",
+          "title": "Wie wir Websites & Portale entwickeln",
+          "body": "Wir bauen mit Astro, Next.js und Headless-CMS-Plattformen (Strapi, Sanity) für schnelle, wartbare Seiten. E-Commerce läuft auf Shopify oder Custom-Stacks mit Stripe-Zahlungen. Hosting auf Vercel, Cloudflare oder AWS sorgt für globale Geschwindigkeit. Alle Seiten sind von Tag eins an responsiv, barrierefrei und SEO-fertig."
+        }
       },
       {
         "title": "Chatbots & WhatsApp",
-        "description": "Automatisierte Gespräche, die häufige Fragen beantworten, Anfragen erfassen und bei Bedarf an Ihr Team übergeben.",
-        "tools": ["WhatsApp-Assistenten", "Website-Chatbots", "FAQ-Automatisierung", "Lead-Generierung", "Terminbuchung"],
-        "included": ["WhatsApp Business Integration", "Website-Chat-Widget", "Natürlich-sprachliche FAQs", "Übergabe an menschliche Agenten"],
-        "whoFor": "Kundenorientierte Unternehmen, die dieselben Fragen immer wieder hören.",
-        "example": "Ein Einzelhändler beantwortet Bestellstatus- und Produktfragen 24/7 per WhatsApp."
+        "summary": "Automatisierte Gespräche, die häufige Fragen beantworten, Anfragen erfassen und bei Bedarf an Ihr Team übergeben. Verfügbar auf WhatsApp, Ihrer Website oder jedem Kanal, den Ihre Kunden nutzen.",
+        "items": [
+          {
+            "name": "WhatsApp-Assistenten",
+            "benefit": "Kunden auf der App antworten, die sie bereits nutzen.",
+            "howItWorks": [
+              "Kunden schreiben an Ihre WhatsApp-Nummer.",
+              "Der Bot beantwortet häufige Fragen automatisch.",
+              "Komplexe Anfragen gehen an ein Teammitglied."
+            ]
+          },
+          {
+            "name": "Website-Chatbots",
+            "benefit": "Besucher ansprechen, bevor sie Ihre Seite verlassen.",
+            "howItWorks": [
+              "Ein Chat-Widget erscheint auf Ihrer Website.",
+              "Der Bot leitet Besucher zur richtigen Seite oder beantwortet Fragen.",
+              "Live-Chat übernimmt, wenn nötig."
+            ]
+          },
+          {
+            "name": "FAQ-Automatisierung",
+            "benefit": "Die gleichen Fragen werden ohne Personal beantwortet.",
+            "howItWorks": [
+              "Wir laden Ihre FAQ in die Wissensdatenbank des Bots.",
+              "Kunden fragen in natürlicher Sprache.",
+              "Der Bot erkennt die Frage und antwortet sofort."
+            ]
+          },
+          {
+            "name": "Lead-Erfassung",
+            "benefit": "Kontaktdaten aus jedem Gespräch sammeln.",
+            "howItWorks": [
+              "Der Bot fragt nach Name, E-Mail oder Telefon.",
+              "Daten werden in Ihrem CRM oder einer Tabelle gespeichert.",
+              "Ihr Vertriebsteam folgt nach."
+            ]
+          },
+          {
+            "name": "Terminbuchung",
+            "benefit": "Kunden buchen ohne anzurufen.",
+            "howItWorks": [
+              "Der Bot zeigt verfügbare Zeitslots.",
+              "Kunden wählen einen Termin und bestätigen.",
+              "Beide Seiten erhalten eine Bestätigungsnachricht."
+            ]
+          },
+          {
+            "name": "Mehrsprachige Unterstützung",
+            "benefit": "Kunden in ihrer eigenen Sprache bedienen.",
+            "howItWorks": [
+              "Der Bot erkennt die Sprache des Kunden.",
+              "Antworten werden in dieser Sprache geliefert.",
+              "Sie können automatisch Dutzende Sprachen unterstützen."
+            ]
+          },
+          {
+            "name": "Übergabe an Menschen",
+            "benefit": "Komplexe Fälle erreichen schnell eine echte Person.",
+            "howItWorks": [
+              "Der Bot erkennt, wenn er nicht weiterhelfen kann.",
+              "Das Gespräch wird an ein Teammitglied übergeben.",
+              "Der Agent sieht den vollständigen Chatverlauf."
+            ]
+          },
+          {
+            "name": "CRM-Anbindungen",
+            "benefit": "Jedes Gespräch aktualisiert Ihre Kundendaten.",
+            "howItWorks": [
+              "Chat-Daten synchronisieren automatisch mit Ihrem CRM.",
+              "Kundenprofile erhalten neue Notizen und Tags.",
+              "Ihr Team sieht den vollständigen Kontext."
+            ]
+          }
+        ],
+        "dialog": {
+          "triggerLabel": "Wie wir es bauen",
+          "title": "Wie wir Chatbots & WhatsApp entwickeln",
+          "body": "Wir nutzen die WhatsApp Business API mit Plattformen wie Twilio oder 360dialog. Chatbots werden mit Botpress, Voiceflow oder eigener Node.js-Logik gebaut. KI-Modelle (OpenAI, lokale LLMs) verarbeiten natürliche Sprache. Alle Gespräche werden protokolliert und können per Webhooks mit Ihrem CRM synchronisiert werden."
+        }
       },
       {
         "title": "Automatisierung",
-        "description": "Verbinden Sie die Schritte, die bisher manuell passieren. Reduzieren Sie Fehler, beschleunigen Sie wiederkehrende Aufgaben und entlasten Sie Ihr Team.",
-        "tools": ["Workflow-Automatisierung", "Benachrichtigungen", "Datenabgleich", "Genehmigungsabläufe", "Erinnerungen"],
-        "included": ["Trigger-basierte Workflows", "E-Mail, WhatsApp und Slack Benachrichtigungen", "Datenabgleich zwischen Tools", "Genehmigungs- und Erinnerungsabläufe"],
-        "whoFor": "Teams, die Daten kopieren, Genehmigungen hinterherlaufen oder Erinnerungen manuell verschicken.",
-        "example": "Ein Büro leitet Urlaubsanträge an Vorgesetzte weiter und aktualisiert HR-Daten automatisch."
+        "summary": "Verbinden Sie die Schritte, die bisher manuell passieren. Wir gestalten Workflows, die Fehler reduzieren, wiederkehrende Aufgaben beschleunigen und Ihr Team für wertvollere Aufgaben freisetzen — von Genehmigungen und Nachfassungen bis zu Datenaustausch und Planung.",
+        "items": [
+          {
+            "name": "Genehmigungsworkflows",
+            "benefit": "Anfragen werden ohne E-Mail-Ketten genehmigt.",
+            "howItWorks": [
+              "Ein Teammitglied stellt einen Antrag.",
+              "Er wird automatisch an den richtigen Genehmiger geleitet.",
+              "Der Antragsteller wird nach Genehmigung benachrichtigt."
+            ]
+          },
+          {
+            "name": "Dokumentenverarbeitung",
+            "benefit": "Daten aus Dokumenten gelangen automatisch in Ihr System.",
+            "howItWorks": [
+              "Dokumente werden hochgeladen oder per E-Mail empfangen.",
+              "KI extrahiert Schlüsselfelder (Namen, Daten, Beträge).",
+              "Daten werden in Ihrer Datenbank oder Tabelle gespeichert."
+            ]
+          },
+          {
+            "name": "Geplante Berichte",
+            "benefit": "Berichte kommen pünktlich, jedes Mal.",
+            "howItWorks": [
+              "Sie definieren das Berichtsformat und den Zeitplan.",
+              "Das System sammelt automatisch Daten.",
+              "Berichte werden per E-Mail gesendet oder in einem Ordner gespeichert."
+            ]
+          },
+          {
+            "name": "Datensynchronisation",
+            "benefit": "Ihre Tools zeigen immer dieselben Informationen.",
+            "howItWorks": [
+              "Wir verbinden Ihre Systeme über APIs.",
+              "Daten fließen in Echtzeit oder geplant zwischen ihnen.",
+              "Kein manuelles Kopieren mehr zwischen Tools."
+            ]
+          },
+          {
+            "name": "Kunden-Nachfassungen",
+            "benefit": "Jeder Kunde erhält eine zeitnahe Antwort.",
+            "howItWorks": [
+              "Ein Trigger startet die Nachfassung (neuer Lead, abgeschlossene Bestellung).",
+              "Eine E-Mail oder Nachricht wird automatisch gesendet.",
+              "Bei keiner Antwort erfolgt später eine Erinnerung."
+            ]
+          },
+          {
+            "name": "Erinnerungen",
+            "benefit": "Fristen und Aufgaben werden nicht vergessen.",
+            "howItWorks": [
+              "Sie legen die Erinnerungsregeln fest.",
+              "Das System sendet Benachrichtigungen zur richtigen Zeit.",
+              "Überfällige Elemente werden für Manager markiert."
+            ]
+          },
+          {
+            "name": "Formularautomatisierung",
+            "benefit": "Formulareingaben lösen automatisch Aktionen aus.",
+            "howItWorks": [
+              "Ein Kunde oder Mitarbeiter füllt ein Formular aus.",
+              "Die Eingabe erstellt eine Aufgabe, einen Datensatz oder eine Benachrichtigung.",
+              "Die richtige Person wird sofort informiert."
+            ]
+          },
+          {
+            "name": "Tool-Integrationen",
+            "benefit": "Ihre bestehenden Tools arbeiten nahtlos zusammen.",
+            "howItWorks": [
+              "Wir verbinden Ihre Apps über APIs oder Webhooks.",
+              "Ereignisse in einem Tool lösen Aktionen in einem anderen aus.",
+              "Alles bleibt ohne manuelle Arbeit synchron."
+            ]
+          }
+        ],
+        "dialog": {
+          "triggerLabel": "Wie wir es bauen",
+          "title": "Wie wir Automatisierung entwickeln",
+          "body": "Wir nutzen n8n, Make (Integromat) oder eigene Node.js/Python-Skripte für Workflow-Automatisierung. Dokumentenverarbeitung nutzt OCR und KI-Extraktion (Tesseract, AWS Textract). APIs und Webhooks verbinden Ihre Tools. Alle Automatisierungen laufen auf zuverlässiger Cloud-Infrastruktur mit Protokollierung und Fehlerbehandlung."
+        }
       },
       {
         "title": "Dashboards & Berichte",
-        "description": "Sehen Sie die relevanten Zahlen an einem Ort. Umsatz, Bestand, Arbeitsstunden und jede andere Kennzahl, die Sie brauchen, um das Unternehmen sicher zu führen.",
-        "tools": ["KPI-Dashboards", "Umsatzberichte", "Bestandsberichte", "Personalberichte", "Individuelle Analysen"],
-        "included": ["Echtzeit-Charts", "Geplante Berichte", "Filter nach Standort, Datum oder Rolle", "Export als PDF oder Tabelle"],
-        "whoFor": "Inhaber und Manager, die klare Zahlen ohne Tabellen-Bastelei wollen.",
-        "example": "Ein Lagermanager sieht täglichen Zugang, Abgang und verspätete Sendungen auf einem Bildschirm."
+        "summary": "Sehen Sie die relevanten Zahlen an einem Ort. Wir entwickeln Echtzeit-Dashboards und automatisierte Berichte für Umsatz, Bestand, Mitarbeiterleistung und jede andere Kennzahl, die Sie brauchen, um das Unternehmen sicher zu führen.",
+        "items": [
+          {
+            "name": "KPI-Dashboards",
+            "benefit": "Die wichtigsten Zahlen auf einen Blick.",
+            "howItWorks": [
+              "Wir identifizieren die KPIs, die für Ihr Geschäft wichtig sind.",
+              "Daten werden in Echtzeit aus Ihren Systemen gezogen.",
+              "Ein visuelles Dashboard zeigt die aktuelle Leistung."
+            ]
+          },
+          {
+            "name": "Umsatzberichte",
+            "benefit": "Umsatz, Deals und Trends klar verfolgen.",
+            "howItWorks": [
+              "Verkaufsdaten fließen aus Ihrem CRM oder POS.",
+              "Berichte zeigen tägliche, wöchentliche und monatliche Trends.",
+              "Sie können nach Produkt, Region oder Verkäufer filtern."
+            ]
+          },
+          {
+            "name": "Bestandsberichte",
+            "benefit": "Wissen, was auf Lager ist, was knapp wird und was sich bewegt.",
+            "howItWorks": [
+              "Bestandsdaten synchronisieren aus Ihrem Lagersystem.",
+              "Berichte zeigen Bestände, Umschlag und Nachbestellpunkte.",
+              "Warnungen melden Artikel, die knapp werden."
+            ]
+          },
+          {
+            "name": "Mitarbeiterleistung",
+            "benefit": "Sehen, wer liefert und wer Unterstützung braucht.",
+            "howItWorks": [
+              "Leistungsdaten werden aus Ihren Systemen gesammelt.",
+              "Dashboards zeigen Einzel- und Teamkennzahlen.",
+              "Manager können ins Detail gehen."
+            ]
+          },
+          {
+            "name": "Individuelle Analysen",
+            "benefit": "Genau das messen, was für Ihr Geschäft zählt.",
+            "howItWorks": [
+              "Wir definieren die Kennzahlen gemeinsam mit Ihnen.",
+              "Daten werden aus mehreren Quellen gesammelt.",
+              "Visualisierungen werden für Ihre spezifischen Bedürfnisse gebaut."
+            ]
+          },
+          {
+            "name": "Geplante Zustellung",
+            "benefit": "Berichte kommen planmäßig in Ihrem Posteingang an.",
+            "howItWorks": [
+              "Sie wählen die Häufigkeit (täglich, wöchentlich, monatlich).",
+              "Das System erstellt den Bericht automatisch.",
+              "Er wird an Ihre E-Mail gesendet oder in einem gemeinsamen Ordner gespeichert."
+            ]
+          },
+          {
+            "name": "Filter",
+            "benefit": "Auf die Daten zoomen, die gerade wichtig sind.",
+            "howItWorks": [
+              "Dashboards enthalten Filter für Datum, Standort, Rolle usw.",
+              "Ein Klick auf einen Filter aktualisiert alle Diagramme sofort.",
+              "Speichern Sie Ihre bevorzugten Ansichten für schnellen Zugriff."
+            ]
+          },
+          {
+            "name": "Export-Tools",
+            "benefit": "Ihre Daten überallhin mitnehmen.",
+            "howItWorks": [
+              "Dashboards und Berichte als PDF oder Excel exportieren.",
+              "Exporte automatisch planen.",
+              "Mit Stakeholdern teilen, die die Daten brauchen."
+            ]
+          }
+        ],
+        "dialog": {
+          "triggerLabel": "Wie wir es bauen",
+          "title": "Wie wir Dashboards & Berichte entwickeln",
+          "body": "Wir bauen Dashboards mit React, Next.js und Chart-Bibliotheken (Recharts, Chart.js, D3.js) oder nutzen Plattformen wie Metabase und Grafana. Daten werden über APIs oder direkte Verbindungen aus Ihren Datenbanken gezogen. Berichte werden mit PDF-Bibliotheken erstellt und mit Cron-Jobs oder Cloud-Funktionen geplant."
+        }
       },
       {
         "title": "Geschäftssysteme",
-        "description": "Die Kernelemente, die ein Unternehmen organisiert halten: Kunden, Mitarbeiter, Bestand, Abläufe und deren Verbindung.",
-        "tools": ["CRM", "ERP", "Bestand", "HR", "Betrieb"],
-        "included": ["Kunden- und Lieferantenstammdaten", "Bestands- und Auftragsmanagement", "Mitarbeiter- und Rollenverwaltung", "Integrationen mit Buchhaltung und Versand"],
-        "whoFor": "Wachsende Unternehmen, die Tabellen überwachsen und ein vernetztes System brauchen.",
-        "example": "Ein Hersteller verfolgt Materialien, Produktionsaufträge und Sendungen in einem System."
+        "summary": "Die Kernelemente, die ein Unternehmen organisiert halten: Kunden, Mitarbeiter, Bestand, Abläufe und deren Verbindung. Wir entwickeln oder integrieren CRM-, ERP-, Bestands-, HR- und Buchhaltungssysteme, die als Einheit funktionieren.",
+        "items": [
+          {
+            "name": "CRM",
+            "benefit": "Jede Kundeninteraktion an einem Ort.",
+            "howItWorks": [
+              "Kundenkontakte, Deals und Notizen werden zentral gespeichert.",
+              "Ihr Team sieht die vollständige Historie zu jedem Kunden.",
+              "Nachfassungen und Aufgaben werden automatisch verfolgt."
+            ]
+          },
+          {
+            "name": "ERP",
+            "benefit": "Ihren gesamten Betrieb von einem System aus steuern.",
+            "howItWorks": [
+              "Verkauf, Einkauf, Bestand und Finanzen sind verbunden.",
+              "Daten fließen ohne manuelle Eingabe zwischen Abteilungen.",
+              "Manager sehen das Gesamtbild in Echtzeit."
+            ]
+          },
+          {
+            "name": "Bestandsverwaltung",
+            "benefit": "Genau wissen, was Sie haben und wo.",
+            "howItWorks": [
+              "Bestände werden über Standorte hinweg verfolgt.",
+              "Bewegungen (Zugang, Abgang, Umbuchung) werden sofort erfasst.",
+              "Nachbestellwarnungen verhindern Lieferengpässe."
+            ]
+          },
+          {
+            "name": "HR",
+            "benefit": "Ihr Team ohne Tabellen verwalten.",
+            "howItWorks": [
+              "Mitarbeiterdaten, Verträge und Dokumente sind zentralisiert.",
+              "Urlaubsanträge und Genehmigungen laufen im System.",
+              "Lohnabrechnungsdaten fließen in Ihr Buchhaltungstool."
+            ]
+          },
+          {
+            "name": "Auftragsverwaltung",
+            "benefit": "Jede Bestellung von der Platzierung bis zur Lieferung verfolgen.",
+            "howItWorks": [
+              "Bestellungen werden aus allen Kanälen erfasst.",
+              "Statusupdates fließen automatisch an Kunden.",
+              "Fulfillment-Teams sehen, was Aufmerksamkeit braucht."
+            ]
+          },
+          {
+            "name": "Buchhaltungsanbindungen",
+            "benefit": "Ihre Bücher bleiben automatisch aktuell.",
+            "howItWorks": [
+              "Verkäufe, Einkäufe und Zahlungen synchronisieren mit Ihrem Buchhaltungstool.",
+              "Rechnungen werden automatisch erstellt und gesendet.",
+              "Finanzberichte spiegeln Echtzeitdaten wider."
+            ]
+          },
+          {
+            "name": "Lieferantenverwaltung",
+            "benefit": "Lieferanten organisiert halten und Lieferungen im Blick behalten.",
+            "howItWorks": [
+              "Lieferantenkontakte, Verträge und Leistung werden verfolgt.",
+              "Bestellungen werden gesendet und überwacht.",
+              "Lieferstatus ist in Echtzeit sichtbar."
+            ]
+          },
+          {
+            "name": "Mehrstandort-Unterstützung",
+            "benefit": "Alle Ihre Standorte von einem System aus verwalten.",
+            "howItWorks": [
+              "Jeder Standort hat eigene Daten und Berechtigungen.",
+              "Die Zentrale sieht konsolidierte Berichte.",
+              "Transfers zwischen Standorten werden verfolgt."
+            ]
+          }
+        ],
+        "dialog": {
+          "triggerLabel": "Wie wir es bauen",
+          "title": "Wie wir Geschäftssysteme entwickeln",
+          "body": "Wir bauen individuelle Systeme mit Node.js, Python und PostgreSQL oder integrieren bestehende Plattformen (Salesforce, HubSpot, Odoo, SAP). APIs verbinden alle Module. Mandantenfähige Architektur unterstützt mehrere Standorte. Daten werden mit Verschlüsselung, Backups und rollenbasierter Zugriffskontrolle gesichert."
+        }
       }
     ],
     "cta": "Mit Experten sprechen"
@@ -122,61 +1012,1011 @@
   "tr": {
     "title": "Çözümler",
     "intro": "İş gününü kolaylaştıran araçları geliştiriyoruz — ekibinizin kullandığı uygulamadan her sabah kontrol ettiğiniz panele kadar.",
-    "labels": {
-      "included": "Neler dahil",
-      "whoFor": "Kimler için",
-      "example": "Örnek"
-    },
     "families": [
       {
         "title": "İş Uygulamaları",
-        "description": "Ekibinizin günlük işleri için tek bir yer. Siparişler, rezervasyonlar, vardiyalar, görevler ve müşteri talepleri, iş akışınıza uyan bir uygulamada.",
-        "tools": ["Siparişler", "Rezervasyonlar", "Vardiya planlama", "Görevler", "Müşteri talepleri"],
-        "included": ["Özel mobil ve web uygulamaları", "Personel için rol tabanlı erişim", "Sürecinize uygun formlar ve akışlar", "Bildirimler ve hatırlatmalar"],
-        "whoFor": "Günlük işleri için basit bir uygulama isteyen restoranlar, klinikler, okullar, depolar ve ofisler.",
-        "example": "Bir restoran sipariş almak, mutfağa iletmek ve masa durumunu takip etmek için tek uygulama kullanır."
+        "summary": "Ekibinizin günlük işleri için tek bir yer. Siparişler, rezervasyonlar, vardiyalar, görevler, onaylar, müşteri talepleri ve diğer günlük operasyonlar için özel mobil ve web uygulamaları geliştiriyoruz. Uygulama, işletmenizin zaten çalıştığı şekli takip eder, ekibinizi genel bir sürece zorlamak yerine.",
+        "items": [
+          {
+            "name": "Özel mobil ve web uygulamaları",
+            "benefit": "Ekibinizi genel yazılıma zorlamak yerine tam sürecinize göre inşa edilir.",
+            "howItWorks": [
+              "Ekibinizin gerçekten nasıl çalıştığını haritalandırırız.",
+              "Uygulamayı iş akışınız, formlarınız ve rolleriniz etrafında tasarlarız.",
+              "Personeliniz web veya mobilde tek bir araç kullanır."
+            ]
+          },
+          {
+            "name": "Personel için rol tabanlı erişim",
+            "benefit": "Her çalışan yalnızca ihtiyacı olanı görür.",
+            "howItWorks": [
+              "Rolleri ve izinleri siz tanımlarsınız.",
+              "Personel giriş yapar ve panellerini görür.",
+              "Yöneticiler tam erişime sahip olur; diğerleri yalnızca kendi görevlerini görür."
+            ]
+          },
+          {
+            "name": "Sürecinize uygun formlar ve iş akışları",
+            "benefit": "Artık kağıt veya elektronik tablo yok.",
+            "howItWorks": [
+              "Spesifik ihtiyaçlarınız için dijital formlar oluştururuz.",
+              "İş akışları görevleri otomatik olarak doğru kişilere yönlendirir.",
+              "Onaylar ve güncellemeler gerçek zamanlı gerçekleşir."
+            ]
+          },
+          {
+            "name": "Bildirimler ve hatırlatmalar",
+            "benefit": "Hiçbir şey gözden kaçmaz.",
+            "howItWorks": [
+              "Uygulama yeni görevler veya son tarihler için uyarılar gönderir.",
+              "Personel telefonlarına veya e-postalarına hatırlatmalar alır.",
+              "Yöneticiler gecikenleri görür."
+            ]
+          },
+          {
+            "name": "Onay akışları",
+            "benefit": "Talepler e-postalar olmadan daha hızlı ilerler.",
+            "howItWorks": [
+              "Personel uygulamada talepleri gönderir.",
+              "Talepler otomatik olarak doğru onaylayıcıya yönlendirilir.",
+              "Onaylayıcılar tek tıklamayla inceler ve onaylar."
+            ]
+          },
+          {
+            "name": "Müşteri ve çalışan portalları",
+            "benefit": "Müşteriler ve personel için kendi kendine hizmet.",
+            "howItWorks": [
+              "Müşteriler siparişlerini veya durumlarını görmek için giriş yapar.",
+              "Çalışanlar kayıtlarına ve taleplerine erişir.",
+              "Her şey gerçek zamanlı güncellenir."
+            ]
+          },
+          {
+            "name": "Dosya ve doküman yönetimi",
+            "benefit": "Tüm dokümanlar tek bir yerde.",
+            "howItWorks": [
+              "Dokümanları projeye veya müşteriye göre yükleyin ve düzenleyin.",
+              "Arama dosyaları anında bulur.",
+              "Sürüm kontrolü değişiklikleri takip eder."
+            ]
+          },
+          {
+            "name": "Mevcut iş araçlarınızla bağlantılar",
+            "benefit": "Uygulamanız zaten kullandığınız araçlarla çalışır.",
+            "howItWorks": [
+              "Muhasebe, CRM veya ERP'nize bağlanıyoruz.",
+              "Veriler sistemler arasında otomatik senkronize olur.",
+              "Çift giriş yok."
+            ]
+          }
+        ],
+        "dialog": {
+          "triggerLabel": "Nasıl inşa ediyoruz",
+          "title": "İş Uygulamalarını nasıl geliştiriyoruz",
+          "body": "Web ve mobil için React, Next.js ve React Native gibi modern framework'ler kullanıyoruz. Güvenli veritabanları (PostgreSQL, MongoDB) verilerinizi saklar. Kimlik doğrulama endüstri standartlarını kullanır (OAuth, JWT). AWS, Vercel gibi bulut platformlarına CI/CD pipeline'ları ile güvenilir güncellemeler için deploy ediyoruz."
+        }
       },
       {
         "title": "Web Siteleri & Portallar",
-        "description": "İnsanların sizi bulmasını, hizmet rezervasyonu yapmasını, ürün satın almasını ve karışıklık yaşamadan iletişime geçmesini sağlayan hızlı, net bir web sitesi veya müşteri portalı.",
-        "tools": ["Kurumsal siteler", "Rezervasyon portalları", "Online mağazalar", "Müşteri girişleri", "Açılış sayfaları"],
-        "included": ["Mobil uyumlu tasarım", "Rezervasyon ve iletişim formları", "Güvenli müşteri giriş alanı", "SEO uyumlu yapı"],
-        "whoFor": "Online bulunmak ve müşterilere self-service sunmak isteyen işletmeler.",
-        "example": "Bir klinik, hastaların hızlı mobil sitede randevu almasına, hizmetleri görmesine ve formlara ulaşmasına izin verir."
+        "summary": "İnsanların sizi bulmasını, hizmet rezervasyonu yapmasını, ürün satın almasını ve karışıklık yaşamadan iletişime geçmesini sağlayan hızlı, net bir web sitesi veya müşteri portalı. Her site hız, netlik ve dönüşüm için tasarlanmıştır — böylece ziyaretçiler müşteri olur.",
+        "items": [
+          {
+            "name": "Kurumsal web siteleri",
+            "benefit": "Güven inşa eden profesyonel bir online varlık.",
+            "howItWorks": [
+              "Markanızı ve mesajınızı yansıtan sayfalar tasarlarız.",
+              "İçerik netlik ve hızlı yükleme için yapılandırılır.",
+              "Ekibiniz bir geliştirici olmadan metin ve görselleri güncelleyebilir."
+            ]
+          },
+          {
+            "name": "Rezervasyon portalları",
+            "benefit": "Müşteriler 7/24 kendi kendine rezervasyon yapar.",
+            "howItWorks": [
+              "Müsaitlik takvimleri ve rezervasyon formları kurarız.",
+              "Müşteriler bir zaman seçer ve online onaylar.",
+              "Ekibiniz otomatik olarak bilgilendirilir."
+            ]
+          },
+          {
+            "name": "E-ticaret mağazaları",
+            "benefit": "Güvenli ödemelerle online ürün satışı.",
+            "howItWorks": [
+              "Arama ve filtreli bir ürün kataloğu oluştururuz.",
+              "Müşteriler sepete ekler ve güvenli ödeme yapar.",
+              "Siparişler yerine getirme sürecinize akar."
+            ]
+          },
+          {
+            "name": "Müşteri hesapları",
+            "benefit": "Müşteriler kendi bilgilerini yönetir.",
+            "howItWorks": [
+              "Müşteriler hesap oluşturur ve giriş yapar.",
+              "Sipariş geçmişini, faturaları ve durumu görürler.",
+              "Güncellemeler gerçek zamanlı gerçekleşir."
+            ]
+          },
+          {
+            "name": "İçerik yönetimi",
+            "benefit": "Ekibiniz bir geliştiriciyi beklemeden yayın yapar.",
+            "howItWorks": [
+              "İçeriğiniz için bir yönetici paneli kurarız.",
+              "Editörler sayfalar, blog yazıları veya ürün listeleri ekler.",
+              "Değişiklikler anında yayına girer."
+            ]
+          },
+          {
+            "name": "SEO kurulumu",
+            "benefit": "Aramada daha fazla müşteri tarafından bulunun.",
+            "howItWorks": [
+              "Sayfa yapısını, meta etiketleri ve hızı optimize ederiz.",
+              "İçerik arama motorları için organize edilir.",
+              "Sıralamaları ve trafiği zaman içinde takip ederiz."
+            ]
+          },
+          {
+            "name": "Erişilebilirlik",
+            "benefit": "Engelli kişiler dahil herkes sitenizi kullanabilir.",
+            "howItWorks": [
+              "Ekran okuyucular ve klavye navigasyonu için WCAG kurallarına uyarız.",
+              "Renk kontrastı ve yazı tipi boyutları standartları karşılar.",
+              "Yayın öncesi yardımcı araçlarla test ederiz."
+            ]
+          },
+          {
+            "name": "Performans optimizasyonu",
+            "benefit": "Sayfalar herhangi bir cihazda veya bağlantıda hızlı yüklenir.",
+            "howItWorks": [
+              "Görselleri sıkıştırır ve kodu minimize ederiz.",
+              "İçerik dünya genelinde edge sunuculardan teslim edilir.",
+              "Hızı izler ve dar boğazları gideririz."
+            ]
+          }
+        ],
+        "dialog": {
+          "triggerLabel": "Nasıl inşa ediyoruz",
+          "title": "Web Siteleri & Portalları nasıl geliştiriyoruz",
+          "body": "Hızlı, sürdürülebilir siteler için Astro, Next.js ve headless CMS platformları (Strapi, Sanity) ile inşa ediyoruz. E-ticaret Stripe ödemeleriyle Shopify veya özel stack'lerde çalışır. Vercel, Cloudflare veya AWS'de barındırma küresel hız sağlar. Tüm siteler ilk günden responsive, erişilebilir ve SEO'ya hazırdır."
+        }
       },
       {
         "title": "Chatbot & WhatsApp",
-        "description": "Sık sorulan soruları yanıtlayan, talepleri toplayan ve gerektiğinde ekibinize devreden otomatik konuşmalar.",
-        "tools": ["WhatsApp asistanları", "Web sitesi chatbotları", "SSS otomasyonu", "Potansiyel müşteri toplama", "Randevu alma"],
-        "included": ["WhatsApp Business entegrasyonu", "Web sitesi sohbet widget'ı", "Doğal dil SSS", "İnsan temsilciye aktarma"],
-        "whoFor": "Aynı soruları tekrar tekrar alan müşteriye bakan işletmeler.",
-        "example": "Bir perakende mağazası, WhatsApp'tan 7/24 sipariş durumu ve ürün sorularını yanıtlar."
+        "summary": "Sık sorulan soruları yanıtlayan, talepleri toplayan ve gerektiğinde ekibinize devreden otomatik konuşmalar. WhatsApp, web siteniz veya müşterilerinizin kullandığı her kanalda kullanılabilir.",
+        "items": [
+          {
+            "name": "WhatsApp asistanları",
+            "benefit": "Müşterilere zaten kullandıkları uygulamada yanıt verin.",
+            "howItWorks": [
+              "Müşteriler WhatsApp numaranıza mesaj gönderir.",
+              "Bot sık sorulan soruları otomatik yanıtlar.",
+              "Karmaşık talepler bir ekip üyesine gider."
+            ]
+          },
+          {
+            "name": "Web sitesi chatbotları",
+            "benefit": "Ziyaretçiler sitenizden ayrılmadan önce etkileşim kurun.",
+            "howItWorks": [
+              "Web sitenizde bir sohbet widget'ı görünür.",
+              "Bot ziyaretçileri doğru sayfaya yönlendirir veya soruları yanıtlar.",
+              "Gerektiğinde canlı sohbet devralır."
+            ]
+          },
+          {
+            "name": "SSS otomasyonu",
+            "benefit": "Aynı sorular personel olmadan yanıtlanır.",
+            "howItWorks": [
+              "SSS'nizi botun bilgi tabanına yükleriz.",
+              "Müşteriler doğal dilde sorar.",
+              "Bot eşleştirir ve anında yanıt verir."
+            ]
+          },
+          {
+            "name": "Lead toplama",
+            "benefit": "Her konuşmadan iletişim bilgilerini toplayın.",
+            "howItWorks": [
+              "Bot isim, e-posta veya telefon ister.",
+              "Detaylar CRM'inize veya tablonuza kaydedilir.",
+              "Satış ekibiniz takip eder."
+            ]
+          },
+          {
+            "name": "Randevu alma",
+            "benefit": "Müşteriler aramadan rezervasyon yapar.",
+            "howItWorks": [
+              "Bot müsait zaman aralıklarını gösterir.",
+              "Müşteriler bir zaman seçer ve onaylar.",
+              "Her iki taraf da onay mesajı alır."
+            ]
+          },
+          {
+            "name": "Çok dilli destek",
+            "benefit": "Müşterilere kendi dillerinde hizmet verin.",
+            "howItWorks": [
+              "Bot müşterinin dilini algılar.",
+              "Yanıtlar o dilde teslim edilir.",
+              "Otomatik olarak onlarca dili destekleyebilirsiniz."
+            ]
+          },
+          {
+            "name": "İnsan aktarımı",
+            "benefit": "Karmaşık konular hızlıca gerçek bir kişiye ulaşır.",
+            "howItWorks": [
+              "Bot yardım edemediğini algılar.",
+              "Konuşma bir ekip üyesine aktarılır.",
+              "Temsilci tam sohbet geçmişini görür."
+            ]
+          },
+          {
+            "name": "CRM bağlantıları",
+            "benefit": "Her konuşma müşteri kayıtlarınızı günceller.",
+            "howItWorks": [
+              "Sohbet verileri otomatik olarak CRM'inizle senkronize olur.",
+              "Müşteri profilleri yeni notlar ve etiketler alır.",
+              "Ekibiniz tam bağlamı görür."
+            ]
+          }
+        ],
+        "dialog": {
+          "triggerLabel": "Nasıl inşa ediyoruz",
+          "title": "Chatbot & WhatsApp'ı nasıl geliştiriyoruz",
+          "body": "Twilio veya 360dialog gibi platformlarla WhatsApp Business API kullanıyoruz. Chatbotlar Botpress, Voiceflow veya özel Node.js mantığı ile inşa edilir. Yapay zeka modelleri (OpenAI, yerel LLM'ler) doğal dil anlama işlemini yönetir. Tüm konuşmalar kaydedilir ve webhook'larla CRM'inizle senkronize edilebilir."
+        }
       },
       {
         "title": "Otomasyon",
-        "description": "Şu ana kadar elle yapılan adımları birbirine bağlayın. Hataları azaltın, tekrarlanan işleri hızlandırın ve ekibinizi daha değerli işlere ayırın.",
-        "tools": ["İş akışı otomasyonu", "Bildirimler", "Veri senkronizasyonu", "Onay akışları", "Hatırlatmalar"],
-        "included": ["Tetikleyici tabanlı iş akışları", "E-posta, WhatsApp ve Slack bildirimleri", "Araçlar arası veri senkronizasyonu", "Onay ve hatırlatma dizileri"],
-        "whoFor": "Veri kopyalayan, onay takip eden veya hatırlatma gönderen ekipler.",
-        "example": "Bir ofis, izin taleplerini yöneticilere yönlendirir ve İK kayıtlarını otomatik günceller."
+        "summary": "Şu anda elle yapılan adımları birbirine bağlayın. Hataları azaltan, tekrarlayan işleri hızlandıran ve ekibinizi daha değerli işlere ayıran iş akışları tasarlıyoruz — onaylardan takiplere, veri senkronizasyonundan zamanlamaya kadar.",
+        "items": [
+          {
+            "name": "Onay iş akışları",
+            "benefit": "Talepler e-posta zincirleri olmadan onaylanır.",
+            "howItWorks": [
+              "Bir ekip üyesi talep gönderir.",
+              "Otomatik olarak doğru onaylayıcıya yönlendirilir.",
+              "Talep sahibi onaylandıktan sonra bilgilendirilir."
+            ]
+          },
+          {
+            "name": "Doküman işleme",
+            "benefit": "Dokümanlardan veriler otomatik olarak sisteminize girer.",
+            "howItWorks": [
+              "Dokümanlar yüklenir veya e-posta ile alınır.",
+              "Yapay zeka anahtar alanları çıkarır (isimler, tarihler, tutarlar).",
+              "Veriler veritabanınıza veya tablonuza kaydedilir."
+            ]
+          },
+          {
+            "name": "Planlanmış raporlar",
+            "benefit": "Raporlar her zaman zamanında gelir.",
+            "howItWorks": [
+              "Rapor formatını ve zamanlamasını siz tanımlarsınız.",
+              "Sistem otomatik olarak veri toplar.",
+              "Raporlar e-posta ile gönderilir veya klasöre kaydedilir."
+            ]
+          },
+          {
+            "name": "Veri senkronizasyonu",
+            "benefit": "Araçlarınız her zaman aynı bilgiyi gösterir.",
+            "howItWorks": [
+              "Sistemlerinizi API'ler üzerinden bağlarız.",
+              "Veriler gerçek zamanlı veya planlı olarak aralarında akar.",
+              "Araçlar arasında manuel kopyalama yok."
+            ]
+          },
+          {
+            "name": "Müşteri takipleri",
+            "benefit": "Her müşteri zamanında yanıt alır.",
+            "howItWorks": [
+              "Bir tetikleyici takibi başlatır (yeni lead, tamamlanan sipariş).",
+              "Otomomatik olarak e-posta veya mesaj gönderilir.",
+              "Yanıt yoksa daha sonra hatırlatma gider."
+            ]
+          },
+          {
+            "name": "Hatırlatmalar",
+            "benefit": "Son tarihler ve görevler unutulmaz.",
+            "howItWorks": [
+              "Hatırlatma kurallarını siz belirlersiniz.",
+              "Sistem doğru zamanda bildirimler gönderir.",
+              "Geciken öğeler yöneticiler için işaretlenir."
+            ]
+          },
+          {
+            "name": "Form otomasyonu",
+            "benefit": "Form gönderimleri otomatik olarak eylem tetikler.",
+            "howItWorks": [
+              "Bir müşteri veya personel form doldurur.",
+              "Gönderim bir görev, kayıt veya bildirim oluşturur.",
+              "Doğru kişi anında bilgilendirilir."
+            ]
+          },
+          {
+            "name": "Araç entegrasyonları",
+            "benefit": "Mevcut araçlarınız sorunsuz birlikte çalışır.",
+            "howItWorks": [
+              "Uygulamalarınızı API'ler veya webhook'lar üzerinden bağlarız.",
+              "Bir araçtaki olaylar diğerinde eylem tetikler.",
+              "Her şey manuel çalışma olmadan senkron kalır."
+            ]
+          }
+        ],
+        "dialog": {
+          "triggerLabel": "Nasıl inşa ediyoruz",
+          "title": "Otomasyonu nasıl geliştiriyoruz",
+          "body": "İş akışı otomasyonu için n8n, Make (Integromat) veya özel Node.js/Python scriptleri kullanıyoruz. Doküman işleme OCR ve yapay zeka çıkarma (Tesseract, AWS Textract) kullanır. API'ler ve webhook'lar araçlarınızı bağlar. Tüm otomasyonlar loglama ve hata yönetimi ile güvenilir bulut altyapısında çalışır."
+        }
       },
       {
         "title": "Panolar & Raporlar",
-        "description": "Önemli sayıları tek yerde görün. Satış, stok, personel saatleri ve işletmeyi güvenle yönetmek için ihtiyaç duyduğunuz diğer tüm ölçümler.",
-        "tools": ["KPI panoları", "Satış raporları", "Stok raporları", "Personel raporları", "Özel analizler"],
-        "included": ["Gerçek zamanlı grafikler", "Planlanmış raporlar", "Konum, tarih veya role göre filtreler", "PDF veya tabloya aktarma"],
-        "whoFor": "Elektronik tablo çilesi olmadan net rakamlar isteyen işletme sahipleri ve yöneticiler.",
-        "example": "Bir depo yöneticisi günlük giriş, çıkış ve gecikmeli sevkiyatları tek ekranda görür."
+        "summary": "Önemli sayıları tek bir yerde görün. Satış, stok, personel performansı ve işletmeyi güvenle yönetmek için ihtiyaç duyduğunuz diğer tüm ölçümler için canlı panolar ve otomatik raporlar geliştiriyoruz.",
+        "items": [
+          {
+            "name": "KPI panoları",
+            "benefit": "En önemli sayılara bir bakışta bakın.",
+            "howItWorks": [
+              "İşletmeniz için önemli olan KPI'ları belirleriz.",
+              "Veriler sistemlerinizden gerçek zamanlı çekilir.",
+              "Görsel bir pano mevcut performansı gösterir."
+            ]
+          },
+          {
+            "name": "Satış raporları",
+            "benefit": "Gelir, anlaşmalar ve trendleri net takip edin.",
+            "howItWorks": [
+              "Satış verileri CRM veya POS'unuzdan akar.",
+              "Raporlar günlük, haftalık ve aylık trendleri gösterir.",
+              "Ürün, bölge veya satış temsilcisine göre filtreleyebilirsiniz."
+            ]
+          },
+          {
+            "name": "Stok raporları",
+            "benefit": "Neyin stokta olduğunu, neyin azaldığını ve neyin hareket ettiğini bilin.",
+            "howItWorks": [
+              "Stok verileri depo sisteminizden senkronize olur.",
+              "Raporlar stok seviyelerini, devir hızını ve yeniden sipariş noktalarını gösterir.",
+              "Uyarılar azalan öğeleri işaretler."
+            ]
+          },
+          {
+            "name": "Personel performansı",
+            "benefit": "Kimin teslim ettiğini ve kimin desteğe ihtiyacı olduğunu görün.",
+            "howItWorks": [
+              "Performans verileri sistemlerinizden toplanır.",
+              "Panolar bireysel ve ekip metriklerini gösterir.",
+              "Yöneticiler detaylara inebilir."
+            ]
+          },
+          {
+            "name": "Özel analitikler",
+            "benefit": "İşletmeniz için tam olarak önemli olanı ölçün.",
+            "howItWorks": [
+              "Metrikleri sizinle birlikte tanımlarız.",
+              "Veriler birden fazla kaynaktan toplanır.",
+              "Görselleştirmeler spesifik ihtiyaçlarınıza göre inşa edilir."
+            ]
+          },
+          {
+            "name": "Planlanmış teslimat",
+            "benefit": "Raporlar planlı olarak gelen kutunuza gelir.",
+            "howItWorks": [
+              "Sıklığı siz seçersiniz (günlük, haftalık, aylık).",
+              "Sistem raporu otomatik oluşturur.",
+              "E-postanıza gönderilir veya paylaşılan klasöre kaydedilir."
+            ]
+          },
+          {
+            "name": "Filtreler",
+            "benefit": "Şu anda önemli olan verilere yakınlaşın.",
+            "howItWorks": [
+              "Panolar tarih, konum, rol vb. için filtreler içerir.",
+              "Bir filtreye tıklamak tüm grafikleri anında günceller.",
+              "Hızlı erişim için favori görünümlerinizi kaydedin."
+            ]
+          },
+          {
+            "name": "Dışa aktarma araçları",
+            "benefit": "Verilerinizi her yere götürün.",
+            "howItWorks": [
+              "Panoları ve raporları PDF veya Excel olarak dışa aktarın.",
+              "Dışa aktarmaları otomatik planlayın.",
+              "Verilere ihtiyacı olan paydaşlarla paylaşın."
+            ]
+          }
+        ],
+        "dialog": {
+          "triggerLabel": "Nasıl inşa ediyoruz",
+          "title": "Panolar & Raporları nasıl geliştiriyoruz",
+          "body": "React, Next.js ve grafik kütüphaneleri (Recharts, Chart.js, D3.js) ile panolar inşa ediyoruz veya Metabase ve Grafana gibi platformlar kullanıyoruz. Veriler API'ler veya doğrudan bağlantılarla veritabanlarınızdan çekilir. Raporlar PDF kütüphaneleri ile oluşturulur ve cron job'lar veya bulut fonksiyonları ile planlanır."
+        }
       },
       {
         "title": "İş Sistemleri",
-        "description": "Bir işletmeyi düzenli tutan temel sistemler: müşteriler, personel, stok, operasyonlar ve bunların arasındaki bağlantılar.",
-        "tools": ["CRM", "ERP", "Stok", "İK", "Operasyon"],
-        "included": ["Müşteri ve tedarikçi kayıtları", "Stok ve sipariş yönetimi", "Personel ve rol yönetimi", "Muhasebe ve kargo entegrasyonları"],
-        "whoFor": "Tabloları aşmış ve bağlı bir sisteme ihtiyaç duyan büyüyen işletmeler.",
-        "example": "Bir üretici, malzemeleri, üretim emirlerini ve sevkiyatları tek sistemde takip eder."
+        "summary": "Bir işletmeyi düzenli tutan temel sistemler: müşteriler, personel, stok, operasyonlar ve bunlar arasındaki bağlantılar. CRM, ERP, stok, İK ve muhasebe sistemlerini bir bütün olarak geliştiriyoruz veya entegre ediyoruz.",
+        "items": [
+          {
+            "name": "CRM",
+            "benefit": "Her müşteri etkileşimi tek bir yerde.",
+            "howItWorks": [
+              "Müşteri kontakları, anlaşmalar ve notlar merkezi olarak saklanır.",
+              "Ekibiniz her müşteriyle tam geçmişi görür.",
+              "Takipler ve görevler otomatik izlenir."
+            ]
+          },
+          {
+            "name": "ERP",
+            "benefit": "Tüm operasyonunuzu tek sistemden yönetin.",
+            "howItWorks": [
+              "Satış, satınalma, stok ve finans bağlıdır.",
+              "Veriler manuel giriş olmadan departmanlar arasında akar.",
+              "Yöneticiler tam resmi gerçek zamanlı görür."
+            ]
+          },
+          {
+            "name": "Stok yönetimi",
+            "benefit": "Neye sahip olduğunuzu ve nerede olduğunu tam olarak bilin.",
+            "howItWorks": [
+              "Stok seviyeleri lokasyonlar genelinde takip edilir.",
+              "Hareketler (giriş, çıkış, transfer) anında kaydedilir.",
+              "Yeniden sipariş uyarıları stok tükenmesini önler."
+            ]
+          },
+          {
+            "name": "İK",
+            "benefit": "Ekibinizi tablolar olmadan yönetin.",
+            "howItWorks": [
+              "Çalışan kayıtları, sözleşmeler ve dokümanlar merkezileştirilir.",
+              "İzin talepleri ve onaylar sistemde gerçekleşir.",
+              "Bordro verileri muhasebe aracınıza akar."
+            ]
+          },
+          {
+            "name": "Sipariş yönetimi",
+            "benefit": "Her siparişi yerleştirmeden teslimata kadar takip edin.",
+            "howItWorks": [
+              "Siparişler tüm kanallardan yakalanır.",
+              "Durum güncellemeleri otomatik olarak müşterilere akar.",
+              "Yerine getirme ekipleri neyin dikkat gerektiğini görür."
+            ]
+          },
+          {
+            "name": "Muhasebe bağlantıları",
+            "benefit": "Kitaplarınız otomatik olarak güncel kalır.",
+            "howItWorks": [
+              "Satışlar, satınalmalar ve ödemeler muhasebe aracınızla senkronize olur.",
+              "Faturalar otomatik oluşturulur ve gönderilir.",
+              "Finansal raporlar gerçek zamanlı verileri yansıtır."
+            ]
+          },
+          {
+            "name": "Tedarikçi yönetimi",
+            "benefit": "Tedarikçileri düzenli tutun ve teslimatları takip edin.",
+            "howItWorks": [
+              "Tedarikçi kontakları, sözleşmeler ve performans takip edilir.",
+              "Satınalma siparişleri gönderilir ve izlenir.",
+              "Teslimat durumu gerçek zamanlı görünür."
+            ]
+          },
+          {
+            "name": "Çok lokasyonlu destek",
+            "benefit": "Tüm lokasyonlarınızı tek sistemden yönetin.",
+            "howItWorks": [
+              "Her lokasyonun kendi verileri ve izinleri vardır.",
+              "Merkez ofis konsolide raporları görür.",
+              "Lokasyonlar arası transferler takip edilir."
+            ]
+          }
+        ],
+        "dialog": {
+          "triggerLabel": "Nasıl inşa ediyoruz",
+          "title": "İş Sistemlerini nasıl geliştiriyoruz",
+          "body": "Node.js, Python ve PostgreSQL ile özel sistemler inşa ediyoruz veya mevcut platformları entegre ediyoruz (Salesforce, HubSpot, Odoo, SAP). API'ler tüm modülleri bağlar. Çoklu kiracılı mimari birden fazla lokasyonu destekler. Veriler şifreleme, yedekleme ve rol tabanlı erişim kontrolü ile güvence altına alınır."
+        }
       }
     ],
     "cta": "Uzmanla görüşün"
+  },
+  "ar": {
+    "title": "الحلول",
+    "intro": "نبني الأدوات التي تجعل العمل اليومي أسهل — من التطبيق الذي يستخدمه موظفوك إلى اللوحة التي تتفقّدها كل صباح.",
+    "families": [
+      {
+        "title": "تطبيقات الأعمال",
+        "summary": "مكان واحد للعمل الذي يؤدّيه فريقك كل يوم. ننشئ تطبيقات جوّال وويب مخصّصة للطلبات والحجوزات والجداول والمهام والموافقات وطلبات العملاء وسائر العمليات اليومية. يتّبع التطبيق طريقة عمل شركتك بالفعل بدلاً من إجبار فريقك على عملية عامة.",
+        "items": [
+          {
+            "name": "تطبيقات جوّال وويب مخصّصة",
+            "benefit": "مبنية لعمليتك بالضبط بدلاً من إجبار فريقك على برامج عامة.",
+            "howItWorks": [
+              "نرسم كيف يعمل فريقك فعليًا.",
+              "نصمّم التطبيق حول سير عملك ونماذجك وأدوارك.",
+              "يستخدم موظفوك أداة واحدة على الويب أو الجوّال."
+            ]
+          },
+          {
+            "name": "وصول قائم على الأدوار للموظفين",
+            "benefit": "كل موظف يرى ما يحتاجه فقط.",
+            "howItWorks": [
+              "تحدّد الأدوار والصلاحيات.",
+              "يسجّل الموظفون الدخول ويرون لوحتهم.",
+              "يحصل المديرون على وصول كامل؛ والآخرون يرون مهامّهم فقط."
+            ]
+          },
+          {
+            "name": "نماذج ومسارات عمل تطابق عمليتك",
+            "benefit": "لا مزيد من الورق أو جداول البيانات.",
+            "howItWorks": [
+              "نبني نماذج رقمية لاحتياجاتك المحدّدة.",
+              "توجّه المسارات المهام إلى الأشخاص المناسبين تلقائيًا.",
+              "تحدث الموافقات والتحديثات في الوقت الفعلي."
+            ]
+          },
+          {
+            "name": "الإشعارات والتذكيرات",
+            "benefit": "لا يضيع شيء بين الثغرات.",
+            "howItWorks": [
+              "يرسل التطبيق تنبيهات للمهام أو المواعيد النهائية الجديدة.",
+              "يتلقّى الموظفون تذكيرات على هواتفهم أو بريدهم.",
+              "يرى المديرون ما تأخّر."
+            ]
+          },
+          {
+            "name": "مسارات الموافقة",
+            "benefit": "تتحرّك الطلبات أسرع دون رسائل بريد.",
+            "howItWorks": [
+              "يقدّم الموظفون الطلبات في التطبيق.",
+              "توجَّه الطلبات إلى المعتمِد المناسب تلقائيًا.",
+              "يراجع المعتمِدون ويوافقون بنقرة واحدة."
+            ]
+          },
+          {
+            "name": "بوابات العملاء والموظفين",
+            "benefit": "خدمة ذاتية للعملاء والموظفين.",
+            "howItWorks": [
+              "يسجّل العملاء الدخول لرؤية طلباتهم أو حالتهم.",
+              "يصل الموظفون إلى سجلاتهم وطلباتهم.",
+              "كل شيء يتحدّث في الوقت الفعلي."
+            ]
+          },
+          {
+            "name": "إدارة الملفات والمستندات",
+            "benefit": "كل المستندات في مكان واحد.",
+            "howItWorks": [
+              "ارفع ونظّم المستندات حسب المشروع أو العميل.",
+              "يجد البحث الملفات فورًا.",
+              "يتتبّع التحكّم بالإصدارات التغييرات."
+            ]
+          },
+          {
+            "name": "الاتصال بأدوات أعمالك الحالية",
+            "benefit": "يعمل تطبيقك مع ما تستخدمه بالفعل.",
+            "howItWorks": [
+              "نتّصل بنظام محاسبتك أو إدارة علاقات العملاء أو تخطيط الموارد.",
+              "تتزامن البيانات تلقائيًا بين الأنظمة.",
+              "لا إدخال مكرّر."
+            ]
+          }
+        ],
+        "dialog": {
+          "triggerLabel": "كيف نبنيه",
+          "title": "كيف نبني تطبيقات الأعمال",
+          "body": "نستخدم أُطر عمل حديثة مثل React وNext.js وReact Native للويب والجوّال. تخزّن قواعد بيانات آمنة (PostgreSQL، MongoDB) بياناتك. تستخدم المصادقة معايير الصناعة (OAuth، JWT). ننشر على منصّات سحابية (AWS، Vercel) مع خطوط CI/CD لتحديثات موثوقة."
+        }
+      },
+      {
+        "title": "المواقع والبوابات",
+        "summary": "موقع أو بوابة عملاء سريعة وواضحة تساعد الناس على إيجادك وحجز الخدمات وشراء المنتجات والتواصل دون التباس. كل موقع مصمّم للسرعة والوضوح والتحويل — ليتحوّل الزوّار إلى عملاء.",
+        "items": [
+          {
+            "name": "مواقع الشركات",
+            "benefit": "حضور احترافي عبر الإنترنت يبني الثقة.",
+            "howItWorks": [
+              "نصمّم صفحات تعكس علامتك ورسالتك.",
+              "يُنظَّم المحتوى للوضوح والتحميل السريع.",
+              "يمكن لفريقك تحديث النص والصور دون مطوّر."
+            ]
+          },
+          {
+            "name": "بوابات الحجز",
+            "benefit": "يحجز العملاء بأنفسهم على مدار الساعة.",
+            "howItWorks": [
+              "نُعِدّ تقاويم التوفّر ونماذج الحجز.",
+              "يختار العملاء وقتًا ويؤكّدون أونلاين.",
+              "يتلقّى فريقك إشعارًا تلقائيًا."
+            ]
+          },
+          {
+            "name": "المتاجر الإلكترونية",
+            "benefit": "بِع المنتجات أونلاين بمدفوعات آمنة.",
+            "howItWorks": [
+              "نبني كتالوج منتجات مع بحث وتصفية.",
+              "يضيف العملاء الأصناف إلى السلة ويدفعون بأمان.",
+              "تتدفّق الطلبات إلى عملية التنفيذ لديك."
+            ]
+          },
+          {
+            "name": "حسابات العملاء",
+            "benefit": "يدير العملاء معلوماتهم بأنفسهم.",
+            "howItWorks": [
+              "ينشئ العملاء حسابات ويسجّلون الدخول.",
+              "يرون سجلّ الطلبات والفواتير والحالة.",
+              "تحدث التحديثات في الوقت الفعلي."
+            ]
+          },
+          {
+            "name": "إدارة المحتوى",
+            "benefit": "ينشر فريقك دون انتظار مطوّر.",
+            "howItWorks": [
+              "نُعِدّ لوحة إدارة لمحتواك.",
+              "يضيف المحرّرون صفحات أو مقالات أو قوائم منتجات.",
+              "تظهر التغييرات فورًا."
+            ]
+          },
+          {
+            "name": "إعداد تحسين محركات البحث",
+            "benefit": "احصل على المزيد من العملاء عبر البحث.",
+            "howItWorks": [
+              "نحسّن بنية الصفحة ووسوم الميتا والسرعة.",
+              "يُنظَّم المحتوى لمحركات البحث.",
+              "نتتبّع الترتيب وحركة الزوّار عبر الوقت."
+            ]
+          },
+          {
+            "name": "إمكانية الوصول",
+            "benefit": "يمكن للجميع استخدام موقعك، بمن فيهم ذوو الإعاقة.",
+            "howItWorks": [
+              "نتّبع إرشادات WCAG لقارئات الشاشة والتنقّل بلوحة المفاتيح.",
+              "يفي تباين الألوان وأحجام الخطوط بالمعايير.",
+              "نختبر بأدوات مساعِدة قبل الإطلاق."
+            ]
+          },
+          {
+            "name": "تحسين الأداء",
+            "benefit": "تُحمَّل الصفحات بسرعة على أي جهاز أو اتصال.",
+            "howItWorks": [
+              "نضغط الصور ونقلّل الكود.",
+              "يُقدَّم المحتوى من خوادم طرفية حول العالم.",
+              "نراقب السرعة ونعالج الاختناقات."
+            ]
+          }
+        ],
+        "dialog": {
+          "triggerLabel": "كيف نبنيه",
+          "title": "كيف نبني المواقع والبوابات",
+          "body": "نبني باستخدام Astro وNext.js ومنصّات CMS بلا رأس (Strapi، Sanity) لمواقع سريعة وقابلة للصيانة. تعمل التجارة الإلكترونية على Shopify أو حزم مخصّصة مع مدفوعات Stripe. تضمن الاستضافة على Vercel أو Cloudflare أو AWS سرعة عالمية. كل المواقع متجاوبة وسهلة الوصول وجاهزة لمحركات البحث من اليوم الأول."
+        }
+      },
+      {
+        "title": "الشات بوت وواتساب",
+        "summary": "محادثات آلية تجيب عن الأسئلة الشائعة وتجمع الطلبات وتحوّل إلى فريقك عند الحاجة إلى إنسان. متاحة على واتساب أو موقعك أو أي قناة يستخدمها عملاؤك.",
+        "items": [
+          {
+            "name": "مساعدو واتساب",
+            "benefit": "أجب العملاء على التطبيق الذي يستخدمونه بالفعل.",
+            "howItWorks": [
+              "يراسل العملاء رقم واتساب لديك.",
+              "يجيب البوت عن الأسئلة الشائعة تلقائيًا.",
+              "تذهب الطلبات المعقّدة إلى أحد أعضاء الفريق."
+            ]
+          },
+          {
+            "name": "شات بوت المواقع",
+            "benefit": "تفاعل مع الزوّار قبل مغادرتهم موقعك.",
+            "howItWorks": [
+              "تظهر أداة دردشة على موقعك.",
+              "يوجّه البوت الزوّار إلى الصفحة الصحيحة أو يجيب عن الأسئلة.",
+              "تتولّى الدردشة المباشرة عند الحاجة."
+            ]
+          },
+          {
+            "name": "أتمتة الأسئلة الشائعة",
+            "benefit": "تُجاب الأسئلة نفسها دون موظفين.",
+            "howItWorks": [
+              "نحمّل أسئلتك الشائعة في قاعدة معرفة البوت.",
+              "يسأل العملاء بلغة طبيعية.",
+              "يطابق البوت ويردّ فورًا."
+            ]
+          },
+          {
+            "name": "التقاط العملاء المحتملين",
+            "benefit": "اجمع بيانات التواصل من كل محادثة.",
+            "howItWorks": [
+              "يطلب البوت الاسم أو البريد أو الهاتف.",
+              "تُحفظ البيانات في إدارة علاقات العملاء أو جدول بيانات.",
+              "يتابع فريق المبيعات."
+            ]
+          },
+          {
+            "name": "حجز المواعيد",
+            "benefit": "يحجز العملاء دون اتصال هاتفي.",
+            "howItWorks": [
+              "يعرض البوت الأوقات المتاحة.",
+              "يختار العملاء وقتًا ويؤكّدون.",
+              "يتلقّى الطرفان رسالة تأكيد."
+            ]
+          },
+          {
+            "name": "دعم متعدّد اللغات",
+            "benefit": "اخدم العملاء بلغتهم.",
+            "howItWorks": [
+              "يكتشف البوت لغة العميل.",
+              "تُقدَّم الردود بتلك اللغة.",
+              "يمكنك دعم عشرات اللغات تلقائيًا."
+            ]
+          },
+          {
+            "name": "التحويل إلى موظف بشري",
+            "benefit": "تصل المشكلات المعقّدة إلى شخص حقيقي بسرعة.",
+            "howItWorks": [
+              "يكتشف البوت متى لا يستطيع المساعدة.",
+              "تُحوَّل المحادثة إلى أحد أعضاء الفريق.",
+              "يرى الموظف سجلّ الدردشة كاملاً."
+            ]
+          },
+          {
+            "name": "الاتصال بإدارة علاقات العملاء",
+            "benefit": "كل محادثة تحدّث سجلات عملائك.",
+            "howItWorks": [
+              "تتزامن بيانات الدردشة مع إدارة علاقات العملاء تلقائيًا.",
+              "تحصل ملفات العملاء على ملاحظات ووسوم جديدة.",
+              "يرى فريقك السياق الكامل."
+            ]
+          }
+        ],
+        "dialog": {
+          "triggerLabel": "كيف نبنيه",
+          "title": "كيف نبني الشات بوت وواتساب",
+          "body": "نستخدم WhatsApp Business API مع منصّات مثل Twilio أو 360dialog. تُبنى روبوتات الدردشة بـ Botpress أو Voiceflow أو منطق Node.js مخصّص. تتولّى نماذج الذكاء الاصطناعي (OpenAI، نماذج LLM محلية) فهم اللغة الطبيعية. تُسجَّل كل المحادثات ويمكن مزامنتها مع إدارة علاقات العملاء عبر webhooks."
+        }
+      },
+      {
+        "title": "الأتمتة",
+        "summary": "اربط الخطوات التي تحدث حاليًا يدويًا. نصمّم مسارات عمل تقلّل الأخطاء وتسرّع العمل المتكرّر وتحرّر فريقك لمهام أعلى قيمة — من الموافقات والمتابعات إلى مزامنة البيانات والجدولة.",
+        "items": [
+          {
+            "name": "مسارات الموافقة",
+            "benefit": "تُعتمَد الطلبات دون سلاسل بريد.",
+            "howItWorks": [
+              "يقدّم أحد أعضاء الفريق طلبًا.",
+              "يوجَّه إلى المعتمِد المناسب تلقائيًا.",
+              "يُخطَر مقدّم الطلب فور الاعتماد."
+            ]
+          },
+          {
+            "name": "معالجة المستندات",
+            "benefit": "تدخل بيانات المستندات نظامك تلقائيًا.",
+            "howItWorks": [
+              "تُرفَع المستندات أو تُستقبَل عبر البريد.",
+              "يستخرج الذكاء الاصطناعي الحقول الرئيسية (الأسماء، التواريخ، المبالغ).",
+              "تُحفظ البيانات في قاعدة بياناتك أو جدول بياناتك."
+            ]
+          },
+          {
+            "name": "التقارير المجدولة",
+            "benefit": "تصل التقارير في وقتها، كل مرة.",
+            "howItWorks": [
+              "تحدّد تنسيق التقرير وجدوله.",
+              "يجمع النظام البيانات تلقائيًا.",
+              "تُرسَل التقارير بالبريد أو تُحفظ في مجلد."
+            ]
+          },
+          {
+            "name": "مزامنة البيانات",
+            "benefit": "تُظهر أدواتك دائمًا المعلومات نفسها.",
+            "howItWorks": [
+              "نربط أنظمتك عبر واجهات API.",
+              "تتدفّق البيانات بينها في الوقت الفعلي أو حسب جدول.",
+              "لا مزيد من النسخ اليدوي بين الأدوات."
+            ]
+          },
+          {
+            "name": "متابعات العملاء",
+            "benefit": "يحصل كل عميل على ردّ في وقته.",
+            "howItWorks": [
+              "يبدأ مُشغِّل المتابعة (عميل محتمل جديد، طلب مكتمل).",
+              "يُرسَل بريد أو رسالة تلقائيًا.",
+              "إن لم يكن هناك ردّ، يخرج تذكير لاحقًا."
+            ]
+          },
+          {
+            "name": "التذكيرات",
+            "benefit": "لا تُنسى المواعيد النهائية والمهام.",
+            "howItWorks": [
+              "تضبط قواعد التذكير.",
+              "يرسل النظام الإشعارات في الوقت المناسب.",
+              "تُعلَّم العناصر المتأخّرة للمديرين."
+            ]
+          },
+          {
+            "name": "أتمتة النماذج",
+            "benefit": "تُشغّل إرساليات النماذج إجراءات تلقائيًا.",
+            "howItWorks": [
+              "يملأ عميل أو موظف نموذجًا.",
+              "ينشئ الإرسال مهمة أو سجلاً أو إشعارًا.",
+              "يُبلَّغ الشخص المناسب فورًا."
+            ]
+          },
+          {
+            "name": "تكاملات الأدوات",
+            "benefit": "تعمل أدواتك الحالية معًا بسلاسة.",
+            "howItWorks": [
+              "نربط تطبيقاتك عبر واجهات API أو webhooks.",
+              "تُشغّل الأحداث في أداة إجراءات في أخرى.",
+              "يبقى كل شيء متزامنًا دون عمل يدوي."
+            ]
+          }
+        ],
+        "dialog": {
+          "triggerLabel": "كيف نبنيه",
+          "title": "كيف نبني الأتمتة",
+          "body": "نستخدم n8n أو Make (Integromat) أو نصوص Node.js/Python مخصّصة لأتمتة سير العمل. تستخدم معالجة المستندات OCR واستخراج الذكاء الاصطناعي (Tesseract، AWS Textract). تربط واجهات API وwebhooks أدواتك. تعمل كل الأتمتة على بنية سحابية موثوقة مع تسجيل ومعالجة أخطاء."
+        }
+      },
+      {
+        "title": "اللوحات والتقارير",
+        "summary": "شاهد الأرقام المهمّة في مكان واحد. نبني لوحات حيّة وتقارير آلية للمبيعات والمخزون وأداء الموظفين وأي مقياس آخر تحتاجه لإدارة العمل بثقة.",
+        "items": [
+          {
+            "name": "لوحات مؤشرات الأداء",
+            "benefit": "شاهد أهمّ أرقامك بلمحة.",
+            "howItWorks": [
+              "نحدّد مؤشرات الأداء المهمّة لأعمالك.",
+              "تُسحب البيانات من أنظمتك في الوقت الفعلي.",
+              "تعرض لوحة مرئية الأداء الحالي."
+            ]
+          },
+          {
+            "name": "تقارير المبيعات",
+            "benefit": "تتبّع الإيرادات والصفقات والاتجاهات بوضوح.",
+            "howItWorks": [
+              "تتدفّق بيانات المبيعات من إدارة علاقات العملاء أو نقاط البيع.",
+              "تُظهر التقارير الاتجاهات اليومية والأسبوعية والشهرية.",
+              "يمكنك التصفية حسب المنتج أو المنطقة أو مندوب المبيعات."
+            ]
+          },
+          {
+            "name": "تقارير المخزون",
+            "benefit": "اعرف المتوفّر والمنخفض والمتحرّك.",
+            "howItWorks": [
+              "تتزامن بيانات المخزون من نظام مستودعك.",
+              "تُظهر التقارير مستويات المخزون ومعدّل الدوران ونقاط إعادة الطلب.",
+              "تُعلِم التنبيهات بالأصناف المنخفضة."
+            ]
+          },
+          {
+            "name": "أداء الموظفين",
+            "benefit": "شاهد من يحقّق ومن يحتاج دعمًا.",
+            "howItWorks": [
+              "تُجمَع بيانات الأداء من أنظمتك.",
+              "تُظهر اللوحات مقاييس الأفراد والفِرق.",
+              "يمكن للمديرين التعمّق في التفاصيل."
+            ]
+          },
+          {
+            "name": "تحليلات مخصّصة",
+            "benefit": "قِس بالضبط ما يهمّ أعمالك.",
+            "howItWorks": [
+              "نحدّد المقاييس معك.",
+              "تُجمَع البيانات من مصادر متعدّدة.",
+              "تُبنى المرئيات لاحتياجاتك المحدّدة."
+            ]
+          },
+          {
+            "name": "تسليم مجدول",
+            "benefit": "تصل التقارير إلى بريدك في موعدها.",
+            "howItWorks": [
+              "تختار التكرار (يومي، أسبوعي، شهري).",
+              "ينشئ النظام التقرير تلقائيًا.",
+              "يُرسَل إلى بريدك أو يُحفظ في مجلد مشترك."
+            ]
+          },
+          {
+            "name": "عوامل التصفية",
+            "benefit": "تعمّق في البيانات المهمّة الآن.",
+            "howItWorks": [
+              "تتضمّن اللوحات عوامل تصفية للتاريخ والموقع والدور وغيرها.",
+              "انقر عامل تصفية لتحديث كل الرسوم فورًا.",
+              "احفظ عروضك المفضّلة للوصول السريع."
+            ]
+          },
+          {
+            "name": "أدوات التصدير",
+            "benefit": "خذ بياناتك إلى أي مكان.",
+            "howItWorks": [
+              "صدّر اللوحات والتقارير بصيغة PDF أو Excel.",
+              "جدوِل عمليات التصدير لتعمل تلقائيًا.",
+              "شاركها مع المعنيّين الذين يحتاجون البيانات."
+            ]
+          }
+        ],
+        "dialog": {
+          "triggerLabel": "كيف نبنيه",
+          "title": "كيف نبني اللوحات والتقارير",
+          "body": "نبني اللوحات بـ React وNext.js ومكتبات الرسوم البيانية (Recharts، Chart.js، D3.js) أو نستخدم منصّات مثل Metabase وGrafana. تُسحب البيانات من قواعد بياناتك عبر واجهات API أو اتصالات مباشرة. تُنشأ التقارير بمكتبات PDF وتُجدوَل بمهام cron أو دوال سحابية."
+        }
+      },
+      {
+        "title": "أنظمة الأعمال",
+        "summary": "الأنظمة الأساسية التي تُبقي العمل منظّمًا: العملاء والموظفون والمخزون والعمليات والروابط بينها. نبني أو ندمج أنظمة إدارة علاقات العملاء وتخطيط الموارد والمخزون والموارد البشرية والمحاسبة لتعمل كنظام واحد.",
+        "items": [
+          {
+            "name": "إدارة علاقات العملاء (CRM)",
+            "benefit": "كل تفاعل مع العميل في مكان واحد.",
+            "howItWorks": [
+              "تُخزَّن جهات اتصال العملاء والصفقات والملاحظات مركزيًا.",
+              "يرى فريقك السجلّ الكامل مع كل عميل.",
+              "تُتتبَّع المتابعات والمهام تلقائيًا."
+            ]
+          },
+          {
+            "name": "تخطيط موارد المؤسسة (ERP)",
+            "benefit": "أدِر عمليتك بالكامل من نظام واحد.",
+            "howItWorks": [
+              "تتّصل المبيعات والمشتريات والمخزون والمالية.",
+              "تتدفّق البيانات بين الأقسام دون إدخال يدوي.",
+              "يرى المديرون الصورة الكاملة في الوقت الفعلي."
+            ]
+          },
+          {
+            "name": "المخزون",
+            "benefit": "اعرف بالضبط ما لديك وأين.",
+            "howItWorks": [
+              "تُتتبَّع مستويات المخزون عبر المواقع.",
+              "تُسجَّل الحركات (دخول، خروج، تحويل) فورًا.",
+              "تمنع تنبيهات إعادة الطلب نفاد المخزون."
+            ]
+          },
+          {
+            "name": "الموارد البشرية",
+            "benefit": "أدِر فريقك دون جداول بيانات.",
+            "howItWorks": [
+              "تُمركَز سجلات الموظفين والعقود والمستندات.",
+              "تحدث طلبات الإجازة والموافقات في النظام.",
+              "تتدفّق بيانات الرواتب إلى أداة محاسبتك."
+            ]
+          },
+          {
+            "name": "إدارة الطلبات",
+            "benefit": "تتبّع كل طلب من التقديم إلى التسليم.",
+            "howItWorks": [
+              "تُلتقَط الطلبات من كل القنوات.",
+              "تتدفّق تحديثات الحالة إلى العملاء تلقائيًا.",
+              "ترى فِرق التنفيذ ما يحتاج انتباهًا."
+            ]
+          },
+          {
+            "name": "اتصالات المحاسبة",
+            "benefit": "تبقى دفاترك محدّثة تلقائيًا.",
+            "howItWorks": [
+              "تتزامن المبيعات والمشتريات والمدفوعات مع أداة محاسبتك.",
+              "تُنشأ الفواتير وتُرسَل تلقائيًا.",
+              "تعكس التقارير المالية بيانات لحظية."
+            ]
+          },
+          {
+            "name": "إدارة المورّدين",
+            "benefit": "أبقِ المورّدين منظّمين والتسليمات في مسارها.",
+            "howItWorks": [
+              "تُتتبَّع جهات اتصال المورّدين والعقود والأداء.",
+              "تُرسَل أوامر الشراء وتُراقَب.",
+              "حالة التسليم مرئية في الوقت الفعلي."
+            ]
+          },
+          {
+            "name": "دعم المواقع المتعدّدة",
+            "benefit": "أدِر كل مواقعك من نظام واحد.",
+            "howItWorks": [
+              "لكل موقع بياناته وصلاحياته.",
+              "يرى المكتب الرئيسي تقارير موحّدة.",
+              "تُتتبَّع التحويلات بين المواقع."
+            ]
+          }
+        ],
+        "dialog": {
+          "triggerLabel": "كيف نبنيه",
+          "title": "كيف نبني أنظمة الأعمال",
+          "body": "نبني أنظمة مخصّصة بـ Node.js وPython وPostgreSQL، أو ندمج منصّات قائمة (Salesforce، HubSpot، Odoo، SAP). تربط واجهات API كل الوحدات. تدعم البنية متعدّدة المستأجرين مواقع متعدّدة. تُؤمَّن البيانات بالتشفير والنسخ الاحتياطي والتحكّم في الوصول القائم على الأدوار."
+        }
+      }
+    ],
+    "cta": "تحدّث إلى خبير"
   }
 }

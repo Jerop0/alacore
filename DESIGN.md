@@ -121,8 +121,9 @@ Light type on dark surfaces: add +0.05 line-height.
   700; hover → `--blue-hover` + `--ala-shadow-card`, active 0.98. Secondary = transparent + `--line`
   border (on dark: white 20% border). Ghost/text = blue label + arrow. `:focus-visible` = 2px blue
   ring + 2px offset. Min tap target 44px.
-- **What We Build (6 cards):** thin line icon in a `--blue-tint` chip, short title, one plain sentence,
-  optional "Learn more". Hover = blue border + light-blue icon fill + ≤2px lift; no 3D/glass/big shadow.
+- **What We Build (6 cards):** thin line icon in a `--blue-tint` chip, short title, one plain sentence;
+  the whole card is the link to `/solutions` (**no "Learn more" text**). Hover = blue border +
+  light-blue icon fill + ≤2px lift; no 3D/glass/big shadow.
   Lucide map (build-spec §): Briefcase / Globe / MessagesSquare / Settings /
   ChartNoAxesColumnIncreasing / Database. Vary layout so it doesn't read as a stamped grid.
 - **Industries:** overview uses horizontal tabs / selectable cards → one clear panel (business type ·

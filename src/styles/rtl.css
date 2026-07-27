@@ -1,0 +1,80 @@
+/*
+ * RTL overrides (Arabic / dir="rtl").
+ *
+ * The layout flips natively from <html dir="rtl"> because the codebase is
+ * built on flexbox `gap`, CSS grid, and logical spacing (margin-inline, etc.).
+ * These rules only patch the handful of physical/transform declarations that
+ * direction alone can't mirror. `html[dir="rtl"]` outspecifies Astro's
+ * component-scoped selectors, so no per-component edits are needed.
+ */
+
+/* --- Directional CTA arrows: mirror the hover nudge toward inline-end --- */
+html[dir="rtl"] .button--ghost:hover .button__arrow {
+  transform: translateX(-4px);
+}
+
+html[dir="rtl"] .build-card:hover .build-card__cta svg,
+html[dir="rtl"] .build-card:focus-visible .build-card__cta svg {
+  transform: translateX(-3px);
+}
+
+/* --- Process step connector sits on the inline-end (left in RTL) edge --- */
+@media (min-width: 768px) and (max-width: 1023px) {
+  html[dir="rtl"] .process-step:not(:last-child)::after {
+    right: auto;
+    left: -0.75rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  html[dir="rtl"] .process-step:not(:last-child)::after {
+    right: auto;
+    left: -1rem;
+  }
+}
+
+/* --- Mobile menu drawer slides in from the inline-start (left) edge --- */
+html[dir="rtl"] .mobile-menu {
+  transform: translateX(-100%);
+}
+
+html[dir="rtl"] .mobile-menu.is-open {
+  transform: translateX(0);
+}
+
+/* --- Pull-quote accent flips to the inline-start edge --- */
+html[dir="rtl"] .work-card__quote {
+  border-left: 0;
+  border-right: 3px solid var(--accent);
+  border-radius: var(--ala-radius-md) 0 0 var(--ala-radius-md);
+}
+
+/* --- Ordered / decorated lists indent from the inline-start --- */
+html[dir="rtl"] .rich-row__how-steps,
+html[dir="rtl"] .how-expect ul {
+  padding-left: 0;
+  padding-right: 1.25rem;
+}
+
+html[dir="rtl"] .about-positioning li {
+  padding-left: 0;
+  padding-right: 1.5rem;
+}
+
+html[dir="rtl"] .about-positioning li::before {
+  left: auto;
+  right: 0;
+}
+
+/* --- Solutions "how we build it" sheet anchors to the inline-start corner --- */
+html[dir="rtl"] .rich-row__dialog-sheet {
+  right: auto;
+  left: 1rem;
+}
+
+@media (max-width: 640px) {
+  html[dir="rtl"] .rich-row__dialog-sheet {
+    right: auto;
+    left: 0;
+  }
+}

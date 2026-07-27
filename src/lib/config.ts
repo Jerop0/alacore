@@ -1,13 +1,23 @@
 export const SITE = 'https://alacore.net';
 export const EMAIL = 'support@alacore.net';
 export const WHATSAPP_NUMBER = '4917621812212';
-export const LOCALES = ['en', 'de', 'tr'] as const;
+export const LOCALES = ['en', 'de', 'tr', 'ar'] as const;
 export const DEFAULT_LOCALE = 'en';
+// Locales offered in the visible language switcher. `ar` is intentionally
+// excluded — it stays reachable at /ar/ but is hidden from the nav switcher.
+export const VISIBLE_LOCALES = ['en', 'de', 'tr'] as const;
+// Right-to-left locales. Drives <html dir> and RTL style overrides.
+export const RTL_LOCALES = ['ar'] as const;
 export const LOCALES_WITH_LABELS: Record<string, string> = {
   en: 'EN',
   de: 'DE',
   tr: 'TR',
+  ar: 'AR',
 };
+
+export function dirForLocale(locale: string): 'ltr' | 'rtl' {
+  return (RTL_LOCALES as readonly string[]).includes(locale) ? 'rtl' : 'ltr';
+}
 export const NAV_ROUTES = [
   { labelKey: 'nav.home', path: '/' },
   { labelKey: 'nav.solutions', path: '/solutions' },

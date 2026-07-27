@@ -103,8 +103,11 @@ Keep the banned engineering words (Kubernetes, RAG, CI/CD, APIs, DevOps, …) **
 belong on For Tech Teams only.
 
 ## Content model & cross-linking
-- Drive the catalog from data: `src/content/industries/<slug>.json` (themes → items → short + long +
-  optional link). Authored EN then DE/TR (task 09), logged in `content/REVIEW.md`.
+- Drive the catalog from data: `src/content/industries/<slug>.json` shaped as
+  `themes[] → { title, intro, items[] → { name, benefit, howItWorks[] } }`. **The card unit is the
+  theme** (one rich card per theme, not per item) with a plain **"how it works"** per item — see
+  [`21-theme-cards-how-it-works.md`](21-theme-cards-how-it-works.md). Authored EN then DE/TR (task 09),
+  logged in `content/REVIEW.md`.
 - Each item may `link` to the matching **Solutions** family or a **For Tech Teams** section for readers
   who want more — the business page stays simple; depth is one click away.
 - Mirror the same expandable pattern on **Solutions** (each of the 6 families expands into "what's

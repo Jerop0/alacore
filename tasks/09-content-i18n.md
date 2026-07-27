@@ -12,8 +12,9 @@ IMPECCABLE §2 (voice), §20 (multilingual rules), §26 (metadata); `content/sit
 1. **Seed:** treat `ala-core-website-assets/content/site-copy.json` as canonical for the homepage. Copy
    its shape into the app's content layer (`src/content/` or a typed `src/content/copy.<locale>.json`).
    **Do not change the meaning** of approved strings — only add.
-2. **Extend** with keys for: Solutions (6 families + example tools), Industries (overview + 7 pages:
-   business type, needs, examples, CTA), For Tech Teams (group titles + capability lists), About
+2. **Extend** with keys for: Solutions (6 families + example tools + tech layer), Industries (overview +
+   7 pages: **themes → items → { name, benefit, howItWorks[] }** per `tasks/21`, + CTA), the Solutions
+   tech layer + `#for-tech-teams` overview (group titles + capability lists), About
    (positioning, principles), Contact (form labels, errors, success), floating flows (WhatsApp steps,
    Ask ALA question/choices/follow-ups/recommendations), header, **footer column labels** (Explore /
    Company / Connect + positioning line), **Products** (intro + per-product tagline/description/status)

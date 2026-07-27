@@ -80,6 +80,9 @@ Added 2026-07-24.
   visible, deeper info on **hover + focus + tap** (never hover-only), **pop-up dialog** for heavy
   content, **no "Learn more"**, **no collapse for one-liners**. Decided via /impeccable + /frontend-design.
   See `tasks/19` (supersedes the interaction spec in `tasks/14`).
+- **Card unit = a theme**, not one card per item: a theme (e.g. restaurant "Take orders & serve
+  faster") is one rich card holding its items, each with a plain **"how it works"** (2–3 steps).
+  See `tasks/21`.
 
 ## i18n & routing
 - Locales: `en` (default, no prefix at `/`), `de` (`/de/…`), `tr` (`/tr/…`). Astro i18n routing +

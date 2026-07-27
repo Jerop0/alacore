@@ -14,397 +14,126 @@
         "intro": "Everything your restaurant or café needs, from one partner.",
         "themes": [
           {
-            "key": "serve",
+            "title": "Take orders & serve faster",
+            "intro": "Everything to take orders and get food out quickly.",
             "items": [
-              { "name": "Digital QR menu", "short": "Customers scan and see your menu.", "detail": "Update dishes, prices, and photos anytime. No app download needed.", "link": "/solutions" },
-              { "name": "Online ordering & delivery", "short": "Take orders on your own site.", "detail": "Keep more of each sale and own the customer relationship.", "link": "/solutions" },
-              { "name": "Table reservations", "short": "Bookings online and on WhatsApp.", "detail": "Reduce no-shows with automatic reminders.", "link": "/solutions" },
-              { "name": "POS & kitchen screen", "short": "Orders go straight to the kitchen.", "detail": "Faster service, fewer mistakes, happier staff.", "link": "/solutions" },
-              { "name": "WhatsApp ordering & chatbot", "short": "Customers order on WhatsApp.", "detail": "Answer questions and take orders where your customers already chat.", "link": "/solutions" }
+              { "name": "Digital QR menu", "benefit": "Customers scan and see your menu.", "howItWorks": ["We put a QR code on each table.", "Guests scan with their phone.", "Your menu opens instantly — change items and prices anytime."] },
+              { "name": "Online ordering & delivery", "benefit": "Take orders on your own site.", "howItWorks": ["Customers order from your website.", "The order reaches your kitchen and staff.", "You fulfill for pickup or delivery — and keep more of the money."] },
+              { "name": "Table reservations", "benefit": "Bookings online and on WhatsApp.", "howItWorks": ["Guests pick a time online or on WhatsApp.", "You see every booking in one place.", "Automatic reminders cut no-shows."] },
+              { "name": "POS & kitchen screen", "benefit": "Orders go straight to the kitchen.", "howItWorks": ["Staff ring up the order on the POS.", "It appears on the kitchen screen instantly.", "The kitchen cooks in order — fewer mistakes, faster service."] },
+              { "name": "WhatsApp ordering & chatbot", "benefit": "Customers order on WhatsApp.", "howItWorks": ["Customers message your WhatsApp.", "The chatbot shows the menu and takes the order.", "You confirm and prepare — common questions answered automatically."] }
             ]
           },
           {
-            "key": "customers",
+            "title": "Get more customers",
+            "intro": "Be found online and bring customers back.",
             "items": [
-              { "name": "Website", "short": "A fast, mobile site.", "detail": "Menu, location, hours, and online ordering in one place.", "link": "/solutions" },
-              { "name": "Be found on Google", "short": "Show up in local searches.", "detail": "When people search for restaurants near you, your business appears.", "link": "/solutions" },
-              { "name": "Social media & ads", "short": "Reach new customers.", "detail": "Run campaigns on Instagram, Google, and TikTok that bring diners in.", "link": "/solutions" },
-              { "name": "Loyalty & rewards", "short": "Bring customers back.", "detail": "Points, offers, and birthday treats that increase visits.", "link": "/solutions" },
-              { "name": "Reviews", "short": "Invite happy guests to review.", "detail": "Build your online reputation automatically after a visit.", "link": "/solutions" }
+              { "name": "Website", "benefit": "A fast, mobile site.", "howItWorks": ["We build a site with your menu, hours, location, and ordering.", "It loads fast on phones.", "Customers find what they need and order or book in seconds."] },
+              { "name": "Be found on Google", "benefit": "Show up in local searches.", "howItWorks": ["We set up your Google Business profile and local SEO.", "Your restaurant appears when people search nearby.", "Photos, hours, and booking links are always correct."] },
+              { "name": "Social media & ads", "benefit": "Reach new customers.", "howItWorks": ["We create campaigns on Instagram, Google, and TikTok.", "Ads target people near your location.", "You see which campaigns bring diners in."] },
+              { "name": "Loyalty & rewards", "benefit": "Bring customers back.", "howItWorks": ["Customers earn points on each visit.", "Automatic offers and birthday treats go out by message.", "Regulars come back more often."] },
+              { "name": "Reviews", "benefit": "Invite happy guests to review.", "howItWorks": ["After a visit, customers get a friendly review request.", "Reviews go to Google and other platforms.", "Your reputation grows without manual work."] }
             ]
           },
           {
-            "key": "look",
+            "title": "Look unforgettable",
+            "intro": "A brand customers remember.",
             "items": [
-              { "name": "Logo & brand", "short": "A look customers remember.", "detail": "Consistent colors, fonts, and feel across menu, site, and store.", "link": "/solutions" },
-              { "name": "Menu design", "short": "Print and digital menus.", "detail": "Designed to highlight your best dishes and increase average order value.", "link": "/solutions" },
-              { "name": "Food photography & video", "short": "Make dishes irresistible.", "detail": "Professional shots for menu, website, and social media.", "link": "/solutions" },
-              { "name": "Digital signage", "short": "In-store screens.", "detail": "Promote offers and menus on screens customers notice.", "link": "/solutions" }
+              { "name": "Logo & brand", "benefit": "A look customers remember.", "howItWorks": ["We design your logo, colors, and brand style.", "The same look is used on menu, site, and signage.", "Customers recognize your business everywhere."] },
+              { "name": "Menu design", "benefit": "Print and digital menus.", "howItWorks": ["We design menus that highlight your best dishes.", "Digital menus update instantly.", "Print menus match your brand."] },
+              { "name": "Food photography & video", "benefit": "Make dishes irresistible.", "howItWorks": ["We shoot your food, drinks, and space.", "Photos and videos go on menu, website, and social media.", "Customers see what they are ordering before they arrive."] },
+              { "name": "Digital signage", "benefit": "In-store screens.", "howItWorks": ["Screens show your menu, offers, and wait times.", "Content updates from one dashboard.", "Customers notice promotions while they wait."] }
             ]
           },
           {
-            "key": "run",
+            "title": "Run the day smoothly",
+            "intro": "Less chaos behind the scenes.",
             "items": [
-              { "name": "Stock & inventory", "short": "Know what's running low.", "detail": "Track ingredients and supplies so you never run out during service.", "link": "/solutions" },
-              { "name": "Staff & shifts", "short": "Schedules in one place.", "detail": "Plan shifts, track hours, and manage roles simply.", "link": "/solutions" },
-              { "name": "Suppliers & purchasing", "short": "Track orders and costs.", "detail": "See what you ordered, from whom, and when it arrives.", "link": "/solutions" },
-              { "name": "Accounting & invoices", "short": "Simple financial records.", "detail": "Keep invoices and payments organized without spreadsheets.", "link": "/solutions" }
+              { "name": "Stock & inventory", "benefit": "Know what's running low.", "howItWorks": ["You track ingredients and supplies in one place.", "Low-stock alerts tell you what to reorder.", "You never run out during service."] },
+              { "name": "Staff & shifts", "benefit": "Schedules in one place.", "howItWorks": ["Managers build shifts on a simple calendar.", "Staff see their schedules on their phone.", "Swap requests and hours are tracked automatically."] },
+              { "name": "Suppliers & purchasing", "benefit": "Track orders and costs.", "howItWorks": ["Purchase orders go to suppliers from the system.", "Deliveries are matched to orders.", "You see exactly what you ordered and what it cost."] },
+              { "name": "Accounting & invoices", "benefit": "Simple financial records.", "howItWorks": ["Sales and expenses flow to your accounting.", "Invoices are created automatically.", "Reports show profit and tax summaries."] }
             ]
           },
           {
-            "key": "numbers",
+            "title": "See your numbers",
+            "intro": "Know what is happening in your business.",
             "items": [
-              { "name": "Sales dashboard", "short": "Today's sales at a glance.", "detail": "Best dishes, busy hours, and revenue trends in real time.", "link": "/solutions" },
-              { "name": "Reports", "short": "Daily, weekly, monthly.", "detail": "Clear reports that help you decide what to change.", "link": "/solutions" }
+              { "name": "Sales dashboard", "benefit": "Today's sales at a glance.", "howItWorks": ["Sales from POS, online, and delivery feed one dashboard.", "You see best dishes, busy hours, and revenue.", "Trends update in real time."] },
+              { "name": "Reports", "benefit": "Daily, weekly, monthly.", "howItWorks": ["Reports are generated automatically.", "You filter by date, location, or category.", "PDFs and spreadsheets export with one click."] }
             ]
           },
           {
-            "key": "automate",
+            "title": "Save time with automation",
+            "intro": "Let the system handle repeat tasks.",
             "items": [
-              { "name": "Reminders", "short": "Booking and pickup reminders.", "detail": "Automatic WhatsApp messages reduce no-shows and missed pickups.", "link": "/solutions" },
-              { "name": "Marketing automation", "short": "Birthday offers and win-back messages.", "detail": "Stay top-of-mind without manual work.", "link": "/solutions" },
-              { "name": "Ask ALA / chatbot", "short": "Answer common questions.", "detail": "Hours, menu, and location questions handled automatically.", "link": "/solutions" }
+              { "name": "Reminders", "benefit": "Booking and pickup reminders.", "howItWorks": ["Customers get automatic WhatsApp or SMS reminders.", "No-shows and missed pickups drop.", "Staff do not spend time calling guests."] },
+              { "name": "Marketing automation", "benefit": "Birthday offers and win-back messages.", "howItWorks": ["Customers get offers based on their visit history.", "Messages send automatically on birthdays or after gaps.", "You stay top-of-mind without manual work."] },
+              { "name": "Ask ALA / chatbot", "benefit": "Answer common questions.", "howItWorks": ["Customers ask hours, menu, and location questions.", "The chatbot replies instantly.", "Complex requests are handed to your staff."] }
             ]
           }
         ],
-        "bundle": {
-          "title": "A typical restaurant setup",
-          "description": "QR menu + online ordering + reservations + WhatsApp reminders + sales dashboard."
-        },
+        "bundle": { "title": "A typical restaurant setup", "description": "QR menu + online ordering + reservations + WhatsApp reminders + sales dashboard." },
         "cta": "Talk to an expert about your restaurant"
       },
       "hospitals-clinics": {
         "intro": "Smoother patient flow, calmer staff, and clear records.",
         "themes": [
           {
-            "key": "serve",
+            "title": "Improve patient access",
+            "intro": "Make booking and visiting easier for patients.",
             "items": [
-              { "name": "Online appointments", "short": "Patients book themselves.", "detail": "24/7 booking that matches your schedule and reduces phone calls.", "link": "/solutions" },
-              { "name": "Patient portal", "short": "One place for records.", "detail": "Patients see visits, results, and messages securely.", "link": "/solutions" },
-              { "name": "Queue & waiting management", "short": "Less waiting-room chaos.", "detail": "Patients know when to arrive and how long to wait.", "link": "/solutions" },
-              { "name": "WhatsApp reminders", "short": "Reduce no-shows.", "detail": "Automatic confirmations and prep instructions by message.", "link": "/solutions" }
+              { "name": "Online appointments", "benefit": "Patients book themselves.", "howItWorks": ["Patients see open slots on your website or portal.", "They pick a doctor, time, and reason.", "The booking syncs to your clinic calendar."] },
+              { "name": "Patient portal", "benefit": "One place for records.", "howItWorks": ["Patients log in securely.", "They see visits, results, and messages.", "Documents are available anytime."] },
+              { "name": "Queue & waiting management", "benefit": "Less waiting-room chaos.", "howItWorks": ["Patients check in digitally.", "They see their place in the queue on a screen.", "Staff know who is next and where to send them."] },
+              { "name": "WhatsApp reminders", "benefit": "Reduce no-shows.", "howItWorks": ["Patients get automatic confirmations.", "Prep instructions and reminders arrive by WhatsApp.", "Fewer appointments are missed."] }
             ]
           },
           {
-            "key": "customers",
+            "title": "Reach more patients",
+            "intro": "Be found and trusted online.",
             "items": [
-              { "name": "Website & Google presence", "short": "Be found locally.", "detail": "Services, hours, location, and online booking in search results.", "link": "/solutions" },
-              { "name": "Reviews & reputation", "short": "Invite patient feedback.", "detail": "Send review requests after appointments.", "link": "/solutions" }
+              { "name": "Website & Google presence", "benefit": "Be found locally.", "howItWorks": ["We build a site with services, hours, and booking.", "Local SEO helps patients find you on Google.", "Everything is mobile-friendly and up to date."] },
+              { "name": "Reviews & reputation", "benefit": "Invite patient feedback.", "howItWorks": ["After a visit, patients receive a review request.", "Reviews go to Google and health platforms.", "Your reputation grows naturally."] }
             ]
           },
           {
-            "key": "look",
+            "title": "Look professional & trustworthy",
+            "intro": "Build trust at first sight.",
             "items": [
-              { "name": "Brand & signage", "short": "Trust at first sight.", "detail": "Clean, calm branding for website, waiting areas, and signage.", "link": "/solutions" },
-              { "name": "Wayfinding screens", "short": "Help patients find their way.", "detail": "Digital directories for clinics and hospitals.", "link": "/solutions" }
+              { "name": "Brand & signage", "benefit": "Trust at first sight.", "howItWorks": ["We create a calm, clean brand identity.", "The same look runs through website, waiting areas, and signage.", "Patients feel confident before they arrive."] },
+              { "name": "Wayfinding screens", "benefit": "Help patients find their way.", "howItWorks": ["Digital directories show department locations.", "Screens update from one system.", "Patients navigate the clinic without asking staff."] }
             ]
           },
           {
-            "key": "run",
+            "title": "Run the clinic smoothly",
+            "intro": "Organize staff, rooms, and records.",
             "items": [
-              { "name": "Patient records", "short": "Everything in one place.", "detail": "Secure records that your team can find in seconds.", "link": "/solutions" },
-              { "name": "Staff scheduling", "short": "Doctors, nurses, rooms.", "detail": "Plan shifts and rooms without conflicts.", "link": "/solutions" },
-              { "name": "Medical inventory", "short": "Track supplies.", "detail": "Know stock levels for consumables and medications.", "link": "/solutions" }
+              { "name": "Patient records", "benefit": "Everything in one place.", "howItWorks": ["Staff enter notes into a secure digital record.", "Records are searchable by patient or visit.", "Only authorized staff can access them."] },
+              { "name": "Staff scheduling", "benefit": "Doctors, nurses, rooms.", "howItWorks": ["Managers schedule doctors, nurses, and rooms on one tool.", "Conflicts are flagged automatically.", "Staff see their shifts on their phone."] },
+              { "name": "Medical inventory", "benefit": "Track supplies.", "howItWorks": ["You track consumables and medications in real time.", "Alerts tell you when stock is low.", "Orders go to suppliers before you run out."] }
             ]
           },
           {
-            "key": "numbers",
+            "title": "See your numbers",
+            "intro": "Make decisions with clear data.",
             "items": [
-              { "name": "Clinic dashboard", "short": "Appointments, no-shows, revenue.", "detail": "Daily and weekly views for managers.", "link": "/solutions" },
-              { "name": "Doctor & service reports", "short": "Performance by provider.", "detail": "See workload and outcome trends clearly.", "link": "/solutions" }
+              { "name": "Clinic dashboard", "benefit": "Appointments, no-shows, revenue.", "howItWorks": ["Daily appointments and no-shows feed the dashboard.", "Revenue and patient volume update automatically.", "Managers see trends at a glance."] },
+              { "name": "Doctor & service reports", "benefit": "Performance by provider.", "howItWorks": ["Reports show workload and outcomes by doctor or service.", "You filter by date, location, or provider.", "Export and share with management."] }
             ]
           },
           {
-            "key": "automate",
+            "title": "Save time with automation",
+            "intro": "Let patients and staff focus on care.",
             "items": [
-              { "name": "Appointment reminders", "short": "Fewer missed visits.", "detail": "SMS or WhatsApp reminders sent automatically.", "link": "/solutions" },
-              { "name": "Follow-up messages", "short": "Care continues after the visit.", "detail": "Automated instructions and check-ins.", "link": "/solutions" },
-              { "name": "Ask ALA / chatbot", "short": "Answer common questions.", "detail": "Hours, services, and booking handled automatically.", "link": "/solutions" }
+              { "name": "Appointment reminders", "benefit": "Fewer missed visits.", "howItWorks": ["Automatic SMS or WhatsApp reminders go out before each visit.", "Patients confirm or reschedule with one reply.", "Staff spend less time on the phone."] },
+              { "name": "Follow-up messages", "benefit": "Care continues after the visit.", "howItWorks": ["After a visit, patients get instructions and check-ins.", "Messages are sent automatically.", "Staff follow up only when needed."] },
+              { "name": "Ask ALA / chatbot", "benefit": "Answer common questions.", "howItWorks": ["Patients ask about hours, services, and booking.", "The chatbot replies instantly.", "Complex questions are passed to your team."] }
             ]
           }
         ],
-        "bundle": {
-          "title": "A typical clinic setup",
-          "description": "Online appointments + patient portal + WhatsApp reminders + clinic dashboard."
-        },
+        "bundle": { "title": "A typical clinic setup", "description": "Online appointments + patient portal + WhatsApp reminders + clinic dashboard." },
         "cta": "Talk to an expert about your clinic"
-      },
-      "schools-training": {
-        "intro": "Less admin, clearer communication, and happier families.",
-        "themes": [
-          {
-            "key": "serve",
-            "items": [
-              { "name": "Online enrollment", "short": "Apply and register online.", "detail": "Families submit forms and documents from any device.", "link": "/solutions" },
-              { "name": "Student & parent portal", "short": "One place for everything.", "detail": "Schedules, grades, messages, and payments in one login.", "link": "/solutions" },
-              { "name": "Course catalog", "short": "Show and sell courses.", "detail": "Publish schedules, descriptions, and availability.", "link": "/solutions" }
-            ]
-          },
-          {
-            "key": "customers",
-            "items": [
-              { "name": "Website & SEO", "short": "Be found by parents.", "detail": "Clear information that ranks in local search.", "link": "/solutions" },
-              { "name": "Social media & ads", "short": "Reach new families.", "detail": "Promote open days and enrollments where parents spend time.", "link": "/solutions" }
-            ]
-          },
-          {
-            "key": "look",
-            "items": [
-              { "name": "Brand & prospectus", "short": "A look families trust.", "detail": "Professional branding for print and digital materials.", "link": "/solutions" },
-              { "name": "Photography & video", "short": "Show your school.", "detail": "Images and tours for website and social media.", "link": "/solutions" }
-            ]
-          },
-          {
-            "key": "run",
-            "items": [
-              { "name": "Attendance tracking", "short": "Know who is present.", "detail": "Simple check-in and reporting for classes and events.", "link": "/solutions" },
-              { "name": "Payments & invoices", "short": "Fees collected on time.", "detail": "Online payments with reminders and receipts.", "link": "/solutions" },
-              { "name": "Staff & rooms", "short": "Schedule teachers and spaces.", "detail": "Avoid double bookings and keep classes organized.", "link": "/solutions" }
-            ]
-          },
-          {
-            "key": "numbers",
-            "items": [
-              { "name": "Results dashboard", "short": "Grades and progress.", "detail": "Clear views for teachers, students, and parents.", "link": "/solutions" },
-              { "name": "Enrollment reports", "short": "See who's enrolled where.", "detail": "Track capacity and revenue by course.", "link": "/solutions" }
-            ]
-          },
-          {
-            "key": "automate",
-            "items": [
-              { "name": "Fee reminders", "short": "Automatic payment prompts.", "detail": "Reduce late payments without chasing families.", "link": "/solutions" },
-              { "name": "Parent updates", "short": "News and alerts.", "detail": "Send class updates, events, and absences automatically.", "link": "/solutions" },
-              { "name": "Ask ALA / chatbot", "short": "Answer common questions.", "detail": "Hours, fees, and admissions handled automatically.", "link": "/solutions" }
-            ]
-          }
-        ],
-        "bundle": {
-          "title": "A typical school setup",
-          "description": "Parent portal + online enrollment + attendance + payments + results dashboard."
-        },
-        "cta": "Talk to an expert about your school"
-      },
-      "companies-offices": {
-        "intro": "One partner to organize customers, staff, and daily work.",
-        "themes": [
-          {
-            "key": "serve",
-            "items": [
-              { "name": "CRM", "short": "Every customer in one place.", "detail": "Track leads, deals, and communication history.", "link": "/solutions" },
-              { "name": "Customer portal", "short": "Let clients self-serve.", "detail": "Invoices, tickets, and documents in one secure place.", "link": "/solutions" },
-              { "name": "Helpdesk & tickets", "short": "Support requests tracked.", "detail": "Nothing falls through the cracks.", "link": "/solutions" }
-            ]
-          },
-          {
-            "key": "customers",
-            "items": [
-              { "name": "Website & SEO", "short": "Be found by buyers.", "detail": "Clear service pages that rank in search.", "link": "/solutions" },
-              { "name": "LinkedIn & Google ads", "short": "Reach decision makers.", "detail": "Targeted campaigns for B2B services.", "link": "/solutions" }
-            ]
-          },
-          {
-            "key": "look",
-            "items": [
-              { "name": "Brand & identity", "short": "A professional look.", "detail": "Logo, templates, and guidelines that scale.", "link": "/solutions" },
-              { "name": "Pitch decks", "short": "Win more proposals.", "detail": "Designed presentations and PDFs.", "link": "/solutions" }
-            ]
-          },
-          {
-            "key": "run",
-            "items": [
-              { "name": "HR & approvals", "short": "Manage people and requests.", "detail": "Leave, expenses, and approvals in one workflow.", "link": "/solutions" },
-              { "name": "Internal knowledge base", "short": "Find answers fast.", "detail": "Procedures, policies, and how-tos in one place.", "link": "/solutions" },
-              { "name": "Project tracking", "short": "See what is happening.", "detail": "Tasks, deadlines, and owners without chaos.", "link": "/solutions" }
-            ]
-          },
-          {
-            "key": "numbers",
-            "items": [
-              { "name": "Sales dashboard", "short": "Pipeline and revenue.", "detail": "Know where every deal stands.", "link": "/solutions" },
-              { "name": "Team workload", "short": "Balance work across staff.", "detail": "See who is overloaded and who is available.", "link": "/solutions" }
-            ]
-          },
-          {
-            "key": "automate",
-            "items": [
-              { "name": "Approval workflows", "short": "Requests move automatically.", "detail": "Expenses and leave routed to the right person.", "link": "/solutions" },
-              { "name": "Notifications", "short": "Keep everyone informed.", "detail": "Slack, email, or WhatsApp updates.", "link": "/solutions" },
-              { "name": "Ask ALA / chatbot", "short": "Answer internal questions.", "detail": "IT, HR, and policy questions handled automatically.", "link": "/solutions" }
-            ]
-          }
-        ],
-        "bundle": {
-          "title": "A typical office setup",
-          "description": "CRM + HR approvals + project tracking + sales dashboard + internal knowledge base."
-        },
-        "cta": "Talk to an expert about your office"
-      },
-      "warehouses-logistics": {
-        "intro": "Know where everything is, from receiving to delivery.",
-        "themes": [
-          {
-            "key": "serve",
-            "items": [
-              { "name": "Barcode scanning", "short": "Track items by scan.", "detail": "Receive, move, and ship with accurate records.", "link": "/solutions" },
-              { "name": "Delivery tracking", "short": "Drivers and routes.", "detail": "See status and ETA for every shipment.", "link": "/solutions" },
-              { "name": "Customer portal", "short": "Clients track their orders.", "detail": "Reduce where-is-my-order calls.", "link": "/solutions" }
-            ]
-          },
-          {
-            "key": "customers",
-            "items": [
-              { "name": "Website & SEO", "short": "Win more shipping business.", "detail": "Rank for logistics services in your regions.", "link": "/solutions" },
-              { "name": "Quote requests", "short": "Capture leads online.", "detail": "Let shippers request rates from your site.", "link": "/solutions" }
-            ]
-          },
-          {
-            "key": "look",
-            "items": [
-              { "name": "Brand & fleet identity", "short": "Look professional.", "detail": "Logo, vehicle branding, and documents.", "link": "/solutions" },
-              { "name": "Digital signage", "short": "Warehouse screens.", "detail": "Show targets, safety messages, and status.", "link": "/solutions" }
-            ]
-          },
-          {
-            "key": "run",
-            "items": [
-              { "name": "Inventory management", "short": "Real stock levels.", "detail": "Always know what is in the warehouse.", "link": "/solutions" },
-              { "name": "Supplier portal", "short": "Coordinate with suppliers.", "detail": "Purchase orders, deliveries, and invoices shared.", "link": "/solutions" },
-              { "name": "Driver app", "short": "Simple mobile tool for drivers.", "detail": "Routes, delivery photos, and signatures.", "link": "/solutions" }
-            ]
-          },
-          {
-            "key": "numbers",
-            "items": [
-              { "name": "Warehouse dashboard", "short": "Stock in, stock out.", "detail": "Daily throughput and alerts at a glance.", "link": "/solutions" },
-              { "name": "Delivery reports", "short": "On-time performance.", "detail": "Track delays and success rates.", "link": "/solutions" }
-            ]
-          },
-          {
-            "key": "automate",
-            "items": [
-              { "name": "Stock alerts", "short": "Know before you run out.", "detail": "Automatic reorder notifications.", "link": "/solutions" },
-              { "name": "Status updates", "short": "Customers notified automatically.", "detail": "Shipped, out for delivery, delivered messages.", "link": "/solutions" },
-              { "name": "Ask ALA / chatbot", "short": "Answer delivery questions.", "detail": "Track orders and answer common queries.", "link": "/solutions" }
-            ]
-          }
-        ],
-        "bundle": {
-          "title": "A typical warehouse setup",
-          "description": "Barcode scanning + inventory dashboard + delivery tracking + supplier portal."
-        },
-        "cta": "Talk to an expert about your warehouse"
-      },
-      "retail-ecommerce": {
-        "intro": "Sell everywhere, keep stock straight, and bring buyers back.",
-        "themes": [
-          {
-            "key": "serve",
-            "items": [
-              { "name": "Online store", "short": "Your own e-commerce site.", "detail": "Product pages, cart, checkout, and payments.", "link": "/solutions" },
-              { "name": "POS & in-store sales", "short": "One system for all channels.", "detail": "Ring up sales in store with the same stock as online.", "link": "/solutions" },
-              { "name": "Marketplace integrations", "short": "Sell on other platforms.", "detail": "Sync stock and orders from Amazon, Trendyol, etc.", "link": "/solutions" }
-            ]
-          },
-          {
-            "key": "customers",
-            "items": [
-              { "name": "SEO & Google Shopping", "short": "Be found when buyers search.", "detail": "Rank for products and appear in shopping results.", "link": "/solutions" },
-              { "name": "Social & influencer ads", "short": "Reach new buyers.", "detail": "Instagram, TikTok, and Google campaigns.", "link": "/solutions" },
-              { "name": "Loyalty & email", "short": "Bring customers back.", "detail": "Points, offers, and abandoned-cart emails.", "link": "/solutions" }
-            ]
-          },
-          {
-            "key": "look",
-            "items": [
-              { "name": "Brand & packaging", "short": "A memorable unboxing.", "detail": "Logo, colors, and packaging design.", "link": "/solutions" },
-              { "name": "Product photography", "short": "Make products sell.", "detail": "Clean shots and lifestyle images.", "link": "/solutions" },
-              { "name": "3D product views", "short": "Show products from every angle.", "detail": "Interactive views for complex products.", "link": "/solutions" }
-            ]
-          },
-          {
-            "key": "run",
-            "items": [
-              { "name": "Stock sync", "short": "One truth across channels.", "detail": "Avoid overselling with live inventory.", "link": "/solutions" },
-              { "name": "Orders & shipping", "short": "Fulfill faster.", "detail": "Pick, pack, ship, and print labels in one flow.", "link": "/solutions" },
-              { "name": "Returns & refunds", "short": "Handle returns smoothly.", "detail": "Simple process for customers and staff.", "link": "/solutions" }
-            ]
-          },
-          {
-            "key": "numbers",
-            "items": [
-              { "name": "Sales dashboard", "short": "Revenue and best sellers.", "detail": "See what is selling and what is not.", "link": "/solutions" },
-              { "name": "Customer reports", "short": "Know your best buyers.", "detail": "Repeat rate, lifetime value, and trends.", "link": "/solutions" }
-            ]
-          },
-          {
-            "key": "automate",
-            "items": [
-              { "name": "Abandoned cart", "short": "Recover lost sales.", "detail": "Automatic reminders to complete the purchase.", "link": "/solutions" },
-              { "name": "Stock alerts", "short": "Reorder before you sell out.", "detail": "Notifications when products run low.", "link": "/solutions" },
-              { "name": "Ask ALA / chatbot", "short": "Answer product questions.", "detail": "Sizes, availability, and shipping info automatically.", "link": "/solutions" }
-            ]
-          }
-        ],
-        "bundle": {
-          "title": "A typical retail setup",
-          "description": "Online store + POS + stock sync + Google Shopping + abandoned-cart recovery."
-        },
-        "cta": "Talk to an expert about your shop"
-      },
-      "factories-manufacturing": {
-        "intro": "Track production, prevent downtime, and see performance by line or shift.",
-        "themes": [
-          {
-            "key": "serve",
-            "items": [
-              { "name": "Production tracking", "short": "See where orders stand.", "detail": "Work orders, stages, and completion status.", "link": "/solutions" },
-              { "name": "Machine monitoring", "short": "Know when machines need attention.", "detail": "Downtime alerts and utilization trends.", "link": "/solutions" },
-              { "name": "Quality checks", "short": "Record inspections.", "detail": "Digital checklists and defect tracking.", "link": "/solutions" }
-            ]
-          },
-          {
-            "key": "customers",
-            "items": [
-              { "name": "B2B portal", "short": "Let customers place orders.", "detail": "Pricing, orders, and delivery status shared.", "link": "/solutions" },
-              { "name": "Website & SEO", "short": "Win industrial buyers.", "detail": "Rank for capabilities and products.", "link": "/solutions" }
-            ]
-          },
-          {
-            "key": "look",
-            "items": [
-              { "name": "Brand & catalog", "short": "Professional industrial presence.", "detail": "Logo, product sheets, and facility visuals.", "link": "/solutions" },
-              { "name": "Digital signage", "short": "Factory floor screens.", "detail": "Safety, targets, and line status.", "link": "/solutions" }
-            ]
-          },
-          {
-            "key": "run",
-            "items": [
-              { "name": "Material tracking", "short": "From raw material to finished goods.", "detail": "Trace batches and manage inventory.", "link": "/solutions" },
-              { "name": "Maintenance scheduler", "short": "Prevent breakdowns.", "detail": "Planned maintenance with reminders.", "link": "/solutions" },
-              { "name": "Supplier orders", "short": "Coordinate purchasing.", "detail": "POs, deliveries, and invoices in one place.", "link": "/solutions" }
-            ]
-          },
-          {
-            "key": "numbers",
-            "items": [
-              { "name": "Production dashboard", "short": "Output and OEE.", "detail": "Real-time view of lines and shifts.", "link": "/solutions" },
-              { "name": "Shift reports", "short": "Compare shifts and lines.", "detail": "Find bottlenecks and top performers.", "link": "/solutions" }
-            ]
-          },
-          {
-            "key": "automate",
-            "items": [
-              { "name": "Maintenance alerts", "short": "Never miss a service.", "detail": "Automatic reminders based on time or usage.", "link": "/solutions" },
-              { "name": "Production alerts", "short": "Act on issues fast.", "detail": "Notify supervisors when a line stops or slows.", "link": "/solutions" },
-              { "name": "Ask ALA / chatbot", "short": "Answer operational questions.", "detail": "Shift info, procedures, and status on demand.", "link": "/solutions" }
-            ]
-          }
-        ],
-        "bundle": {
-          "title": "A typical factory setup",
-          "description": "Production tracking + machine monitoring + maintenance scheduler + production dashboard."
-        },
-        "cta": "Talk to an expert about your factory"
       }
     }
   },
@@ -423,806 +152,402 @@
         "intro": "Alles, was Ihr Restaurant oder Café braucht, von einem Partner.",
         "themes": [
           {
-            "key": "serve",
+            "title": "Aufträge annehmen & schneller bedienen",
+            "intro": "Alles, um Bestellungen anzunehmen und Essen schnell rauszubringen.",
             "items": [
-              { "name": "Digitale QR-Speisekarte", "short": "Gäste scannen die Karte.", "detail": "Gerichte, Preise und Fotos jederzeit aktualisieren. Kein App-Download nötig.", "link": "/solutions" },
-              { "name": "Online-Bestellung & Lieferung", "short": "Bestellungen auf der eigenen Seite.", "detail": "Behalten Sie mehr vom Umsatz und besitzen Sie die Kundenbeziehung.", "link": "/solutions" },
-              { "name": "Tischreservierungen", "short": "Buchungen online und per WhatsApp.", "detail": "Reduzieren Sie Ausfälle mit automatischen Erinnerungen.", "link": "/solutions" },
-              { "name": "Kasse & Küchenbildschirm", "short": "Bestellungen gehen direkt in die Küche.", "detail": "Schnellerer Service, weniger Fehler, zufriedeneres Personal.", "link": "/solutions" },
-              { "name": "WhatsApp-Bestellung & Chatbot", "short": "Gäste bestellen per WhatsApp.", "detail": "Beantworten Sie Fragen und nehmen Sie Bestellungen dort entgegen, wo Ihre Gäste schreiben.", "link": "/solutions" }
+              { "name": "Digitale QR-Speisekarte", "benefit": "Gäste scannen und sehen Ihre Karte.", "howItWorks": ["Wir legen einen QR-Code auf jeden Tisch.", "Gäste scannen mit dem Handy.", "Ihre Karte öffnet sich sofort — Speisen und Preise jederzeit ändern."] },
+              { "name": "Online-Bestellung & Lieferung", "benefit": "Bestellungen auf der eigenen Seite.", "howItWorks": ["Kunden bestellen über Ihre Website.", "Die Bestellung erreicht Küche und Personal.", "Sie erfüllen Abholung oder Lieferung — und behalten mehr vom Umsatz."] },
+              { "name": "Tischreservierungen", "benefit": "Buchungen online und per WhatsApp.", "howItWorks": ["Gäste wählen eine Zeit online oder per WhatsApp.", "Sie sehen alle Buchungen an einem Ort.", "Automatische Erinnerungen reduzieren Ausfälle."] },
+              { "name": "Kasse & Küchenbildschirm", "benefit": "Bestellungen gehen direkt in die Küche.", "howItWorks": ["Personal tippt die Bestellung ins POS.", "Sie erscheint sofort auf dem Küchenbildschirm.", "Die Küche kocht in Reihenfolge — weniger Fehler, schnellerer Service."] },
+              { "name": "WhatsApp-Bestellung & Chatbot", "benefit": "Kunden bestellen per WhatsApp.", "howItWorks": ["Kunden schreiben an Ihr WhatsApp.", "Der Chatbot zeigt die Karte und nimmt die Bestellung auf.", "Sie bestätigen und bereiten zu — häufige Fragen werden automatisch beantwortet."] }
             ]
           },
           {
-            "key": "customers",
+            "title": "Mehr Kunden gewinnen",
+            "intro": "Online gefunden werden und Kunden zurückholen.",
             "items": [
-              { "name": "Website", "short": "Eine schnelle mobile Seite.", "detail": "Speisekarte, Standort, Öffnungszeiten und Online-Bestellung an einem Ort.", "link": "/solutions" },
-              { "name": "Auf Google gefunden werden", "short": "Bei lokalen Suchen erscheinen.", "detail": "Wenn Menschen nach Restaurants in der Nähe suchen, finden Sie sie.", "link": "/solutions" },
-              { "name": "Social Media & Ads", "short": "Neue Gäste erreichen.", "detail": "Kampagnen auf Instagram, Google und TikTok, die Gäste anziehen.", "link": "/solutions" },
-              { "name": "Loyalty & Rewards", "short": "Gäste zurückbringen.", "detail": "Punkte, Angebote und Geburtstagsaktionen erhöhen die Besuche.", "link": "/solutions" },
-              { "name": "Bewertungen", "short": "Zufriedene Gäste zur Bewertung einladen.", "detail": "Bauen Sie Ihren Online-Ruf nach dem Besuch automatisch auf.", "link": "/solutions" }
+              { "name": "Website", "benefit": "Eine schnelle mobile Seite.", "howItWorks": ["Wir bauen eine Seite mit Karte, Zeiten, Standort und Bestellung.", "Sie lädt schnell auf Handys.", "Kunden finden, was sie brauchen, und bestellen oder buchen in Sekunden."] },
+              { "name": "Auf Google gefunden werden", "benefit": "Bei lokalen Suchen erscheinen.", "howItWorks": ["Wir richten Ihr Google-Unternehmensprofil und lokales SEO ein.", "Ihr Restaurant erscheint, wenn Leute in der Nähe suchen.", "Fotos, Zeiten und Buchungslinks sind immer aktuell."] },
+              { "name": "Social Media & Ads", "benefit": "Neue Gäste erreichen.", "howItWorks": ["Wir erstellen Kampagnen auf Instagram, Google und TikTok.", "Anzeigen zielen auf Menschen in Ihrer Nähe.", "Sie sehen, welche Kampagnen Gäste bringen."] },
+              { "name": "Loyalty & Rewards", "benefit": "Gäste zurückbringen.", "howItWorks": ["Kunden sammeln Punkte bei jedem Besuch.", "Automatische Angebote und Geburtstagsüberraschungen werden per Nachricht verschickt.", "Stammgäste kommen öfter."] },
+              { "name": "Bewertungen", "benefit": "Zufriedene Gäste zur Bewertung einladen.", "howItWorks": ["Nach dem Besuch erhalten Kunden eine freundliche Bewertungsanfrage.", "Bewertungen gehen an Google und andere Plattformen.", "Ihr Ruf wächst ohne manuelle Arbeit."] }
             ]
           },
           {
-            "key": "look",
+            "title": "Unvergesslich aussehen",
+            "intro": "Eine Marke, an die sich Kunden erinnern.",
             "items": [
-              { "name": "Logo & Branding", "short": "Ein Look, den man sich merkt.", "detail": "Einheitliche Farben, Schriften und Stimmung auf Speisekarte, Website und im Laden.", "link": "/solutions" },
-              { "name": "Speisekartengestaltung", "short": "Gedruckt und digital.", "detail": "Gestaltet, um Ihre besten Gerichte zu betonen und den Durchschnittsbon zu erhöhen.", "link": "/solutions" },
-              { "name": "Food-Fotografie & Video", "short": "Gerichte unwiderstehlich wirken lassen.", "detail": "Professionelle Aufnahmen für Speisekarte, Website und Social Media.", "link": "/solutions" },
-              { "name": "Digitale Beschilderung", "short": "Bildschirme im Geschäft.", "detail": "Werben Sie für Angebote und Menüs auf Bildschirmen, die auffallen.", "link": "/solutions" }
+              { "name": "Logo & Branding", "benefit": "Ein Look, den Kunden sich merken.", "howItWorks": ["Wir gestalten Ihr Logo, Farben und Markenstil.", "Derselbe Look wird auf Karte, Website und Beschilderung verwendet.", "Kunden erkennen Ihr Geschäft überall."] },
+              { "name": "Speisekartendesign", "benefit": "Gedruckte und digitale Karten.", "howItWorks": ["Wir gestalten Karten, die Ihre besten Gerichte hervorheben.", "Digitale Karten aktualisieren sich sofort.", "Gedruckte Karten passen zu Ihrer Marke."] },
+              { "name": "Food-Fotografie & Video", "benefit": "Gerichte unwiderstehlich machen.", "howItWorks": ["Wir fotografieren Ihr Essen, Getränke und Ihren Raum.", "Fotos und Videos kommen auf Karte, Website und Social Media.", "Kunden sehen, was sie bestellen, bevor sie ankommen."] },
+              { "name": "Digitale Beschilderung", "benefit": "Bildschirme im Geschäft.", "howItWorks": ["Bildschirme zeigen Karte, Angebote und Wartezeiten.", "Inhalte werden von einem Dashboard aktualisiert.", "Kunden bemerken Aktionen während sie warten."] }
             ]
           },
           {
-            "key": "run",
+            "title": "Den Tag reibungslos meistern",
+            "intro": "Weniger Chaos hinter den Kulissen.",
             "items": [
-              { "name": "Lager & Bestand", "short": "Wissen, was knapp wird.", "detail": "Verfolgen Sie Zutaten und Verbrauchsmaterial, damit Sie nie während des Services ausgehen.", "link": "/solutions" },
-              { "name": "Personal & Schichten", "short": "Dienstpläne an einem Ort.", "detail": "Schichten planen, Stunden erfassen und Rollen einfach verwalten.", "link": "/solutions" },
-              { "name": "Lieferanten & Einkauf", "short": "Bestellungen und Kosten im Blick.", "detail": "Sehen Sie, was Sie bestellt haben, von wem und wann es ankommt.", "link": "/solutions" },
-              { "name": "Buchhaltung & Rechnungen", "short": "Einfache Finanzunterlagen.", "detail": "Rechnungen und Zahlungen ohne Tabellen organisiert halten.", "link": "/solutions" }
+              { "name": "Lager & Bestand", "benefit": "Wissen, was knapp wird.", "howItWorks": ["Sie verfolgen Zutaten und Vorräte an einem Ort.", "Warnungen bei niedrigem Bestand sagen Ihnen, was nachzubestellen ist.", "Ihnen geht nie während des Service etwas aus."] },
+              { "name": "Personal & Schichten", "benefit": "Dienstpläne an einem Ort.", "howItWorks": ["Manager erstellen Schichten auf einem einfachen Kalender.", "Personal sieht seine Dienstpläne auf dem Handy.", "Tauschanfragen und Stunden werden automatisch verfolgt."] },
+              { "name": "Lieferanten & Einkauf", "benefit": "Bestellungen und Kosten verfolgen.", "howItWorks": ["Bestellungen gehen vom System an Lieferanten.", "Lieferungen werden mit Bestellungen abgeglichen.", "Sie sehen genau, was Sie bestellt haben und was es kostet."] },
+              { "name": "Buchhaltung & Rechnungen", "benefit": "Einfache Finanzunterlagen.", "howItWorks": ["Umsätze und Ausgaben fließen in Ihre Buchhaltung.", "Rechnungen werden automatisch erstellt.", "Berichte zeigen Gewinn- und Steuerübersichten."] }
             ]
           },
           {
-            "key": "numbers",
+            "title": "Die Zahlen im Blick",
+            "intro": "Wissen, was in Ihrem Geschäft passiert.",
             "items": [
-              { "name": "Umsatz-Dashboard", "short": "Der Umsatz heute auf einen Blick.", "detail": "Beste Gerichte, Stoßzeiten und Umsatztrends in Echtzeit.", "link": "/solutions" },
-              { "name": "Berichte", "short": "Täglich, wöchentlich, monatlich.", "detail": "Klare Berichte, die Ihnen helfen zu entscheiden, was Sie ändern.", "link": "/solutions" }
+              { "name": "Umsatz-Dashboard", "benefit": "Heutiger Umsatz auf einen Blick.", "howItWorks": ["Umsätze aus POS, Online und Lieferung speisen ein Dashboard.", "Sie sehen beste Gerichte, Stoßzeiten und Umsatz.", "Trends aktualisieren sich in Echtzeit."] },
+              { "name": "Berichte", "benefit": "Täglich, wöchentlich, monatlich.", "howItWorks": ["Berichte werden automatisch erstellt.", "Sie filtern nach Datum, Standort oder Kategorie.", "PDFs und Tabellen exportieren mit einem Klick."] }
             ]
           },
           {
-            "key": "automate",
+            "title": "Zeit durch Automatisierung sparen",
+            "intro": "Das System übernimmt wiederkehrende Aufgaben.",
             "items": [
-              { "name": "Erinnerungen", "short": "Buchungs- und Abholerinnerungen.", "detail": "Automatische WhatsApp-Nachrichten reduzieren Ausfälle und verpasste Abholungen.", "link": "/solutions" },
-              { "name": "Marketing-Automatisierung", "short": "Geburtstagsangebote und Win-Back-Nachrichten.", "detail": "Bleiben Sie präsent, ohne manuell zu arbeiten.", "link": "/solutions" },
-              { "name": "Ask ALA / Chatbot", "short": "Häufige Fragen beantworten.", "detail": "Öffnungszeiten, Menü und Standort automatisch beantwortet.", "link": "/solutions" }
+              { "name": "Erinnerungen", "benefit": "Buchungs- und Abholerinnerungen.", "howItWorks": ["Kunden erhalten automatische WhatsApp- oder SMS-Erinnerungen.", "Ausfälle und verpasste Abholungen gehen zurück.", "Personal verbringt keine Zeit damit, Gäste anzurufen."] },
+              { "name": "Marketing-Automatisierung", "benefit": "Geburtstagsangebote und Rückgewinnungsnachrichten.", "howItWorks": ["Kunden erhalten Angebote basierend auf ihrer Besuchshistorie.", "Nachrichten werden automatisch zu Geburtstagen oder nach Lücken gesendet.", "Sie bleiben im Gedächtnis ohne manuelle Arbeit."] },
+              { "name": "Ask ALA / Chatbot", "benefit": "Häufige Fragen beantworten.", "howItWorks": ["Kunden fragen nach Zeiten, Karte und Standort.", "Der Chatbot antwortet sofort.", "Komplexe Anfragen werden an Ihr Personal weitergeleitet."] }
             ]
           }
         ],
-        "bundle": {
-          "title": "Ein typisches Restaurant-Setup",
-          "description": "QR-Speisekarte + Online-Bestellung + Reservierungen + WhatsApp-Erinnerungen + Umsatz-Dashboard."
-        },
+        "bundle": { "title": "Ein typisches Restaurant-Setup", "description": "QR-Karte + Online-Bestellung + Reservierungen + WhatsApp-Erinnerungen + Umsatz-Dashboard." },
         "cta": "Mit einem Experten über Ihr Restaurant sprechen"
       },
       "hospitals-clinics": {
-        "intro": "Flüssiger Patientenfluss, ruhigere Mitarbeiter und klare Akten.",
+        "intro": "Flüssigerer Patientenfluss, ruhigeres Personal und klare Akten.",
         "themes": [
           {
-            "key": "serve",
+            "title": "Patientenzugang verbessern",
+            "intro": "Buchung und Besuch für Patienten einfacher machen.",
             "items": [
-              { "name": "Online-Termine", "short": "Patienten buchen selbst.", "detail": "24/7-Buchung, die zu Ihrem Plan passt und Anrufe reduziert.", "link": "/solutions" },
-              { "name": "Patientenportal", "short": "Ein Ort für alle Akten.", "detail": "Patienten sehen Besuche, Befunde und Nachrichten sicher.", "link": "/solutions" },
-              { "name": "Warteschlangenmanagement", "short": "Weniger Chaos im Wartezimmer.", "detail": "Patienten wissen, wann sie kommen und wie lange sie warten.", "link": "/solutions" },
-              { "name": "WhatsApp-Erinnerungen", "short": "Ausfälle reduzieren.", "detail": "Automatische Bestätigungen und Vorbereitungen per Nachricht.", "link": "/solutions" }
+              { "name": "Online-Termine", "benefit": "Patienten buchen selbst.", "howItWorks": ["Patienten sehen freie Termine auf Ihrer Website oder im Portal.", "Sie wählen Arzt, Zeit und Grund.", "Die Buchung synchronisiert sich mit Ihrem Klinik-Kalender."] },
+              { "name": "Patientenportal", "benefit": "Ein Ort für alle Akten.", "howItWorks": ["Patienten melden sich sicher an.", "Sie sehen Besuche, Ergebnisse und Nachrichten.", "Dokumente sind jederzeit verfügbar."] },
+              { "name": "Warteschlangen & Wartemanagement", "benefit": "Weniger Chaos im Wartezimmer.", "howItWorks": ["Patienten checken digital ein.", "Sie sehen ihre Position in der Warteschlange auf einem Bildschirm.", "Personal weiß, wer als nächstes kommt und wohin."] },
+              { "name": "WhatsApp-Erinnerungen", "benefit": "Ausfälle reduzieren.", "howItWorks": ["Patienten erhalten automatische Bestätigungen.", "Vorbereitungsanweisungen und Erinnerungen kommen per WhatsApp.", "Weniger Termine werden verpasst."] }
             ]
           },
           {
-            "key": "customers",
+            "title": "Mehr Patienten erreichen",
+            "intro": "Online gefunden und vertraut werden.",
             "items": [
-              { "name": "Website & Google-Präsenz", "short": "Lokal gefunden werden.", "detail": "Leistungen, Öffnungszeiten, Standort und Online-Buchung in den Suchergebnissen.", "link": "/solutions" },
-              { "name": "Bewertungen & Reputation", "short": "Patientenfeedback einholen.", "detail": "Senden Sie Bewertungsanfragen nach Terminen.", "link": "/solutions" }
+              { "name": "Website & Google-Präsenz", "benefit": "Lokal gefunden werden.", "howItWorks": ["Wir bauen eine Seite mit Leistungen, Zeiten und Buchung.", "Lokales SEO hilft Patienten, Sie auf Google zu finden.", "Alles ist mobilfreundlich und aktuell."] },
+              { "name": "Bewertungen & Reputation", "benefit": "Patientenfeedback einladen.", "howItWorks": ["Nach einem Besuch erhalten Patienten eine Bewertungsanfrage.", "Bewertungen gehen an Google und Gesundheitsplattformen.", "Ihr Ruf wächst natürlich."] }
             ]
           },
           {
-            "key": "look",
+            "title": "Professionell & vertrauenswürdig aussehen",
+            "intro": "Vertrauen auf den ersten Blick aufbauen.",
             "items": [
-              { "name": "Branding & Beschilderung", "short": "Vertrauen auf den ersten Blick.", "detail": "Ruhiges, sauberes Branding für Website, Wartebereich und Beschilderung.", "link": "/solutions" },
-              { "name": "Wegweiser-Bildschirme", "short": "Patienten den Weg zeigen.", "detail": "Digitale Verzeichnisse für Kliniken und Krankenhäuser.", "link": "/solutions" }
+              { "name": "Marke & Beschilderung", "benefit": "Vertrauen auf den ersten Blick.", "howItWorks": ["Wir erstellen eine ruhige, saubere Markenidentität.", "Derselbe Look zieht sich durch Website, Wartebereiche und Beschilderung.", "Patienten fühlen sich sicher, bevor sie ankommen."] },
+              { "name": "Wegweiser-Bildschirme", "benefit": "Patienten den Weg zeigen.", "howItWorks": ["Digitale Verzeichnisse zeigen Abteilungsstandorte.", "Bildschirme aktualisieren sich von einem System.", "Patienten navigieren durch die Klinik ohne Personal zu fragen."] }
             ]
           },
           {
-            "key": "run",
+            "title": "Die Klinik reibungslos führen",
+            "intro": "Personal, Räume und Akten organisieren.",
             "items": [
-              { "name": "Patientenakten", "short": "Alles an einem Ort.", "detail": "Sichere Akten, die Ihr Team in Sekunden findet.", "link": "/solutions" },
-              { "name": "Dienstplan", "short": "Ärzte, Pflege, Räume.", "detail": "Planen Sie Schichten und Räume ohne Konflikte.", "link": "/solutions" },
-              { "name": "Medizinisches Lager", "short": "Verbrauchsmaterial im Blick.", "detail": "Kennen Sie Bestände für Verbrauchsmaterial und Medikamente.", "link": "/solutions" }
+              { "name": "Patientenakten", "benefit": "Alles an einem Ort.", "howItWorks": ["Personal trägt Notizen in eine sichere digitale Akte ein.", "Akten sind nach Patient oder Besuch durchsuchbar.", "Nur autorisiertes Personal kann darauf zugreifen."] },
+              { "name": "Dienstplanung", "benefit": "Ärzte, Pflege, Räume.", "howItWorks": ["Manager planen Ärzte, Pflege und Räume auf einem Tool.", "Konflikte werden automatisch markiert.", "Personal sieht seine Schichten auf dem Handy."] },
+              { "name": "Medizinisches Inventar", "benefit": "Vorräte verfolgen.", "howItWorks": ["Sie verfolgen Verbrauchsmaterialien und Medikamente in Echtzeit.", "Warnungen sagen Ihnen, wenn der Bestand niedrig ist.", "Bestellungen gehen an Lieferanten, bevor Ihnen etwas ausgeht."] }
             ]
           },
           {
-            "key": "numbers",
+            "title": "Die Zahlen im Blick",
+            "intro": "Entscheidungen mit klaren Daten treffen.",
             "items": [
-              { "name": "Klinik-Dashboard", "short": "Termine, Ausfälle, Umsatz.", "detail": "Tägliche und wöchentliche Ansichten für Manager.", "link": "/solutions" },
-              { "name": "Arzt- & Serviceberichte", "short": "Leistung nach Anbieter.", "detail": "Sehen Sie Arbeitsbelastung und Ergebnistrends klar.", "link": "/solutions" }
+              { "name": "Klinik-Dashboard", "benefit": "Termine, Ausfälle, Umsatz.", "howItWorks": ["Tägliche Termine und Ausfälle speisen das Dashboard.", "Umsatz und Patientenvolumen aktualisieren sich automatisch.", "Manager sehen Trends auf einen Blick."] },
+              { "name": "Arzt- & Leistungsberichte", "benefit": "Leistung nach Anbieter.", "howItWorks": ["Berichte zeigen Arbeitslast und Ergebnisse nach Arzt oder Leistung.", "Sie filtern nach Datum, Standort oder Anbieter.", "Exportieren und mit Management teilen."] }
             ]
           },
           {
-            "key": "automate",
+            "title": "Zeit durch Automatisierung sparen",
+            "intro": "Patienten und Personal können sich auf die Versorgung konzentrieren.",
             "items": [
-              { "name": "Terminerinnerungen", "short": "Weniger verpasste Besuche.", "detail": "Automatische SMS- oder WhatsApp-Erinnerungen.", "link": "/solutions" },
-              { "name": "Follow-up-Nachrichten", "short": "Die Betreuung geht weiter.", "detail": "Automatische Anweisungen und Nachsorge-Nachrichten.", "link": "/solutions" },
-              { "name": "Ask ALA / Chatbot", "short": "Häufige Fragen beantworten.", "detail": "Öffnungszeiten, Leistungen und Buchung automatisch.", "link": "/solutions" }
+              { "name": "Terminerinnerungen", "benefit": "Weniger verpasste Besuche.", "howItWorks": ["Automatische SMS- oder WhatsApp-Erinnerungen gehen vor jedem Besuch raus.", "Patienten bestätigen oder verschieben mit einer Antwort.", "Personal verbringt weniger Zeit am Telefon."] },
+              { "name": "Nachsorge-Nachrichten", "benefit": "Versorgung geht nach dem Besuch weiter.", "howItWorks": ["Nach einem Besuch erhalten Patienten Anweisungen und Check-ins.", "Nachrichten werden automatisch gesendet.", "Personal folgt nur bei Bedarf nach."] },
+              { "name": "Ask ALA / Chatbot", "benefit": "Häufige Fragen beantworten.", "howItWorks": ["Patienten fragen nach Zeiten, Leistungen und Buchung.", "Der Chatbot antwortet sofort.", "Komplexe Fragen werden an Ihr Team weitergeleitet."] }
             ]
           }
         ],
-        "bundle": {
-          "title": "Ein typisches Klinik-Setup",
-          "description": "Online-Termine + Patientenportal + WhatsApp-Erinnerungen + Klinik-Dashboard."
-        },
+        "bundle": { "title": "Ein typisches Klinik-Setup", "description": "Online-Termine + Patientenportal + WhatsApp-Erinnerungen + Klinik-Dashboard." },
         "cta": "Mit einem Experten über Ihre Klinik sprechen"
-      },
-      "schools-training": {
-        "intro": "Weniger Verwaltung, klarere Kommunikation und zufriedenere Familien.",
-        "themes": [
-          {
-            "key": "serve",
-            "items": [
-              { "name": "Online-Anmeldung", "short": "Online bewerben und anmelden.", "detail": "Familien reichen Formulare und Unterlagen von jedem Gerät ein.", "link": "/solutions" },
-              { "name": "Schüler- & Elternportal", "short": "Ein Ort für alles.", "detail": "Stundenpläne, Noten, Nachrichten und Zahlungen in einem Login.", "link": "/solutions" },
-              { "name": "Kurskatalog", "short": "Kurse zeigen und verkaufen.", "detail": "Veröffentlichen Sie Pläne, Beschreibungen und Verfügbarkeiten.", "link": "/solutions" }
-            ]
-          },
-          {
-            "key": "customers",
-            "items": [
-              { "name": "Website & SEO", "short": "Von Eltern gefunden werden.", "detail": "Klare Informationen, die in der lokalen Suche ranken.", "link": "/solutions" },
-              { "name": "Social Media & Ads", "short": "Neue Familien erreichen.", "detail": "Werben Sie für Tage der offenen Tür und Anmeldungen dort, wo Eltern aktiv sind.", "link": "/solutions" }
-            ]
-          },
-          {
-            "key": "look",
-            "items": [
-              { "name": "Branding & Prospekt", "short": "Ein Look, dem Familien vertrauen.", "detail": "Professionelles Branding für Print- und digitale Materialien.", "link": "/solutions" },
-              { "name": "Fotografie & Video", "short": "Zeigen Sie Ihre Schule.", "detail": "Bilder und Rundgänge für Website und Social Media.", "link": "/solutions" }
-            ]
-          },
-          {
-            "key": "run",
-            "items": [
-              { "name": "Anwesenheitsverfolgung", "short": "Wer ist anwesend.", "detail": "Einfache Erfassung und Berichte für Kurse und Veranstaltungen.", "link": "/solutions" },
-              { "name": "Zahlungen & Rechnungen", "short": "Gebühren pünktlich einziehen.", "detail": "Online-Zahlungen mit Erinnerungen und Quittungen.", "link": "/solutions" },
-              { "name": "Personal & Räume", "short": "Lehrer und Räume planen.", "detail": "Vermeiden Sie Doppelbuchungen und halten Sie Kurse organisiert.", "link": "/solutions" }
-            ]
-          },
-          {
-            "key": "numbers",
-            "items": [
-              { "name": "Ergebnis-Dashboard", "short": "Noten und Fortschritt.", "detail": "Klare Ansichten für Lehrer, Schüler und Eltern.", "link": "/solutions" },
-              { "name": "Anmeldeberichte", "short": "Wer ist wo angemeldet.", "detail": "Kapazität und Umsatz pro Kurs verfolgen.", "link": "/solutions" }
-            ]
-          },
-          {
-            "key": "automate",
-            "items": [
-              { "name": "Gebührenerinnerungen", "short": "Automatische Zahlungsaufforderungen.", "detail": "Reduzieren Sie verspätete Zahlungen, ohne Familien zu jagen.", "link": "/solutions" },
-              { "name": "Eltern-Updates", "short": "Nachrichten und Warnungen.", "detail": "Senden Sie Kurs-Updates, Veranstaltungen und Fehlzeiten automatisch.", "link": "/solutions" },
-              { "name": "Ask ALA / Chatbot", "short": "Häufige Fragen beantworten.", "detail": "Öffnungszeiten, Gebühren und Zulassung automatisch.", "link": "/solutions" }
-            ]
-          }
-        ],
-        "bundle": {
-          "title": "Ein typisches Schul-Setup",
-          "description": "Elternportal + Online-Anmeldung + Anwesenheit + Zahlungen + Ergebnis-Dashboard."
-        },
-        "cta": "Mit einem Experten über Ihre Schule sprechen"
-      },
-      "companies-offices": {
-        "intro": "Ein Partner, der Kunden, Mitarbeiter und den Tagesablauf organisiert.",
-        "themes": [
-          {
-            "key": "serve",
-            "items": [
-              { "name": "CRM", "short": "Jeder Kunde an einem Ort.", "detail": "Verfolgen Sie Leads, Deals und Kommunikationshistorie.", "link": "/solutions" },
-              { "name": "Kundenportal", "short": "Kunden helfen sich selbst.", "detail": "Rechnungen, Tickets und Dokumente an einem sicheren Ort.", "link": "/solutions" },
-              { "name": "Helpdesk & Tickets", "short": "Support-Anfragen nachverfolgen.", "detail": "Nichts fällt durch die Lücken.", "link": "/solutions" }
-            ]
-          },
-          {
-            "key": "customers",
-            "items": [
-              { "name": "Website & SEO", "short": "Von Käufern gefunden werden.", "detail": "Klare Service-Seiten, die in der Suche ranken.", "link": "/solutions" },
-              { "name": "LinkedIn & Google Ads", "short": "Entscheider erreichen.", "detail": "Gezielte Kampagnen für B2B-Dienstleistungen.", "link": "/solutions" }
-            ]
-          },
-          {
-            "key": "look",
-            "items": [
-              { "name": "Branding & Identität", "short": "Ein professioneller Look.", "detail": "Logo, Vorlagen und Guidelines, die mitwachsen.", "link": "/solutions" },
-              { "name": "Pitch-Decks", "short": "Mehr Angebote gewinnen.", "detail": "Gestaltete Präsentationen und PDFs.", "link": "/solutions" }
-            ]
-          },
-          {
-            "key": "run",
-            "items": [
-              { "name": "HR & Genehmigungen", "short": "Menschen und Anträge verwalten.", "detail": "Urlaub, Spesen und Genehmigungen in einem Workflow.", "link": "/solutions" },
-              { "name": "Interne Wissensdatenbank", "short": "Antworten schnell finden.", "detail": "Abläufe, Richtlinien und Anleitungen an einem Ort.", "link": "/solutions" },
-              { "name": "Projektverfolgung", "short": "Sehen Sie, was läuft.", "detail": "Aufgaben, Fristen und Verantwortliche ohne Chaos.", "link": "/solutions" }
-            ]
-          },
-          {
-            "key": "numbers",
-            "items": [
-              { "name": "Vertriebs-Dashboard", "short": "Pipeline und Umsatz.", "detail": "Wissen Sie, wo jeder Deal steht.", "link": "/solutions" },
-              { "name": "Team-Auslastung", "short": "Arbeit gleichmäßig verteilen.", "detail": "Sehen Sie, wer überlastet und wer verfügbar ist.", "link": "/solutions" }
-            ]
-          },
-          {
-            "key": "automate",
-            "items": [
-              { "name": "Genehmigungs-Workflows", "short": "Anträge laufen automatisch.", "detail": "Spesen und Urlaub an die richtige Person weiterleiten.", "link": "/solutions" },
-              { "name": "Benachrichtigungen", "short": "Alle informiert halten.", "detail": "Updates per Slack, E-Mail oder WhatsApp.", "link": "/solutions" },
-              { "name": "Ask ALA / Chatbot", "short": "Interne Fragen beantworten.", "detail": "IT, HR und Richtlinien automatisch beantwortet.", "link": "/solutions" }
-            ]
-          }
-        ],
-        "bundle": {
-          "title": "Ein typisches Büro-Setup",
-          "description": "CRM + HR-Genehmigungen + Projektverfolgung + Vertriebs-Dashboard + Wissensdatenbank."
-        },
-        "cta": "Mit einem Experten über Ihr Büro sprechen"
-      },
-      "warehouses-logistics": {
-        "intro": "Wissen, wo alles ist – vom Wareneingang bis zur Lieferung.",
-        "themes": [
-          {
-            "key": "serve",
-            "items": [
-              { "name": "Barcode-Scanning", "short": "Artikel per Scan verfolgen.", "detail": "Wareneingang, Umlagerung und Versand mit genauen Aufzeichnungen.", "link": "/solutions" },
-              { "name": "Lieferverfolgung", "short": "Fahrer und Routen.", "detail": "Status und ETA für jede Sendung sehen.", "link": "/solutions" },
-              { "name": "Kundenportal", "short": "Kunden verfolgen ihre Sendungen.", "detail": "Reduzieren Sie Wo-ist-meine-Bestellung-Anrufe.", "link": "/solutions" }
-            ]
-          },
-          {
-            "key": "customers",
-            "items": [
-              { "name": "Website & SEO", "short": "Mehr Versandaufträge gewinnen.", "detail": "Für Logistikdienstleistungen in Ihren Regionen ranken.", "link": "/solutions" },
-              { "name": "Angebotsanfragen", "short": "Leads online erfassen.", "detail": "Lassen Sie Absender Preise über Ihre Website anfragen.", "link": "/solutions" }
-            ]
-          },
-          {
-            "key": "look",
-            "items": [
-              { "name": "Branding & Fuhrpark-Design", "short": "Professionell auftreten.", "detail": "Logo, Fahrzeugbeschriftung und Dokumente.", "link": "/solutions" },
-              { "name": "Digitale Beschilderung", "short": "Bildschirme im Lager.", "detail": "Zeigen Sie Ziele, Sicherheitshinweise und Status an.", "link": "/solutions" }
-            ]
-          },
-          {
-            "key": "run",
-            "items": [
-              { "name": "Lagerverwaltung", "short": "Echte Bestände.", "detail": "Wissen Sie jederzeit, was im Lager ist.", "link": "/solutions" },
-              { "name": "Lieferantenportal", "short": "Mit Lieferanten abstimmen.", "detail": "Bestellungen, Lieferungen und Rechnungen geteilt.", "link": "/solutions" },
-              { "name": "Fahrer-App", "short": "Einfaches Mobile-Tool für Fahrer.", "detail": "Routen, Lieferfotos und Unterschriften.", "link": "/solutions" }
-            ]
-          },
-          {
-            "key": "numbers",
-            "items": [
-              { "name": "Lager-Dashboard", "short": "Zugang und Abgang.", "detail": "Täglicher Durchsatz und Warnungen auf einen Blick.", "link": "/solutions" },
-              { "name": "Lieferberichte", "short": "Pünktlichkeitsleistung.", "detail": "Verfolgen Sie Verzögerungen und Erfolgsraten.", "link": "/solutions" }
-            ]
-          },
-          {
-            "key": "automate",
-            "items": [
-              { "name": "Bestandswarnungen", "short": "Wissen, bevor es ausgeht.", "detail": "Automatische Nachbestell-Benachrichtigungen.", "link": "/solutions" },
-              { "name": "Status-Updates", "short": "Kunden automatisch informieren.", "detail": "Versandt, unterwegs, geliefert – automatisch.", "link": "/solutions" },
-              { "name": "Ask ALA / Chatbot", "short": "Lieferfragen beantworten.", "detail": "Sendungen verfolgen und häufige Fragen beantworten.", "link": "/solutions" }
-            ]
-          }
-        ],
-        "bundle": {
-          "title": "Ein typisches Lager-Setup",
-          "description": "Barcode-Scanning + Lager-Dashboard + Lieferverfolgung + Lieferantenportal."
-        },
-        "cta": "Mit einem Experten über Ihr Lager sprechen"
-      },
-      "retail-ecommerce": {
-        "intro": "Überall verkaufen, Bestände im Griff behalten und Käufer zurückholen.",
-        "themes": [
-          {
-            "key": "serve",
-            "items": [
-              { "name": "Online-Shop", "short": "Eigene E-Commerce-Seite.", "detail": "Produktseiten, Warenkorb, Checkout und Zahlungen.", "link": "/solutions" },
-              { "name": "POS & Ladenverkauf", "short": "Ein System für alle Kanäle.", "detail": "Ladenverkauf mit demselben Bestand wie online.", "link": "/solutions" },
-              { "name": "Marktplatz-Integrationen", "short": "Auf anderen Plattformen verkaufen.", "detail": "Bestand und Aufträge mit Amazon, Trendyol etc. synchronisieren.", "link": "/solutions" }
-            ]
-          },
-          {
-            "key": "customers",
-            "items": [
-              { "name": "SEO & Google Shopping", "short": "Gefunden werden, wenn Käufer suchen.", "detail": "Für Produkte ranken und in Shopping-Ergebnissen erscheinen.", "link": "/solutions" },
-              { "name": "Social & Influencer Ads", "short": "Neue Käufer erreichen.", "detail": "Instagram-, TikTok- und Google-Kampagnen.", "link": "/solutions" },
-              { "name": "Loyalty & E-Mail", "short": "Kunden zurückbringen.", "detail": "Punkte, Angebote und E-Mails für verlassene Warenkörbe.", "link": "/solutions" }
-            ]
-          },
-          {
-            "key": "look",
-            "items": [
-              { "name": "Branding & Verpackung", "short": "Ein unvergessliches Auspacken.", "detail": "Logo, Farben und Verpackungsdesign.", "link": "/solutions" },
-              { "name": "Produktfotografie", "short": "Produkte verkaufen lassen.", "detail": "Saubere Aufnahmen und Lifestyle-Bilder.", "link": "/solutions" },
-              { "name": "3D-Produktansichten", "short": "Produkte aus jedem Winkel zeigen.", "detail": "Interaktive Ansichten für komplexe Produkte.", "link": "/solutions" }
-            ]
-          },
-          {
-            "key": "run",
-            "items": [
-              { "name": "Bestandsabgleich", "short": "Eine Wahrheit über alle Kanäle.", "detail": "Überverkäufe mit Live-Bestand vermeiden.", "link": "/solutions" },
-              { "name": "Aufträge & Versand", "short": "Schneller erfüllen.", "detail": "Kommissionieren, verpacken, versenden und Etiketten drucken in einem Flow.", "link": "/solutions" },
-              { "name": "Retouren & Erstattungen", "short": "Retouren reibungslos abwickeln.", "detail": "Einfacher Prozess für Kunden und Mitarbeiter.", "link": "/solutions" }
-            ]
-          },
-          {
-            "key": "numbers",
-            "items": [
-              { "name": "Verkaufs-Dashboard", "short": "Umsatz und Bestseller.", "detail": "Sehen Sie, was läuft und was nicht.", "link": "/solutions" },
-              { "name": "Kundenberichte", "short": "Kennen Sie Ihre besten Käufer.", "detail": "Wiederholungsrate, Lebenszeitwert und Trends.", "link": "/solutions" }
-            ]
-          },
-          {
-            "key": "automate",
-            "items": [
-              { "name": "Verlassener Warenkorb", "short": "Verlorene Verkäufe zurückholen.", "detail": "Automatische Erinnerungen zum Abschluss des Kaufs.", "link": "/solutions" },
-              { "name": "Bestandswarnungen", "short": "Vor dem Ausverkauf nachbestellen.", "detail": "Benachrichtigungen, wenn Produkte knapp werden.", "link": "/solutions" },
-              { "name": "Ask ALA / Chatbot", "short": "Produktfragen beantworten.", "detail": "Größen, Verfügbarkeit und Versandinfo automatisch.", "link": "/solutions" }
-            ]
-          }
-        ],
-        "bundle": {
-          "title": "Ein typisches Retail-Setup",
-          "description": "Online-Shop + POS + Bestandsabgleich + Google Shopping + Verlassener-Warenkorb-Recovery."
-        },
-        "cta": "Mit einem Experten über Ihren Shop sprechen"
-      },
-      "factories-manufacturing": {
-        "intro": "Produktion verfolgen, Ausfallzeiten vermeiden und Leistung pro Linie oder Schicht sehen.",
-        "themes": [
-          {
-            "key": "serve",
-            "items": [
-              { "name": "Produktionsverfolgung", "short": "Sehen Sie, wo Aufträge stehen.", "detail": "Fertigungsaufträge, Stufen und Fertigungsstatus.", "link": "/solutions" },
-              { "name": "Maschinenüberwachung", "short": "Wissen, wann Maschinen Aufmerksamkeit brauchen.", "detail": "Ausfallwarnungen und Auslastungstrends.", "link": "/solutions" },
-              { "name": "Qualitätskontrollen", "short": "Prüfungen protokollieren.", "detail": "Digitale Checklisten und Fehlerverfolgung.", "link": "/solutions" }
-            ]
-          },
-          {
-            "key": "customers",
-            "items": [
-              { "name": "B2B-Portal", "short": "Kunden bestellen selbst.", "detail": "Preise, Aufträge und Lieferstatus geteilt.", "link": "/solutions" },
-              { "name": "Website & SEO", "short": "Industrielle Käufer gewinnen.", "detail": "Für Fähigkeiten und Produkte ranken.", "link": "/solutions" }
-            ]
-          },
-          {
-            "key": "look",
-            "items": [
-              { "name": "Branding & Katalog", "short": "Professioneller industrieller Auftritt.", "detail": "Logo, Produktdatenblätter und Anlagenbilder.", "link": "/solutions" },
-              { "name": "Digitale Beschilderung", "short": "Bildschirme auf der Fabriketage.", "detail": "Sicherheit, Ziele und Linienstatus.", "link": "/solutions" }
-            ]
-          },
-          {
-            "key": "run",
-            "items": [
-              { "name": "Materialverfolgung", "short": "Von Rohmaterial bis Fertigprodukt.", "detail": "Chargen rückverfolgen und Bestand verwalten.", "link": "/solutions" },
-              { "name": "Wartungsplaner", "short": "Ausfälle verhindern.", "detail": "Geplante Wartung mit Erinnerungen.", "link": "/solutions" },
-              { "name": "Lieferantenbestellungen", "short": "Einkauf koordinieren.", "detail": "Bestellungen, Lieferungen und Rechnungen an einem Ort.", "link": "/solutions" }
-            ]
-          },
-          {
-            "key": "numbers",
-            "items": [
-              { "name": "Produktions-Dashboard", "short": "Output und OEE.", "detail": "Echtzeit-Ansicht von Linien und Schichten.", "link": "/solutions" },
-              { "name": "Schichtberichte", "short": "Schichten und Linien vergleichen.", "detail": "Engpässe und Top-Performer finden.", "link": "/solutions" }
-            ]
-          },
-          {
-            "key": "automate",
-            "items": [
-              { "name": "Wartungswarnungen", "short": "Keine Wartung verpassen.", "detail": "Automatische Erinnerungen nach Zeit oder Nutzung.", "link": "/solutions" },
-              { "name": "Produktionswarnungen", "short": "Schnell auf Probleme reagieren.", "detail": "Benachrichtigen Sie Vorgesetzte, wenn eine Linie stoppt oder langsamer wird.", "link": "/solutions" },
-              { "name": "Ask ALA / Chatbot", "short": "Betriebliche Fragen beantworten.", "detail": "Schichtinfo, Abläufe und Status auf Anfrage.", "link": "/solutions" }
-            ]
-          }
-        ],
-        "bundle": {
-          "title": "Ein typisches Fabrik-Setup",
-          "description": "Produktionsverfolgung + Maschinenüberwachung + Wartungsplaner + Produktions-Dashboard."
-        },
-        "cta": "Mit einem Experten über Ihre Fabrik sprechen"
       }
     }
   },
   "tr": {
     "learnMore": "Daha fazla bilgi",
     "themeTitles": {
-      "serve": "Sipariş alın & daha hızlı hizmet edin",
-      "customers": "Daha fazla müşteri kazanın",
-      "look": "Akılda kalın",
-      "run": "Günü sorunsuz yönetin",
-      "numbers": "Rakamlarınızı görün",
-      "automate": "Otomasyonla zaman kazanın"
+      "serve": "Sipariş al ve daha hızlı servis et",
+      "customers": "Daha fazla müşteri kazan",
+      "look": "Unutulmaz görün",
+      "run": "Günü sorunsuz geçir",
+      "numbers": "Rakamları gör",
+      "automate": "Otomasyonla zaman kazan"
     },
     "catalog": {
       "restaurants-cafes": {
-        "intro": "Restoranınızın veya kafenizin ihtiyacı olan her şey, tek iş ortağından.",
+        "intro": "Restoranınızın veya kafenizin ihtiyacı olan her şey, tek bir partnerden.",
         "themes": [
           {
-            "key": "serve",
+            "title": "Sipariş al ve daha hızlı servis et",
+            "intro": "Sipariş almak ve yemeği hızlı çıkarmak için her şey.",
             "items": [
-              { "name": "Dijital QR menü", "short": "Müşteriler tarar ve menüyü görür.", "detail": "Yemekleri, fiyatları ve fotoğrafları istediğiniz zaman güncelleyin. Uygulama indirmeye gerek yok.", "link": "/solutions" },
-              { "name": "Online sipariş & teslimat", "short": "Kendi sitenizden sipariş alın.", "detail": "Her satıştan daha fazla pay alın ve müşteri ilişkisini siz yönetin.", "link": "/solutions" },
-              { "name": "Masa rezervasyonları", "short": "Web ve WhatsApp'tan rezervasyon.", "detail": "Otomatik hatırlatmalarla iptalleri azaltın.", "link": "/solutions" },
-              { "name": "POS & mutfak ekranı", "short": "Siparişler doğrudan mutfağa gider.", "detail": "Daha hızlı hizmet, daha az hata, daha mutlu personel.", "link": "/solutions" },
-              { "name": "WhatsApp sipariş & chatbot", "short": "Müşteriler WhatsApp'tan sipariş verir.", "detail": "Soruları yanıtlayın ve siparişleri müşterilerinizin zaten yazıştığı yerden alın.", "link": "/solutions" }
+              { "name": "Dijital QR menü", "benefit": "Müşteriler tarar ve menünüzü görür.", "howItWorks": ["Her masaya bir QR kod koyarız.", "Misafirler telefonlarıyla tarar.", "Menünüz anında açılır — ürünleri ve fiyatları istediğiniz zaman değiştirin."] },
+              { "name": "Online sipariş ve teslimat", "benefit": "Kendi sitenizden sipariş alın.", "howItWorks": ["Müşteriler web sitenizden sipariş verir.", "Sipariş mutfağınıza ve personelinize ulaşır.", "Paket servis veya teslimat için hazırlarsınız — ve daha fazla parayı siz tutarsınız."] },
+              { "name": "Masa rezervasyonları", "benefit": "Online ve WhatsApp'tan rezervasyonlar.", "howItWorks": ["Misafirler online veya WhatsApp'tan saat seçer.", "Tüm rezervasyonları tek bir yerde görürsünüz.", "Otomatik hatırlatmalar no-show'ları azaltır."] },
+              { "name": "POS ve mutfak ekranı", "benefit": "Siparişler doğrudan mutfağa gider.", "howItWorks": ["Personel siparişi POS'a yazar.", "Anında mutfak ekranında görünür.", "Mutfak sırayla pişirir — daha az hata, daha hızlı servis."] },
+              { "name": "WhatsApp sipariş ve chatbot", "benefit": "Müşteriler WhatsApp'tan sipariş verir.", "howItWorks": ["Müşteriler WhatsApp'ınıza mesaj atar.", "Chatbot menüyü gösterir ve siparişi alır.", "Siz onaylar ve hazırlarsınız — yaygın sorular otomatik yanıtlanır."] }
             ]
           },
           {
-            "key": "customers",
+            "title": "Daha fazla müşteri kazan",
+            "intro": "Online bulun ve müşterileri geri getir.",
             "items": [
-              { "name": "Web sitesi", "short": "Hızlı, mobil uyumlu site.", "detail": "Menü, konum, çalışma saatleri ve online sipariş tek yerde.", "link": "/solutions" },
-              { "name": "Google'da bulunmak", "short": "Yerel aramalarda görünün.", "detail": "İnsanlar yakındaki restoranları aradığında işletmeniz çıksın.", "link": "/solutions" },
-              { "name": "Sosyal medya & reklamlar", "short": "Yeni müşterilere ulaşın.", "detail": "Instagram, Google ve TikTok'ta müşteri getiren kampanyalar.", "link": "/solutions" },
-              { "name": "Sadakat & ödüller", "short": "Müşterileri geri getirin.", "detail": "Puanlar, teklifler ve doğum günü sürprizleri ziyaretleri artırır.", "link": "/solutions" },
-              { "name": "Değerlendirmeler", "short": "Memnun misafirleri yorum yapmaya davet edin.", "detail": "Ziyaret sonrası online itibarınızı otomatik olarak oluşturun.", "link": "/solutions" }
+              { "name": "Web sitesi", "benefit": "Hızlı, mobil bir site.", "howItWorks": ["Menünüz, saatleriniz, konumunuz ve siparişle bir site kurarız.", "Telefonlarda hızlı yüklenir.", "Müşteriler ihtiyaç duyduklarını bulur ve saniyeler içinde sipariş verir veya rezervasyon yapar."] },
+              { "name": "Google'da bulun", "benefit": "Yerel aramalarda görün.", "howItWorks": ["Google İşletme profilinizi ve yerel SEO'yu kurarız.", "Restoranınız insanlar yakında aradığında görünür.", "Fotoğraflar, saatler ve rezervasyon bağlantıları her zaman günceldir."] },
+              { "name": "Sosyal medya ve reklamlar", "benefit": "Yeni müşterilere ulaş.", "howItWorks": ["Instagram, Google ve TikTok'ta kampanyalar oluştururuz.", "Reklamlar konumunuza yakın insanları hedefler.", "Hangi kampanyaların misafir getirdiğini görürsünüz."] },
+              { "name": "Sadakat ve ödüller", "benefit": "Müşterileri geri getir.", "howItWorks": ["Müşteriler her ziyarette puan kazanır.", "Otomatik teklifler ve doğum günü sürprizleri mesajla gönderilir.", "Düzenli müşteriler daha sık gelir."] },
+              { "name": "Yorumlar", "benefit": "Mutlu misafirleri yorum yapmaya davet et.", "howItWorks": ["Ziyaretten sonra müşteriler arkadaşça bir yorum isteği alır.", "Yorumlar Google ve diğer platformlara gider.", "İtibarınız manuel çalışma olmadan büyür."] }
             ]
           },
           {
-            "key": "look",
+            "title": "Unutulmaz görün",
+            "intro": "Müşterilerin hatırladığı bir marka.",
             "items": [
-              { "name": "Logo & marka", "short": "Akılda kalan bir görünüm.", "detail": "Menü, site ve mağazada tutarlı renkler, yazı tipleri ve his.", "link": "/solutions" },
-              { "name": "Menü tasarımı", "short": "Baskılı ve dijital menüler.", "detail": "En iyi yemeklerinizi öne çıkararak ortalama sipariş tutarını artırmak için tasarlanır.", "link": "/solutions" },
-              { "name": "Yemek fotoğrafçılığı & video", "short": "Yemekleri karşı konulmaz gösterin.", "detail": "Menü, web sitesi ve sosyal medya için profesyonel çekimler.", "link": "/solutions" },
-              { "name": "Dijital tabela", "short": "Mağaza içi ekranlar.", "detail": "Müşterilerin dikkatini çeken ekranlarda teklif ve menüler.", "link": "/solutions" }
+              { "name": "Logo ve marka", "benefit": "Müşterilerin hatırladığı bir görünüm.", "howItWorks": ["Logonuzu, renklerinizi ve marka stilinizi tasarlarız.", "Aynı görünüm menü, site ve tabelalarda kullanılır.", "Müşteriler işletmenizi her yerde tanır."] },
+              { "name": "Menü tasarımı", "benefit": "Baskılı ve dijital menüler.", "howItWorks": ["En iyi yemeklerinizi öne çıkaran menüler tasarlarız.", "Dijital menüler anında güncellenir.", "Baskılı menüler markanıza uyar."] },
+              { "name": "Yemek fotoğrafçılığı ve video", "benefit": "Yemekleri cazip hale getir.", "howItWorks": ["Yemeklerinizi, içeceklerinizi ve alanınızı çekeriz.", "Fotoğraflar ve videolar menü, web sitesi ve sosyal medyada kullanılır.", "Müşteriler gelmeden önce ne sipariş ettiklerini görür."] },
+              { "name": "Dijital tabela", "benefit": "Mağaza içi ekranlar.", "howItWorks": ["Ekranlar menünüzü, tekliflerinizi ve bekleme sürelerini gösterir.", "İçerik tek bir panodan güncellenir.", "Müşteriler beklerken promosyonları fark eder."] }
             ]
           },
           {
-            "key": "run",
+            "title": "Günü sorunsuz geçir",
+            "intro": "Perde arkasında daha az kaos.",
             "items": [
-              { "name": "Stok & envanter", "short": "Ne azaldığını bilin.", "detail": "Malzemeleri ve sarf malzemelerini takip edin, servis sırasında hiçbir şey bitmesin.", "link": "/solutions" },
-              { "name": "Personel & vardiyalar", "short": "Vardiyalar tek yerde.", "detail": "Vardiya planlayın, saatleri takip edin ve rolleri kolayca yönetin.", "link": "/solutions" },
-              { "name": "Tedarikçiler & satın alma", "short": "Siparişleri ve maliyetleri takip edin.", "detail": "Neyi, kimden sipariş ettiğinizi ve ne zaman geleceğini görün.", "link": "/solutions" },
-              { "name": "Muhasebe & faturalar", "short": "Basit finansal kayıtlar.", "detail": "Faturaları ve ödemeleri elektronik tablo olmadan organize tutun.", "link": "/solutions" }
+              { "name": "Stok ve envanter", "benefit": "Nein azaldığını bil.", "howItWorks": ["Malzemeleri ve stokları tek bir yerde takip edersiniz.", "Düşük stok uyarıları neyi yeniden sipariş etmeniz gerektiğini söyler.", "Servis sırasında hiçbir şey tükenmez."] },
+              { "name": "Personel ve vardiyalar", "benefit": "Tek bir yerde programlar.", "howItWorks": ["Yöneticiler basit bir takvimde vardiyaları oluşturur.", "Personel programlarını telefonlarında görür.", "Değişim istekleri ve saatler otomatik takip edilir."] },
+              { "name": "Tedarikçiler ve satın alma", "benefit": "Siparişleri ve maliyetleri takip et.", "howItWorks": ["Siparişler sistemden tedarikçilere gider.", "Teslimatlar siparişlerle eşleştirilir.", "Tam olarak ne sipariş ettiğinizi ve neye mal olduğunu görürsünüz."] },
+              { "name": "Muhasebe ve faturalar", "benefit": "Basit finansal kayıtlar.", "howItWorks": ["Satışlar ve giderler muhasebenize akar.", "Faturalar otomatik oluşturulur.", "Raporlar kâr ve vergi özetlerini gösterir."] }
             ]
           },
           {
-            "key": "numbers",
+            "title": "Rakamları gör",
+            "intro": "İşletmenizde neler olduğunu bil.",
             "items": [
-              { "name": "Satış paneli", "short": "Bugünün satışlarına bir bakış.", "detail": "En iyi yemekler, yoğun saatler ve gelir trendleri gerçek zamanlı.", "link": "/solutions" },
-              { "name": "Raporlar", "short": "Günlük, haftalık, aylık.", "detail": "Ne değiştireceğinize karar vermenize yardımcı olan net raporlar.", "link": "/solutions" }
+              { "name": "Satış paneli", "benefit": "Bugünün satışları bir bakışta.", "howItWorks": ["POS, online ve teslimattan satışlar tek panele akar.", "En iyi yemekleri, yoğun saatleri ve geliri görürsünüz.", "Trendler gerçek zamanlı güncellenir."] },
+              { "name": "Raporlar", "benefit": "Günlük, haftalık, aylık.", "howItWorks": ["Raporlar otomatik oluşturulur.", "Tarih, konum veya kategoriye göre filtreleyebilirsiniz.", "PDF'ler ve tablolar tek tıkla dışa aktarılır."] }
             ]
           },
           {
-            "key": "automate",
+            "title": "Otomasyonla zaman kazan",
+            "intro": "Sistemin tekrarlayan görevleri üstlenmesine izin ver.",
             "items": [
-              { "name": "Hatırlatmalar", "short": "Rezervasyon ve teslim alma hatırlatmaları.", "detail": "Otomatik WhatsApp mesajları iptalleri ve kaçırılan teslimleri azaltır.", "link": "/solutions" },
-              { "name": "Pazarlama otomasyonu", "short": "Doğum günü teklifleri ve geri kazanma mesajları.", "detail": "Manuel iş yapmadan akıllarda kalın.", "link": "/solutions" },
-              { "name": "Ask ALA / chatbot", "short": "Sık sorulan soruları yanıtlayın.", "detail": "Çalışma saatleri, menü ve konum otomatik yanıtlanır.", "link": "/solutions" }
+              { "name": "Hatırlatmalar", "benefit": "Rezervasyon ve paket servis hatırlatmaları.", "howItWorks": ["Müşteriler otomatik WhatsApp veya SMS hatırlatmaları alır.", "No-show'lar ve kaçırılan paket servisler azalır.", "Personel misafirleri aramakla zaman harcamaz."] },
+              { "name": "Pazarlama otomasyonu", "benefit": "Doğum günü teklifleri ve geri kazanım mesajları.", "howItWorks": ["Müşteriler ziyaret geçmişlerine göre teklifler alır.", "Mesajlar doğum günlerinde veya aralardan sonra otomatik gönderilir.", "Manuel çalışma olmadan akılda kalırsınız."] },
+              { "name": "Ask ALA / chatbot", "benefit": "Yaygın soruları yanıtla.", "howItWorks": ["Müşteriler saatler, menü ve konum sorularını sorar.", "Chatbot anında yanıt verir.", "Karmaşık istekler personelinize aktarılır."] }
             ]
           }
         ],
-        "bundle": {
-          "title": "Tipik bir restoran kurulumu",
-          "description": "QR menü + online sipariş + rezervasyonlar + WhatsApp hatırlatmaları + satış paneli."
-        },
-        "cta": "Restoranınız için bir uzmanla konuşun"
+        "bundle": { "title": "Tipik bir restoran kurulumu", "description": "QR menü + online sipariş + rezervasyonlar + WhatsApp hatırlatmaları + satış paneli." },
+        "cta": "Restoranınız hakkında uzmanla görüşün"
       },
       "hospitals-clinics": {
         "intro": "Daha akıcı hasta akışı, daha sakin personel ve net kayıtlar.",
         "themes": [
           {
-            "key": "serve",
+            "title": "Hasta erişimini iyileştir",
+            "intro": "Hastalar için rezervasyon ve ziyareti kolaylaştır.",
             "items": [
-              { "name": "Online randevular", "short": "Hastalar kendi kendine randevu alır.", "detail": "Programınıza uyan ve telefon görüşmelerini azaltan 7/24 rezervasyon.", "link": "/solutions" },
-              { "name": "Hasta portalı", "short": "Tüm kayıtlar için tek yer.", "detail": "Hastalar ziyaretleri, sonuçları ve mesajları güvenle görür.", "link": "/solutions" },
-              { "name": "Sıra & bekleme yönetimi", "short": "Bekleme odasında daha az karmaşa.", "detail": "Hastalar ne zaman geleceklerini ve ne kadar bekleyeceklerini bilir.", "link": "/solutions" },
-              { "name": "WhatsApp hatırlatmaları", "short": "İptalleri azaltın.", "detail": "Otomatik onaylar ve hazırlık talimatları mesajla.", "link": "/solutions" }
+              { "name": "Online randevular", "benefit": "Hastalar kendileri rezervasyon yapar.", "howItWorks": ["Hastalar web sitenizde veya portalda açık slotları görür.", "Doktor, saat ve neden seçerler.", "Rezervasyon klinik takviminize senkronize olur."] },
+              { "name": "Hasta portalı", "benefit": "Kayıtlar için tek bir yer.", "howItWorks": ["Hastalar güvenli giriş yapar.", "Ziyaretleri, sonuçları ve mesajları görürler.", "Belgeler her zaman erişilebilir."] },
+              { "name": "Kuyruk ve bekleme yönetimi", "benefit": "Daha az bekleme odası kaosu.", "howItWorks": ["Hastalar dijital olarak giriş yapar.", "Kuyruktaki yerlerini bir ekranda görürler.", "Personel kimin sırada olduğunu ve nereye göndereceğini bilir."] },
+              { "name": "WhatsApp hatırlatmaları", "benefit": "No-show'ları azalt.", "howItWorks": ["Hastalar otomatik onaylar alır.", "Hazırlık talimatları ve hatırlatmalar WhatsApp ile gelir.", "Daha az randevu kaçırılır."] }
             ]
           },
           {
-            "key": "customers",
+            "title": "Daha fazla hastaya ulaş",
+            "intro": "Online bulun ve güven kazan.",
             "items": [
-              { "name": "Web sitesi & Google varlığı", "short": "Yerel olarak bulunmak.", "detail": "Hizmetler, çalışma saatleri, konum ve online rezervasyon arama sonuçlarında.", "link": "/solutions" },
-              { "name": "Değerlendirmeler & itibar", "short": "Hasta geri bildirimi toplayın.", "detail": "Randevulardan sonra değerlendirme istekleri gönderin.", "link": "/solutions" }
+              { "name": "Web sitesi ve Google varlığı", "benefit": "Yerel olarak bulun.", "howItWorks": ["Hizmetler, saatler ve rezervasyonla bir site kurarız.", "Yerel SEO hastaların sizi Google'da bulmasına yardımcı olur.", "Her şey mobil uyumlu ve günceldir."] },
+              { "name": "Yorumlar ve itibar", "benefit": "Hasta geri bildirimini davet et.", "howItWorks": ["Ziyaretten sonra hastalar yorum isteği alır.", "Yorumlar Google ve sağlık platformlarına gider.", "İtibarınız doğal olarak büyür."] }
             ]
           },
           {
-            "key": "look",
+            "title": "Profesyonel ve güvenilir görün",
+            "intro": "İlk bakışta güven oluştur.",
             "items": [
-              { "name": "Marka & tabela", "short": "İlk görüşte güven.", "detail": "Web sitesi, bekleme alanları ve tabelalar için sade, sakin marka.", "link": "/solutions" },
-              { "name": "Yönlendirme ekranları", "short": "Hastalara yol gösterin.", "detail": "Klinikler ve hastaneler için dijital rehberler.", "link": "/solutions" }
+              { "name": "Marka ve tabela", "benefit": "İlk bakışta güven.", "howItWorks": ["Sakin, temiz bir marka kimliği oluştururuz.", "Aynı görünüm web sitesi, bekleme alanları ve tabelalarda kullanılır.", "Hastalar gelmeden önce güvende hisseder."] },
+              { "name": "Yönlendirme ekranları", "benefit": "Hastaların yolunu bulmasına yardımcı ol.", "howItWorks": ["Dijital dizinler bölüm konumlarını gösterir.", "Ekranlar tek bir sistemden güncellenir.", "Hastalar personele sormadan klinikte gezinir."] }
             ]
           },
           {
-            "key": "run",
+            "title": "Kliniği sorunsuz yönet",
+            "intro": "Personel, odalar ve kayıtları organize et.",
             "items": [
-              { "name": "Hasta kayıtları", "short": "Her şey tek yerde.", "detail": "Ekibinizin saniyeler içinde bulduğu güvenli kayıtlar.", "link": "/solutions" },
-              { "name": "Personel planlama", "short": "Doktorlar, hemşireler, odalar.", "detail": "Çakışma olmadan vardiya ve odaları planlayın.", "link": "/solutions" },
-              { "name": "Tıbbi envanter", "short": "Sarf malzemelerini takip edin.", "detail": "Sarf malzemeleri ve ilaçlar için stok seviyelerini bilin.", "link": "/solutions" }
+              { "name": "Hasta kayıtları", "benefit": "Her şey tek bir yerde.", "howItWorks": ["Personel notları güvenli dijital kayda girer.", "Kayıtlar hasta veya ziyarete göre aranabilir.", "Sadece yetkili personel erişebilir."] },
+              { "name": "Personel planlama", "benefit": "Doktorlar, hemşireler, odalar.", "howItWorks": ["Yöneticiler doktorları, hemşireleri ve odaları tek araçta planlar.", "Çakışmalar otomatik işaretlenir.", "Personel vardiyalarını telefonlarında görür."] },
+              { "name": "Tıbbi envanter", "benefit": "Malzemeleri takip et.", "howItWorks": ["Sarf malzemelerini ve ilaçları gerçek zamanlı takip edersiniz.", "Uyarılar stok düşük olduğunda söyler.", "Siparişler tükenmeden önce tedarikçilere gider."] }
             ]
           },
           {
-            "key": "numbers",
+            "title": "Rakamları gör",
+            "intro": "Net verilerle kararlar al.",
             "items": [
-              { "name": "Klinik paneli", "short": "Randevular, iptaller, gelir.", "detail": "Yöneticiler için günlük ve haftalık görünümler.", "link": "/solutions" },
-              { "name": "Doktor & hizmet raporları", "short": "Sağlayıcıya göre performans.", "detail": "İş yükü ve sonuç trendlerini net şekilde görün.", "link": "/solutions" }
+              { "name": "Klinik paneli", "benefit": "Randevular, no-show'lar, gelir.", "howItWorks": ["Günlük randevular ve no-show'lar panele akar.", "Gelir ve hasta hacmi otomatik güncellenir.", "Yöneticiler trendleri bir bakışta görür."] },
+              { "name": "Doktor ve hizmet raporları", "benefit": "Sağlayıcıya göre performans.", "howItWorks": ["Raporlar doktor veya hizmete göre iş yükünü ve sonuçları gösterir.", "Tarih, konum veya sağlayıcıya göre filtreleyebilirsiniz.", "Dışa aktarın ve yönetimle paylaşın."] }
             ]
           },
           {
-            "key": "automate",
+            "title": "Otomasyonla zaman kazan",
+            "intro": "Hastalar ve personel bakıma odaklansın.",
             "items": [
-              { "name": "Randevu hatırlatmaları", "short": "Daha az kaçırılan ziyaret.", "detail": "Otomatik SMS veya WhatsApp hatırlatmaları.", "link": "/solutions" },
-              { "name": "Takip mesajları", "short": "Ziyaret sonrası bakım devam eder.", "detail": "Otomatik talimatlar ve kontrol mesajları.", "link": "/solutions" },
-              { "name": "Ask ALA / chatbot", "short": "Sık sorulan soruları yanıtlayın.", "detail": "Çalışma saatleri, hizmetler ve rezervasyon otomatik.", "link": "/solutions" }
+              { "name": "Randevu hatırlatmaları", "benefit": "Daha az kaçırılan ziyaret.", "howItWorks": ["Her ziyaretten önce otomatik SMS veya WhatsApp hatırlatmaları gider.", "Hastalar tek bir yanıtla onaylar veya yeniden planlar.", "Personel telefonda daha az zaman harcar."] },
+              { "name": "Takip mesajları", "benefit": "Bakım ziyaretten sonra devam eder.", "howItWorks": ["Ziyaretten sonra hastalar talimatlar ve check-in'ler alır.", "Mesajlar otomatik gönderilir.", "Personel sadece gerektiğinde takip eder."] },
+              { "name": "Ask ALA / chatbot", "benefit": "Yaygın soruları yanıtla.", "howItWorks": ["Hastalar saatler, hizmetler ve rezervasyon hakkında sorar.", "Chatbot anında yanıt verir.", "Karmaşık sorular ekibinize aktarılır."] }
             ]
           }
         ],
-        "bundle": {
-          "title": "Tipik bir klinik kurulumu",
-          "description": "Online randevular + hasta portalı + WhatsApp hatırlatmaları + klinik paneli."
-        },
-        "cta": "Kliniğiniz için bir uzmanla konuşun"
-      },
-      "schools-training": {
-        "intro": "Daha az idari iş, daha net iletişim ve daha mutlu aileler.",
+        "bundle": { "title": "Tipik bir klinik kurulumu", "description": "Online randevular + hasta portalı + WhatsApp hatırlatmaları + klinik paneli." },
+        "cta": "Kliniğiniz hakkında uzmanla görüşün"
+      }
+    }
+  },
+  "ar": {
+    "learnMore": "اعرف المزيد",
+    "themeTitles": {
+      "serve": "استقبل الطلبات واخدم أسرع",
+      "customers": "اجذب المزيد من العملاء",
+      "look": "ابدُ لا يُنسى",
+      "run": "أدِر يومك بسلاسة",
+      "numbers": "شاهد أرقامك",
+      "automate": "وفّر الوقت بالأتمتة"
+    },
+    "catalog": {
+      "restaurants-cafes": {
+        "intro": "كل ما يحتاجه مطعمك أو مقهاك، من شريك واحد.",
         "themes": [
           {
-            "key": "serve",
+            "title": "استقبل الطلبات واخدم أسرع",
+            "intro": "كل ما يلزم لاستقبال الطلبات وإخراج الطعام بسرعة.",
             "items": [
-              { "name": "Online kayıt", "short": "Online başvuru ve kayıt.", "detail": "Aileler formları ve belgeleri her cihazdan gönderir.", "link": "/solutions" },
-              { "name": "Öğrenci & veli portalı", "short": "Her şey için tek yer.", "detail": "Ders programı, notlar, mesajlar ve ödemeler tek girişte.", "link": "/solutions" },
-              { "name": "Kurs kataloğu", "short": "Kursları gösterin ve satın.", "detail": "Programları, açıklamaları ve müsaitliği yayınlayın.", "link": "/solutions" }
+              { "name": "قائمة QR رقمية", "benefit": "يمسح العملاء ويرون قائمتك.", "howItWorks": ["نضع رمز QR على كل طاولة.", "يمسح الضيوف بهواتفهم.", "تُفتح قائمتك فورًا — غيّر الأصناف والأسعار في أي وقت."] },
+              { "name": "الطلب والتوصيل أونلاين", "benefit": "استقبل الطلبات على موقعك الخاص.", "howItWorks": ["يطلب العملاء من موقعك.", "يصل الطلب إلى مطبخك وموظفيك.", "تنفّذ للاستلام أو التوصيل — وتحتفظ بمزيد من المال."] },
+              { "name": "حجوزات الطاولات", "benefit": "حجوزات أونلاين وعبر واتساب.", "howItWorks": ["يختار الضيوف وقتًا أونلاين أو عبر واتساب.", "ترى كل حجز في مكان واحد.", "تقلّل التذكيرات التلقائية حالات عدم الحضور."] },
+              { "name": "نقاط البيع وشاشة المطبخ", "benefit": "تذهب الطلبات مباشرة إلى المطبخ.", "howItWorks": ["يسجّل الموظفون الطلب على نقطة البيع.", "يظهر فورًا على شاشة المطبخ.", "يطبخ المطبخ بالترتيب — أخطاء أقل وخدمة أسرع."] },
+              { "name": "الطلب عبر واتساب وشات بوت", "benefit": "يطلب العملاء عبر واتساب.", "howItWorks": ["يراسل العملاء واتساب لديك.", "يعرض البوت القائمة ويأخذ الطلب.", "تؤكّد وتحضّر — تُجاب الأسئلة الشائعة تلقائيًا."] }
             ]
           },
           {
-            "key": "customers",
+            "title": "اجذب المزيد من العملاء",
+            "intro": "كن موجودًا أونلاين وأعِد العملاء.",
             "items": [
-              { "name": "Web sitesi & SEO", "short": "Veliler tarafından bulunmak.", "detail": "Yerel aramada sıralanan net bilgiler.", "link": "/solutions" },
-              { "name": "Sosyal medya & reklamlar", "short": "Yeni ailelere ulaşın.", "detail": "Velilerin aktif olduğu yerlerde açık gün ve kayıt kampanyaları.", "link": "/solutions" }
+              { "name": "موقع إلكتروني", "benefit": "موقع سريع ومتوافق مع الجوّال.", "howItWorks": ["نبني موقعًا يضمّ قائمتك وساعاتك وموقعك والطلب.", "يُحمَّل بسرعة على الهواتف.", "يجد العملاء ما يحتاجونه ويطلبون أو يحجزون في ثوانٍ."] },
+              { "name": "الظهور على Google", "benefit": "اظهر في عمليات البحث المحلية.", "howItWorks": ["نُعِدّ ملفك في Google Business وتحسين محركات البحث المحلي.", "يظهر مطعمك عند بحث الناس في الجوار.", "الصور والساعات وروابط الحجز صحيحة دائمًا."] },
+              { "name": "وسائل التواصل والإعلانات", "benefit": "اوصل إلى عملاء جدد.", "howItWorks": ["ننشئ حملات على Instagram وGoogle وTikTok.", "تستهدف الإعلانات من هم قرب موقعك.", "ترى أي الحملات تجلب الرواد."] },
+              { "name": "الولاء والمكافآت", "benefit": "أعِد العملاء.", "howItWorks": ["يكسب العملاء نقاطًا في كل زيارة.", "تخرج العروض التلقائية وهدايا أعياد الميلاد عبر الرسائل.", "يعود الزبائن الدائمون أكثر."] },
+              { "name": "التقييمات", "benefit": "ادعُ الضيوف السعداء للتقييم.", "howItWorks": ["بعد الزيارة، يتلقّى العملاء طلب تقييم ودّي.", "تذهب التقييمات إلى Google ومنصّات أخرى.", "تنمو سمعتك دون عمل يدوي."] }
             ]
           },
           {
-            "key": "look",
+            "title": "ابدُ لا يُنسى",
+            "intro": "علامة يتذكّرها العملاء.",
             "items": [
-              { "name": "Marka & katalog", "short": "Ailelerin güvendiği bir görünüm.", "detail": "Baskı ve dijital materyaller için profesyonel markalama.", "link": "/solutions" },
-              { "name": "Fotoğraf & video", "short": "Okulunuzu gösterin.", "detail": "Web sitesi ve sosyal medya için görseller ve turlar.", "link": "/solutions" }
+              { "name": "الشعار والعلامة", "benefit": "مظهر يتذكّره العملاء.", "howItWorks": ["نصمّم شعارك وألوانك ونمط علامتك.", "يُستخدم المظهر نفسه على القائمة والموقع واللافتات.", "يتعرّف العملاء على نشاطك في كل مكان."] },
+              { "name": "تصميم القائمة", "benefit": "قوائم مطبوعة ورقمية.", "howItWorks": ["نصمّم قوائم تُبرز أفضل أطباقك.", "تُحدَّث القوائم الرقمية فورًا.", "تتوافق القوائم المطبوعة مع علامتك."] },
+              { "name": "تصوير الطعام والفيديو", "benefit": "اجعل الأطباق لا تُقاوَم.", "howItWorks": ["نصوّر طعامك ومشروباتك ومكانك.", "تظهر الصور والفيديوهات على القائمة والموقع ووسائل التواصل.", "يرى العملاء ما يطلبونه قبل وصولهم."] },
+              { "name": "اللافتات الرقمية", "benefit": "شاشات داخل المتجر.", "howItWorks": ["تعرض الشاشات قائمتك وعروضك وأوقات الانتظار.", "يُحدَّث المحتوى من لوحة واحدة.", "يلاحظ العملاء العروض أثناء انتظارهم."] }
             ]
           },
           {
-            "key": "run",
+            "title": "أدِر يومك بسلاسة",
+            "intro": "فوضى أقل خلف الكواليس.",
             "items": [
-              { "name": "Devam takibi", "short": "Kimlerin hazır bulunduğunu bilin.", "detail": "Dersler ve etkinlikler için basit giriş ve raporlama.", "link": "/solutions" },
-              { "name": "Ödemeler & faturalar", "short": "Ücretler zamanında tahsil edilsin.", "detail": "Hatırlatmalar ve makbuzlarla online ödemeler.", "link": "/solutions" },
-              { "name": "Personel & salonlar", "short": "Öğretmen ve mekan planlayın.", "detail": "Çifte rezervasyonlardan kaçının ve dersleri düzenli tutun.", "link": "/solutions" }
+              { "name": "المخزون والجرد", "benefit": "اعرف ما يقارب النفاد.", "howItWorks": ["تتبّع المكوّنات والمستلزمات في مكان واحد.", "تخبرك تنبيهات المخزون المنخفض بما تعيد طلبه.", "لا ينفد منك شيء أثناء الخدمة."] },
+              { "name": "الموظفون والورديات", "benefit": "جداول في مكان واحد.", "howItWorks": ["ينشئ المديرون الورديات على تقويم بسيط.", "يرى الموظفون جداولهم على هواتفهم.", "تُتتبَّع طلبات التبديل والساعات تلقائيًا."] },
+              { "name": "المورّدون والشراء", "benefit": "تتبّع الطلبات والتكاليف.", "howItWorks": ["تذهب أوامر الشراء إلى المورّدين من النظام.", "تُطابَق التسليمات مع الطلبات.", "ترى بالضبط ما طلبته وكم كلّف."] },
+              { "name": "المحاسبة والفواتير", "benefit": "سجلات مالية بسيطة.", "howItWorks": ["تتدفّق المبيعات والمصروفات إلى محاسبتك.", "تُنشأ الفواتير تلقائيًا.", "تُظهر التقارير ملخّصات الأرباح والضرائب."] }
             ]
           },
           {
-            "key": "numbers",
+            "title": "شاهد أرقامك",
+            "intro": "اعرف ما يجري في نشاطك.",
             "items": [
-              { "name": "Sonuç paneli", "short": "Notlar ve ilerleme.", "detail": "Öğretmenler, öğrenciler ve veliler için net görünümler.", "link": "/solutions" },
-              { "name": "Kayıt raporları", "short": "Kim nerede kayıtlı.", "detail": "Kapasiteyi ve kurs başına geliri takip edin.", "link": "/solutions" }
+              { "name": "لوحة المبيعات", "benefit": "مبيعات اليوم بلمحة.", "howItWorks": ["تتغذّى لوحة واحدة بالمبيعات من نقاط البيع وأونلاين والتوصيل.", "ترى أفضل الأطباق والساعات المزدحمة والإيرادات.", "تتحدّث الاتجاهات في الوقت الفعلي."] },
+              { "name": "التقارير", "benefit": "يومية وأسبوعية وشهرية.", "howItWorks": ["تُنشأ التقارير تلقائيًا.", "تصفّي حسب التاريخ أو الموقع أو الفئة.", "تُصدَّر ملفات PDF والجداول بنقرة واحدة."] }
             ]
           },
           {
-            "key": "automate",
+            "title": "وفّر الوقت بالأتمتة",
+            "intro": "دع النظام يتولّى المهام المتكرّرة.",
             "items": [
-              { "name": "Ücret hatırlatmaları", "short": "Otomatik ödeme istekleri.", "detail": "Aileleri takip etmeden gecikmiş ödemeleri azaltın.", "link": "/solutions" },
-              { "name": "Veli güncellemeleri", "short": "Haberler ve uyarılar.", "detail": "Ders güncellemeleri, etkinlikler ve devamsızlıkları otomatik gönderin.", "link": "/solutions" },
-              { "name": "Ask ALA / chatbot", "short": "Sık sorulan soruları yanıtlayın.", "detail": "Çalışma saatleri, ücretler ve kabul otomatik.", "link": "/solutions" }
+              { "name": "التذكيرات", "benefit": "تذكيرات الحجز والاستلام.", "howItWorks": ["يتلقّى العملاء تذكيرات تلقائية عبر واتساب أو SMS.", "تنخفض حالات عدم الحضور والاستلام الفائت.", "لا يقضي الموظفون وقتًا في الاتصال بالضيوف."] },
+              { "name": "أتمتة التسويق", "benefit": "عروض أعياد الميلاد ورسائل الاستعادة.", "howItWorks": ["يتلقّى العملاء عروضًا بناءً على سجلّ زياراتهم.", "تُرسَل الرسائل تلقائيًا في أعياد الميلاد أو بعد الانقطاع.", "تبقى في الأذهان دون عمل يدوي."] },
+              { "name": "اسأل ALA / شات بوت", "benefit": "أجب عن الأسئلة الشائعة.", "howItWorks": ["يسأل العملاء عن الساعات والقائمة والموقع.", "يردّ البوت فورًا.", "تُحوَّل الطلبات المعقّدة إلى موظفيك."] }
             ]
           }
         ],
-        "bundle": {
-          "title": "Tipik bir okul kurulumu",
-          "description": "Veli portalı + online kayıt + devam takibi + ödemeler + sonuç paneli."
-        },
-        "cta": "Okulunuz için bir uzmanla konuşun"
+        "bundle": { "title": "إعداد مطعم نموذجي", "description": "قائمة QR + طلب أونلاين + حجوزات + تذكيرات واتساب + لوحة مبيعات." },
+        "cta": "تحدّث إلى خبير حول مطعمك"
       },
-      "companies-offices": {
-        "intro": "Müşterileri, personeli ve günlük iş akışını organize eden tek ortak.",
+      "hospitals-clinics": {
+        "intro": "انسياب أفضل للمرضى، وموظفون أكثر هدوءًا، وسجلات واضحة.",
         "themes": [
           {
-            "key": "serve",
+            "title": "حسّن وصول المرضى",
+            "intro": "اجعل الحجز والزيارة أسهل للمرضى.",
             "items": [
-              { "name": "CRM", "short": "Her müşteri tek yerde.", "detail": "Potansiyel müşterileri, anlaşmaları ve iletişim geçmişini takip edin.", "link": "/solutions" },
-              { "name": "Müşteri portalı", "short": "Müşteriler kendi kendine hizmet alsın.", "detail": "Faturalar, talepler ve belgeler güvenli tek yerde.", "link": "/solutions" },
-              { "name": "Yardım masası & talepler", "short": "Destek istekleri takip edilsin.", "detail": "Hiçbir şey gözden kaçmaz.", "link": "/solutions" }
+              { "name": "المواعيد أونلاين", "benefit": "يحجز المرضى بأنفسهم.", "howItWorks": ["يرى المرضى الأوقات المتاحة على موقعك أو بوابتك.", "يختارون طبيبًا ووقتًا وسببًا.", "يتزامن الحجز مع تقويم عيادتك."] },
+              { "name": "بوابة المرضى", "benefit": "مكان واحد للسجلات.", "howItWorks": ["يسجّل المرضى الدخول بأمان.", "يرون الزيارات والنتائج والرسائل.", "المستندات متاحة في أي وقت."] },
+              { "name": "إدارة الطابور والانتظار", "benefit": "فوضى أقل في غرفة الانتظار.", "howItWorks": ["يسجّل المرضى الدخول رقميًا.", "يرون موضعهم في الطابور على شاشة.", "يعرف الموظفون من التالي وأين يوجّهونه."] },
+              { "name": "تذكيرات واتساب", "benefit": "قلّل حالات عدم الحضور.", "howItWorks": ["يتلقّى المرضى تأكيدات تلقائية.", "تصل تعليمات التحضير والتذكيرات عبر واتساب.", "تُفوَّت مواعيد أقل."] }
             ]
           },
           {
-            "key": "customers",
+            "title": "اوصل إلى مزيد من المرضى",
+            "intro": "كن موجودًا وموثوقًا أونلاين.",
             "items": [
-              { "name": "Web sitesi & SEO", "short": "Alıcılar tarafından bulunmak.", "detail": "Aramada sıralanan net hizmet sayfaları.", "link": "/solutions" },
-              { "name": "LinkedIn & Google reklamları", "short": "Karar vericilere ulaşın.", "detail": "B2B hizmetleri için hedefli kampanyalar.", "link": "/solutions" }
+              { "name": "الموقع والظهور على Google", "benefit": "كن موجودًا محليًا.", "howItWorks": ["نبني موقعًا يضمّ الخدمات والساعات والحجز.", "يساعد تحسين محركات البحث المحلي المرضى على إيجادك على Google.", "كل شيء متوافق مع الجوّال ومحدّث."] },
+              { "name": "التقييمات والسمعة", "benefit": "ادعُ ملاحظات المرضى.", "howItWorks": ["بعد الزيارة، يتلقّى المرضى طلب تقييم.", "تذهب التقييمات إلى Google ومنصّات الصحة.", "تنمو سمعتك بشكل طبيعي."] }
             ]
           },
           {
-            "key": "look",
+            "title": "ابدُ محترفًا وموثوقًا",
+            "intro": "ابنِ الثقة من النظرة الأولى.",
             "items": [
-              { "name": "Marka & kimlik", "short": "Profesyonel bir görünüm.", "detail": "Büyüyen logo, şablonlar ve kılavuzlar.", "link": "/solutions" },
-              { "name": "Sunum dosyaları", "short": "Daha fazla teklif kazanın.", "detail": "Tasarlanmış sunumlar ve PDF'ler.", "link": "/solutions" }
+              { "name": "العلامة واللافتات", "benefit": "ثقة من النظرة الأولى.", "howItWorks": ["نصنع هوية علامة هادئة ونظيفة.", "يمتدّ المظهر نفسه عبر الموقع ومناطق الانتظار واللافتات.", "يشعر المرضى بالثقة قبل وصولهم."] },
+              { "name": "شاشات التوجيه", "benefit": "ساعد المرضى على إيجاد طريقهم.", "howItWorks": ["تعرض الأدلّة الرقمية مواقع الأقسام.", "تُحدَّث الشاشات من نظام واحد.", "يتنقّل المرضى في العيادة دون سؤال الموظفين."] }
             ]
           },
           {
-            "key": "run",
+            "title": "أدِر العيادة بسلاسة",
+            "intro": "نظّم الموظفين والغرف والسجلات.",
             "items": [
-              { "name": "İK & onaylar", "short": "İnsanları ve talepleri yönetin.", "detail": "İzin, masraf ve onaylar tek akışta.", "link": "/solutions" },
-              { "name": "İç bilgi bankası", "short": "Cevapları hızlı bulun.", "detail": "Prosedürler, politikalar ve nasıl yapılır bilgileri tek yerde.", "link": "/solutions" },
-              { "name": "Proje takibi", "short": "Neler olduğunu görün.", "detail": "Görevler, son tarihler ve sorumlular kaos olmadan.", "link": "/solutions" }
+              { "name": "سجلات المرضى", "benefit": "كل شيء في مكان واحد.", "howItWorks": ["يُدخل الموظفون الملاحظات في سجلّ رقمي آمن.", "السجلات قابلة للبحث حسب المريض أو الزيارة.", "يمكن للموظفين المصرّح لهم فقط الوصول إليها."] },
+              { "name": "جدولة الموظفين", "benefit": "أطباء وممرضون وغرف.", "howItWorks": ["يجدول المديرون الأطباء والممرضين والغرف بأداة واحدة.", "تُعلَّم التعارضات تلقائيًا.", "يرى الموظفون ورديّاتهم على هواتفهم."] },
+              { "name": "المخزون الطبي", "benefit": "تتبّع المستلزمات.", "howItWorks": ["تتبّع المستهلكات والأدوية في الوقت الفعلي.", "تخبرك التنبيهات عند انخفاض المخزون.", "تذهب الطلبات إلى المورّدين قبل أن ينفد منك."] }
             ]
           },
           {
-            "key": "numbers",
+            "title": "شاهد أرقامك",
+            "intro": "اتخذ قرارات ببيانات واضحة.",
             "items": [
-              { "name": "Satış paneli", "short": "Hunisi ve gelir.", "detail": "Her anlaşmanın nerede olduğunu bilin.", "link": "/solutions" },
-              { "name": "Ekip iş yükü", "short": "İşi eşit dağıtın.", "detail": "Kim fazla mesai yapıyor, kim müsait görün.", "link": "/solutions" }
+              { "name": "لوحة العيادة", "benefit": "المواعيد وحالات عدم الحضور والإيرادات.", "howItWorks": ["تتغذّى اللوحة بالمواعيد اليومية وحالات عدم الحضور.", "تتحدّث الإيرادات وعدد المرضى تلقائيًا.", "يرى المديرون الاتجاهات بلمحة."] },
+              { "name": "تقارير الأطباء والخدمات", "benefit": "الأداء حسب المقدّم.", "howItWorks": ["تُظهر التقارير عبء العمل والنتائج حسب الطبيب أو الخدمة.", "تصفّي حسب التاريخ أو الموقع أو المقدّم.", "صدّر وشارك مع الإدارة."] }
             ]
           },
           {
-            "key": "automate",
+            "title": "وفّر الوقت بالأتمتة",
+            "intro": "دع المرضى والموظفين يركّزون على الرعاية.",
             "items": [
-              { "name": "Onay akışları", "short": "Talepler otomatik ilerler.", "detail": "Masraf ve izin doğru kişiye yönlendirilir.", "link": "/solutions" },
-              { "name": "Bildirimler", "short": "Herkesi bilgilendirin.", "detail": "Slack, e-posta veya WhatsApp güncellemeleri.", "link": "/solutions" },
-              { "name": "Ask ALA / chatbot", "short": "İç soruları yanıtlayın.", "detail": "BT, İK ve politika soruları otomatik yanıtlanır.", "link": "/solutions" }
+              { "name": "تذكيرات المواعيد", "benefit": "زيارات فائتة أقل.", "howItWorks": ["تخرج تذكيرات SMS أو واتساب تلقائية قبل كل زيارة.", "يؤكّد المرضى أو يعيدون الجدولة بردّ واحد.", "يقضي الموظفون وقتًا أقل على الهاتف."] },
+              { "name": "رسائل المتابعة", "benefit": "تستمرّ الرعاية بعد الزيارة.", "howItWorks": ["بعد الزيارة، يتلقّى المرضى تعليمات ومتابعات.", "تُرسَل الرسائل تلقائيًا.", "يتابع الموظفون عند الحاجة فقط."] },
+              { "name": "اسأل ALA / شات بوت", "benefit": "أجب عن الأسئلة الشائعة.", "howItWorks": ["يسأل المرضى عن الساعات والخدمات والحجز.", "يردّ البوت فورًا.", "تُمرَّر الأسئلة المعقّدة إلى فريقك."] }
             ]
           }
         ],
-        "bundle": {
-          "title": "Tipik bir ofis kurulumu",
-          "description": "CRM + İK onayları + proje takibi + satış paneli + iç bilgi bankası."
-        },
-        "cta": "Ofisiniz için bir uzmanla konuşun"
-      },
-      "warehouses-logistics": {
-        "intro": "Girişten teslimata kadar her şeyin nerede olduğunu bilin.",
-        "themes": [
-          {
-            "key": "serve",
-            "items": [
-              { "name": "Barkod tarama", "short": "Ürünleri tarama ile takip edin.", "detail": "Giriş, hareket ve sevkiyatı doğru kayıtlarla yapın.", "link": "/solutions" },
-              { "name": "Teslimat takibi", "short": "Sürücüler ve rotalar.", "detail": "Her gönderi için durum ve ETA görün.", "link": "/solutions" },
-              { "name": "Müşteri portalı", "short": "Müşteriler siparişlerini takip eder.", "detail": "Siparişim nerede aramalarını azaltın.", "link": "/solutions" }
-            ]
-          },
-          {
-            "key": "customers",
-            "items": [
-              { "name": "Web sitesi & SEO", "short": "Daha fazla nakliye işi kazanın.", "detail": "Bölgelerinizde lojistik hizmetleri için sıralanın.", "link": "/solutions" },
-              { "name": "Fiyat teklifi istekleri", "short": "Müşteri adaylarını online yakalayın.", "detail": "Göndericilerin sitenizden fiyat istemesine izin verin.", "link": "/solutions" }
-            ]
-          },
-          {
-            "key": "look",
-            "items": [
-              { "name": "Marka & filo kimliği", "short": "Profesyonel görünün.", "detail": "Logo, araç giydirme ve dokümanlar.", "link": "/solutions" },
-              { "name": "Dijital tabela", "short": "Depo ekranları.", "detail": "Hedefler, güvenlik mesajları ve durum gösterin.", "link": "/solutions" }
-            ]
-          },
-          {
-            "key": "run",
-            "items": [
-              { "name": "Depo yönetimi", "short": "Gerçek stok seviyeleri.", "detail": "Depoda ne olduğunu her zaman bilin.", "link": "/solutions" },
-              { "name": "Tedarikçi portalı", "short": "Tedarikçilerle koordine olun.", "detail": "Satın alma siparişleri, teslimatlar ve faturalar paylaşılır.", "link": "/solutions" },
-              { "name": "Sürücü uygulaması", "short": "Sürücüler için basit mobil araç.", "detail": "Rotalar, teslimat fotoğrafları ve imzalar.", "link": "/solutions" }
-            ]
-          },
-          {
-            "key": "numbers",
-            "items": [
-              { "name": "Depo paneli", "short": "Giriş ve çıkış.", "detail": "Günlük aktarım ve uyarılara bir bakış.", "link": "/solutions" },
-              { "name": "Teslimat raporları", "short": "Zamanında performans.", "detail": "Gecikmeleri ve başarı oranlarını takip edin.", "link": "/solutions" }
-            ]
-          },
-          {
-            "key": "automate",
-            "items": [
-              { "name": "Stok uyarıları", "short": "Bitmeden önce bilin.", "detail": "Otomatik yeniden sipariş bildirimleri.", "link": "/solutions" },
-              { "name": "Durum güncellemeleri", "short": "Müşteriler otomatik bilgilendirilsin.", "detail": "Gönderildi, dağıtımda, teslim edildi mesajları.", "link": "/solutions" },
-              { "name": "Ask ALA / chatbot", "short": "Teslimat sorularını yanıtlayın.", "detail": "Siparişleri takip edin ve sık sorulanları yanıtlayın.", "link": "/solutions" }
-            ]
-          }
-        ],
-        "bundle": {
-          "title": "Tipik bir depo kurulumu",
-          "description": "Barkod tarama + depo paneli + teslimat takibi + tedarikçi portalı."
-        },
-        "cta": "Deponuz için bir uzmanla konuşun"
-      },
-      "retail-ecommerce": {
-        "intro": "Her yerde satın, stoku düzgün tutun ve alıcıları geri getirin.",
-        "themes": [
-          {
-            "key": "serve",
-            "items": [
-              { "name": "Online mağaza", "short": "Kendi e-ticaret siteniz.", "detail": "Ürün sayfaları, sepet, ödeme ve ödemeler.", "link": "/solutions" },
-              { "name": "POS & mağaza satışı", "short": "Tüm kanallar için tek sistem.", "detail": "Mağazada online ile aynı stokla satış yapın.", "link": "/solutions" },
-              { "name": "Pazaryeri entegrasyonları", "short": "Diğer platformlarda satın.", "detail": "Amazon, Trendyol vb. ile stok ve siparişleri senkronize edin.", "link": "/solutions" }
-            ]
-          },
-          {
-            "key": "customers",
-            "items": [
-              { "name": "SEO & Google Shopping", "short": "Alıcılar ararken bulun.", "detail": "Ürünler için sıralanın ve alışveriş sonuçlarında görün.", "link": "/solutions" },
-              { "name": "Sosyal medya & influencer reklamları", "short": "Yeni alıcılara ulaşın.", "detail": "Instagram, TikTok ve Google kampanyaları.", "link": "/solutions" },
-              { "name": "Sadakat & e-posta", "short": "Müşterileri geri getirin.", "detail": "Puanlar, teklifler ve terk edilmiş sepet e-postaları.", "link": "/solutions" }
-            ]
-          },
-          {
-            "key": "look",
-            "items": [
-              { "name": "Marka & ambalaj", "short": "Akılda kalan bir açılış deneyimi.", "detail": "Logo, renkler ve ambalaj tasarımı.", "link": "/solutions" },
-              { "name": "Ürün fotoğrafçılığı", "short": "Ürünleri sattırın.", "detail": "Temiz çekimler ve yaşam tarzı görselleri.", "link": "/solutions" },
-              { "name": "3D ürün görünümleri", "short": "Ürünleri her açıdan gösterin.", "detail": "Karmaşık ürünler için etkileşimli görünümler.", "link": "/solutions" }
-            ]
-          },
-          {
-            "key": "run",
-            "items": [
-              { "name": "Stok senkronizasyonu", "short": "Tüm kanallarda tek doğru.", "detail": "Canlı stokla fazla satışı önleyin.", "link": "/solutions" },
-              { "name": "Siparişler & kargo", "short": "Daha hızlı yerine getirin.", "detail": "Topla, paketle, gönder ve etiketleri tek akışta yazdır.", "link": "/solutions" },
-              { "name": "İadeler & geri ödemeler", "short": "İadeleri sorunsuz yönetin.", "detail": "Müşteriler ve personel için basit süreç.", "link": "/solutions" }
-            ]
-          },
-          {
-            "key": "numbers",
-            "items": [
-              { "name": "Satış paneli", "short": "Gelir ve çok satanlar.", "detail": "Ne satıyor, ne satmıyor görün.", "link": "/solutions" },
-              { "name": "Müşteri raporları", "short": "En iyi alıcılarınızı tanıyın.", "detail": "Tekrar oranı, yaşam boyu değer ve trendler.", "link": "/solutions" }
-            ]
-          },
-          {
-            "key": "automate",
-            "items": [
-              { "name": "Terk edilmiş sepet", "short": "Kayıp satışları geri kazanın.", "detail": "Satın almayı tamamlamak için otomatik hatırlatmalar.", "link": "/solutions" },
-              { "name": "Stok uyarıları", "short": "Tükenmeden yeniden sipariş edin.", "detail": "Ürünler azaldığında bildirimler.", "link": "/solutions" },
-              { "name": "Ask ALA / chatbot", "short": "Ürün sorularını yanıtlayın.", "detail": "Beden, stok ve kargo bilgisi otomatik.", "link": "/solutions" }
-            ]
-          }
-        ],
-        "bundle": {
-          "title": "Tipik bir perakende kurulumu",
-          "description": "Online mağaza + POS + stok senkronizasyonu + Google Shopping + terk edilmiş sepet kurtarma."
-        },
-        "cta": "Mağazanız için bir uzmanla konuşun"
-      },
-      "factories-manufacturing": {
-        "intro": "Üretimi takip edin, arıza sürelerini önleyin ve hat veya vardiya bazında performansı görün.",
-        "themes": [
-          {
-            "key": "serve",
-            "items": [
-              { "name": "Üretim takibi", "short": "Siparişlerin nerede olduğunu görün.", "detail": "Üretim emirleri, aşamalar ve tamamlanma durumu.", "link": "/solutions" },
-              { "name": "Makine izleme", "short": "Makinelerin ne zaman dikkat gerektirdiğini bilin.", "detail": "Arıza uyarıları ve kullanım trendleri.", "link": "/solutions" },
-              { "name": "Kalite kontrolleri", "short": "Kontrolleri kaydedin.", "detail": "Dijital kontrol listeleri ve hata takibi.", "link": "/solutions" }
-            ]
-          },
-          {
-            "key": "customers",
-            "items": [
-              { "name": "B2B portal", "short": "Müşteriler sipariş versin.", "detail": "Fiyatlandırma, siparişler ve teslimat durumu paylaşılır.", "link": "/solutions" },
-              { "name": "Web sitesi & SEO", "short": "Endüstriyel alıcılar kazanın.", "detail": "Yetenekler ve ürünler için sıralanın.", "link": "/solutions" }
-            ]
-          },
-          {
-            "key": "look",
-            "items": [
-              { "name": "Marka & katalog", "short": "Profesyonel endüstriyel varlık.", "detail": "Logo, ürün veri sayfaları ve tesis görselleri.", "link": "/solutions" },
-              { "name": "Dijital tabela", "short": "Fabrika katı ekranları.", "detail": "Güvenlik, hedefler ve hat durumu.", "link": "/solutions" }
-            ]
-          },
-          {
-            "key": "run",
-            "items": [
-              { "name": "Malzeme takibi", "short": "Hammadde bitmiş ürüne kadar.", "detail": "Partileri izleyin ve stok yönetin.", "link": "/solutions" },
-              { "name": "Bakım planlayıcı", "short": "Arızaları önleyin.", "detail": "Hatırlatmalarla planlı bakım.", "link": "/solutions" },
-              { "name": "Tedarikçi siparişleri", "short": "Satın almayı koordine edin.", "detail": "Siparişler, teslimatlar ve faturalar tek yerde.", "link": "/solutions" }
-            ]
-          },
-          {
-            "key": "numbers",
-            "items": [
-              { "name": "Üretim paneli", "short": "Çıktı ve OEE.", "detail": "Hat ve vardiyaların gerçek zamanlı görünümü.", "link": "/solutions" },
-              { "name": "Vardiya raporları", "short": "Vardiya ve hatları karşılaştırın.", "detail": "Darboğazları ve en iyi performansları bulun.", "link": "/solutions" }
-            ]
-          },
-          {
-            "key": "automate",
-            "items": [
-              { "name": "Bakım uyarıları", "short": "Hiçbir bakımı kaçırmayın.", "detail": "Zaman veya kullanıma göre otomatik hatırlatmalar.", "link": "/solutions" },
-              { "name": "Üretim uyarıları", "short": "Sorunlara hızlı müdahale edin.", "detail": "Bir hat durduğunda veya yavaşladığında yöneticileri bilgilendirin.", "link": "/solutions" },
-              { "name": "Ask ALA / chatbot", "short": "Operasyonel soruları yanıtlayın.", "detail": "Vardiya bilgisi, prosedürler ve durum talep üzerine.", "link": "/solutions" }
-            ]
-          }
-        ],
-        "bundle": {
-          "title": "Tipik bir fabrika kurulumu",
-          "description": "Üretim takibi + makine izleme + bakım planlayıcı + üretim paneli."
-        },
-        "cta": "Fabrikanız için bir uzmanla konuşun"
+        "bundle": { "title": "إعداد عيادة نموذجي", "description": "مواعيد أونلاين + بوابة مرضى + تذكيرات واتساب + لوحة عيادة." },
+        "cta": "تحدّث إلى خبير حول عيادتك"
       }
     }
   }

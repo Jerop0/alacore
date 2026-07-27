@@ -1,83 +1,482 @@
 {
   "en": {
     "title": "About",
-    "intro": "ALA CORE is a B2B technology partner. We design, build, and support the custom apps, websites, chatbots, automation, dashboards, and business systems that help companies run smarter.",
-    "positioning": [
-      "We understand your business first, then propose technology.",
-      "We are one accountable partner for every digital need.",
-      "We stay with you after launch: support, improve, and scale."
-    ],
-    "principles": {
-      "title": "How we work",
+    "opening": {
+      "headline": "We are an engineering company.",
+      "body": "Not an agency. Not a consultancy. An engineering company that builds complete technology systems for businesses that take technology seriously."
+    },
+    "mission": {
+      "title": "Mission",
+      "body": "To deliver complete technology ecosystems that create lasting business value — engineered with precision, built to scale, and supported over the long term."
+    },
+    "vision": {
+      "title": "Vision",
+      "body": "To be the most trusted technology partner for international companies navigating digital transformation — known for engineering excellence, transparency, and outcomes."
+    },
+    "values": {
+      "title": "Values",
       "items": [
         {
-          "title": "Capable",
-          "body": "We have built systems across industries and technologies. If it can be done, we can design and deliver it."
+          "number": "01",
+          "title": "Engineering integrity",
+          "body": "We build systems that work reliably, scale predictably, and can be maintained by any competent team — not just the ones who wrote them."
         },
         {
-          "title": "Clear",
-          "body": "We speak in business outcomes, not jargon. Every decision is explained in language you can act on."
+          "number": "02",
+          "title": "Radical transparency",
+          "body": "You see what we see. Progress, blockers, trade-offs, and decisions — shared openly so you can act on facts, not assumptions."
         },
         {
-          "title": "Calm",
-          "body": "We plan before we build, test before we launch, and support after delivery. No panic, no noise."
+          "number": "03",
+          "title": "Long-term thinking",
+          "body": "We design for the next five years, not the next sprint. Architecture, documentation, and support are built to outlast the initial engagement."
+        },
+        {
+          "number": "04",
+          "title": "Client success",
+          "body": "Your outcomes are our measure. We succeed when your systems perform, your team operates efficiently, and your business grows."
         }
       ]
     },
-    "cta": "Talk to an expert"
+    "principles": {
+      "title": "Engineering principles",
+      "intro": "These are the actual technical constraints we impose on every project:",
+      "items": [
+        {
+          "title": "Documentation is not optional",
+          "body": "Every system ships with architecture docs, API contracts, and runbooks. If it's not documented, it doesn't exist."
+        },
+        {
+          "title": "Test coverage is a minimum, not a stretch goal",
+          "body": "Unit, integration, and end-to-end tests are baseline requirements. We don't ship code without proof it works."
+        },
+        {
+          "title": "Monitoring and observability from day one",
+          "body": "Structured logging, metrics, and alerts are built in from the start — not bolted on after something breaks."
+        },
+        {
+          "title": "Simplicity over cleverness",
+          "body": "We choose boring technology when it works. Complex solutions earn their place; simple ones are the default."
+        }
+      ]
+    },
+    "process": {
+      "title": "Our process",
+      "steps": [
+        {
+          "number": "01",
+          "title": "Discovery & scoping",
+          "body": "We map your business context, constraints, and outcomes. Requirements are documented, not assumed. You sign off on scope before we write a line of code."
+        },
+        {
+          "number": "02",
+          "title": "Architecture & design",
+          "body": "System architecture, data models, and API contracts are designed and reviewed. You see the blueprint before construction begins."
+        },
+        {
+          "number": "03",
+          "title": "Engineering & development",
+          "body": "We build in iterations with continuous integration. You see working software regularly, not just status reports."
+        },
+        {
+          "number": "04",
+          "title": "Testing & quality",
+          "body": "Automated tests, manual QA, and user acceptance testing verify every release. Bugs are caught before they reach production."
+        },
+        {
+          "number": "05",
+          "title": "Deployment & support",
+          "body": "We deploy to production, monitor performance, and provide ongoing support. The relationship doesn't end at launch."
+        }
+      ]
+    },
+    "global": {
+      "title": "Global reach",
+      "body": "ALA CORE operates internationally with delivery capability across Europe, the Middle East, and beyond. We build technology without borders — serving clients in multiple languages, currencies, and regulatory environments."
+    },
+    "stats": {
+      "items": [
+        {
+          "label": "Languages supported",
+          "value": "3"
+        },
+        {
+          "label": "Delivery regions",
+          "value": "Europe & Middle East"
+        },
+        {
+          "label": "Cloud deployment",
+          "value": "Multi-region"
+        },
+        {
+          "label": "Time zones",
+          "value": "Global"
+        }
+      ]
+    },
+    "cta": {
+      "primary": "Start a project",
+      "secondary": "Describe your need"
+    }
   },
   "de": {
     "title": "Über uns",
-    "intro": "ALA CORE ist ein B2B-Technologiepartner. Wir konzipieren, entwickeln und betreuen die maßgeschneiderten Apps, Websites, Chatbots, Automatisierungen, Dashboards und Geschäftssysteme, die Unternehmen effizienter machen.",
-    "positioning": [
-      "Wir verstehen zuerst Ihr Unternehmen, dann schlagen wir Technologie vor.",
-      "Wir sind ein verantwortlicher Partner für jeden digitalen Bedarf.",
-      "Wir bleiben nach dem Start: Betreuung, Verbesserung und Skalierung."
-    ],
-    "principles": {
-      "title": "So arbeiten wir",
+    "opening": {
+      "headline": "Wir sind ein Engineering-Unternehmen.",
+      "body": "Keine Agentur. Keine Beratung. Ein Engineering-Unternehmen, das vollständige Technologiesysteme für Unternehmen baut, die Technologie ernst nehmen."
+    },
+    "mission": {
+      "title": "Mission",
+      "body": "Vollständige Technologie-Ökosysteme zu liefern, die nachhaltigen Geschäftswert schaffen — mit Präzision entwickelt, skalierbar gebaut und langfristig unterstützt."
+    },
+    "vision": {
+      "title": "Vision",
+      "body": "Der vertrauenswürdigste Technologiepartner für internationale Unternehmen auf dem Weg der digitalen Transformation zu sein — bekannt für Engineering-Exzellenz, Transparenz und Ergebnisse."
+    },
+    "values": {
+      "title": "Werte",
       "items": [
         {
-          "title": "Kompetent",
-          "body": "Wir haben Systeme über Branchen und Technologien hinweg gebaut. Wenn es umsetzbar ist, können wir es konzipieren und liefern."
+          "number": "01",
+          "title": "Engineering-Integrität",
+          "body": "Wir bauen Systeme, die zuverlässig funktionieren, vorhersehbar skalieren und von jedem kompetenten Team gewartet werden können — nicht nur von denen, die sie geschrieben haben."
         },
         {
-          "title": "Klar",
-          "body": "Wir sprechen in geschäftlichen Ergebnissen, nicht im Fachjargon. Jede Entscheidung wird in einer Sprache erklärt, auf die Sie handeln können."
+          "number": "02",
+          "title": "Radikale Transparenz",
+          "body": "Sie sehen, was wir sehen. Fortschritt, Blocker, Kompromisse und Entscheidungen — offen geteilt, damit Sie auf Fakten handeln können, nicht auf Annahmen."
         },
         {
-          "title": "Ruhig",
-          "body": "Wir planen vor dem Bauen, testen vor dem Start und betreuen nach der Lieferung. Keine Panik, kein Lärm."
+          "number": "03",
+          "title": "Langfristiges Denken",
+          "body": "Wir designen für die nächsten fünf Jahre, nicht für den nächsten Sprint. Architektur, Dokumentation und Support sind built to outlast the initial engagement."
+        },
+        {
+          "number": "04",
+          "title": "Kundenerfolg",
+          "body": "Ihre Ergebnisse sind unser Maßstab. Wir sind erfolgreich, wenn Ihre Systeme performen, Ihr Team effizient arbeitet und Ihr Unternehmen wächst."
         }
       ]
     },
-    "cta": "Mit Experten sprechen"
+    "principles": {
+      "title": "Engineering-Prinzipien",
+      "intro": "Dies sind die tatsächlichen technischen Constraints, die wir auf jedes Projekt anwenden:",
+      "items": [
+        {
+          "title": "Dokumentation ist nicht optional",
+          "body": "Jedes System wird mit Architektur-Docs, API-Verträgen und Runbooks ausgeliefert. Wenn es nicht dokumentiert ist, existiert es nicht."
+        },
+        {
+          "title": "Testabdeckung ist ein Minimum, kein Stretch-Ziel",
+          "body": "Unit-, Integrations- und End-to-End-Tests sind Basisanforderungen. Wir liefern keinen Code ohne Beweis, dass er funktioniert."
+        },
+        {
+          "title": "Monitoring und Observability vom ersten Tag an",
+          "body": "Strukturierte Logs, Metriken und Alerts sind von Anfang an eingebaut — nicht nachträglich angefügt, nachdem etwas kaputt gegangen ist."
+        },
+        {
+          "title": "Einfachheit vor Cleverness",
+          "body": "Wir wählen langweilige Technologie, wenn sie funktioniert. Komplexe Lösungen verdienen ihren Platz; einfache sind der Standard."
+        }
+      ]
+    },
+    "process": {
+      "title": "Unser Prozess",
+      "steps": [
+        {
+          "number": "01",
+          "title": "Discovery & Scoping",
+          "body": "Wir kartieren Ihren Geschäftskontext, Constraints und Ergebnisse. Anforderungen werden dokumentiert, nicht angenommen. Sie geben das Scope frei, bevor wir eine Zeile Code schreiben."
+        },
+        {
+          "number": "02",
+          "title": "Architektur & Design",
+          "body": "Systemarchitektur, Datenmodelle und API-Verträge werden designed und reviewed. Sie sehen den Bauplan, bevor die Konstruktion beginnt."
+        },
+        {
+          "number": "03",
+          "title": "Engineering & Entwicklung",
+          "body": "Wir bauen in Iterationen mit Continuous Integration. Sie sehen regelmäßig funktionierende Software, nicht nur Statusberichte."
+        },
+        {
+          "number": "04",
+          "title": "Testing & Qualität",
+          "body": "Automatisierte Tests, manuelle QA und User Acceptance Testing verifizieren jedes Release. Bugs werden abgefangen, bevor sie die Produktion erreichen."
+        },
+        {
+          "number": "05",
+          "title": "Deployment & Support",
+          "body": "Wir deployen in die Produktion, überwachen die Performance und bieten laufenden Support. Die Beziehung endet nicht beim Launch."
+        }
+      ]
+    },
+    "global": {
+      "title": "Globale Reichweite",
+      "body": "ALA CORE operiert international mit Delivery-Capability across Europe, the Middle East, and beyond. Wir bauen Technologie ohne Grenzen — bedienen Kunden in mehreren Sprachen, Währungen und regulatorischen Umgebungen."
+    },
+    "stats": {
+      "items": [
+        {
+          "label": "Unterstützte Sprachen",
+          "value": "3"
+        },
+        {
+          "label": "Delivery-Regionen",
+          "value": "Europa & Naher Osten"
+        },
+        {
+          "label": "Cloud-Deployment",
+          "value": "Multi-Region"
+        },
+        {
+          "label": "Zeitzonen",
+          "value": "Global"
+        }
+      ]
+    },
+    "cta": {
+      "primary": "Projekt starten",
+      "secondary": "Bedarf beschreiben"
+    }
   },
   "tr": {
     "title": "Hakkımızda",
-    "intro": "ALA CORE, bir B2B teknoloji ortağıdır. Şirketlerin daha akıllı çalışmasını sağlayan özel uygulamaları, web sitelerini, chatbotları, otomasyonu, panoları ve iş sistemlerini tasarlar, geliştirir ve destekleriz.",
-    "positioning": [
-      "Önce işletmenizi anlarız, sonra teknoloji öneririz.",
-      "Her dijital ihtiyaç için tek sorumlu ortağız.",
-      "Başlattıktan sonra kalırız: destek, iyileştirme ve ölçeklendirme."
-    ],
-    "principles": {
-      "title": "Nasıl çalışırız",
+    "opening": {
+      "headline": "Biz bir mühendislik şirketiyiz.",
+      "body": "Ajans değil. Danışmanlık değil. Teknolojiyi ciddiye alan işletmeler için eksiksiz teknoloji sistemleri inşa eden bir mühendislik şirketi."
+    },
+    "mission": {
+      "title": "Misyon",
+      "body": "Kalıcı iş değeri yaratan eksiksiz teknoloji ekosistemleri sunmak — hassasiyetle mühendislik, ölçeklenebilir şekilde inşa, uzun vadeli destek."
+    },
+    "vision": {
+      "title": "Vizyon",
+      "body": "Dijital dönüşümde gezinen uluslararası şirketler için en güvenilir teknoloji ortağı olmak — mühendislik mükemmelliği, şeffaflık ve sonuçlarla tanınan."
+    },
+    "values": {
+      "title": "Değerler",
       "items": [
         {
-          "title": "Yetkin",
-          "body": "Sektörler ve teknolojiler arasında sistemler inşa ettik. Yapılabilirse, tasarlayıp teslim edebiliriz."
+          "number": "01",
+          "title": "Mühendislik bütünlüğü",
+          "body": "Güvenilir çalışan, öngörülebilir ölçeklenen ve sadece yazanlar tarafından değil, herhangi yetkin ekip tarafından bakım yapılabilen sistemler inşa ediyoruz."
         },
         {
-          "title": "Net",
-          "body": "Teknik jargon değil, iş sonuçlarında konuşuruz. Her karar, üzerinde hareket edebileceğiniz bir dille açıklanır."
+          "number": "02",
+          "title": "Radikal şeffaflık",
+          "body": "Bizim gördüğümüzü siz de görüyorsunuz. İlerleme, engelleyiciler, ödünler ve kararlar — açıkça paylaşılan, böylece varsayımlara değil, gerçeklere göre hareket edebilirsiniz."
         },
         {
-          "title": "Sakin",
-          "body": "İnşaat öncesi planlarız, başlama öncesi test ederiz, teslimattan sonra destek veririz. Panik yok, gürültü yok."
+          "number": "03",
+          "title": "Uzun vadeli düşünme",
+          "body": "Bir sonraki sprint için değil, önümüzdeki beş yıl için tasarlıyoruz. Mimari, dokümantasyon ve destek, ilk etkileşimden sonra da devam edecek şekilde inşa edilir."
+        },
+        {
+          "number": "04",
+          "title": "Müşteri başarısı",
+          "body": "Sizin sonuçlarınız bizim ölçütümüzdür. Sistemleriniz performans gösterdiğinde, ekibiniz verimli çalıştığında ve işletmeniz büyüdüğünde başarılı oluyoruz."
         }
       ]
     },
-    "cta": "Uzmanla görüşün"
+    "principles": {
+      "title": "Mühendislik ilkeleri",
+      "intro": "Bunlar, her projeye uyguladığımız gerçek teknik kısıtlamalardır:",
+      "items": [
+        {
+          "title": "Dokümantasyon opsiyonel değildir",
+          "body": "Her sistem mimari dokümanları, API sözleşmeleri ve runbook'lar ile teslim edilir. Dokümante edilmemişse, var değildir."
+        },
+        {
+          "title": "Test kapsamı bir minimumdur, bir hedef değil",
+          "body": "Birim, entegrasyon ve uçtan uca testler temel gereksinimlerdir. Çalıştığının kanıtı olmadan kod teslim etmeyiz."
+        },
+        {
+          "title": "İlk günden izleme ve gözlemlenebilirlik",
+          "body": "Yapılandırılmış günlükleme, metrikler ve uyarılar baştan itibaren yerleşiktir — bir şey bozulduktan sonra sonradan eklenmez."
+        },
+        {
+          "title": "Basitlik, kurnazlıktan üstündür",
+          "body": "Çalıştığında sıkıcı teknolojiyi seçeriz. Karmaşık çözümler yerlerini kazanır; basit olanlar varsayılandır."
+        }
+      ]
+    },
+    "process": {
+      "title": "Sürecimiz",
+      "steps": [
+        {
+          "number": "01",
+          "title": "Keşif ve kapsam belirleme",
+          "body": "İş bağlamınızı, kısıtlamalarınızı ve sonuçlarınızı haritalandırıyoruz. Gereksinimler varsayılmaz, dokümante edilir. Bir satır kod yazmadan önce kapsamı onaylarsınız."
+        },
+        {
+          "number": "02",
+          "title": "Mimari ve tasarım",
+          "body": "Sistem mimarisi, veri modelleri ve API sözleşmeleri tasarlanır ve gözden geçirilir. İnşaat başlamadan önce planı görürsünüz."
+        },
+        {
+          "number": "03",
+          "title": "Mühendislik ve geliştirme",
+          "body": "Sürekli entegrasyon ile yinelemelerde inşa ediyoruz. Sadece durum raporları değil, düzenli olarak çalışan yazılımı görürsünüz."
+        },
+        {
+          "number": "04",
+          "title": "Test ve kalite",
+          "body": "Otomatik testler, manuel QA ve kullanıcı kabul testi her sürümü doğrular. Hatalar üretime ulaşmadan önce yakalanır."
+        },
+        {
+          "number": "05",
+          "title": "Dağıtım ve destek",
+          "body": "Üretime dağıtıyoruz, performansı izliyoruz ve sürekli destek sağlıyoruz. İlişki lansmanda bitmez."
+        }
+      ]
+    },
+    "global": {
+      "title": "Küresel erişim",
+      "body": "ALA CORE, Avrupa, Orta Doğu ve ötesinde teslim kabiliyeti ile uluslararası faaliyet gösterir. Sınırlar olmadan teknoloji inşa ediyoruz — birden fazla dilde, para biriminde ve düzenleyici ortamda müşterilere hizmet veriyoruz."
+    },
+    "stats": {
+      "items": [
+        {
+          "label": "Desteklenen diller",
+          "value": "3"
+        },
+        {
+          "label": "Teslimat bölgeleri",
+          "value": "Avrupa & Orta Doğu"
+        },
+        {
+          "label": "Bulut dağıtımı",
+          "value": "Çok bölgeli"
+        },
+        {
+          "label": "Zaman dilimleri",
+          "value": "Küresel"
+        }
+      ]
+    },
+    "cta": {
+      "primary": "Proje başlat",
+      "secondary": "İhtiyacınızı açıklayın"
+    }
+  },
+  "ar": {
+    "title": "من نحن",
+    "opening": {
+      "headline": "نحن شركة هندسية.",
+      "body": "لسنا وكالة. ولسنا شركة استشارات. نحن شركة هندسية تبني أنظمة تقنية متكاملة للشركات التي تأخذ التقنية على محمل الجد."
+    },
+    "mission": {
+      "title": "المهمة",
+      "body": "أن نقدّم منظومات تقنية متكاملة تخلق قيمة عمل دائمة — مهندَسة بدقّة، ومبنية للتوسّع، ومدعومة على المدى الطويل."
+    },
+    "vision": {
+      "title": "الرؤية",
+      "body": "أن نكون الشريك التقني الأكثر ثقة للشركات الدولية في رحلة التحوّل الرقمي — معروفين بالتميّز الهندسي والشفافية والنتائج."
+    },
+    "values": {
+      "title": "القيم",
+      "items": [
+        {
+          "number": "01",
+          "title": "النزاهة الهندسية",
+          "body": "نبني أنظمة تعمل بموثوقية، وتتوسّع بشكل متوقّع، ويمكن لأي فريق كفء صيانتها — لا الذين كتبوها فقط."
+        },
+        {
+          "number": "02",
+          "title": "الشفافية التامة",
+          "body": "ترى ما نراه. التقدّم والعوائق والمفاضلات والقرارات — نشاركها بوضوح لتتصرّف بناءً على الحقائق لا الافتراضات."
+        },
+        {
+          "number": "03",
+          "title": "التفكير طويل الأمد",
+          "body": "نصمّم للسنوات الخمس القادمة، لا للمرحلة التالية فقط. البنية والتوثيق والدعم مبنية لتدوم بعد التعاون الأول."
+        },
+        {
+          "number": "04",
+          "title": "نجاح العميل",
+          "body": "نتائجك هي مقياسنا. ننجح عندما تعمل أنظمتك، ويعمل فريقك بكفاءة، وتنمو أعمالك."
+        }
+      ]
+    },
+    "principles": {
+      "title": "مبادئ هندسية",
+      "intro": "هذه هي القيود التقنية الفعلية التي نفرضها على كل مشروع:",
+      "items": [
+        {
+          "title": "التوثيق ليس اختياريًا",
+          "body": "كل نظام يُسلَّم مع وثائق البنية وعقود الـ API وأدلّة التشغيل. ما لا يُوثَّق لا وجود له."
+        },
+        {
+          "title": "تغطية الاختبار حدّ أدنى لا هدف طموح",
+          "body": "اختبارات الوحدة والتكامل والاختبار الشامل متطلبات أساسية. لا نُطلق كودًا دون إثبات أنه يعمل."
+        },
+        {
+          "title": "المراقبة والرصد من اليوم الأول",
+          "body": "التسجيل المنظّم والمقاييس والتنبيهات مدمجة من البداية — لا تُضاف بعد أن يتعطّل شيء."
+        },
+        {
+          "title": "البساطة قبل البراعة",
+          "body": "نختار التقنية المملّة عندما تعمل. الحلول المعقّدة تستحقّ مكانها؛ والبسيطة هي الأصل."
+        }
+      ]
+    },
+    "process": {
+      "title": "عمليتنا",
+      "steps": [
+        {
+          "number": "01",
+          "title": "الاستكشاف وتحديد النطاق",
+          "body": "نرسم سياق أعمالك وقيودها ونتائجها. تُوثَّق المتطلبات ولا تُفترَض. تعتمد النطاق قبل أن نكتب سطرًا واحدًا من الكود."
+        },
+        {
+          "number": "02",
+          "title": "البنية والتصميم",
+          "body": "تُصمَّم بنية النظام ونماذج البيانات وعقود الـ API وتُراجَع. ترى المخطّط قبل بدء البناء."
+        },
+        {
+          "number": "03",
+          "title": "الهندسة والتطوير",
+          "body": "نبني على دفعات مع تكامل مستمر. ترى برمجيات تعمل بانتظام، لا مجرّد تقارير حالة."
+        },
+        {
+          "number": "04",
+          "title": "الاختبار والجودة",
+          "body": "اختبارات آلية، وضمان جودة يدوي، واختبار قبول المستخدم تتحقّق من كل إصدار. تُلتقط الأخطاء قبل وصولها إلى الإنتاج."
+        },
+        {
+          "number": "05",
+          "title": "النشر والدعم",
+          "body": "ننشر إلى الإنتاج، ونراقب الأداء، ونقدّم دعمًا مستمرًا. العلاقة لا تنتهي عند الإطلاق."
+        }
+      ]
+    },
+    "global": {
+      "title": "حضور عالمي",
+      "body": "تعمل ALA CORE دوليًا بقدرة تنفيذ عبر أوروبا والشرق الأوسط وما بعدهما. نبني تقنية بلا حدود — نخدم عملاء بعدّة لغات وعملات وبيئات تنظيمية."
+    },
+    "stats": {
+      "items": [
+        {
+          "label": "اللغات المدعومة",
+          "value": "4"
+        },
+        {
+          "label": "مناطق التنفيذ",
+          "value": "أوروبا والشرق الأوسط"
+        },
+        {
+          "label": "النشر السحابي",
+          "value": "متعدّد المناطق"
+        },
+        {
+          "label": "المناطق الزمنية",
+          "value": "عالمي"
+        }
+      ]
+    },
+    "cta": {
+      "primary": "ابدأ مشروعًا",
+      "secondary": "صف احتياجك"
+    }
   }
 }

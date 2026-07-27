@@ -8,12 +8,11 @@ prefilled WhatsApp message, shows only `support@alacore.net`, and offers Ask ALA
 IMPECCABLE §16, §21, §23; `../DECISIONS.md` (no backend); `../PRODUCT.md` (voice: capable/clear/calm).
 
 ## `/about`
-1. Positioning: one accountable partner for every business technology need; understands business before
-   proposing technology; long-term partner that designs, builds, and supports.
-2. Working principles (capable / clear / calm), a short Process recap (reuse `ProcessSteps`) with a link
-   to the full **How We Work** page (`/how-we-work`, [`17-how-we-work.md`](17-how-we-work.md)), and a CTA.
-3. **No** fake stats, clients, awards, team headshots-as-proof, or unverifiable claims. Author copy into
-   the content model (EN/DE/TR).
+> **Superseded by [`24-about-page.md`](24-about-page.md)** — the full "engineering company" About page
+> (statement · mission · vision · values · engineering principles · 5-step process · global vision ·
+> stats · CTA). Build About from task 24; this task only owns `/contact` below.
+- Constraint that still applies: **no fake stats, clients, awards, or unverifiable claims** (see task 24
+  flag 1 on the stats). Author copy into the content model (EN/DE/TR).
 
 ## `/contact`
 1. **`components/forms/ContactForm.astro`** (island) — fields: Name, Business name, Email or phone,

@@ -1,5 +1,5 @@
 ---
-import { EMAIL, DEFAULT_LOCALE, LOCALES, LOCALES_WITH_LABELS, type Locale } from '../../lib/config';
+import { EMAIL, DEFAULT_LOCALE, VISIBLE_LOCALES, LOCALES_WITH_LABELS, type Locale } from '../../lib/config';
 import { localizePath, t } from '../../lib/i18n';
 import type { CopyNode } from '../../lib/i18n';
 import copy from '../../content/site-copy.json';
@@ -49,9 +49,6 @@ const year = new Date().getFullYear();
       <h3 class="site-footer__column-title">{t(localeCopy, 'footer.company.title')}</h3>
         <ul class="site-footer__nav-list">
         <li>
-          <a href={localizePath('/how-we-work', currentLocale, currentLocale)}>{t(localeCopy, 'footer.company.howWeWork')}</a>
-        </li>
-        <li>
           <a href={localizePath('/products', currentLocale, currentLocale)}>{t(localeCopy, 'footer.company.products')}</a>
         </li>
         <li>
@@ -64,7 +61,7 @@ const year = new Date().getFullYear();
       <nav class="site-footer__languages" aria-label="Footer languages">
         <ul class="site-footer__language-list">
           {
-            LOCALES.map((locale) => {
+            VISIBLE_LOCALES.map((locale) => {
               const href = localizePath(path, locale, currentLocale);
               return (
                 <li>

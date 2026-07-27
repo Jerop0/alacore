@@ -1,0 +1,48 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Hero from '../../components/sections/Hero.astro';
+import WhatWeBuild from '../../components/sections/WhatWeBuild.astro';
+import IndustriesTeaser from '../../components/sections/IndustriesTeaser.astro';
+import ExampleSolutions from '../../components/sections/ExampleSolutions.astro';
+import AnyIdea from '../../components/sections/AnyIdea.astro';
+import ProcessSteps from '../../components/sections/ProcessSteps.astro';
+import WhyAlaCore from '../../components/sections/WhyAlaCore.astro';
+import FinalCta from '../../components/sections/FinalCta.astro';
+import { DEFAULT_LOCALE, type Locale } from '../../lib/config';
+import type { CopyNode } from '../../lib/i18n';
+import copy from '../../content/site-copy.json';
+
+const currentLocale = (Astro.currentLocale as Locale) ?? 'ar';
+const localeCopy =
+  (copy as Record<string, CopyNode>)[currentLocale] ?? (copy as Record<string, CopyNode>)[DEFAULT_LOCALE];
+
+const title = 'ALA CORE — شريك واحد لكل حلول أعمالك';
+const description =
+  'تبني ALA CORE التطبيقات والمواقع والشات بوت والأتمتة ولوحات المعلومات وأنظمة الأعمال التي تجعل إدارة شركتك أسهل.';
+
+const structuredData = {
+  '@context': 'https://schema.org',
+  '@type': 'Organization',
+  name: 'ALA CORE',
+  url: 'https://alacore.net',
+  logo: 'https://alacore.net/brand/ala-core-horizontal-dark.svg',
+  contactPoint: {
+    '@type': 'ContactPoint',
+    email: 'support@alacore.net',
+    contactType: 'customer support',
+    availableLanguage: ['English', 'German', 'Turkish', 'Arabic'],
+  },
+  sameAs: [],
+};
+---
+
+<Layout title={title} description={description} structuredData={structuredData}>
+  <Hero locale={currentLocale} copy={localeCopy} />
+  <WhatWeBuild copy={localeCopy} locale={currentLocale} />
+  <AnyIdea locale={currentLocale} copy={localeCopy} />
+  <IndustriesTeaser locale={currentLocale} copy={localeCopy} />
+  <ExampleSolutions copy={localeCopy} />
+  <ProcessSteps copy={localeCopy} locale={currentLocale} />
+  <WhyAlaCore copy={localeCopy} />
+  <FinalCta locale={currentLocale} copy={localeCopy} />
+</Layout>

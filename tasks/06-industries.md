@@ -31,9 +31,11 @@ companies-offices, warehouses-logistics, retail-ecommerce, factories-manufacturi
    examples per industry.
 5. **Depth:** each industry page carries the deep, simplified capability catalog (app → website → 3D/AR
    → menu design → ads → SEO → automation) — **content** from
-   [`14-industry-and-solution-depth.md`](14-industry-and-solution-depth.md), **interaction** (rich rows,
+   [`14-industry-and-solution-depth.md`](14-industry-and-solution-depth.md), **card grouping** (one card
+   per **theme**, each item with a plain "how it works") from
+   [`21-theme-cards-how-it-works.md`](21-theme-cards-how-it-works.md), **interaction** (rich rows,
    hover/focus/tap reveal, pop-up for heavy items, no "Learn more", no one-liner collapse) from
-   [`19-card-interaction.md`](19-card-interaction.md). Build the page shell here; apply 14 + 19.
+   [`19-card-interaction.md`](19-card-interaction.md). Build the page shell here; apply 14 + 19 + 21.
 
 ## Acceptance
 - 8 industry routes render in all 3 locales with correct pretty URLs + hreflang; overview tabs link

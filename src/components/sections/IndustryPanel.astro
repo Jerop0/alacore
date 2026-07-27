@@ -19,7 +19,6 @@ const list = tObj<Record<string, CopyNode>>(copy, 'list') ?? {};
 const item = list[slug] ?? {};
 const catalogLocale = (catalogData as Record<string, any>)[locale] ?? (catalogData as Record<string, any>)['en'];
 const catalog = catalogLocale.catalog?.[slug];
-const themeTitles = catalogLocale.themeTitles ?? {};
 ---
 
 <section class="section industry-panel">
@@ -30,8 +29,7 @@ const themeTitles = catalogLocale.themeTitles ?? {};
       catalog ? (
         <IndustryCatalog
           intro={catalog.intro}
-          themeTitles={themeTitles}
-          themes={catalog.themes}
+          themes={catalog.themes ?? []}
           bundle={catalog.bundle}
           cta={catalog.cta}
           locale={locale}

@@ -65,7 +65,26 @@ All strings are newly authored: title, intro, delivery, 10 capability groups × 
 
 ## src/content/about.json
 
-All strings are newly authored: title, intro, 3 positioning bullets, principles title/items, cta.
+All strings are newly authored for the full About page (Task 24):
+
+| Section | EN | DE | TR | Status |
+|---|---|---|---|---|
+| opening.headline | We are an engineering company. | Wir sind ein Engineering-Unternehmen. | Biz bir mühendislik şirketiyiz. | needs review |
+| opening.body | Not an agency. Not a consultancy... | Keine Agentur. Keine Beratung... | Ajans değil. Danışmanlık değil... | needs review |
+| mission.title/body | Mission / To deliver complete technology ecosystems... | Mission / Vollständige Technologie-Ökosysteme zu liefern... | Misyon / Kalıcı iş değeri yaratan eksiksiz teknoloji ekosistemleri sunmak... | needs review |
+| vision.title/body | Vision / To be the most trusted technology partner... | Vision / Der vertrauenswürdigste Technologiepartner... | Vizyon / Dijital dönüşümde gezinen uluslararası şirketler için... | needs review |
+| values.title | Values | Werte | Değerler | needs review |
+| values.items[0-3] | 01–04: Engineering integrity, Radical transparency, Long-term thinking, Client success | 01–04: Engineering-Integrität, Radikale Transparenz, Langfristiges Denken, Kundenerfolg | 01–04: Mühendislik bütünlüğü, Radikal şeffaflık, Uzun vadeli düşünme, Müşteri başarısı | needs review |
+| principles.title/intro | Engineering principles / These are the actual technical constraints... | Engineering-Prinzipien / Dies sind die tatsächlichen technischen Constraints... | Mühendislik ilkeleri / Bunlar, her projeye uyguladığımız gerçek teknik kısıtlamalardır... | needs review |
+| principles.items[0-3] | Documentation is not optional, Test coverage is a minimum, Monitoring from day one, Simplicity over cleverness | (same titles) | (same titles) | needs review |
+| process.title | Our process | Unser Prozess | Sürecimiz | needs review |
+| process.steps[0-4] | 01–05: Discovery & scoping, Architecture & design, Engineering & development, Testing & quality, Deployment & support | 01–05: Discovery & Scoping, Architektur & Design, Engineering & Entwicklung, Testing & Qualität, Deployment & Support | 01–05: Keşif ve kapsam belirleme, Mimari ve tasarım, Mühendislik ve geliştirme, Test ve kalite, Dağıtım ve destek | needs review |
+| global.title/body | Global reach / ALA CORE operates internationally... | Globale Reichweite / ALA CORE operiert international... | Küresel erişim / ALA CORE, Avrupa, Orta Doğu ve ötesinde... | needs review |
+| stats.items[0-3] | 3 Languages supported, Europe & Middle East, Multi-region, Global | 3 Unterstützte Sprachen, Europa & Naher Osten, Multi-Region, Global | 3 Desteklenen diller, Avrupa & Orta Doğu, Çok bölgeli, Küresel | needs review |
+| cta.primary | Start a project | Projekt starten | Proje başlat | needs review |
+| cta.secondary | Describe your need | Bedarf beschreiben | İhtiyacınızı açıklayın | needs review |
+
+**Note:** The `/how-we-work` route has been removed and redirected to `/about` (301 redirect in vercel.json). The footer no longer includes a "How We Work" link. The homepage process teaser now links to `/about`.
 
 ## src/content/contact.json
 
@@ -102,11 +121,12 @@ All strings are newly authored: page meta, heading/intro, labels.youGet/yourPart
 | /solutions | ✓ | ✓ | ✓ |
 | /industries | ✓ | ✓ | ✓ |
 | /industries/* | ✓ | ✓ | ✓ |
-| /for-tech-teams | ✓ | ✓ | ✓ |
+| /for-tech-teams | ✓ (redirects to /solutions) | ✓ (redirects to /de/solutions) | ✓ (redirects to /tr/solutions) |
 | /about | ✓ | ✓ | ✓ |
 | /contact | ✓ | ✓ | ✓ |
 | /products | ✓ | ✓ | ✓ |
 | /work | ✓ | ✓ | ✓ |
+| /how-we-work | ✓ (redirects to /about) | ✓ (redirects to /de/about) | ✓ (redirects to /tr/about) |
 
 All newly authored DE/TR strings in this file are marked `needs review` for human sign-off before shipping.
 

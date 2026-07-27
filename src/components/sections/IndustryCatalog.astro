@@ -1,19 +1,30 @@
 ---
-import RichRow from '../sections/RichRow.astro';
+import RichRow from './RichRow.astro';
 import Button from '../ui/Button.astro';
 import { localizePath } from '../../lib/i18n';
 import type { Locale } from '../../lib/config';
 
+interface Item {
+  name: string;
+  benefit: string;
+  howItWorks?: string[];
+}
+
+interface Theme {
+  title: string;
+  intro: string;
+  items: Item[];
+}
+
 interface Props {
   intro: string;
-  themeTitles: Record<string, string>;
-  themes: { key: string; items: { name: string; short: string; detail: string; link?: string }[] }[];
+  themes: Theme[];
   bundle?: { title: string; description: string };
   cta?: string;
   locale: Locale;
 }
 
-const { intro, themeTitles, themes, bundle, cta, locale } = Astro.props;
+const { intro, themes, bundle, cta, locale } = Astro.props;
 ---
 
 <div class="industry-catalog">
@@ -22,23 +33,11 @@ const { intro, themeTitles, themes, bundle, cta, locale } = Astro.props;
   <div class="industry-catalog__themes">
     {
       themes.map((theme) => (
-        <section class="industry-theme" aria-labelledby={`theme-${theme.key}`}>
-          <h3 id={`theme-${theme.key}`} class="industry-theme__title">
-            {themeTitles[theme.key] ?? theme.key}
-          </h3>
-          <div class="industry-theme__items">
-            {theme.items.map((item) => (
-              <RichRow
-                title={item.name}
-                summary={item.short}
-                expand={{
-                  summaryLabel: item.name,
-                  content: item.detail,
-                }}
-              />
-            ))}
-          </div>
-        </section>
+        <RichRow
+          title={theme.title}
+          summary={theme.intro}
+          items={theme.items}
+        />
       ))
     }
   </div>
@@ -71,34 +70,14 @@ const { intro, themeTitles, themes, bundle, cta, locale } = Astro.props;
   .industry-catalog__intro {
     font-size: var(--text-xl);
     line-height: 1.5;
-    color: var(--text-secondary);
+    color: var(--text-muted);
     max-width: 64ch;
   }
 
   .industry-catalog__themes {
     display: flex;
     flex-direction: column;
-    gap: 2.5rem;
-  }
-
-  .industry-theme {
-    display: flex;
-    flex-direction: column;
-    gap: 1rem;
-  }
-
-  .industry-theme__title {
-    font-size: var(--text-lg);
-    font-weight: 700;
-    color: var(--text);
-    padding-bottom: 0.75rem;
-    border-bottom: 1px solid var(--line);
-  }
-
-  .industry-theme__items {
-    display: flex;
-    flex-direction: column;
-    gap: 0.75rem;
+    gap: 1.5rem;
   }
 
   .industry-catalog__bundle {
@@ -116,7 +95,7 @@ const { intro, themeTitles, themes, bundle, cta, locale } = Astro.props;
   }
 
   .industry-catalog__bundle-desc {
-    color: var(--text-secondary);
+    color: var(--text-muted);
     line-height: 1.6;
   }
 

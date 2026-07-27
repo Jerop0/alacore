@@ -12,7 +12,7 @@ const classes = `core-orbit ${compact ? 'core-orbit--compact' : ''} ${className}
   <svg
     class="core-orbit__svg"
     xmlns="http://www.w3.org/2000/svg"
-    viewBox="0 0 900 500"
+    viewBox="0 -160 900 820"
     preserveAspectRatio="xMidYMid meet"
     role="img"
     aria-label="ALA CORE orbital visual"
@@ -79,16 +79,19 @@ const classes = `core-orbit ${compact ? 'core-orbit--compact' : ''} ${className}
     position: relative;
     width: 100%;
     max-width: 760px;
+    min-height: 420px;
     margin-inline: auto;
   }
 
   .core-orbit--compact {
     max-width: 420px;
+    min-height: 280px;
   }
 
   .core-orbit__svg {
     width: 100%;
     height: auto;
+    overflow: visible;
   }
 
   @media (prefers-reduced-motion: no-preference) {
