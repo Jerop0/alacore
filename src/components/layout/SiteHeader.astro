@@ -17,7 +17,7 @@ const currentLocale = Astro.currentLocale as Locale ?? DEFAULT_LOCALE;
 const path = Astro.url.pathname;
 const localeCopy = (copy as Record<string, CopyNode>)[currentLocale] ?? copy[DEFAULT_LOCALE];
 
-const lightLogo = '/brand/ala-core-horizontal-white.png';
+const lightLogo = '/brand/ala-core-horizontal-white-removebg-preview.png';
 const markLogo = '/brand/ala-core-mark-light.svg';
 ---
 
@@ -134,6 +134,10 @@ const markLogo = '/brand/ala-core-mark-light.svg';
 
   .site-header__logo-wide {
     display: none;
+    height: 46px;
+    width: auto;
+    max-width: 220px;
+    object-fit: contain;
   }
 
   .site-header__logo-mark {
