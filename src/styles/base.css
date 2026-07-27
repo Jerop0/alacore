@@ -97,6 +97,7 @@ li {
 
 .section {
   padding-block: var(--ala-section-space);
+  scroll-margin-top: 80px;
 }
 
 .section--mist {

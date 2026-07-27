@@ -79,56 +79,42 @@ const industryImages: Record<string, string> = {
 
 <style>
   .industries-teaser {
-    overflow-x: auto;
-    padding-bottom: 0.5rem;
-    -webkit-overflow-scrolling: touch;
+    margin-top: 2rem;
   }
 
   .industries-teaser__list {
-    display: flex;
-    gap: 1rem;
-    min-width: max-content;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 1.5rem;
     list-style: none;
-  }
-
-  @media (min-width: 640px) {
-    .industries-teaser__list {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      min-width: auto;
-    }
-  }
-
-  @media (min-width: 1024px) {
-    .industries-teaser__list {
-      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    }
+    padding: 0;
+    margin: 0;
   }
 
   .industries-teaser__card {
-    display: inline-flex;
+    display: flex;
     flex-direction: column;
-    min-width: 180px;
     border: 1px solid var(--line);
     border-radius: var(--ala-radius-md);
     background-color: var(--bg);
     color: var(--text);
-    text-align: center;
+    text-decoration: none;
     overflow: hidden;
-    transition: border-color 180ms var(--ease-out-expo), transform 180ms var(--ease-out-expo);
+    transition: border-color 180ms var(--ease-out-expo), transform 180ms var(--ease-out-expo), box-shadow 180ms var(--ease-out-expo);
   }
 
   .industries-teaser__card:hover {
     border-color: var(--accent);
-    transform: translateY(-2px);
+    transform: translateY(-4px);
+    box-shadow: 0 12px 24px -12px rgba(0, 0, 0, 0.15);
   }
 
   .industries-teaser__image-wrapper {
     position: relative;
     width: 100%;
-    aspect-ratio: 4 / 3;
+    aspect-ratio: 16 / 9;
     overflow: hidden;
-    border-radius: var(--ala-radius-sm) var(--ala-radius-sm) 0 0;
+    background-color: var(--surface);
   }
 
   .industries-teaser__image {
@@ -139,18 +125,19 @@ const industryImages: Record<string, string> = {
   }
 
   .industries-teaser__card:hover .industries-teaser__image {
-    transform: scale(1.03);
+    transform: scale(1.05);
   }
 
   .industries-teaser__label {
     display: block;
-    padding: 1rem;
-    font-size: var(--text-sm);
-    font-weight: 600;
+    padding: 1.25rem;
+    font-size: var(--text-md);
+    font-weight: 700;
+    text-align: center;
   }
 
   .industries-teaser__footer {
-    margin-top: 2rem;
+    margin-top: 2.5rem;
     text-align: center;
   }
 
@@ -173,6 +160,10 @@ const industryImages: Record<string, string> = {
     }
 
     .industries-teaser__card:hover .industries-teaser__image {
+      transform: none;
+    }
+
+    .industries-teaser__card:hover {
       transform: none;
     }
   }
