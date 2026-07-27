@@ -98,7 +98,7 @@
       "items": [
         {
           "label": "Languages supported",
-          "value": "3"
+          "value": "4"
         },
         {
           "label": "Delivery regions",
@@ -149,7 +149,7 @@
         {
           "number": "03",
           "title": "Langfristiges Denken",
-          "body": "Wir designen für die nächsten fünf Jahre, nicht für den nächsten Sprint. Architektur, Dokumentation und Support sind built to outlast the initial engagement."
+          "body": "Wir gestalten für die nächsten fünf Jahre, nicht für den nächsten Sprint. Architektur, Dokumentation und Support sind auf Langlebigkeit ausgelegt."
         },
         {
           "number": "04",
@@ -212,13 +212,13 @@
     },
     "global": {
       "title": "Globale Reichweite",
-      "body": "ALA CORE operiert international mit Delivery-Capability across Europe, the Middle East, and beyond. Wir bauen Technologie ohne Grenzen — bedienen Kunden in mehreren Sprachen, Währungen und regulatorischen Umgebungen."
+      "body": "ALA CORE ist international tätig mit Lieferfähigkeit in Europa, dem Nahen Osten und darüber hinaus. Wir bauen Technologie ohne Grenzen — für Kunden in mehreren Sprachen, Währungen und regulatorischen Umgebungen."
     },
     "stats": {
       "items": [
         {
           "label": "Unterstützte Sprachen",
-          "value": "3"
+          "value": "4"
         },
         {
           "label": "Delivery-Regionen",
@@ -338,7 +338,7 @@
       "items": [
         {
           "label": "Desteklenen diller",
-          "value": "3"
+          "value": "4"
         },
         {
           "label": "Teslimat bölgeleri",

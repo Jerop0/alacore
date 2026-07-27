@@ -82,7 +82,7 @@ const { intro, themeTitles, themes, bundle, cta, learnMore = 'Learn more', local
   .capability-catalog__intro {
     font-size: var(--text-xl);
     line-height: 1.5;
-    color: var(--text-secondary);
+    color: var(--text-muted);
     max-width: 64ch;
   }
 
@@ -107,7 +107,7 @@ const { intro, themeTitles, themes, bundle, cta, learnMore = 'Learn more', local
     padding: 1.25rem 1.5rem;
     font-size: var(--text-lg);
     font-weight: 700;
-    color: var(--text-primary);
+    color: var(--text);
     background-color: var(--surface);
     border-bottom: 1px solid var(--line);
   }
@@ -130,8 +130,8 @@ const { intro, themeTitles, themes, bundle, cta, learnMore = 'Learn more', local
   }
 
   .capability-item__summary {
-    display: grid;
-    grid-template-columns: 1fr auto;
+    display: flex;
+    flex-wrap: wrap;
     gap: 0.25rem 0.75rem;
     align-items: center;
     padding: 1rem 1.5rem;
@@ -150,26 +150,23 @@ const { intro, themeTitles, themes, bundle, cta, learnMore = 'Learn more', local
   }
 
   .capability-item__name {
-    grid-column: 1;
     font-weight: 700;
-    color: var(--text-primary);
+    color: var(--text);
   }
 
   .capability-item__short {
-    grid-column: 1;
+    flex: 1;
     font-size: var(--text-sm);
-    color: var(--text-secondary);
+    color: var(--text-muted);
     line-height: 1.5;
   }
 
   .capability-item__chevron {
-    grid-column: 2;
-    grid-row: 1 / 3;
     display: grid;
     place-items: center;
     width: 28px;
     height: 28px;
-    color: var(--text-tertiary);
+    color: var(--text-subtle);
     transition: transform 160ms var(--ease-out-expo);
   }
 
@@ -179,7 +176,7 @@ const { intro, themeTitles, themes, bundle, cta, learnMore = 'Learn more', local
 
   .capability-item__detail {
     padding: 0 1.5rem 1.25rem;
-    color: var(--text-secondary);
+    color: var(--text-muted);
     line-height: 1.6;
   }
 
@@ -195,7 +192,7 @@ const { intro, themeTitles, themes, bundle, cta, learnMore = 'Learn more', local
   }
 
   .capability-item__link:hover {
-    color: var(--text-primary);
+    color: var(--text);
   }
 
   .capability-bundle {
@@ -208,12 +205,12 @@ const { intro, themeTitles, themes, bundle, cta, learnMore = 'Learn more', local
   .capability-bundle h2 {
     font-size: var(--text-lg);
     font-weight: 700;
-    color: var(--text-primary);
+    color: var(--text);
     margin-bottom: 0.5rem;
   }
 
   .capability-bundle p {
-    color: var(--text-secondary);
+    color: var(--text-muted);
     line-height: 1.6;
   }
 

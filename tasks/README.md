@@ -1,8 +1,17 @@
 # ALA CORE — Build Tasks (opencode work queue)
 
 You are building the ALA CORE website. Work through the numbered task files **in order**
-(`00 → 12`), committing after each. Each file is self-contained:
+(`00 → 31`), committing after each. Each file is self-contained:
 **Goal · Read-first · Steps · Files · Acceptance · Done-when.**
+
+**Later tracks:**
+- `21 → 24` — post-launch fixes and the About page.
+- `25 → 28` — **Arabic locale** (RTL). Read `25-arabic-preferences.md` **first** (user-filled decisions);
+  it is canonical for `26` (retranslate EN→AR, reviewed), `27` (RTL + Arabic impeccable redesign), `28` (audit).
+- `29` — header + hero rebuilt with the supplied brand assets (transparent white logo + reception-wall hero).
+- `30` — homepage: move "Industries We Help" directly after the hero.
+- `31` — **on finish, commit + push to `origin/main` and verify every image/logo/font is on the remote.**
+  Run it as the closing step of each task and as a final sweep.
 
 ## Read before you start (once)
 

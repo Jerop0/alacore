@@ -17,14 +17,14 @@ const currentLocale = Astro.currentLocale as Locale ?? DEFAULT_LOCALE;
 const path = Astro.url.pathname;
 const localeCopy = (copy as Record<string, CopyNode>)[currentLocale] ?? copy[DEFAULT_LOCALE];
 
-const lightLogo = '/brand/ala-core-horizontal-light.svg';
+const lightLogo = '/brand/ala-core-horizontal-white.png';
 const markLogo = '/brand/ala-core-mark-light.svg';
 ---
 
 <header class="site-header" id="site-header">
   <div class="container site-header__inner">
     <a href={localizePath('/', currentLocale, currentLocale)} class="site-header__logo" aria-label="ALA CORE Home">
-      <img src={lightLogo} alt="ALA CORE" class="site-header__logo-wide" width="180" height="36" />
+      <img src={lightLogo} alt="ALA CORE" class="site-header__logo-wide" width="180" height="45" />
       <img src={markLogo} alt="ALA CORE" class="site-header__logo-mark" width="40" height="40" />
     </a>
 

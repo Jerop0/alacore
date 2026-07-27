@@ -97,7 +97,7 @@ const ctaHref = product.cta.startsWith('/') ? localizePath(product.cta, locale, 
 
   .product-card__status--coming-soon {
     background-color: rgba(107, 114, 128, 0.12);
-    color: var(--text-tertiary);
+    color: var(--text-subtle);
   }
 
   :global([data-theme='dark']) .product-card__status--live {
@@ -114,25 +114,25 @@ const ctaHref = product.cta.startsWith('/') ? localizePath(product.cta, locale, 
     font-size: var(--text-xl);
     font-weight: 700;
     line-height: 1.2;
-    color: var(--text-primary);
+    color: var(--text);
   }
 
   .product-card__tagline {
     font-size: var(--text-md);
     font-weight: 600;
-    color: var(--text-secondary);
+    color: var(--text-muted);
     line-height: 1.4;
   }
 
   .product-card__description {
-    font-size: var(--text-base);
+    font-size: var(--text-md);
     line-height: 1.6;
-    color: var(--text-secondary);
+    color: var(--text-muted);
   }
 
   .product-card__for-whom {
     font-size: var(--text-sm);
-    color: var(--text-tertiary);
+    color: var(--text-subtle);
   }
 
   .product-card__cta {

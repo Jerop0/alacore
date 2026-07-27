@@ -1,6 +1,5 @@
 ---
 import Button from '../ui/Button.astro';
-import CoreOrbit from './CoreOrbit.astro';
 import { DEFAULT_LOCALE, type Locale } from '../../lib/config';
 import { localizePath, t } from '../../lib/i18n';
 import type { CopyNode } from '../../lib/i18n';
@@ -14,21 +13,26 @@ const { locale, copy } = Astro.props;
 ---
 
 <section class="hero">
-  <div class="container hero__inner">
-    <div class="hero__copy">
-      <h1 class="hero__title">{t(copy, 'hero.title')}</h1>
-      <p class="hero__body">{t(copy, 'hero.body')}</p>
-      <div class="hero__actions">
-        <Button href={localizePath('/solutions', locale, locale)}>
-          {t(copy, 'hero.primary')}
-        </Button>
-        <Button href={localizePath('/contact', locale, locale)} variant="secondary" onDark>
-          {t(copy, 'hero.secondary')}
-        </Button>
-      </div>
-    </div>
-    <div class="hero__visual">
-      <CoreOrbit />
+  <div class="hero__media">
+    <img
+      src="/images/hero/reception-wall.png"
+      alt="ALA CORE office reception with mounted logo"
+      class="hero__image"
+      width="1672"
+      height="941"
+      fetchpriority="high"
+    />
+  </div>
+  <div class="container hero__content">
+    <h1 class="hero__title">{t(copy, 'hero.title')}</h1>
+    <p class="hero__body">{t(copy, 'hero.body')}</p>
+    <div class="hero__actions">
+      <Button href={localizePath('/solutions', locale, locale)}>
+        {t(copy, 'hero.primary')}
+      </Button>
+      <Button href={localizePath('/contact', locale, locale)} variant="secondary">
+        {t(copy, 'hero.secondary')}
+      </Button>
     </div>
   </div>
 </section>
@@ -37,57 +41,60 @@ const { locale, copy } = Astro.props;
   .hero {
     position: relative;
     display: flex;
-    align-items: center;
-    min-height: calc(600px - 76px);
-    padding-top: 64px;
-    padding-bottom: 64px;
-    background-color: var(--ala-core-ink);
-    color: var(--ala-pure-white);
+    flex-direction: column;
+    background-color: var(--bg);
+    color: var(--text);
+  }
+
+  .hero__media {
+    width: 100%;
     overflow: hidden;
   }
 
-  @media (min-width: 1024px) {
-    .hero {
-      min-height: calc(640px - 76px);
-      padding-top: 80px;
-      padding-bottom: 80px;
+  .hero__image {
+    display: block;
+    width: 100%;
+    height: auto;
+    max-height: 70vh;
+    object-fit: cover;
+    object-position: center;
+  }
+
+  .hero__content {
+    padding-top: 3rem;
+    padding-bottom: 4rem;
+  }
+
+  @media (min-width: 768px) {
+    .hero__content {
+      padding-top: 4rem;
+      padding-bottom: 5rem;
     }
   }
 
-  .hero__inner {
-    display: grid;
-    gap: 2.5rem;
-    align-items: center;
-  }
-
   @media (min-width: 1024px) {
-    .hero__inner {
-      grid-template-columns: minmax(0, 560px) 1fr;
-      gap: 3rem;
+    .hero__content {
+      padding-top: 5rem;
+      padding-bottom: 6rem;
     }
-  }
-
-  .hero__copy {
-    position: relative;
-    z-index: 1;
   }
 
   .hero__title {
     font-size: var(--heading-hero);
     font-weight: 800;
-    line-height: 1.02;
+    line-height: 1.05;
     letter-spacing: -0.02em;
-    text-transform: uppercase;
-    color: var(--ala-pure-white);
-    max-width: 650px;
+    color: var(--text);
+    max-width: 20ch;
+    text-wrap: balance;
   }
 
   .hero__body {
     margin-top: 1.25rem;
     font-size: var(--text-xl);
     line-height: 1.55;
-    color: rgba(255, 255, 255, 0.8);
-    max-width: 540px;
+    color: var(--text-muted);
+    max-width: 54ch;
   }
 
   .hero__actions {
@@ -97,15 +104,9 @@ const { locale, copy } = Astro.props;
     margin-top: 2rem;
   }
 
-  .hero__visual {
-    position: relative;
-    z-index: 0;
-  }
-
-  @media (max-width: 1023px) {
-    .hero__visual {
-      max-width: 420px;
-      margin-inline: auto;
+  @media (prefers-reduced-motion: reduce) {
+    .hero__image {
+      transition: none;
     }
   }
 </style>

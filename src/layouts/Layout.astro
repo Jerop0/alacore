@@ -53,6 +53,9 @@ const alternates = LOCALES.map((loc) => ({
     <link rel="manifest" href="/site.webmanifest" />
 
     <link rel="preload" href="/fonts/manrope-latin-700-normal.woff2" as="font" type="font/woff2" crossorigin />
+    {currentLocale === 'ar' && (
+      <link rel="preload" href="/fonts/alexandria-arabic.woff2" as="font" type="font/woff2" crossorigin />
+    )}
     <link rel="preload" href="/fonts/manrope-latin-ext-700-normal.woff2" as="font" type="font/woff2" crossorigin />
 
     <meta property="og:type" content="website" />

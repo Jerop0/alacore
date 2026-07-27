@@ -28,9 +28,6 @@
   --surface-2: #eaf1ff;
   --line: var(--ala-border);
   --text: var(--ala-text-dark);
-  --text-primary: var(--ala-text-dark);
-  --text-secondary: var(--ala-text-muted);
-  --text-tertiary: var(--text-subtle);
   --text-muted: var(--ala-text-muted);
   --text-subtle: #4b5563;
   --accent: var(--ala-technology-blue);
@@ -46,9 +43,6 @@
   --surface-2: #16223b;
   --line: rgba(148, 163, 184, 0.14);
   --text: var(--ala-interface-mist);
-  --text-primary: var(--ala-interface-mist);
-  --text-secondary: #94a3b8;
-  --text-tertiary: #b4c0d3;
   --text-muted: #94a3b8;
   --text-subtle: #b4c0d3;
   --accent: #4c86ff;
@@ -61,10 +55,10 @@
 :root {
   --text-xs: 0.75rem;
   --text-sm: 0.875rem;
-  --text-base: 1rem;
   --text-md: 1rem;
   --text-lg: 1.125rem;
   --text-xl: 1.25rem;
+  --text-2xl: 1.5rem;
 
   --heading-sm: clamp(1.75rem, 3vw, 2.5rem);
   --heading-md: clamp(2.25rem, 5vw, 4rem);
@@ -137,4 +131,22 @@
     url("/fonts/manrope-latin-ext-800-normal.woff2") format("woff2"),
     url("/fonts/manrope-latin-800-normal.woff2") format("woff2");
   unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+
+@font-face {
+  font-family: "Alexandria";
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+  src: url("/fonts/alexandria-arabic.woff2") format("woff2");
+  unicode-range: U+0600-06FF, U+0750-077F, U+FB50-FDFF, U+FE70-FEFF;
+}
+
+@font-face {
+  font-family: "Alexandria";
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+  src: url("/fonts/alexandria-arabic.woff2") format("woff2");
+  unicode-range: U+0600-06FF, U+0750-077F, U+FB50-FDFF, U+FE70-FEFF;
 }
