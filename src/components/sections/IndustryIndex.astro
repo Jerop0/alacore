@@ -1,8 +1,6 @@
 ---
 import SectionHeading from '../ui/SectionHeading.astro';
-import Card from '../ui/Card.astro';
 import Button from '../ui/Button.astro';
-import Icon from '../ui/Icon.astro';
 import { INDUSTRIES, type Locale } from '../../lib/config';
 import { localizePath, t, tObj } from '../../lib/i18n';
 import type { CopyNode } from '../../lib/i18n';
@@ -15,6 +13,16 @@ interface Props {
 
 const { locale, copy, siteCopy } = Astro.props;
 const industryList = tObj<Record<string, CopyNode>>(copy, 'list') ?? {};
+
+const industryImages: Record<string, string> = {
+  'factories-manufacturing': '/images/industries/factories-manufacturing-germany.png',
+  'retail-ecommerce': '/images/industries/retail-ecommerce-germany.png',
+  'warehouses-logistics': '/images/industries/warehouses-logistics-germany.png',
+  'companies-offices': '/images/industries/companies-offices-germany.png',
+  'schools-training': '/images/industries/schools-training-germany.png',
+  'hospitals-clinics': '/images/industries/hospitals-clinics-germany.png',
+  'restaurants-cafes': '/images/industries/restaurants-cafes-germany.png',
+};
 ---
 
 <section class="section">
@@ -25,16 +33,25 @@ const industryList = tObj<Record<string, CopyNode>>(copy, 'list') ?? {};
       {
         INDUSTRIES.map((industry) => {
           const item = industryList[industry.slug] ?? {};
+          const imageSrc = industryImages[industry.slug];
           return (
-            <a href={localizePath(`/industries/${industry.slug}`, locale, locale)} class="industry-card-link">
-              <Card>
-                <div class="industry-card__icon">
-                  <Icon name={industry.iconKey.toLowerCase()} size={24} />
-                </div>
+            <a href={localizePath(`/industries/${industry.slug}`, locale, locale)} class="industry-card">
+              <div class="industry-card__image-wrapper">
+                <img
+                  src={imageSrc}
+                  alt={t(item, 'name')}
+                  class="industry-card__image"
+                  width="400"
+                  height="300"
+                  loading="lazy"
+                  decoding="async"
+                />
+              </div>
+              <div class="industry-card__body">
                 <h3 class="industry-card__title">{t(item, 'name')}</h3>
-                <p class="industry-card__body">{t(item, 'oneLiner')}</p>
+                <p class="industry-card__text">{t(item, 'oneLiner')}</p>
                 <span class="industry-card__cta">{t(copy, 'cta')}</span>
-              </Card>
+              </div>
             </a>
           );
         })
@@ -73,50 +90,88 @@ const industryList = tObj<Record<string, CopyNode>>(copy, 'list') ?? {};
     }
   }
 
-  .industry-card-link {
-    display: block;
+  .industry-card {
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    border-radius: 18px;
+    background: #fff;
+    border: 1px solid rgba(15, 23, 42, 0.1);
+    box-shadow: 0 12px 34px rgba(15, 23, 42, 0.06);
     text-decoration: none;
+    color: inherit;
+    transition: transform 200ms var(--ease-out-expo), box-shadow 200ms var(--ease-out-expo);
   }
 
-  .industry-card__icon {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    width: 44px;
-    height: 44px;
-    border-radius: var(--ala-radius-sm);
-    background-color: var(--accent-tint);
-    color: var(--accent);
-    margin-bottom: 1rem;
+  .industry-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 20px 40px rgba(15, 23, 42, 0.12);
   }
 
-  .industry-card-link:hover .industry-card__icon {
-    background-color: var(--accent);
-    color: var(--ala-pure-white);
+  .industry-card__image-wrapper {
+    width: 100%;
+    height: 210px;
+    overflow: hidden;
+    background-color: var(--surface);
+  }
+
+  .industry-card__image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform 300ms var(--ease-out-expo);
+  }
+
+  .industry-card:hover .industry-card__image {
+    transform: scale(1.05);
+  }
+
+  .industry-card__body {
+    padding: 26px 30px 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+    flex: 1;
   }
 
   .industry-card__title {
     font-size: var(--text-xl);
     font-weight: 700;
-    margin-bottom: 0.5rem;
     color: var(--text);
   }
 
-  .industry-card__body {
+  .industry-card__text {
     font-size: var(--text-md);
     line-height: 1.55;
     color: var(--text-muted);
-    margin-bottom: 1rem;
+    flex: 1;
   }
 
   .industry-card__cta {
     font-size: var(--text-sm);
     font-weight: 700;
     color: var(--accent);
+    margin-top: 0.5rem;
   }
 
   .industries-all__cta {
     margin-top: 2rem;
     text-align: center;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .industry-card,
+    .industry-card__image {
+      transition: none;
+    }
+
+    .industry-card:hover {
+      transform: none;
+    }
+
+    .industry-card:hover .industry-card__image {
+      transform: none;
+    }
   }
 </style>

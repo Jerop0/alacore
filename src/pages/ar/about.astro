@@ -1,10 +1,6 @@
 ---
 import Layout from '../../layouts/Layout.astro';
-import SectionHeading from '../../components/ui/SectionHeading.astro';
-import Card from '../../components/ui/Card.astro';
 import Button from '../../components/ui/Button.astro';
-import ProcessSteps from '../../components/sections/ProcessSteps.astro';
-import FinalCta from '../../components/sections/FinalCta.astro';
 import { DEFAULT_LOCALE, type Locale } from '../../lib/config';
 import { getCopy, getSeo } from '../../lib/page';
 import { localizePath, t, tArr } from '../../lib/i18n';
@@ -15,37 +11,53 @@ const copy = getCopy(currentLocale, 'about');
 const siteCopy = getCopy(currentLocale, 'site');
 const seo = getSeo(currentLocale, 'about');
 
-const positioning = tArr(copy, 'positioning');
-const principles = (t(copy, 'principles') as unknown as CopyNode) ?? {};
-const principleItems = tArr(principles, 'items');
+const values = tArr(copy, 'values.items');
+const principles = tArr(copy, 'principles.items');
+const processSteps = tArr(copy, 'process.steps');
+const stats = tArr(copy, 'stats.items');
 ---
 
 <Layout title={seo.title} description={seo.description}>
-  <section class="section">
+  <!-- Opening Statement -->
+  <section class="about-opening">
     <div class="container">
-      <SectionHeading title={t(copy, 'title')} />
-      <p class="about-intro">{t(copy, 'intro')}</p>
-
-      <ul class="about-positioning">
-        {positioning.map((point) => (
-          <li>{point}</li>
-        ))}
-      </ul>
+      <h1 class="about-opening__headline">{t(copy, 'opening.headline')}</h1>
+      <p class="about-opening__body">{t(copy, 'opening.body')}</p>
     </div>
   </section>
 
+  <!-- Mission & Vision -->
+  <section class="section about-mission-vision">
+    <div class="container">
+      <div class="about-mission-vision__grid">
+        <div class="about-mission-vision__item">
+          <h2 class="about-mission-vision__title">{t(copy, 'mission.title')}</h2>
+          <p class="about-mission-vision__body">{t(copy, 'mission.body')}</p>
+        </div>
+        <div class="about-mission-vision__item">
+          <h2 class="about-mission-vision__title">{t(copy, 'vision.title')}</h2>
+          <p class="about-mission-vision__body">{t(copy, 'vision.body')}</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Values -->
   <section class="section section--mist">
     <div class="container">
-      <SectionHeading title={t(principles, 'title')} />
-      <div class="about-principles">
+      <h2 class="about-section-title">{t(copy, 'values.title')}</h2>
+      <div class="about-values">
         {
-          principleItems.map((item) => {
-            const p = item as unknown as CopyNode;
+          values.map((item) => {
+            const v = item as unknown as CopyNode;
             return (
-              <Card>
-                <h3 class="about-principle__title">{t(p, 'title')}</h3>
-                <p class="about-principle__body">{t(p, 'body')}</p>
-              </Card>
+              <div class="about-value">
+                <span class="about-value__number">{t(v, 'number')}</span>
+                <div class="about-value__content">
+                  <h3 class="about-value__title">{t(v, 'title')}</h3>
+                  <p class="about-value__body">{t(v, 'body')}</p>
+                </div>
+              </div>
             );
           })
         }
@@ -53,72 +65,247 @@ const principleItems = tArr(principles, 'items');
     </div>
   </section>
 
-  <ProcessSteps copy={siteCopy} locale={currentLocale} />
-
+  <!-- Engineering Principles -->
   <section class="section">
-    <div class="container about-cta">
-      <Button href={localizePath('/contact', currentLocale, currentLocale)}>
-        {t(copy, 'cta')}
-      </Button>
-      <Button href={localizePath('/how-we-work', currentLocale, currentLocale)} variant="secondary">
-        {t(siteCopy, 'sections.processCta')}
-      </Button>
+    <div class="container">
+      <h2 class="about-section-title">{t(copy, 'principles.title')}</h2>
+      <p class="about-principles__intro">{t(copy, 'principles.intro')}</p>
+      <div class="about-principles">
+        {
+          principles.map((item) => {
+            const p = item as unknown as CopyNode;
+            return (
+              <div class="about-principle">
+                <h3 class="about-principle__title">{t(p, 'title')}</h3>
+                <p class="about-principle__body">{t(p, 'body')}</p>
+              </div>
+            );
+          })
+        }
+      </div>
     </div>
   </section>
 
-  <FinalCta locale={currentLocale} copy={siteCopy} />
+  <!-- Our Process -->
+  <section class="section section--mist">
+    <div class="container">
+      <h2 class="about-section-title">{t(copy, 'process.title')}</h2>
+      <div class="about-process">
+        {
+          processSteps.map((item, index) => {
+            const step = item as unknown as CopyNode;
+            const isLast = index === processSteps.length - 1;
+            const processImages = [
+              '/how-we-work/understand.png',
+              '/how-we-work/design.png',
+              '/how-we-build/build.png',
+              '/how-we-work/build.png',
+              '/how-we-work/support.png'
+            ];
+            const imageSrc = processImages[index] || '/how-we-work/understand.png';
+            return (
+              <div class="about-process__step">
+                <div class="about-process__marker">
+                  <span class="about-process__number">{t(step, 'number')}</span>
+                  {!isLast && <div class="about-process__connector"></div>}
+                </div>
+                <div class="about-process__content">
+                  <div class="about-process__image-wrapper">
+                    <img src={imageSrc} alt={t(step, 'title')} class="about-process__image" />
+                  </div>
+                  <h3 class="about-process__title">{t(step, 'title')}</h3>
+                  <p class="about-process__body">{t(step, 'body')}</p>
+                </div>
+              </div>
+            );
+          })
+        }
+      </div>
+    </div>
+  </section>
+
+  <!-- Global Vision -->
+  <section class="section">
+    <div class="container">
+      <div class="about-global">
+        <h2 class="about-global__title">{t(copy, 'global.title')}</h2>
+        <p class="about-global__body">{t(copy, 'global.body')}</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Stats Strip -->
+  <section class="section section--mist">
+    <div class="container">
+      <div class="about-stats">
+        {
+          stats.map((item) => {
+            const s = item as unknown as CopyNode;
+            return (
+              <div class="about-stat">
+                <span class="about-stat__value">{t(s, 'value')}</span>
+                <span class="about-stat__label">{t(s, 'label')}</span>
+              </div>
+            );
+          })
+        }
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="section">
+    <div class="container about-cta">
+      <Button href={localizePath('/contact', currentLocale, currentLocale)}>
+        {t(copy, 'cta.primary')}
+      </Button>
+      <Button id="about-ask-ala" variant="secondary">
+        {t(copy, 'cta.secondary')}
+      </Button>
+    </div>
+  </section>
 </Layout>
 
+<script>
+  (function () {
+    const btn = document.getElementById('about-ask-ala');
+    if (!btn) return;
+    btn.addEventListener('click', (e) => {
+      e.preventDefault();
+      window.dispatchEvent(new CustomEvent('open-ask-ala'));
+    });
+  })();
+</script>
+
 <style>
-  .about-intro {
-    max-width: 72ch;
+  /* Opening Statement */
+  .about-opening {
+    padding-top: 120px;
+    padding-bottom: 80px;
+    background-color: var(--bg);
+  }
+
+  .about-opening__headline {
+    font-size: clamp(2.5rem, 5vw, 4rem);
+    font-weight: 800;
+    line-height: 1.1;
+    letter-spacing: -0.02em;
+    color: var(--text);
+    margin-bottom: 1.5rem;
+    max-width: 20ch;
+  }
+
+  .about-opening__body {
     font-size: var(--text-xl);
     line-height: 1.55;
     color: var(--text-muted);
+    max-width: 64ch;
   }
 
-  .about-positioning {
-    margin-top: 2rem;
+  /* Mission & Vision */
+  .about-mission-vision__grid {
+    display: grid;
+    gap: 3rem;
+  }
+
+  @media (min-width: 768px) {
+    .about-mission-vision__grid {
+      grid-template-columns: 1fr 1fr;
+      gap: 4rem;
+    }
+  }
+
+  .about-mission-vision__title {
+    font-size: var(--text-sm);
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: var(--accent);
+    margin-bottom: 1rem;
+  }
+
+  .about-mission-vision__body {
+    font-size: var(--text-lg);
+    line-height: 1.6;
+    color: var(--text);
+    max-width: 48ch;
+  }
+
+  /* Section Title */
+  .about-section-title {
+    font-size: var(--heading-sm);
+    font-weight: 700;
+    color: var(--text);
+    margin-bottom: 2rem;
+  }
+
+  /* Values */
+  .about-values {
     display: flex;
     flex-direction: column;
-    gap: 0.75rem;
-    list-style: none;
+    gap: 2rem;
   }
 
-  .about-positioning li {
-    position: relative;
-    padding-left: 1.5rem;
-    font-size: var(--text-lg);
-    line-height: 1.55;
+  .about-value {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: 1.5rem;
+    align-items: start;
+  }
+
+  .about-value__number {
+    font-size: var(--text-sm);
+    font-weight: 700;
+    color: var(--accent);
+    padding-top: 0.25rem;
+  }
+
+  .about-value__title {
+    font-size: var(--text-xl);
+    font-weight: 700;
     color: var(--text);
+    margin-bottom: 0.5rem;
   }
 
-  .about-positioning li::before {
-    content: '';
-    position: absolute;
-    left: 0;
-    top: 0.6em;
-    width: 8px;
-    height: 8px;
-    border-radius: 50%;
-    background-color: var(--accent);
+  .about-value__body {
+    font-size: var(--text-md);
+    line-height: 1.6;
+    color: var(--text-muted);
+    max-width: 64ch;
+  }
+
+  /* Principles */
+  .about-principles__intro {
+    font-size: var(--text-lg);
+    line-height: 1.6;
+    color: var(--text-muted);
+    margin-bottom: 2rem;
+    max-width: 64ch;
   }
 
   .about-principles {
     display: grid;
-    gap: 1.5rem;
+    gap: 2rem;
     grid-template-columns: 1fr;
   }
 
   @media (min-width: 768px) {
     .about-principles {
-      grid-template-columns: repeat(3, 1fr);
+      grid-template-columns: 1fr 1fr;
     }
   }
 
+  .about-principle {
+    padding: 1.5rem;
+    border: 1px solid var(--line);
+    border-radius: var(--ala-radius-sm);
+    background-color: var(--surface);
+  }
+
   .about-principle__title {
-    font-size: var(--text-xl);
+    font-size: var(--text-lg);
     font-weight: 700;
+    color: var(--text);
     margin-bottom: 0.75rem;
   }
 
@@ -128,10 +315,133 @@ const principleItems = tArr(principles, 'items');
     color: var(--text-muted);
   }
 
+  /* Process */
+  .about-process {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+  }
+
+  .about-process__step {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: 1.5rem;
+    align-items: start;
+  }
+
+  .about-process__marker {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .about-process__number {
+    display: grid;
+    place-items: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: var(--accent);
+    color: var(--ala-pure-white);
+    font-size: var(--text-sm);
+    font-weight: 700;
+    flex-shrink: 0;
+  }
+
+  .about-process__connector {
+    width: 2px;
+    flex: 1;
+    min-height: 40px;
+    background-color: var(--line);
+    margin: 0.5rem 0;
+  }
+
+  .about-process__content {
+    padding-bottom: 2rem;
+  }
+
+  .about-process__title {
+    font-size: var(--text-xl);
+    font-weight: 700;
+    color: var(--text);
+    margin-bottom: 0.75rem;
+  }
+
+  .about-process__body {
+    font-size: var(--text-md);
+    line-height: 1.6;
+    color: var(--text-muted);
+    max-width: 64ch;
+  }
+
+  /* Global */
+  .about-global {
+    padding: 2.5rem;
+    border: 1px solid var(--line);
+    border-radius: var(--ala-radius-md);
+    background-color: var(--bg);
+  }
+
+  .about-global__title {
+    font-size: var(--text-sm);
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: var(--accent);
+    margin-bottom: 1rem;
+  }
+
+  .about-global__body {
+    font-size: var(--text-lg);
+    line-height: 1.6;
+    color: var(--text);
+    max-width: 64ch;
+  }
+
+  /* Stats */
+  .about-stats {
+    display: grid;
+    gap: 2rem;
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  @media (min-width: 768px) {
+    .about-stats {
+      grid-template-columns: repeat(4, 1fr);
+    }
+  }
+
+  .about-stat {
+    text-align: center;
+  }
+
+  .about-stat__value {
+    display: block;
+    font-size: var(--text-2xl);
+    font-weight: 800;
+    color: var(--text);
+    margin-bottom: 0.5rem;
+  }
+
+  .about-stat__label {
+    font-size: var(--text-sm);
+    color: var(--text-muted);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+  }
+
+  /* CTA */
   .about-cta {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     gap: 0.75rem;
+  }
+
+  /* Reduced motion */
+  @media (prefers-reduced-motion: reduce) {
+    .about-process__connector {
+      transition: none;
+    }
   }
 </style>
