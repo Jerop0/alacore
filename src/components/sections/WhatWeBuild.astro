@@ -12,12 +12,12 @@ interface Props {
 const { copy, locale } = Astro.props;
 
 const cards = [
-  { key: 'apps', image: '/assets/solutions/business-apps.png', accent: '#1E56A0' },
-  { key: 'web', image: '/assets/solutions/websites-portals.png', accent: '#2D6A4F' },
-  { key: 'chat', image: '/assets/solutions/chatbots-whatsapp.png', accent: '#D97706' },
-  { key: 'automation', image: '/assets/solutions/automation.png', accent: '#7C3AED' },
-  { key: 'reports', image: '/assets/solutions/dashboards-reports.png', accent: '#DC2626' },
-  { key: 'systems', image: '/assets/solutions/business-systems.png', accent: '#4B5563' },
+  { key: 'apps', image: '/what-we-build/business-apps.png', accent: '#1E56A0' },
+  { key: 'web', image: '/what-we-build/websites-portals.png', accent: '#2D6A4F' },
+  { key: 'chat', image: '/what-we-build/chatbots-whatsapp.png', accent: '#D97706' },
+  { key: 'automation', image: '/what-we-build/automation.png', accent: '#7C3AED' },
+  { key: 'reports', image: '/what-we-build/dashboards-reports.png', accent: '#DC2626' },
+  { key: 'systems', image: '/what-we-build/business-systems.png', accent: '#4B5563' },
 ] as const;
 
 const learnMore = t(copy, 'sections.buildLearnMore');
@@ -103,8 +103,8 @@ const solutionsHref = localizePath('/solutions', locale, locale);
     flex-direction: column;
     width: 100%;
     overflow: hidden;
-    border: 1px solid var(--line);
-    border-radius: var(--ala-radius-md);
+    border: 1px solid rgba(15, 23, 42, 0.1);
+    border-radius: 18px;
     background-color: var(--bg);
     box-shadow: var(--shadow-card);
     text-decoration: none;
@@ -132,7 +132,8 @@ const solutionsHref = localizePath('/solutions', locale, locale);
   }
 
   .build-card__media {
-    aspect-ratio: 16 / 9;
+    width: 100%;
+    height: 230px;
     background-color: #f4f7fb;
     border-bottom: 1px solid var(--line);
     overflow: hidden;
