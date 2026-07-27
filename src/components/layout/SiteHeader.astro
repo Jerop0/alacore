@@ -81,8 +81,12 @@ const markLogo = '/brand/ala-core-mark-light.svg';
   (function () {
     const header = document.getElementById('site-header');
     if (!header) return;
+    
+    const hero = document.querySelector('.hero');
+    const heroHeight = hero ? hero.offsetHeight : 400;
+    
     const onScroll = () => {
-      header.classList.toggle('is-scrolled', window.scrollY > 10);
+      header.classList.toggle('is-scrolled', window.scrollY > heroHeight - 100);
     };
     window.addEventListener('scroll', onScroll, { passive: true });
     onScroll();
@@ -95,7 +99,7 @@ const markLogo = '/brand/ala-core-mark-light.svg';
     top: 0;
     z-index: var(--z-header);
     height: 64px;
-    background-color: var(--ala-core-ink);
+    background-color: transparent;
     border-bottom: 1px solid transparent;
     transition:
       background-color 160ms var(--ease-out-expo),
