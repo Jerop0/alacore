@@ -1,13 +1,8 @@
 ---
 import Button from '../ui/Button.astro';
-import { Image } from 'astro:assets';
 import { localizePath, t } from '../../lib/i18n';
 import type { CopyNode } from '../../lib/i18n';
 import type { Locale } from '../../lib/config';
-
-import ideaMadeReal from '../../assets/build/idea-made-real.png';
-import anyTechnology from '../../assets/build/any-technology.png';
-import hardProblems from '../../assets/build/hard-problems.png';
 
 interface Props {
   locale: Locale;
@@ -20,19 +15,19 @@ const points = [
   {
     title: t(copy, 'sections.anyIdeaPoint1'),
     body: t(copy, 'sections.anyIdeaPoint1Support'),
-    image: ideaMadeReal,
+    image: '/assets/idea-made-real.png',
     accent: '#1D61E7',
   },
   {
     title: t(copy, 'sections.anyIdeaPoint2'),
     body: t(copy, 'sections.anyIdeaPoint2Support'),
-    image: anyTechnology,
+    image: '/assets/any-technology.png',
     accent: '#2563EB',
   },
   {
     title: t(copy, 'sections.anyIdeaPoint3'),
     body: t(copy, 'sections.anyIdeaPoint3Support'),
-    image: hardProblems,
+    image: '/assets/hard-problems.png',
     accent: '#1E3A8A',
   },
 ];
@@ -50,13 +45,11 @@ const points = [
         points.map((point) => (
           <li class="any-idea__card" style={`--card-accent: ${point.accent};`}>
             <div class="any-idea__media">
-              <Image
+              <img
                 src={point.image}
                 alt={`${point.title} illustration`}
-                widths={[400, 560, 720]}
-                sizes="(min-width: 768px) 32vw, 90vw"
-                format="webp"
-                quality={72}
+                width="720"
+                height="480"
                 loading="lazy"
                 decoding="async"
               />
