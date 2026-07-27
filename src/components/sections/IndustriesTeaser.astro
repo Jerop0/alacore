@@ -21,6 +21,16 @@ const industryLabels: Record<string, string> = {
   'retail-ecommerce': 'Retail & E-commerce',
   'factories-manufacturing': 'Factories & Manufacturing',
 };
+
+const industryImages: Record<string, string> = {
+  'factories-manufacturing': '/images/industries/factories-manufacturing-germany.png',
+  'retail-ecommerce': '/images/industries/retail-ecommerce-germany.png',
+  'warehouses-logistics': '/images/industries/warehouses-logistics-germany.png',
+  'companies-offices': '/images/industries/companies-offices-germany.png',
+  'schools-training': '/images/industries/schools-training-germany.png',
+  'hospitals-clinics': '/images/industries/hospitals-clinics-germany.png',
+  'restaurants-cafes': '/images/industries/restaurants-cafes-germany.png',
+};
 ---
 
 <section class="section section--mist">
@@ -39,9 +49,17 @@ const industryLabels: Record<string, string> = {
                 href={localizePath(`/industries/${industry.slug}`, locale, locale)}
                 class="industries-teaser__card"
               >
-                <span class="industries-teaser__icon">
-                  <Icon name={industry.iconKey.toLowerCase()} size={22} />
-                </span>
+                <div class="industries-teaser__image-wrapper">
+                  <img
+                    src={industryImages[industry.slug]}
+                    alt={industryLabels[industry.slug]}
+                    class="industries-teaser__image"
+                    width="400"
+                    height="300"
+                    loading="lazy"
+                    decoding="async"
+                  />
+                </div>
                 <span class="industries-teaser__label">{industryLabels[industry.slug]}</span>
               </a>
             </li>
@@ -68,31 +86,35 @@ const industryLabels: Record<string, string> = {
 
   .industries-teaser__list {
     display: flex;
-    gap: 0.75rem;
+    gap: 1rem;
     min-width: max-content;
     list-style: none;
   }
 
-  @media (min-width: 1024px) {
+  @media (min-width: 640px) {
     .industries-teaser__list {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+      grid-template-columns: repeat(2, 1fr);
       min-width: auto;
+    }
+  }
+
+  @media (min-width: 1024px) {
+    .industries-teaser__list {
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     }
   }
 
   .industries-teaser__card {
     display: inline-flex;
     flex-direction: column;
-    align-items: center;
-    gap: 0.75rem;
-    min-width: 140px;
-    padding: 1.25rem 1rem;
+    min-width: 180px;
     border: 1px solid var(--line);
     border-radius: var(--ala-radius-md);
     background-color: var(--bg);
     color: var(--text);
     text-align: center;
+    overflow: hidden;
     transition: border-color 180ms var(--ease-out-expo), transform 180ms var(--ease-out-expo);
   }
 
@@ -101,18 +123,28 @@ const industryLabels: Record<string, string> = {
     transform: translateY(-2px);
   }
 
-  .industries-teaser__icon {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    width: 44px;
-    height: 44px;
-    border-radius: 50%;
-    background-color: var(--accent-tint);
-    color: var(--accent);
+  .industries-teaser__image-wrapper {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 4 / 3;
+    overflow: hidden;
+    border-radius: var(--ala-radius-sm) var(--ala-radius-sm) 0 0;
+  }
+
+  .industries-teaser__image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 300ms var(--ease-out-expo);
+  }
+
+  .industries-teaser__card:hover .industries-teaser__image {
+    transform: scale(1.03);
   }
 
   .industries-teaser__label {
+    display: block;
+    padding: 1rem;
     font-size: var(--text-sm);
     font-weight: 600;
   }
@@ -132,5 +164,16 @@ const industryLabels: Record<string, string> = {
 
   .industries-teaser__all:hover {
     color: var(--accent-hover);
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .industries-teaser__image,
+    .industries-teaser__card {
+      transition: none;
+    }
+
+    .industries-teaser__card:hover .industries-teaser__image {
+      transform: none;
+    }
   }
 </style>
