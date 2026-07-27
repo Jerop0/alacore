@@ -102,19 +102,20 @@ const { locale, copy } = Astro.props;
   }
 
   .hero__title {
-    font-size: clamp(34px, 4vw, 56px);
+    font-size: clamp(28px, 3.5vw, 48px);
     font-weight: 800;
     line-height: 1.1;
     letter-spacing: -0.02em;
     color: var(--ala-pure-white);
     white-space: nowrap;
     max-width: 100%;
+    overflow: hidden;
+    text-overflow: ellipsis;
   }
 
-  @media (max-width: 480px) {
+  @media (min-width: 1200px) {
     .hero__title {
-      white-space: normal;
-      font-size: clamp(28px, 6vw, 40px);
+      font-size: clamp(36px, 4vw, 56px);
     }
   }
 
