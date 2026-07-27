@@ -105,7 +105,14 @@
       "next": "Next",
       "back": "Back",
       "openWhatsApp": "Open WhatsApp",
-      "preface": "Hello, I would like to discuss a project with ALA CORE."
+      "preface": "Hello, I would like to discuss a project with ALA CORE.",
+      "messageLabels": {
+        "businessType": "Business",
+        "challenge": "Challenge",
+        "outcome": "Goal",
+        "name": "Name",
+        "contactTime": "Best time"
+      }
     },
     "examples": {
       "restaurant": {
@@ -252,29 +259,36 @@
       "next": "Was möchten Sie als Nächstes tun?",
       "actions": ["Per WhatsApp sprechen", "Kontaktformular öffnen"]
     },
-    "whatsapp": {
-      "buttonLabel": "Auf WhatsApp chatten",
-      "title": "Anfrage per WhatsApp senden",
-      "step": "Schritt {n} von {total}",
-      "fields": {
-        "businessType": "Welche Art von Unternehmen führen Sie?",
-        "challenge": "Was ist Ihre größte Herausforderung gerade?",
-        "outcome": "Was möchten Sie erreichen?",
-        "name": "Ihr Name",
-        "contactTime": "Beste Erreichbarkeit"
-      },
-      "placeholders": {
-        "businessType": "z. B. Restaurant, Klinik, Lager",
-        "challenge": "z. B. Wir verlieren den Überblick über Aufträge",
-        "outcome": "z. B. Schnellerer Kundenservice",
-        "name": "Ihr Name",
-        "contactTime": "z. B. Wochentag vormittags"
-      },
-      "next": "Weiter",
-      "back": "Zurück",
-      "openWhatsApp": "WhatsApp öffnen",
-      "preface": "Hallo, ich möchte ein Projekt mit ALA CORE besprechen."
-    },
+     "whatsapp": {
+       "buttonLabel": "Auf WhatsApp chatten",
+       "title": "Anfrage per WhatsApp senden",
+       "step": "Schritt {n} von {total}",
+       "fields": {
+         "businessType": "Welche Art von Unternehmen führen Sie?",
+         "challenge": "Was ist Ihre größte Herausforderung gerade?",
+         "outcome": "Was möchten Sie erreichen?",
+         "name": "Ihr Name",
+         "contactTime": "Beste Erreichbarkeit"
+       },
+       "placeholders": {
+         "businessType": "z. B. Restaurant, Klinik, Lager",
+         "challenge": "z. B. Wir verlieren den Überblick über Aufträge",
+         "outcome": "z. B. Schnellerer Kundenservice",
+         "name": "Ihr Name",
+         "contactTime": "z. B. Wochentag vormittags"
+       },
+       "next": "Weiter",
+       "back": "Zurück",
+       "openWhatsApp": "WhatsApp öffnen",
+       "preface": "Hallo, ich möchte ein Projekt mit ALA CORE besprechen.",
+       "messageLabels": {
+         "businessType": "Unternehmen",
+         "challenge": "Herausforderung",
+         "outcome": "Ziel",
+         "name": "Name",
+         "contactTime": "Beste Zeit"
+       }
+     },
     "examples": {
       "restaurant": {
         "title": "Restaurant",
@@ -424,7 +438,14 @@
       "next": "İleri",
       "back": "Geri",
       "openWhatsApp": "WhatsApp'ı aç",
-      "preface": "Merhaba, ALA CORE ile bir proje görüşmek istiyorum."
+      "preface": "Merhaba, ALA CORE ile bir proje görüşmek istiyorum.",
+      "messageLabels": {
+        "businessType": "İşletme",
+        "challenge": "Zorluk",
+        "outcome": "Hedef",
+        "name": "Ad",
+        "contactTime": "En uygun zaman"
+      }
     },
     "examples": {
       "restaurant": {
@@ -575,7 +596,14 @@
       "next": "التالي",
       "back": "رجوع",
       "openWhatsApp": "افتح واتساب",
-      "preface": "مرحبًا، أودّ مناقشة مشروع مع ALA CORE."
+      "preface": "مرحبًا، أودّ مناقشة مشروع مع ALA CORE.",
+      "messageLabels": {
+        "businessType": "العمل",
+        "challenge": "التحدي",
+        "outcome": "الهدف",
+        "name": "الاسم",
+        "contactTime": "أفضل وقت"
+      }
     },
     "examples": {
       "restaurant": {

@@ -53,6 +53,7 @@ const placeholders = (whatsapp.placeholders ?? {}) as Record<string, string>;
       back: string;
       openWhatsApp: string;
       preface: string;
+      messageLabels: Record<string, string>;
     }
 
     const panel = document.getElementById('whatsapp-panel');
@@ -138,13 +139,14 @@ const placeholders = (whatsapp.placeholders ?? {}) as Record<string, string>;
     };
 
     const openWhatsApp = () => {
+      const labels = copy.messageLabels ?? {};
       const lines = [
         copy.preface,
-        answers.businessType && `Business: ${answers.businessType}`,
-        answers.challenge && `Challenge: ${answers.challenge}`,
-        answers.outcome && `Goal: ${answers.outcome}`,
-        answers.name && `Name: ${answers.name}`,
-        answers.contactTime && `Best time: ${answers.contactTime}`,
+        answers.businessType && `${labels.businessType ?? 'Business'}: ${answers.businessType}`,
+        answers.challenge && `${labels.challenge ?? 'Challenge'}: ${answers.challenge}`,
+        answers.outcome && `${labels.outcome ?? 'Goal'}: ${answers.outcome}`,
+        answers.name && `${labels.name ?? 'Name'}: ${answers.name}`,
+        answers.contactTime && `${labels.contactTime ?? 'Best time'}: ${answers.contactTime}`,
       ].filter(Boolean);
       const text = encodeURIComponent(lines.join('\n'));
       window.open(`https://wa.me/${number}?text=${text}`, '_blank', 'noopener,noreferrer');
