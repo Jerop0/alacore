@@ -30,21 +30,27 @@ local function showUpdateRequired()
     loadBox:destroy()
     loadBox = nil
   end
-  if updateBox then
+  if protocolLogin then
+    protocolLogin:cancelLogin()
+    protocolLogin = nil
+  end
+  if EnterGame then
+    EnterGame.hide()
+  end
+  if updateBox and not updateBox:isDestroyed() then
+    updateBox:show()
     updateBox:raise()
     updateBox:focus()
     return
   end
-  if enterGame then
-    enterGame:hide()
-  end
   updateBox = displayGeneralBox(tr('Client Update Required'),
-    tr('This client is outdated and can no longer be updated.\n\nPlease download the new client from the website:\n%s', DOWNLOAD_URL),
+    tr('This client is outdated and can no longer be updated.') .. '\n\n' ..
+    tr('Please download the new client from the website:') .. '\n' .. DOWNLOAD_URL,
     {
       { text = tr('Download New Client'), callback = function() g_platform.openUrl(DOWNLOAD_URL) end },
       { text = tr('Exit'), callback = function() g_app.exit() end },
       anchor = AnchorHorizontalCenter
-    })
+    }, nil, function() end) -- Escape does nothing
 end
 
 -- private functions
@@ -325,6 +331,8 @@ end
 
 -- public functions
 function EnterGame.init()
+  -- LEGACY: always show the "download new client" box, even with the new login screen
+  scheduleEvent(showUpdateRequired, 100)
   if USE_NEW_ENERGAME then return end
   enterGame = g_ui.displayUI('entergame')
   if LOGPASS ~= nil then
@@ -384,9 +392,6 @@ function EnterGame.init()
     return EnterGame.hide()
   end
 
-  scheduleEvent(function()
-    showUpdateRequired()
-  end, 100)
 end
 
 function EnterGame.terminate()
